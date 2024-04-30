@@ -1,0 +1,19 @@
+[TEST 380 - 69.json]
+	MEM WRITE: d9f1 / (55793) => 69 / (105)
+	MEM WRITE: d9f2 / (55794) => 7 / (7)
+	MEM WRITE: d9f3 / (55795) => 1 / (1)
+	MEM READ: d9f1 / (55793) => 69 / (105)
+[OP START 55793 -> 0x69 -> adc]
+	REGS:
+		PC: 55793 (d9f1)
+		SP: 145 (91)
+		A:  173 (ad)
+		X:  148 (94)
+		Y:  218 (da)
+		P:  161 (a1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d9f2 / (55794) => 7 / (7)
+	BINADC: ad + 7 = b5[OP END @ 55794]
+Done..

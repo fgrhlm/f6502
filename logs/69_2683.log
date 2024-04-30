@@ -1,0 +1,19 @@
+[TEST 183 - 69.json]
+	MEM WRITE: 9c17 / (39959) => 69 / (105)
+	MEM WRITE: 9c18 / (39960) => 88 / (136)
+	MEM WRITE: 9c19 / (39961) => 1e / (30)
+	MEM READ: 9c17 / (39959) => 69 / (105)
+[OP START 39959 -> 0x69 -> adc]
+	REGS:
+		PC: 39959 (9c17)
+		SP: 99 (63)
+		A:  230 (e6)
+		X:  157 (9d)
+		Y:  15 (f)
+		P:  224 (e0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9c18 / (39960) => 88 / (136)
+	BINADC: e6 + 88 = 6e[OP END @ 39960]
+Done..

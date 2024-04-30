@@ -1,0 +1,19 @@
+[TEST 301 - 69.json]
+	MEM WRITE: 84e / (2126) => 69 / (105)
+	MEM WRITE: 84f / (2127) => ea / (234)
+	MEM WRITE: 850 / (2128) => 7e / (126)
+	MEM READ: 84e / (2126) => 69 / (105)
+[OP START 2126 -> 0x69 -> adc]
+	REGS:
+		PC: 2126 (84e)
+		SP: 139 (8b)
+		A:  90 (5a)
+		X:  9 (9)
+		Y:  229 (e5)
+		P:  32 (20)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 84f / (2127) => ea / (234)
+	BINADC: 5a + ea = 44[OP END @ 2127]
+Done..

@@ -1,0 +1,22 @@
+[TEST 620 - 69.json]
+	MEM WRITE: 983d / (38973) => 69 / (105)
+	MEM WRITE: 983e / (38974) => 3c / (60)
+	MEM WRITE: 983f / (38975) => 0 / (0)
+	MEM READ: 983d / (38973) => 69 / (105)
+[OP START 38973 -> 0x69 -> adc]
+	REGS:
+		PC: 38973 (983d)
+		SP: 80 (50)
+		A:  197 (c5)
+		X:  229 (e5)
+		Y:  186 (ba)
+		P:  40 (28)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 983e / (38974) => 3c / (60)
+	BCD START -> c5 + 3c
+	BCD CONVERT -> 25 + 42
+	BCD SUM -> 67
+[OP END @ 38974]
+Done..

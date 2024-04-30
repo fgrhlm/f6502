@@ -1,0 +1,22 @@
+[TEST 336 - 69.json]
+	MEM WRITE: db6c / (56172) => 69 / (105)
+	MEM WRITE: db6d / (56173) => d3 / (211)
+	MEM WRITE: db6e / (56174) => c2 / (194)
+	MEM READ: db6c / (56172) => 69 / (105)
+[OP START 56172 -> 0x69 -> adc]
+	REGS:
+		PC: 56172 (db6c)
+		SP: 36 (24)
+		A:  32 (20)
+		X:  237 (ed)
+		Y:  140 (8c)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: db6d / (56173) => d3 / (211)
+	BCD START -> 20 + d3
+	BCD CONVERT -> 20 + 33
+	BCD SUM -> 53
+[OP END @ 56173]
+Done..

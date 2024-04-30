@@ -1,0 +1,19 @@
+[TEST 535 - 69.json]
+	MEM WRITE: 5795 / (22421) => 69 / (105)
+	MEM WRITE: 5796 / (22422) => fb / (251)
+	MEM WRITE: 5797 / (22423) => 26 / (38)
+	MEM READ: 5795 / (22421) => 69 / (105)
+[OP START 22421 -> 0x69 -> adc]
+	REGS:
+		PC: 22421 (5795)
+		SP: 207 (cf)
+		A:  131 (83)
+		X:  145 (91)
+		Y:  102 (66)
+		P:  100 (64)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5796 / (22422) => fb / (251)
+	BINADC: 83 + fb = 7e[OP END @ 22422]
+Done..

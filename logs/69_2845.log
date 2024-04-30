@@ -1,0 +1,22 @@
+[TEST 345 - 69.json]
+	MEM WRITE: b833 / (47155) => 69 / (105)
+	MEM WRITE: b834 / (47156) => 98 / (152)
+	MEM WRITE: b835 / (47157) => 84 / (132)
+	MEM READ: b833 / (47155) => 69 / (105)
+[OP START 47155 -> 0x69 -> adc]
+	REGS:
+		PC: 47155 (b833)
+		SP: 190 (be)
+		A:  2 (2)
+		X:  55 (37)
+		Y:  139 (8b)
+		P:  238 (ee)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b834 / (47156) => 98 / (152)
+	BCD START -> 2 + 98
+	BCD CONVERT -> 2 + 98
+	BCD SUM -> 0
+[OP END @ 47156]
+Done..

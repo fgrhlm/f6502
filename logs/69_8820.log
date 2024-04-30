@@ -1,0 +1,19 @@
+[TEST 70 - 69.json]
+	MEM WRITE: 4ed7 / (20183) => 69 / (105)
+	MEM WRITE: 4ed8 / (20184) => c3 / (195)
+	MEM WRITE: 4ed9 / (20185) => 49 / (73)
+	MEM READ: 4ed7 / (20183) => 69 / (105)
+[OP START 20183 -> 0x69 -> adc]
+	REGS:
+		PC: 20183 (4ed7)
+		SP: 50 (32)
+		A:  27 (1b)
+		X:  37 (25)
+		Y:  61 (3d)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4ed8 / (20184) => c3 / (195)
+	BINADC: 1b + c3 = df[OP END @ 20184]
+Done..

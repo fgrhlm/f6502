@@ -1,0 +1,19 @@
+[TEST 104 - 69.json]
+	MEM WRITE: 1fd9 / (8153) => 69 / (105)
+	MEM WRITE: 1fda / (8154) => 56 / (86)
+	MEM WRITE: 1fdb / (8155) => bd / (189)
+	MEM READ: 1fd9 / (8153) => 69 / (105)
+[OP START 8153 -> 0x69 -> adc]
+	REGS:
+		PC: 8153 (1fd9)
+		SP: 4 (4)
+		A:  9 (9)
+		X:  193 (c1)
+		Y:  131 (83)
+		P:  34 (22)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1fda / (8154) => 56 / (86)
+	BINADC: 9 + 56 = 5f[OP END @ 8154]
+Done..

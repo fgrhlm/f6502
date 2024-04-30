@@ -1,0 +1,22 @@
+[TEST 148 - 69.json]
+	MEM WRITE: 1075 / (4213) => 69 / (105)
+	MEM WRITE: 1076 / (4214) => ad / (173)
+	MEM WRITE: 1077 / (4215) => 9c / (156)
+	MEM READ: 1075 / (4213) => 69 / (105)
+[OP START 4213 -> 0x69 -> adc]
+	REGS:
+		PC: 4213 (1075)
+		SP: 229 (e5)
+		A:  241 (f1)
+		X:  161 (a1)
+		Y:  226 (e2)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1076 / (4214) => ad / (173)
+	BCD START -> f1 + ad
+	BCD CONVERT -> 51 + 13
+	BCD SUM -> 65
+[OP END @ 4214]
+Done..

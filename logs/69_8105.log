@@ -1,0 +1,19 @@
+[TEST 605 - 69.json]
+	MEM WRITE: 62cf / (25295) => 69 / (105)
+	MEM WRITE: 62d0 / (25296) => 21 / (33)
+	MEM WRITE: 62d1 / (25297) => fb / (251)
+	MEM READ: 62cf / (25295) => 69 / (105)
+[OP START 25295 -> 0x69 -> adc]
+	REGS:
+		PC: 25295 (62cf)
+		SP: 24 (18)
+		A:  248 (f8)
+		X:  135 (87)
+		Y:  195 (c3)
+		P:  98 (62)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 62d0 / (25296) => 21 / (33)
+	BINADC: f8 + 21 = 19[OP END @ 25296]
+Done..

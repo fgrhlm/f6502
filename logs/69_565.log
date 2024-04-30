@@ -1,0 +1,19 @@
+[TEST 565 - 69.json]
+	MEM WRITE: 956a / (38250) => 69 / (105)
+	MEM WRITE: 956b / (38251) => 83 / (131)
+	MEM WRITE: 956c / (38252) => 7a / (122)
+	MEM READ: 956a / (38250) => 69 / (105)
+[OP START 38250 -> 0x69 -> adc]
+	REGS:
+		PC: 38250 (956a)
+		SP: 72 (48)
+		A:  205 (cd)
+		X:  142 (8e)
+		Y:  131 (83)
+		P:  34 (22)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 956b / (38251) => 83 / (131)
+	BINADC: cd + 83 = 50[OP END @ 38251]
+Done..

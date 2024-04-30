@@ -1,0 +1,19 @@
+[TEST 467 - 69.json]
+	MEM WRITE: 9e0f / (40463) => 69 / (105)
+	MEM WRITE: 9e10 / (40464) => 3d / (61)
+	MEM WRITE: 9e11 / (40465) => 8d / (141)
+	MEM READ: 9e0f / (40463) => 69 / (105)
+[OP START 40463 -> 0x69 -> adc]
+	REGS:
+		PC: 40463 (9e0f)
+		SP: 246 (f6)
+		A:  68 (44)
+		X:  81 (51)
+		Y:  16 (10)
+		P:  161 (a1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9e10 / (40464) => 3d / (61)
+	BINADC: 44 + 3d = 82[OP END @ 40464]
+Done..

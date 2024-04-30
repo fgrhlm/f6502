@@ -1,0 +1,22 @@
+[TEST 346 - 69.json]
+	MEM WRITE: b064 / (45156) => 69 / (105)
+	MEM WRITE: b065 / (45157) => 56 / (86)
+	MEM WRITE: b066 / (45158) => 3b / (59)
+	MEM READ: b064 / (45156) => 69 / (105)
+[OP START 45156 -> 0x69 -> adc]
+	REGS:
+		PC: 45156 (b064)
+		SP: 199 (c7)
+		A:  22 (16)
+		X:  102 (66)
+		Y:  75 (4b)
+		P:  111 (6f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b065 / (45157) => 56 / (86)
+	BCD START -> 16 + 56
+	BCD CONVERT -> 16 + 56
+	BCD SUM -> 73
+[OP END @ 45157]
+Done..

@@ -1,0 +1,19 @@
+[TEST 94 - 69.json]
+	MEM WRITE: dc2a / (56362) => 69 / (105)
+	MEM WRITE: dc2b / (56363) => 5d / (93)
+	MEM WRITE: dc2c / (56364) => 3b / (59)
+	MEM READ: dc2a / (56362) => 69 / (105)
+[OP START 56362 -> 0x69 -> adc]
+	REGS:
+		PC: 56362 (dc2a)
+		SP: 216 (d8)
+		A:  56 (38)
+		X:  159 (9f)
+		Y:  83 (53)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: dc2b / (56363) => 5d / (93)
+	BINADC: 38 + 5d = 95[OP END @ 56363]
+Done..

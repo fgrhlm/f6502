@@ -1,0 +1,19 @@
+[TEST 124 - 69.json]
+	MEM WRITE: fe4d / (65101) => 69 / (105)
+	MEM WRITE: fe4e / (65102) => 6f / (111)
+	MEM WRITE: fe4f / (65103) => c6 / (198)
+	MEM READ: fe4d / (65101) => 69 / (105)
+[OP START 65101 -> 0x69 -> adc]
+	REGS:
+		PC: 65101 (fe4d)
+		SP: 244 (f4)
+		A:  113 (71)
+		X:  94 (5e)
+		Y:  13 (d)
+		P:  227 (e3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fe4e / (65102) => 6f / (111)
+	BINADC: 71 + 6f = e1[OP END @ 65102]
+Done..

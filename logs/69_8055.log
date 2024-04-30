@@ -1,0 +1,22 @@
+[TEST 555 - 69.json]
+	MEM WRITE: f2e2 / (62178) => 69 / (105)
+	MEM WRITE: f2e3 / (62179) => 3f / (63)
+	MEM WRITE: f2e4 / (62180) => 99 / (153)
+	MEM READ: f2e2 / (62178) => 69 / (105)
+[OP START 62178 -> 0x69 -> adc]
+	REGS:
+		PC: 62178 (f2e2)
+		SP: 58 (3a)
+		A:  227 (e3)
+		X:  232 (e8)
+		Y:  23 (17)
+		P:  232 (e8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f2e3 / (62179) => 3f / (63)
+	BCD START -> e3 + 3f
+	BCD CONVERT -> 43 + 45
+	BCD SUM -> 88
+[OP END @ 62179]
+Done..

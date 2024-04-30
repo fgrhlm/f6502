@@ -1,0 +1,22 @@
+[TEST 526 - 69.json]
+	MEM WRITE: a11a / (41242) => 69 / (105)
+	MEM WRITE: a11b / (41243) => 94 / (148)
+	MEM WRITE: a11c / (41244) => 64 / (100)
+	MEM READ: a11a / (41242) => 69 / (105)
+[OP START 41242 -> 0x69 -> adc]
+	REGS:
+		PC: 41242 (a11a)
+		SP: 93 (5d)
+		A:  212 (d4)
+		X:  73 (49)
+		Y:  91 (5b)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a11b / (41243) => 94 / (148)
+	BCD START -> d4 + 94
+	BCD CONVERT -> 34 + 94
+	BCD SUM -> 29
+[OP END @ 41243]
+Done..

@@ -1,0 +1,19 @@
+[TEST 232 - 69.json]
+	MEM WRITE: 8925 / (35109) => 69 / (105)
+	MEM WRITE: 8926 / (35110) => b8 / (184)
+	MEM WRITE: 8927 / (35111) => ab / (171)
+	MEM READ: 8925 / (35109) => 69 / (105)
+[OP START 35109 -> 0x69 -> adc]
+	REGS:
+		PC: 35109 (8925)
+		SP: 71 (47)
+		A:  127 (7f)
+		X:  232 (e8)
+		Y:  73 (49)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8926 / (35110) => b8 / (184)
+	BINADC: 7f + b8 = 38[OP END @ 35110]
+Done..

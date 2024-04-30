@@ -1,0 +1,22 @@
+[TEST 386 - 69.json]
+	MEM WRITE: 4e02 / (19970) => 69 / (105)
+	MEM WRITE: 4e03 / (19971) => 34 / (52)
+	MEM WRITE: 4e04 / (19972) => 2c / (44)
+	MEM READ: 4e02 / (19970) => 69 / (105)
+[OP START 19970 -> 0x69 -> adc]
+	REGS:
+		PC: 19970 (4e02)
+		SP: 27 (1b)
+		A:  117 (75)
+		X:  164 (a4)
+		Y:  19 (13)
+		P:  44 (2c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4e03 / (19971) => 34 / (52)
+	BCD START -> 75 + 34
+	BCD CONVERT -> 75 + 34
+	BCD SUM -> 9
+[OP END @ 19971]
+Done..

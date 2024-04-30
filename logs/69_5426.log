@@ -1,0 +1,22 @@
+[TEST 426 - 69.json]
+	MEM WRITE: 5446 / (21574) => 69 / (105)
+	MEM WRITE: 5447 / (21575) => a2 / (162)
+	MEM WRITE: 5448 / (21576) => a3 / (163)
+	MEM READ: 5446 / (21574) => 69 / (105)
+[OP START 21574 -> 0x69 -> adc]
+	REGS:
+		PC: 21574 (5446)
+		SP: 173 (ad)
+		A:  167 (a7)
+		X:  236 (ec)
+		Y:  193 (c1)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5447 / (21575) => a2 / (162)
+	BCD START -> a7 + a2
+	BCD CONVERT -> 7 + 2
+	BCD SUM -> 9
+[OP END @ 21575]
+Done..

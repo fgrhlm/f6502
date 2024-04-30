@@ -1,0 +1,22 @@
+[TEST 340 - 69.json]
+	MEM WRITE: 9d61 / (40289) => 69 / (105)
+	MEM WRITE: 9d62 / (40290) => e3 / (227)
+	MEM WRITE: 9d63 / (40291) => 3d / (61)
+	MEM READ: 9d61 / (40289) => 69 / (105)
+[OP START 40289 -> 0x69 -> adc]
+	REGS:
+		PC: 40289 (9d61)
+		SP: 31 (1f)
+		A:  98 (62)
+		X:  181 (b5)
+		Y:  97 (61)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9d62 / (40290) => e3 / (227)
+	BCD START -> 62 + e3
+	BCD CONVERT -> 62 + 43
+	BCD SUM -> 6
+[OP END @ 40290]
+Done..

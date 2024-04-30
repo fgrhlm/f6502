@@ -1,0 +1,22 @@
+[TEST 314 - 69.json]
+	MEM WRITE: 6db8 / (28088) => 69 / (105)
+	MEM WRITE: 6db9 / (28089) => c1 / (193)
+	MEM WRITE: 6dba / (28090) => d5 / (213)
+	MEM READ: 6db8 / (28088) => 69 / (105)
+[OP START 28088 -> 0x69 -> adc]
+	REGS:
+		PC: 28088 (6db8)
+		SP: 170 (aa)
+		A:  141 (8d)
+		X:  130 (82)
+		Y:  91 (5b)
+		P:  108 (6c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6db9 / (28089) => c1 / (193)
+	BCD START -> 8d + c1
+	BCD CONVERT -> 93 + 21
+	BCD SUM -> 14
+[OP END @ 28089]
+Done..

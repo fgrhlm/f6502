@@ -1,0 +1,19 @@
+[TEST 571 - 69.json]
+	MEM WRITE: f436 / (62518) => 69 / (105)
+	MEM WRITE: f437 / (62519) => 1b / (27)
+	MEM WRITE: f438 / (62520) => 4a / (74)
+	MEM READ: f436 / (62518) => 69 / (105)
+[OP START 62518 -> 0x69 -> adc]
+	REGS:
+		PC: 62518 (f436)
+		SP: 52 (34)
+		A:  117 (75)
+		X:  125 (7d)
+		Y:  56 (38)
+		P:  161 (a1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f437 / (62519) => 1b / (27)
+	BINADC: 75 + 1b = 91[OP END @ 62519]
+Done..

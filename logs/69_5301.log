@@ -1,0 +1,19 @@
+[TEST 301 - 69.json]
+	MEM WRITE: 35ce / (13774) => 69 / (105)
+	MEM WRITE: 35cf / (13775) => 20 / (32)
+	MEM WRITE: 35d0 / (13776) => 1f / (31)
+	MEM READ: 35ce / (13774) => 69 / (105)
+[OP START 13774 -> 0x69 -> adc]
+	REGS:
+		PC: 13774 (35ce)
+		SP: 35 (23)
+		A:  121 (79)
+		X:  11 (b)
+		Y:  252 (fc)
+		P:  103 (67)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 35cf / (13775) => 20 / (32)
+	BINADC: 79 + 20 = 9a[OP END @ 13775]
+Done..

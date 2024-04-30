@@ -1,0 +1,19 @@
+[TEST 109 - 69.json]
+	MEM WRITE: 42d5 / (17109) => 69 / (105)
+	MEM WRITE: 42d6 / (17110) => a4 / (164)
+	MEM WRITE: 42d7 / (17111) => f9 / (249)
+	MEM READ: 42d5 / (17109) => 69 / (105)
+[OP START 17109 -> 0x69 -> adc]
+	REGS:
+		PC: 17109 (42d5)
+		SP: 214 (d6)
+		A:  112 (70)
+		X:  74 (4a)
+		Y:  181 (b5)
+		P:  34 (22)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 42d6 / (17110) => a4 / (164)
+	BINADC: 70 + a4 = 14[OP END @ 17110]
+Done..

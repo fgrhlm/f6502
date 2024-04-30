@@ -1,0 +1,22 @@
+[TEST 207 - 69.json]
+	MEM WRITE: f81d / (63517) => 69 / (105)
+	MEM WRITE: f81e / (63518) => 87 / (135)
+	MEM WRITE: f81f / (63519) => eb / (235)
+	MEM READ: f81d / (63517) => 69 / (105)
+[OP START 63517 -> 0x69 -> adc]
+	REGS:
+		PC: 63517 (f81d)
+		SP: 150 (96)
+		A:  71 (47)
+		X:  124 (7c)
+		Y:  126 (7e)
+		P:  111 (6f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f81e / (63518) => 87 / (135)
+	BCD START -> 47 + 87
+	BCD CONVERT -> 47 + 87
+	BCD SUM -> 35
+[OP END @ 63518]
+Done..

@@ -1,0 +1,19 @@
+[TEST 585 - 69.json]
+	MEM WRITE: 2a99 / (10905) => 69 / (105)
+	MEM WRITE: 2a9a / (10906) => 47 / (71)
+	MEM WRITE: 2a9b / (10907) => 45 / (69)
+	MEM READ: 2a99 / (10905) => 69 / (105)
+[OP START 10905 -> 0x69 -> adc]
+	REGS:
+		PC: 10905 (2a99)
+		SP: 188 (bc)
+		A:  212 (d4)
+		X:  229 (e5)
+		Y:  56 (38)
+		P:  38 (26)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2a9a / (10906) => 47 / (71)
+	BINADC: d4 + 47 = 1b[OP END @ 10906]
+Done..

@@ -1,0 +1,22 @@
+[TEST 254 - 69.json]
+	MEM WRITE: 6aeb / (27371) => 69 / (105)
+	MEM WRITE: 6aec / (27372) => e0 / (224)
+	MEM WRITE: 6aed / (27373) => 6f / (111)
+	MEM READ: 6aeb / (27371) => 69 / (105)
+[OP START 27371 -> 0x69 -> adc]
+	REGS:
+		PC: 27371 (6aeb)
+		SP: 86 (56)
+		A:  125 (7d)
+		X:  190 (be)
+		Y:  251 (fb)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6aec / (27372) => e0 / (224)
+	BCD START -> 7d + e0
+	BCD CONVERT -> 83 + 40
+	BCD SUM -> 23
+[OP END @ 27372]
+Done..

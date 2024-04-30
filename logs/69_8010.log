@@ -1,0 +1,22 @@
+[TEST 510 - 69.json]
+	MEM WRITE: 907b / (36987) => 69 / (105)
+	MEM WRITE: 907c / (36988) => 13 / (19)
+	MEM WRITE: 907d / (36989) => d8 / (216)
+	MEM READ: 907b / (36987) => 69 / (105)
+[OP START 36987 -> 0x69 -> adc]
+	REGS:
+		PC: 36987 (907b)
+		SP: 134 (86)
+		A:  100 (64)
+		X:  4 (4)
+		Y:  25 (19)
+		P:  40 (28)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 907c / (36988) => 13 / (19)
+	BCD START -> 64 + 13
+	BCD CONVERT -> 64 + 13
+	BCD SUM -> 77
+[OP END @ 36988]
+Done..

@@ -1,0 +1,19 @@
+[TEST 585 - 69.json]
+	MEM WRITE: a40a / (41994) => 69 / (105)
+	MEM WRITE: a40b / (41995) => 82 / (130)
+	MEM WRITE: a40c / (41996) => ac / (172)
+	MEM READ: a40a / (41994) => 69 / (105)
+[OP START 41994 -> 0x69 -> adc]
+	REGS:
+		PC: 41994 (a40a)
+		SP: 73 (49)
+		A:  142 (8e)
+		X:  165 (a5)
+		Y:  30 (1e)
+		P:  224 (e0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a40b / (41995) => 82 / (130)
+	BINADC: 8e + 82 = 10[OP END @ 41995]
+Done..

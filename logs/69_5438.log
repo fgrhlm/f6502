@@ -1,0 +1,19 @@
+[TEST 438 - 69.json]
+	MEM WRITE: 9e41 / (40513) => 69 / (105)
+	MEM WRITE: 9e42 / (40514) => d9 / (217)
+	MEM WRITE: 9e43 / (40515) => 39 / (57)
+	MEM READ: 9e41 / (40513) => 69 / (105)
+[OP START 40513 -> 0x69 -> adc]
+	REGS:
+		PC: 40513 (9e41)
+		SP: 160 (a0)
+		A:  69 (45)
+		X:  70 (46)
+		Y:  191 (bf)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9e42 / (40514) => d9 / (217)
+	BINADC: 45 + d9 = 1f[OP END @ 40514]
+Done..

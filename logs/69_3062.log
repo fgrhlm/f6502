@@ -1,0 +1,22 @@
+[TEST 562 - 69.json]
+	MEM WRITE: 18ed / (6381) => 69 / (105)
+	MEM WRITE: 18ee / (6382) => bb / (187)
+	MEM WRITE: 18ef / (6383) => 79 / (121)
+	MEM READ: 18ed / (6381) => 69 / (105)
+[OP START 6381 -> 0x69 -> adc]
+	REGS:
+		PC: 6381 (18ed)
+		SP: 212 (d4)
+		A:  223 (df)
+		X:  92 (5c)
+		Y:  121 (79)
+		P:  40 (28)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 18ee / (6382) => bb / (187)
+	BCD START -> df + bb
+	BCD CONVERT -> 45 + 21
+	BCD SUM -> 66
+[OP END @ 6382]
+Done..

@@ -1,0 +1,19 @@
+[TEST 299 - 69.json]
+	MEM WRITE: 53ee / (21486) => 69 / (105)
+	MEM WRITE: 53ef / (21487) => a3 / (163)
+	MEM WRITE: 53f0 / (21488) => 99 / (153)
+	MEM READ: 53ee / (21486) => 69 / (105)
+[OP START 21486 -> 0x69 -> adc]
+	REGS:
+		PC: 21486 (53ee)
+		SP: 72 (48)
+		A:  90 (5a)
+		X:  74 (4a)
+		Y:  59 (3b)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 53ef / (21487) => a3 / (163)
+	BINADC: 5a + a3 = fe[OP END @ 21487]
+Done..

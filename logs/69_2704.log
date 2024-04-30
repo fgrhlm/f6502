@@ -1,0 +1,22 @@
+[TEST 204 - 69.json]
+	MEM WRITE: a40f / (41999) => 69 / (105)
+	MEM WRITE: a410 / (42000) => 76 / (118)
+	MEM WRITE: a411 / (42001) => c1 / (193)
+	MEM READ: a40f / (41999) => 69 / (105)
+[OP START 41999 -> 0x69 -> adc]
+	REGS:
+		PC: 41999 (a40f)
+		SP: 78 (4e)
+		A:  71 (47)
+		X:  123 (7b)
+		Y:  23 (17)
+		P:  233 (e9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a410 / (42000) => 76 / (118)
+	BCD START -> 47 + 76
+	BCD CONVERT -> 47 + 76
+	BCD SUM -> 24
+[OP END @ 42000]
+Done..

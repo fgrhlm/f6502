@@ -1,0 +1,19 @@
+[TEST 268 - 69.json]
+	MEM WRITE: 12c6 / (4806) => 69 / (105)
+	MEM WRITE: 12c7 / (4807) => a4 / (164)
+	MEM WRITE: 12c8 / (4808) => 33 / (51)
+	MEM READ: 12c6 / (4806) => 69 / (105)
+[OP START 4806 -> 0x69 -> adc]
+	REGS:
+		PC: 4806 (12c6)
+		SP: 151 (97)
+		A:  156 (9c)
+		X:  218 (da)
+		Y:  137 (89)
+		P:  98 (62)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 12c7 / (4807) => a4 / (164)
+	BINADC: 9c + a4 = 40[OP END @ 4807]
+Done..

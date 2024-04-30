@@ -1,0 +1,22 @@
+[TEST 211 - 69.json]
+	MEM WRITE: 4af3 / (19187) => 69 / (105)
+	MEM WRITE: 4af4 / (19188) => 44 / (68)
+	MEM WRITE: 4af5 / (19189) => b9 / (185)
+	MEM READ: 4af3 / (19187) => 69 / (105)
+[OP START 19187 -> 0x69 -> adc]
+	REGS:
+		PC: 19187 (4af3)
+		SP: 95 (5f)
+		A:  56 (38)
+		X:  208 (d0)
+		Y:  28 (1c)
+		P:  40 (28)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4af4 / (19188) => 44 / (68)
+	BCD START -> 38 + 44
+	BCD CONVERT -> 38 + 44
+	BCD SUM -> 82
+[OP END @ 19188]
+Done..

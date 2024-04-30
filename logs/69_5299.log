@@ -1,0 +1,22 @@
+[TEST 299 - 69.json]
+	MEM WRITE: a2b2 / (41650) => 69 / (105)
+	MEM WRITE: a2b3 / (41651) => 7 / (7)
+	MEM WRITE: a2b4 / (41652) => 62 / (98)
+	MEM READ: a2b2 / (41650) => 69 / (105)
+[OP START 41650 -> 0x69 -> adc]
+	REGS:
+		PC: 41650 (a2b2)
+		SP: 126 (7e)
+		A:  235 (eb)
+		X:  56 (38)
+		Y:  223 (df)
+		P:  174 (ae)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a2b3 / (41651) => 7 / (7)
+	BCD START -> eb + 7
+	BCD CONVERT -> 51 + 7
+	BCD SUM -> 58
+[OP END @ 41651]
+Done..

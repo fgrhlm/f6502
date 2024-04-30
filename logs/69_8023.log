@@ -1,0 +1,22 @@
+[TEST 523 - 69.json]
+	MEM WRITE: 8f5c / (36700) => 69 / (105)
+	MEM WRITE: 8f5d / (36701) => 7e / (126)
+	MEM WRITE: 8f5e / (36702) => 57 / (87)
+	MEM READ: 8f5c / (36700) => 69 / (105)
+[OP START 36700 -> 0x69 -> adc]
+	REGS:
+		PC: 36700 (8f5c)
+		SP: 60 (3c)
+		A:  15 (f)
+		X:  230 (e6)
+		Y:  10 (a)
+		P:  44 (2c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8f5d / (36701) => 7e / (126)
+	BCD START -> f + 7e
+	BCD CONVERT -> 15 + 84
+	BCD SUM -> 99
+[OP END @ 36701]
+Done..

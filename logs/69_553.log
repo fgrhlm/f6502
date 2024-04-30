@@ -1,0 +1,22 @@
+[TEST 553 - 69.json]
+	MEM WRITE: eb41 / (60225) => 69 / (105)
+	MEM WRITE: eb42 / (60226) => 54 / (84)
+	MEM WRITE: eb43 / (60227) => 37 / (55)
+	MEM READ: eb41 / (60225) => 69 / (105)
+[OP START 60225 -> 0x69 -> adc]
+	REGS:
+		PC: 60225 (eb41)
+		SP: 73 (49)
+		A:  134 (86)
+		X:  110 (6e)
+		Y:  108 (6c)
+		P:  111 (6f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eb42 / (60226) => 54 / (84)
+	BCD START -> 86 + 54
+	BCD CONVERT -> 86 + 54
+	BCD SUM -> 41
+[OP END @ 60226]
+Done..

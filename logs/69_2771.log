@@ -1,0 +1,22 @@
+[TEST 271 - 69.json]
+	MEM WRITE: 2532 / (9522) => 69 / (105)
+	MEM WRITE: 2533 / (9523) => ae / (174)
+	MEM WRITE: 2534 / (9524) => 49 / (73)
+	MEM READ: 2532 / (9522) => 69 / (105)
+[OP START 9522 -> 0x69 -> adc]
+	REGS:
+		PC: 9522 (2532)
+		SP: 210 (d2)
+		A:  131 (83)
+		X:  175 (af)
+		Y:  138 (8a)
+		P:  170 (aa)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2533 / (9523) => ae / (174)
+	BCD START -> 83 + ae
+	BCD CONVERT -> 83 + 14
+	BCD SUM -> 97
+[OP END @ 9523]
+Done..

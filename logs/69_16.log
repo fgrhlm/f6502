@@ -1,0 +1,19 @@
+[TEST 16 - 69.json]
+	MEM WRITE: 4db / (1243) => 69 / (105)
+	MEM WRITE: 4dc / (1244) => d1 / (209)
+	MEM WRITE: 4dd / (1245) => 28 / (40)
+	MEM READ: 4db / (1243) => 69 / (105)
+[OP START 1243 -> 0x69 -> adc]
+	REGS:
+		PC: 1243 (4db)
+		SP: 41 (29)
+		A:  6 (6)
+		X:  8 (8)
+		Y:  66 (42)
+		P:  166 (a6)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4dc / (1244) => d1 / (209)
+	BINADC: 6 + d1 = d7[OP END @ 1244]
+Done..

@@ -1,0 +1,19 @@
+[TEST 39 - 69.json]
+	MEM WRITE: 1cdd / (7389) => 69 / (105)
+	MEM WRITE: 1cde / (7390) => 26 / (38)
+	MEM WRITE: 1cdf / (7391) => 5f / (95)
+	MEM READ: 1cdd / (7389) => 69 / (105)
+[OP START 7389 -> 0x69 -> adc]
+	REGS:
+		PC: 7389 (1cdd)
+		SP: 201 (c9)
+		A:  219 (db)
+		X:  89 (59)
+		Y:  191 (bf)
+		P:  102 (66)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1cde / (7390) => 26 / (38)
+	BINADC: db + 26 = 1[OP END @ 7390]
+Done..

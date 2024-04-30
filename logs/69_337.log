@@ -1,0 +1,19 @@
+[TEST 337 - 69.json]
+	MEM WRITE: fe81 / (65153) => 69 / (105)
+	MEM WRITE: fe82 / (65154) => 7c / (124)
+	MEM WRITE: fe83 / (65155) => 48 / (72)
+	MEM READ: fe81 / (65153) => 69 / (105)
+[OP START 65153 -> 0x69 -> adc]
+	REGS:
+		PC: 65153 (fe81)
+		SP: 200 (c8)
+		A:  43 (2b)
+		X:  207 (cf)
+		Y:  113 (71)
+		P:  97 (61)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fe82 / (65154) => 7c / (124)
+	BINADC: 2b + 7c = a8[OP END @ 65154]
+Done..

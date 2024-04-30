@@ -1,0 +1,19 @@
+[TEST 115 - 69.json]
+	MEM WRITE: be62 / (48738) => 69 / (105)
+	MEM WRITE: be63 / (48739) => 57 / (87)
+	MEM WRITE: be64 / (48740) => 92 / (146)
+	MEM READ: be62 / (48738) => 69 / (105)
+[OP START 48738 -> 0x69 -> adc]
+	REGS:
+		PC: 48738 (be62)
+		SP: 193 (c1)
+		A:  230 (e6)
+		X:  160 (a0)
+		Y:  118 (76)
+		P:  100 (64)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: be63 / (48739) => 57 / (87)
+	BINADC: e6 + 57 = 3d[OP END @ 48739]
+Done..

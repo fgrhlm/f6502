@@ -1,0 +1,22 @@
+[TEST 212 - 69.json]
+	MEM WRITE: c363 / (50019) => 69 / (105)
+	MEM WRITE: c364 / (50020) => 59 / (89)
+	MEM WRITE: c365 / (50021) => 87 / (135)
+	MEM READ: c363 / (50019) => 69 / (105)
+[OP START 50019 -> 0x69 -> adc]
+	REGS:
+		PC: 50019 (c363)
+		SP: 217 (d9)
+		A:  243 (f3)
+		X:  14 (e)
+		Y:  238 (ee)
+		P:  45 (2d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c364 / (50020) => 59 / (89)
+	BCD START -> f3 + 59
+	BCD CONVERT -> 53 + 59
+	BCD SUM -> 13
+[OP END @ 50020]
+Done..

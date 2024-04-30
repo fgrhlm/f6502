@@ -1,0 +1,22 @@
+[TEST 13 - 69.json]
+	MEM WRITE: 760a / (30218) => 69 / (105)
+	MEM WRITE: 760b / (30219) => bb / (187)
+	MEM WRITE: 760c / (30220) => 7 / (7)
+	MEM READ: 760a / (30218) => 69 / (105)
+[OP START 30218 -> 0x69 -> adc]
+	REGS:
+		PC: 30218 (760a)
+		SP: 52 (34)
+		A:  3 (3)
+		X:  118 (76)
+		Y:  100 (64)
+		P:  110 (6e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 760b / (30219) => bb / (187)
+	BCD START -> 3 + bb
+	BCD CONVERT -> 3 + 21
+	BCD SUM -> 24
+[OP END @ 30219]
+Done..

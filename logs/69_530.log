@@ -1,0 +1,19 @@
+[TEST 530 - 69.json]
+	MEM WRITE: a18c / (41356) => 69 / (105)
+	MEM WRITE: a18d / (41357) => c / (12)
+	MEM WRITE: a18e / (41358) => 84 / (132)
+	MEM READ: a18c / (41356) => 69 / (105)
+[OP START 41356 -> 0x69 -> adc]
+	REGS:
+		PC: 41356 (a18c)
+		SP: 211 (d3)
+		A:  63 (3f)
+		X:  200 (c8)
+		Y:  213 (d5)
+		P:  36 (24)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a18d / (41357) => c / (12)
+	BINADC: 3f + c = 4b[OP END @ 41357]
+Done..

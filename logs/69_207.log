@@ -1,0 +1,22 @@
+[TEST 207 - 69.json]
+	MEM WRITE: d3c6 / (54214) => 69 / (105)
+	MEM WRITE: d3c7 / (54215) => 11 / (17)
+	MEM WRITE: d3c8 / (54216) => c3 / (195)
+	MEM READ: d3c6 / (54214) => 69 / (105)
+[OP START 54214 -> 0x69 -> adc]
+	REGS:
+		PC: 54214 (d3c6)
+		SP: 211 (d3)
+		A:  118 (76)
+		X:  45 (2d)
+		Y:  141 (8d)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d3c7 / (54215) => 11 / (17)
+	BCD START -> 76 + 11
+	BCD CONVERT -> 76 + 11
+	BCD SUM -> 88
+[OP END @ 54215]
+Done..

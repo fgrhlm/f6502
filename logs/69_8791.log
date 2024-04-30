@@ -1,0 +1,19 @@
+[TEST 41 - 69.json]
+	MEM WRITE: 76dd / (30429) => 69 / (105)
+	MEM WRITE: 76de / (30430) => a5 / (165)
+	MEM WRITE: 76df / (30431) => ad / (173)
+	MEM READ: 76dd / (30429) => 69 / (105)
+[OP START 30429 -> 0x69 -> adc]
+	REGS:
+		PC: 30429 (76dd)
+		SP: 10 (a)
+		A:  70 (46)
+		X:  7 (7)
+		Y:  47 (2f)
+		P:  166 (a6)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 76de / (30430) => a5 / (165)
+	BINADC: 46 + a5 = eb[OP END @ 30430]
+Done..

@@ -1,0 +1,22 @@
+[TEST 445 - 69.json]
+	MEM WRITE: 19aa / (6570) => 69 / (105)
+	MEM WRITE: 19ab / (6571) => 52 / (82)
+	MEM WRITE: 19ac / (6572) => ef / (239)
+	MEM READ: 19aa / (6570) => 69 / (105)
+[OP START 6570 -> 0x69 -> adc]
+	REGS:
+		PC: 6570 (19aa)
+		SP: 57 (39)
+		A:  211 (d3)
+		X:  42 (2a)
+		Y:  58 (3a)
+		P:  168 (a8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 19ab / (6571) => 52 / (82)
+	BCD START -> d3 + 52
+	BCD CONVERT -> 33 + 52
+	BCD SUM -> 85
+[OP END @ 6571]
+Done..

@@ -1,0 +1,19 @@
+[TEST 271 - 69.json]
+	MEM WRITE: 6f3a / (28474) => 69 / (105)
+	MEM WRITE: 6f3b / (28475) => e8 / (232)
+	MEM WRITE: 6f3c / (28476) => 55 / (85)
+	MEM READ: 6f3a / (28474) => 69 / (105)
+[OP START 28474 -> 0x69 -> adc]
+	REGS:
+		PC: 28474 (6f3a)
+		SP: 200 (c8)
+		A:  166 (a6)
+		X:  249 (f9)
+		Y:  140 (8c)
+		P:  167 (a7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6f3b / (28475) => e8 / (232)
+	BINADC: a6 + e8 = 8f[OP END @ 28475]
+Done..

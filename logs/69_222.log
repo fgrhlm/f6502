@@ -1,0 +1,19 @@
+[TEST 222 - 69.json]
+	MEM WRITE: 2b91 / (11153) => 69 / (105)
+	MEM WRITE: 2b92 / (11154) => 59 / (89)
+	MEM WRITE: 2b93 / (11155) => b5 / (181)
+	MEM READ: 2b91 / (11153) => 69 / (105)
+[OP START 11153 -> 0x69 -> adc]
+	REGS:
+		PC: 11153 (2b91)
+		SP: 83 (53)
+		A:  46 (2e)
+		X:  107 (6b)
+		Y:  140 (8c)
+		P:  100 (64)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2b92 / (11154) => 59 / (89)
+	BINADC: 2e + 59 = 87[OP END @ 11154]
+Done..

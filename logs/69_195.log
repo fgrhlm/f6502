@@ -1,0 +1,22 @@
+[TEST 195 - 69.json]
+	MEM WRITE: 5a8 / (1448) => 69 / (105)
+	MEM WRITE: 5a9 / (1449) => bc / (188)
+	MEM WRITE: 5aa / (1450) => 55 / (85)
+	MEM READ: 5a8 / (1448) => 69 / (105)
+[OP START 1448 -> 0x69 -> adc]
+	REGS:
+		PC: 1448 (5a8)
+		SP: 12 (c)
+		A:  8 (8)
+		X:  155 (9b)
+		Y:  109 (6d)
+		P:  105 (69)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5a9 / (1449) => bc / (188)
+	BCD START -> 8 + bc
+	BCD CONVERT -> 8 + 22
+	BCD SUM -> 31
+[OP END @ 1449]
+Done..

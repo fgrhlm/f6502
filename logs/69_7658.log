@@ -1,0 +1,22 @@
+[TEST 158 - 69.json]
+	MEM WRITE: 7ffb / (32763) => 69 / (105)
+	MEM WRITE: 7ffc / (32764) => 13 / (19)
+	MEM WRITE: 7ffd / (32765) => f1 / (241)
+	MEM READ: 7ffb / (32763) => 69 / (105)
+[OP START 32763 -> 0x69 -> adc]
+	REGS:
+		PC: 32763 (7ffb)
+		SP: 146 (92)
+		A:  208 (d0)
+		X:  21 (15)
+		Y:  178 (b2)
+		P:  45 (2d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7ffc / (32764) => 13 / (19)
+	BCD START -> d0 + 13
+	BCD CONVERT -> 30 + 13
+	BCD SUM -> 44
+[OP END @ 32764]
+Done..

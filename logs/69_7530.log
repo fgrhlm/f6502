@@ -1,0 +1,22 @@
+[TEST 30 - 69.json]
+	MEM WRITE: fd2c / (64812) => 69 / (105)
+	MEM WRITE: fd2d / (64813) => f0 / (240)
+	MEM WRITE: fd2e / (64814) => d0 / (208)
+	MEM READ: fd2c / (64812) => 69 / (105)
+[OP START 64812 -> 0x69 -> adc]
+	REGS:
+		PC: 64812 (fd2c)
+		SP: 236 (ec)
+		A:  96 (60)
+		X:  19 (13)
+		Y:  153 (99)
+		P:  233 (e9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fd2d / (64813) => f0 / (240)
+	BCD START -> 60 + f0
+	BCD CONVERT -> 60 + 50
+	BCD SUM -> 11
+[OP END @ 64813]
+Done..

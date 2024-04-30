@@ -1,0 +1,22 @@
+[TEST 498 - 69.json]
+	MEM WRITE: eb1 / (3761) => 69 / (105)
+	MEM WRITE: eb2 / (3762) => a2 / (162)
+	MEM WRITE: eb3 / (3763) => cd / (205)
+	MEM READ: eb1 / (3761) => 69 / (105)
+[OP START 3761 -> 0x69 -> adc]
+	REGS:
+		PC: 3761 (eb1)
+		SP: 96 (60)
+		A:  158 (9e)
+		X:  214 (d6)
+		Y:  184 (b8)
+		P:  168 (a8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eb2 / (3762) => a2 / (162)
+	BCD START -> 9e + a2
+	BCD CONVERT -> a4 + 2
+	BCD SUM -> 6
+[OP END @ 3762]
+Done..

@@ -1,0 +1,22 @@
+[TEST 544 - 69.json]
+	MEM WRITE: 899a / (35226) => 69 / (105)
+	MEM WRITE: 899b / (35227) => 49 / (73)
+	MEM WRITE: 899c / (35228) => b4 / (180)
+	MEM READ: 899a / (35226) => 69 / (105)
+[OP START 35226 -> 0x69 -> adc]
+	REGS:
+		PC: 35226 (899a)
+		SP: 197 (c5)
+		A:  161 (a1)
+		X:  136 (88)
+		Y:  169 (a9)
+		P:  170 (aa)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 899b / (35227) => 49 / (73)
+	BCD START -> a1 + 49
+	BCD CONVERT -> 1 + 49
+	BCD SUM -> 50
+[OP END @ 35227]
+Done..

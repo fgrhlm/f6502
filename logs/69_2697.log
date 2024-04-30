@@ -1,0 +1,19 @@
+[TEST 197 - 69.json]
+	MEM WRITE: 677a / (26490) => 69 / (105)
+	MEM WRITE: 677b / (26491) => 9a / (154)
+	MEM WRITE: 677c / (26492) => 4c / (76)
+	MEM READ: 677a / (26490) => 69 / (105)
+[OP START 26490 -> 0x69 -> adc]
+	REGS:
+		PC: 26490 (677a)
+		SP: 252 (fc)
+		A:  156 (9c)
+		X:  226 (e2)
+		Y:  234 (ea)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 677b / (26491) => 9a / (154)
+	BINADC: 9c + 9a = 37[OP END @ 26491]
+Done..

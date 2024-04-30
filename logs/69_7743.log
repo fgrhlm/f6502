@@ -1,0 +1,19 @@
+[TEST 243 - 69.json]
+	MEM WRITE: 6280 / (25216) => 69 / (105)
+	MEM WRITE: 6281 / (25217) => e5 / (229)
+	MEM WRITE: 6282 / (25218) => fb / (251)
+	MEM READ: 6280 / (25216) => 69 / (105)
+[OP START 25216 -> 0x69 -> adc]
+	REGS:
+		PC: 25216 (6280)
+		SP: 225 (e1)
+		A:  250 (fa)
+		X:  61 (3d)
+		Y:  123 (7b)
+		P:  34 (22)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6281 / (25217) => e5 / (229)
+	BINADC: fa + e5 = df[OP END @ 25217]
+Done..

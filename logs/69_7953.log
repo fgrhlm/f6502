@@ -1,0 +1,19 @@
+[TEST 453 - 69.json]
+	MEM WRITE: 20b / (523) => 69 / (105)
+	MEM WRITE: 20c / (524) => 43 / (67)
+	MEM WRITE: 20d / (525) => a0 / (160)
+	MEM READ: 20b / (523) => 69 / (105)
+[OP START 523 -> 0x69 -> adc]
+	REGS:
+		PC: 523 (20b)
+		SP: 57 (39)
+		A:  116 (74)
+		X:  135 (87)
+		Y:  148 (94)
+		P:  165 (a5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 20c / (524) => 43 / (67)
+	BINADC: 74 + 43 = b8[OP END @ 524]
+Done..

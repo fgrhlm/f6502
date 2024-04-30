@@ -1,0 +1,19 @@
+[TEST 495 - 69.json]
+	MEM WRITE: 78e4 / (30948) => 69 / (105)
+	MEM WRITE: 78e5 / (30949) => 7f / (127)
+	MEM WRITE: 78e6 / (30950) => e5 / (229)
+	MEM READ: 78e4 / (30948) => 69 / (105)
+[OP START 30948 -> 0x69 -> adc]
+	REGS:
+		PC: 30948 (78e4)
+		SP: 16 (10)
+		A:  137 (89)
+		X:  48 (30)
+		Y:  69 (45)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 78e5 / (30949) => 7f / (127)
+	BINADC: 89 + 7f = 9[OP END @ 30949]
+Done..

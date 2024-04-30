@@ -1,0 +1,19 @@
+[TEST 42 - 69.json]
+	MEM WRITE: 27de / (10206) => 69 / (105)
+	MEM WRITE: 27df / (10207) => de / (222)
+	MEM WRITE: 27e0 / (10208) => 34 / (52)
+	MEM READ: 27de / (10206) => 69 / (105)
+[OP START 10206 -> 0x69 -> adc]
+	REGS:
+		PC: 10206 (27de)
+		SP: 241 (f1)
+		A:  27 (1b)
+		X:  59 (3b)
+		Y:  38 (26)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 27df / (10207) => de / (222)
+	BINADC: 1b + de = f9[OP END @ 10207]
+Done..

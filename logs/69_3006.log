@@ -1,0 +1,22 @@
+[TEST 506 - 69.json]
+	MEM WRITE: 4113 / (16659) => 69 / (105)
+	MEM WRITE: 4114 / (16660) => 88 / (136)
+	MEM WRITE: 4115 / (16661) => a6 / (166)
+	MEM READ: 4113 / (16659) => 69 / (105)
+[OP START 16659 -> 0x69 -> adc]
+	REGS:
+		PC: 16659 (4113)
+		SP: 13 (d)
+		A:  88 (58)
+		X:  101 (65)
+		Y:  52 (34)
+		P:  168 (a8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4114 / (16660) => 88 / (136)
+	BCD START -> 58 + 88
+	BCD CONVERT -> 58 + 88
+	BCD SUM -> 46
+[OP END @ 16660]
+Done..

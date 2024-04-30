@@ -1,0 +1,19 @@
+[TEST 113 - 69.json]
+	MEM WRITE: a946 / (43334) => 69 / (105)
+	MEM WRITE: a947 / (43335) => 47 / (71)
+	MEM WRITE: a948 / (43336) => a / (10)
+	MEM READ: a946 / (43334) => 69 / (105)
+[OP START 43334 -> 0x69 -> adc]
+	REGS:
+		PC: 43334 (a946)
+		SP: 198 (c6)
+		A:  78 (4e)
+		X:  204 (cc)
+		Y:  232 (e8)
+		P:  98 (62)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a947 / (43335) => 47 / (71)
+	BINADC: 4e + 47 = 95[OP END @ 43335]
+Done..

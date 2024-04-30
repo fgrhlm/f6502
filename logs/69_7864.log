@@ -1,0 +1,22 @@
+[TEST 364 - 69.json]
+	MEM WRITE: e2c / (3628) => 69 / (105)
+	MEM WRITE: e2d / (3629) => ce / (206)
+	MEM WRITE: e2e / (3630) => 74 / (116)
+	MEM READ: e2c / (3628) => 69 / (105)
+[OP START 3628 -> 0x69 -> adc]
+	REGS:
+		PC: 3628 (e2c)
+		SP: 132 (84)
+		A:  41 (29)
+		X:  178 (b2)
+		Y:  231 (e7)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e2d / (3629) => ce / (206)
+	BCD START -> 29 + ce
+	BCD CONVERT -> 29 + 34
+	BCD SUM -> 64
+[OP END @ 3629]
+Done..

@@ -1,0 +1,22 @@
+[TEST 624 - 69.json]
+	MEM WRITE: 1242 / (4674) => 69 / (105)
+	MEM WRITE: 1243 / (4675) => b9 / (185)
+	MEM WRITE: 1244 / (4676) => 20 / (32)
+	MEM READ: 1242 / (4674) => 69 / (105)
+[OP START 4674 -> 0x69 -> adc]
+	REGS:
+		PC: 4674 (1242)
+		SP: 150 (96)
+		A:  59 (3b)
+		X:  46 (2e)
+		Y:  182 (b6)
+		P:  105 (69)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1243 / (4675) => b9 / (185)
+	BCD START -> 3b + b9
+	BCD CONVERT -> 41 + 19
+	BCD SUM -> 61
+[OP END @ 4675]
+Done..

@@ -1,0 +1,22 @@
+[TEST 398 - 69.json]
+	MEM WRITE: f38 / (3896) => 69 / (105)
+	MEM WRITE: f39 / (3897) => a7 / (167)
+	MEM WRITE: f3a / (3898) => 91 / (145)
+	MEM READ: f38 / (3896) => 69 / (105)
+[OP START 3896 -> 0x69 -> adc]
+	REGS:
+		PC: 3896 (f38)
+		SP: 176 (b0)
+		A:  153 (99)
+		X:  193 (c1)
+		Y:  221 (dd)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f39 / (3897) => a7 / (167)
+	BCD START -> 99 + a7
+	BCD CONVERT -> 99 + 7
+	BCD SUM -> 6
+[OP END @ 3897]
+Done..

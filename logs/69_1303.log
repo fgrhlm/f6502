@@ -1,0 +1,22 @@
+[TEST 53 - 69.json]
+	MEM WRITE: 7cc7 / (31943) => 69 / (105)
+	MEM WRITE: 7cc8 / (31944) => f0 / (240)
+	MEM WRITE: 7cc9 / (31945) => 25 / (37)
+	MEM READ: 7cc7 / (31943) => 69 / (105)
+[OP START 31943 -> 0x69 -> adc]
+	REGS:
+		PC: 31943 (7cc7)
+		SP: 82 (52)
+		A:  219 (db)
+		X:  66 (42)
+		Y:  0 (0)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7cc8 / (31944) => f0 / (240)
+	BCD START -> db + f0
+	BCD CONVERT -> 41 + 50
+	BCD SUM -> 92
+[OP END @ 31944]
+Done..

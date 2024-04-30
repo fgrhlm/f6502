@@ -1,0 +1,22 @@
+[TEST 375 - 69.json]
+	MEM WRITE: 4e9b / (20123) => 69 / (105)
+	MEM WRITE: 4e9c / (20124) => 6d / (109)
+	MEM WRITE: 4e9d / (20125) => fd / (253)
+	MEM READ: 4e9b / (20123) => 69 / (105)
+[OP START 20123 -> 0x69 -> adc]
+	REGS:
+		PC: 20123 (4e9b)
+		SP: 67 (43)
+		A:  91 (5b)
+		X:  47 (2f)
+		Y:  250 (fa)
+		P:  172 (ac)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4e9c / (20124) => 6d / (109)
+	BCD START -> 5b + 6d
+	BCD CONVERT -> 61 + 73
+	BCD SUM -> 34
+[OP END @ 20124]
+Done..

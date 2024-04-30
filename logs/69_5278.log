@@ -1,0 +1,22 @@
+[TEST 278 - 69.json]
+	MEM WRITE: 5366 / (21350) => 69 / (105)
+	MEM WRITE: 5367 / (21351) => e5 / (229)
+	MEM WRITE: 5368 / (21352) => 2e / (46)
+	MEM READ: 5366 / (21350) => 69 / (105)
+[OP START 21350 -> 0x69 -> adc]
+	REGS:
+		PC: 21350 (5366)
+		SP: 56 (38)
+		A:  101 (65)
+		X:  147 (93)
+		Y:  121 (79)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5367 / (21351) => e5 / (229)
+	BCD START -> 65 + e5
+	BCD CONVERT -> 65 + 45
+	BCD SUM -> 10
+[OP END @ 21351]
+Done..

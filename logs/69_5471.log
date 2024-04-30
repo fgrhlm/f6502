@@ -1,0 +1,22 @@
+[TEST 471 - 69.json]
+	MEM WRITE: 5d21 / (23841) => 69 / (105)
+	MEM WRITE: 5d22 / (23842) => da / (218)
+	MEM WRITE: 5d23 / (23843) => fd / (253)
+	MEM READ: 5d21 / (23841) => 69 / (105)
+[OP START 23841 -> 0x69 -> adc]
+	REGS:
+		PC: 23841 (5d21)
+		SP: 122 (7a)
+		A:  108 (6c)
+		X:  105 (69)
+		Y:  243 (f3)
+		P:  106 (6a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5d22 / (23842) => da / (218)
+	BCD START -> 6c + da
+	BCD CONVERT -> 72 + 40
+	BCD SUM -> 12
+[OP END @ 23842]
+Done..

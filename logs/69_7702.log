@@ -1,0 +1,22 @@
+[TEST 202 - 69.json]
+	MEM WRITE: 1333 / (4915) => 69 / (105)
+	MEM WRITE: 1334 / (4916) => ff / (255)
+	MEM WRITE: 1335 / (4917) => 45 / (69)
+	MEM READ: 1333 / (4915) => 69 / (105)
+[OP START 4915 -> 0x69 -> adc]
+	REGS:
+		PC: 4915 (1333)
+		SP: 178 (b2)
+		A:  7 (7)
+		X:  63 (3f)
+		Y:  146 (92)
+		P:  44 (2c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1334 / (4916) => ff / (255)
+	BCD START -> 7 + ff
+	BCD CONVERT -> 7 + 65
+	BCD SUM -> 72
+[OP END @ 4916]
+Done..

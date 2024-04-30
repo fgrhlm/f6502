@@ -1,0 +1,19 @@
+[TEST 92 - 69.json]
+	MEM WRITE: 95e5 / (38373) => 69 / (105)
+	MEM WRITE: 95e6 / (38374) => 27 / (39)
+	MEM WRITE: 95e7 / (38375) => 45 / (69)
+	MEM READ: 95e5 / (38373) => 69 / (105)
+[OP START 38373 -> 0x69 -> adc]
+	REGS:
+		PC: 38373 (95e5)
+		SP: 196 (c4)
+		A:  215 (d7)
+		X:  99 (63)
+		Y:  128 (80)
+		P:  103 (67)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 95e6 / (38374) => 27 / (39)
+	BINADC: d7 + 27 = ff[OP END @ 38374]
+Done..

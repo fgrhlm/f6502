@@ -1,0 +1,19 @@
+[TEST 114 - 69.json]
+	MEM WRITE: 19bb / (6587) => 69 / (105)
+	MEM WRITE: 19bc / (6588) => b9 / (185)
+	MEM WRITE: 19bd / (6589) => fa / (250)
+	MEM READ: 19bb / (6587) => 69 / (105)
+[OP START 6587 -> 0x69 -> adc]
+	REGS:
+		PC: 6587 (19bb)
+		SP: 159 (9f)
+		A:  199 (c7)
+		X:  202 (ca)
+		Y:  209 (d1)
+		P:  34 (22)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 19bc / (6588) => b9 / (185)
+	BINADC: c7 + b9 = 80[OP END @ 6588]
+Done..

@@ -1,0 +1,22 @@
+[TEST 444 - 69.json]
+	MEM WRITE: 6a16 / (27158) => 69 / (105)
+	MEM WRITE: 6a17 / (27159) => 8d / (141)
+	MEM WRITE: 6a18 / (27160) => 7f / (127)
+	MEM READ: 6a16 / (27158) => 69 / (105)
+[OP START 27158 -> 0x69 -> adc]
+	REGS:
+		PC: 27158 (6a16)
+		SP: 184 (b8)
+		A:  220 (dc)
+		X:  189 (bd)
+		Y:  245 (f5)
+		P:  172 (ac)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6a17 / (27159) => 8d / (141)
+	BCD START -> dc + 8d
+	BCD CONVERT -> 42 + 93
+	BCD SUM -> 35
+[OP END @ 27159]
+Done..

@@ -1,0 +1,22 @@
+[TEST 619 - 69.json]
+	MEM WRITE: c5ab / (50603) => 69 / (105)
+	MEM WRITE: c5ac / (50604) => aa / (170)
+	MEM WRITE: c5ad / (50605) => 9e / (158)
+	MEM READ: c5ab / (50603) => 69 / (105)
+[OP START 50603 -> 0x69 -> adc]
+	REGS:
+		PC: 50603 (c5ab)
+		SP: 4 (4)
+		A:  15 (f)
+		X:  13 (d)
+		Y:  235 (eb)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c5ac / (50604) => aa / (170)
+	BCD START -> f + aa
+	BCD CONVERT -> 15 + 10
+	BCD SUM -> 26
+[OP END @ 50604]
+Done..

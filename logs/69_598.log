@@ -1,0 +1,19 @@
+[TEST 598 - 69.json]
+	MEM WRITE: 1622 / (5666) => 69 / (105)
+	MEM WRITE: 1623 / (5667) => ad / (173)
+	MEM WRITE: 1624 / (5668) => 4 / (4)
+	MEM READ: 1622 / (5666) => 69 / (105)
+[OP START 5666 -> 0x69 -> adc]
+	REGS:
+		PC: 5666 (1622)
+		SP: 245 (f5)
+		A:  14 (e)
+		X:  29 (1d)
+		Y:  35 (23)
+		P:  38 (26)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1623 / (5667) => ad / (173)
+	BINADC: e + ad = bb[OP END @ 5667]
+Done..

@@ -1,0 +1,19 @@
+[TEST 545 - 69.json]
+	MEM WRITE: 37a / (890) => 69 / (105)
+	MEM WRITE: 37b / (891) => 61 / (97)
+	MEM WRITE: 37c / (892) => 19 / (25)
+	MEM READ: 37a / (890) => 69 / (105)
+[OP START 890 -> 0x69 -> adc]
+	REGS:
+		PC: 890 (37a)
+		SP: 85 (55)
+		A:  201 (c9)
+		X:  222 (de)
+		Y:  134 (86)
+		P:  231 (e7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 37b / (891) => 61 / (97)
+	BINADC: c9 + 61 = 2b[OP END @ 891]
+Done..

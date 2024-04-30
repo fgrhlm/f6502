@@ -1,0 +1,19 @@
+[TEST 355 - 69.json]
+	MEM WRITE: c237 / (49719) => 69 / (105)
+	MEM WRITE: c238 / (49720) => 1d / (29)
+	MEM WRITE: c239 / (49721) => 9b / (155)
+	MEM READ: c237 / (49719) => 69 / (105)
+[OP START 49719 -> 0x69 -> adc]
+	REGS:
+		PC: 49719 (c237)
+		SP: 186 (ba)
+		A:  10 (a)
+		X:  114 (72)
+		Y:  16 (10)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c238 / (49720) => 1d / (29)
+	BINADC: a + 1d = 28[OP END @ 49720]
+Done..

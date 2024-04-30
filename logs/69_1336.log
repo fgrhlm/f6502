@@ -1,0 +1,19 @@
+[TEST 86 - 69.json]
+	MEM WRITE: 33e8 / (13288) => 69 / (105)
+	MEM WRITE: 33e9 / (13289) => 2f / (47)
+	MEM WRITE: 33ea / (13290) => f5 / (245)
+	MEM READ: 33e8 / (13288) => 69 / (105)
+[OP START 13288 -> 0x69 -> adc]
+	REGS:
+		PC: 13288 (33e8)
+		SP: 97 (61)
+		A:  17 (11)
+		X:  197 (c5)
+		Y:  205 (cd)
+		P:  160 (a0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 33e9 / (13289) => 2f / (47)
+	BINADC: 11 + 2f = 40[OP END @ 13289]
+Done..

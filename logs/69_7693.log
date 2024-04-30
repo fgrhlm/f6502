@@ -1,0 +1,22 @@
+[TEST 193 - 69.json]
+	MEM WRITE: 74be / (29886) => 69 / (105)
+	MEM WRITE: 74bf / (29887) => 39 / (57)
+	MEM WRITE: 74c0 / (29888) => 6c / (108)
+	MEM READ: 74be / (29886) => 69 / (105)
+[OP START 29886 -> 0x69 -> adc]
+	REGS:
+		PC: 29886 (74be)
+		SP: 173 (ad)
+		A:  244 (f4)
+		X:  155 (9b)
+		Y:  19 (13)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 74bf / (29887) => 39 / (57)
+	BCD START -> f4 + 39
+	BCD CONVERT -> 54 + 39
+	BCD SUM -> 93
+[OP END @ 29887]
+Done..

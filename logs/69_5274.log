@@ -1,0 +1,22 @@
+[TEST 274 - 69.json]
+	MEM WRITE: dac9 / (56009) => 69 / (105)
+	MEM WRITE: daca / (56010) => 84 / (132)
+	MEM WRITE: dacb / (56011) => 73 / (115)
+	MEM READ: dac9 / (56009) => 69 / (105)
+[OP START 56009 -> 0x69 -> adc]
+	REGS:
+		PC: 56009 (dac9)
+		SP: 173 (ad)
+		A:  140 (8c)
+		X:  92 (5c)
+		Y:  228 (e4)
+		P:  174 (ae)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: daca / (56010) => 84 / (132)
+	BCD START -> 8c + 84
+	BCD CONVERT -> 92 + 84
+	BCD SUM -> 76
+[OP END @ 56010]
+Done..

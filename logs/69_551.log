@@ -1,0 +1,22 @@
+[TEST 551 - 69.json]
+	MEM WRITE: 1cb2 / (7346) => 69 / (105)
+	MEM WRITE: 1cb3 / (7347) => 3f / (63)
+	MEM WRITE: 1cb4 / (7348) => e5 / (229)
+	MEM READ: 1cb2 / (7346) => 69 / (105)
+[OP START 7346 -> 0x69 -> adc]
+	REGS:
+		PC: 7346 (1cb2)
+		SP: 131 (83)
+		A:  128 (80)
+		X:  24 (18)
+		Y:  82 (52)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1cb3 / (7347) => 3f / (63)
+	BCD START -> 80 + 3f
+	BCD CONVERT -> 80 + 45
+	BCD SUM -> 26
+[OP END @ 7347]
+Done..

@@ -1,0 +1,19 @@
+[TEST 554 - 69.json]
+	MEM WRITE: f36a / (62314) => 69 / (105)
+	MEM WRITE: f36b / (62315) => 77 / (119)
+	MEM WRITE: f36c / (62316) => 5e / (94)
+	MEM READ: f36a / (62314) => 69 / (105)
+[OP START 62314 -> 0x69 -> adc]
+	REGS:
+		PC: 62314 (f36a)
+		SP: 64 (40)
+		A:  112 (70)
+		X:  90 (5a)
+		Y:  97 (61)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f36b / (62315) => 77 / (119)
+	BINADC: 70 + 77 = e8[OP END @ 62315]
+Done..

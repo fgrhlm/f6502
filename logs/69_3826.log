@@ -1,0 +1,19 @@
+[TEST 76 - 69.json]
+	MEM WRITE: 6602 / (26114) => 69 / (105)
+	MEM WRITE: 6603 / (26115) => fb / (251)
+	MEM WRITE: 6604 / (26116) => df / (223)
+	MEM READ: 6602 / (26114) => 69 / (105)
+[OP START 26114 -> 0x69 -> adc]
+	REGS:
+		PC: 26114 (6602)
+		SP: 79 (4f)
+		A:  37 (25)
+		X:  62 (3e)
+		Y:  45 (2d)
+		P:  98 (62)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6603 / (26115) => fb / (251)
+	BINADC: 25 + fb = 20[OP END @ 26115]
+Done..

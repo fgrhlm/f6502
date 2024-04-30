@@ -1,0 +1,19 @@
+[TEST 450 - 69.json]
+	MEM WRITE: f65b / (63067) => 69 / (105)
+	MEM WRITE: f65c / (63068) => 17 / (23)
+	MEM WRITE: f65d / (63069) => 59 / (89)
+	MEM READ: f65b / (63067) => 69 / (105)
+[OP START 63067 -> 0x69 -> adc]
+	REGS:
+		PC: 63067 (f65b)
+		SP: 85 (55)
+		A:  182 (b6)
+		X:  52 (34)
+		Y:  81 (51)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f65c / (63068) => 17 / (23)
+	BINADC: b6 + 17 = ce[OP END @ 63068]
+Done..

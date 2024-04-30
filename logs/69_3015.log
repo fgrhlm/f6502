@@ -1,0 +1,19 @@
+[TEST 515 - 69.json]
+	MEM WRITE: 701c / (28700) => 69 / (105)
+	MEM WRITE: 701d / (28701) => db / (219)
+	MEM WRITE: 701e / (28702) => d4 / (212)
+	MEM READ: 701c / (28700) => 69 / (105)
+[OP START 28700 -> 0x69 -> adc]
+	REGS:
+		PC: 28700 (701c)
+		SP: 158 (9e)
+		A:  232 (e8)
+		X:  37 (25)
+		Y:  151 (97)
+		P:  231 (e7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 701d / (28701) => db / (219)
+	BINADC: e8 + db = c4[OP END @ 28701]
+Done..

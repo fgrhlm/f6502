@@ -1,0 +1,22 @@
+[TEST 505 - 69.json]
+	MEM WRITE: 6001 / (24577) => 69 / (105)
+	MEM WRITE: 6002 / (24578) => 92 / (146)
+	MEM WRITE: 6003 / (24579) => 4b / (75)
+	MEM READ: 6001 / (24577) => 69 / (105)
+[OP START 24577 -> 0x69 -> adc]
+	REGS:
+		PC: 24577 (6001)
+		SP: 166 (a6)
+		A:  61 (3d)
+		X:  78 (4e)
+		Y:  224 (e0)
+		P:  45 (2d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6002 / (24578) => 92 / (146)
+	BCD START -> 3d + 92
+	BCD CONVERT -> 43 + 92
+	BCD SUM -> 36
+[OP END @ 24578]
+Done..

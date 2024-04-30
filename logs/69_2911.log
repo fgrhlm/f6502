@@ -1,0 +1,19 @@
+[TEST 411 - 69.json]
+	MEM WRITE: 91b5 / (37301) => 69 / (105)
+	MEM WRITE: 91b6 / (37302) => da / (218)
+	MEM WRITE: 91b7 / (37303) => db / (219)
+	MEM READ: 91b5 / (37301) => 69 / (105)
+[OP START 37301 -> 0x69 -> adc]
+	REGS:
+		PC: 37301 (91b5)
+		SP: 49 (31)
+		A:  173 (ad)
+		X:  169 (a9)
+		Y:  71 (47)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 91b6 / (37302) => da / (218)
+	BINADC: ad + da = 87[OP END @ 37302]
+Done..

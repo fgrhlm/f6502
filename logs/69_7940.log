@@ -1,0 +1,19 @@
+[TEST 440 - 69.json]
+	MEM WRITE: 2035 / (8245) => 69 / (105)
+	MEM WRITE: 2036 / (8246) => b8 / (184)
+	MEM WRITE: 2037 / (8247) => df / (223)
+	MEM READ: 2035 / (8245) => 69 / (105)
+[OP START 8245 -> 0x69 -> adc]
+	REGS:
+		PC: 8245 (2035)
+		SP: 106 (6a)
+		A:  200 (c8)
+		X:  184 (b8)
+		Y:  15 (f)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2036 / (8246) => b8 / (184)
+	BINADC: c8 + b8 = 81[OP END @ 8246]
+Done..

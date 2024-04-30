@@ -1,0 +1,22 @@
+[TEST 465 - 69.json]
+	MEM WRITE: 1780 / (6016) => 69 / (105)
+	MEM WRITE: 1781 / (6017) => b2 / (178)
+	MEM WRITE: 1782 / (6018) => 32 / (50)
+	MEM READ: 1780 / (6016) => 69 / (105)
+[OP START 6016 -> 0x69 -> adc]
+	REGS:
+		PC: 6016 (1780)
+		SP: 198 (c6)
+		A:  207 (cf)
+		X:  217 (d9)
+		Y:  66 (42)
+		P:  47 (2f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1781 / (6017) => b2 / (178)
+	BCD START -> cf + b2
+	BCD CONVERT -> 35 + 12
+	BCD SUM -> 48
+[OP END @ 6017]
+Done..

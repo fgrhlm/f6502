@@ -1,0 +1,22 @@
+[TEST 85 - 69.json]
+	MEM WRITE: 6d1e / (27934) => 69 / (105)
+	MEM WRITE: 6d1f / (27935) => ff / (255)
+	MEM WRITE: 6d20 / (27936) => 33 / (51)
+	MEM READ: 6d1e / (27934) => 69 / (105)
+[OP START 27934 -> 0x69 -> adc]
+	REGS:
+		PC: 27934 (6d1e)
+		SP: 74 (4a)
+		A:  78 (4e)
+		X:  138 (8a)
+		Y:  77 (4d)
+		P:  169 (a9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6d1f / (27935) => ff / (255)
+	BCD START -> 4e + ff
+	BCD CONVERT -> 54 + 65
+	BCD SUM -> 1a
+[OP END @ 27935]
+Done..

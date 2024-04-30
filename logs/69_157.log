@@ -1,0 +1,19 @@
+[TEST 157 - 69.json]
+	MEM WRITE: 1981 / (6529) => 69 / (105)
+	MEM WRITE: 1982 / (6530) => 8 / (8)
+	MEM WRITE: 1983 / (6531) => 3e / (62)
+	MEM READ: 1981 / (6529) => 69 / (105)
+[OP START 6529 -> 0x69 -> adc]
+	REGS:
+		PC: 6529 (1981)
+		SP: 88 (58)
+		A:  43 (2b)
+		X:  74 (4a)
+		Y:  250 (fa)
+		P:  163 (a3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1982 / (6530) => 8 / (8)
+	BINADC: 2b + 8 = 34[OP END @ 6530]
+Done..

@@ -1,0 +1,19 @@
+[TEST 564 - 69.json]
+	MEM WRITE: 2faf / (12207) => 69 / (105)
+	MEM WRITE: 2fb0 / (12208) => 59 / (89)
+	MEM WRITE: 2fb1 / (12209) => d7 / (215)
+	MEM READ: 2faf / (12207) => 69 / (105)
+[OP START 12207 -> 0x69 -> adc]
+	REGS:
+		PC: 12207 (2faf)
+		SP: 82 (52)
+		A:  1 (1)
+		X:  27 (1b)
+		Y:  216 (d8)
+		P:  160 (a0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2fb0 / (12208) => 59 / (89)
+	BINADC: 1 + 59 = 5a[OP END @ 12208]
+Done..

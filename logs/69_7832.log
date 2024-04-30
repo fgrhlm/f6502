@@ -1,0 +1,19 @@
+[TEST 332 - 69.json]
+	MEM WRITE: 716a / (29034) => 69 / (105)
+	MEM WRITE: 716b / (29035) => ff / (255)
+	MEM WRITE: 716c / (29036) => 26 / (38)
+	MEM READ: 716a / (29034) => 69 / (105)
+[OP START 29034 -> 0x69 -> adc]
+	REGS:
+		PC: 29034 (716a)
+		SP: 184 (b8)
+		A:  98 (62)
+		X:  157 (9d)
+		Y:  109 (6d)
+		P:  97 (61)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 716b / (29035) => ff / (255)
+	BINADC: 62 + ff = 62[OP END @ 29035]
+Done..

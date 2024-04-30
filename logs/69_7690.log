@@ -1,0 +1,19 @@
+[TEST 190 - 69.json]
+	MEM WRITE: dec / (3564) => 69 / (105)
+	MEM WRITE: ded / (3565) => d6 / (214)
+	MEM WRITE: dee / (3566) => 19 / (25)
+	MEM READ: dec / (3564) => 69 / (105)
+[OP START 3564 -> 0x69 -> adc]
+	REGS:
+		PC: 3564 (dec)
+		SP: 250 (fa)
+		A:  14 (e)
+		X:  69 (45)
+		Y:  189 (bd)
+		P:  96 (60)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ded / (3565) => d6 / (214)
+	BINADC: e + d6 = e4[OP END @ 3565]
+Done..

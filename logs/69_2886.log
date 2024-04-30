@@ -1,0 +1,22 @@
+[TEST 386 - 69.json]
+	MEM WRITE: 9642 / (38466) => 69 / (105)
+	MEM WRITE: 9643 / (38467) => 51 / (81)
+	MEM WRITE: 9644 / (38468) => 8c / (140)
+	MEM READ: 9642 / (38466) => 69 / (105)
+[OP START 38466 -> 0x69 -> adc]
+	REGS:
+		PC: 38466 (9642)
+		SP: 129 (81)
+		A:  6 (6)
+		X:  53 (35)
+		Y:  171 (ab)
+		P:  108 (6c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9643 / (38467) => 51 / (81)
+	BCD START -> 6 + 51
+	BCD CONVERT -> 6 + 51
+	BCD SUM -> 57
+[OP END @ 38467]
+Done..

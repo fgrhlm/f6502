@@ -1,0 +1,19 @@
+[TEST 23 - 69.json]
+	MEM WRITE: 220c / (8716) => 69 / (105)
+	MEM WRITE: 220d / (8717) => c0 / (192)
+	MEM WRITE: 220e / (8718) => f / (15)
+	MEM READ: 220c / (8716) => 69 / (105)
+[OP START 8716 -> 0x69 -> adc]
+	REGS:
+		PC: 8716 (220c)
+		SP: 200 (c8)
+		A:  217 (d9)
+		X:  210 (d2)
+		Y:  245 (f5)
+		P:  167 (a7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 220d / (8717) => c0 / (192)
+	BINADC: d9 + c0 = 9a[OP END @ 8717]
+Done..

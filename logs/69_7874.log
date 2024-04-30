@@ -1,0 +1,19 @@
+[TEST 374 - 69.json]
+	MEM WRITE: 3bf1 / (15345) => 69 / (105)
+	MEM WRITE: 3bf2 / (15346) => 89 / (137)
+	MEM WRITE: 3bf3 / (15347) => 80 / (128)
+	MEM READ: 3bf1 / (15345) => 69 / (105)
+[OP START 15345 -> 0x69 -> adc]
+	REGS:
+		PC: 15345 (3bf1)
+		SP: 82 (52)
+		A:  36 (24)
+		X:  56 (38)
+		Y:  153 (99)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3bf2 / (15346) => 89 / (137)
+	BINADC: 24 + 89 = ae[OP END @ 15346]
+Done..

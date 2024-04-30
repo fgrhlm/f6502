@@ -1,0 +1,22 @@
+[TEST 50 - 69.json]
+	MEM WRITE: 64e7 / (25831) => 69 / (105)
+	MEM WRITE: 64e8 / (25832) => 1e / (30)
+	MEM WRITE: 64e9 / (25833) => 18 / (24)
+	MEM READ: 64e7 / (25831) => 69 / (105)
+[OP START 25831 -> 0x69 -> adc]
+	REGS:
+		PC: 25831 (64e7)
+		SP: 243 (f3)
+		A:  111 (6f)
+		X:  222 (de)
+		Y:  200 (c8)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 64e8 / (25832) => 1e / (30)
+	BCD START -> 6f + 1e
+	BCD CONVERT -> 75 + 24
+	BCD SUM -> 9a
+[OP END @ 25832]
+Done..

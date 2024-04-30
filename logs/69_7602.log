@@ -1,0 +1,19 @@
+[TEST 102 - 69.json]
+	MEM WRITE: db1e / (56094) => 69 / (105)
+	MEM WRITE: db1f / (56095) => 6 / (6)
+	MEM WRITE: db20 / (56096) => 70 / (112)
+	MEM READ: db1e / (56094) => 69 / (105)
+[OP START 56094 -> 0x69 -> adc]
+	REGS:
+		PC: 56094 (db1e)
+		SP: 46 (2e)
+		A:  201 (c9)
+		X:  230 (e6)
+		Y:  242 (f2)
+		P:  230 (e6)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: db1f / (56095) => 6 / (6)
+	BINADC: c9 + 6 = cf[OP END @ 56095]
+Done..

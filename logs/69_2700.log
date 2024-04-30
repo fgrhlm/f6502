@@ -1,0 +1,22 @@
+[TEST 200 - 69.json]
+	MEM WRITE: edf6 / (60918) => 69 / (105)
+	MEM WRITE: edf7 / (60919) => 53 / (83)
+	MEM WRITE: edf8 / (60920) => 17 / (23)
+	MEM READ: edf6 / (60918) => 69 / (105)
+[OP START 60918 -> 0x69 -> adc]
+	REGS:
+		PC: 60918 (edf6)
+		SP: 251 (fb)
+		A:  19 (13)
+		X:  109 (6d)
+		Y:  47 (2f)
+		P:  233 (e9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: edf7 / (60919) => 53 / (83)
+	BCD START -> 13 + 53
+	BCD CONVERT -> 13 + 53
+	BCD SUM -> 67
+[OP END @ 60919]
+Done..

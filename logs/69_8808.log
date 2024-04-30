@@ -1,0 +1,19 @@
+[TEST 58 - 69.json]
+	MEM WRITE: 2034 / (8244) => 69 / (105)
+	MEM WRITE: 2035 / (8245) => 22 / (34)
+	MEM WRITE: 2036 / (8246) => d0 / (208)
+	MEM READ: 2034 / (8244) => 69 / (105)
+[OP START 8244 -> 0x69 -> adc]
+	REGS:
+		PC: 8244 (2034)
+		SP: 92 (5c)
+		A:  128 (80)
+		X:  194 (c2)
+		Y:  87 (57)
+		P:  96 (60)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2035 / (8245) => 22 / (34)
+	BINADC: 80 + 22 = a2[OP END @ 8245]
+Done..

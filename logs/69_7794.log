@@ -1,0 +1,19 @@
+[TEST 294 - 69.json]
+	MEM WRITE: abe8 / (44008) => 69 / (105)
+	MEM WRITE: abe9 / (44009) => 43 / (67)
+	MEM WRITE: abea / (44010) => 41 / (65)
+	MEM READ: abe8 / (44008) => 69 / (105)
+[OP START 44008 -> 0x69 -> adc]
+	REGS:
+		PC: 44008 (abe8)
+		SP: 235 (eb)
+		A:  64 (40)
+		X:  252 (fc)
+		Y:  24 (18)
+		P:  36 (24)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: abe9 / (44009) => 43 / (67)
+	BINADC: 40 + 43 = 83[OP END @ 44009]
+Done..

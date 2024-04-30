@@ -1,0 +1,19 @@
+[TEST 392 - 69.json]
+	MEM WRITE: aac3 / (43715) => 69 / (105)
+	MEM WRITE: aac4 / (43716) => 71 / (113)
+	MEM WRITE: aac5 / (43717) => 59 / (89)
+	MEM READ: aac3 / (43715) => 69 / (105)
+[OP START 43715 -> 0x69 -> adc]
+	REGS:
+		PC: 43715 (aac3)
+		SP: 10 (a)
+		A:  166 (a6)
+		X:  193 (c1)
+		Y:  78 (4e)
+		P:  102 (66)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: aac4 / (43716) => 71 / (113)
+	BINADC: a6 + 71 = 17[OP END @ 43716]
+Done..

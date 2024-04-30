@@ -1,0 +1,22 @@
+[TEST 88 - 69.json]
+	MEM WRITE: 1e3c / (7740) => 69 / (105)
+	MEM WRITE: 1e3d / (7741) => bd / (189)
+	MEM WRITE: 1e3e / (7742) => ed / (237)
+	MEM READ: 1e3c / (7740) => 69 / (105)
+[OP START 7740 -> 0x69 -> adc]
+	REGS:
+		PC: 7740 (1e3c)
+		SP: 73 (49)
+		A:  38 (26)
+		X:  218 (da)
+		Y:  241 (f1)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1e3d / (7741) => bd / (189)
+	BCD START -> 26 + bd
+	BCD CONVERT -> 26 + 23
+	BCD SUM -> 49
+[OP END @ 7741]
+Done..

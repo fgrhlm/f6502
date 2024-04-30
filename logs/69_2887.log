@@ -1,0 +1,22 @@
+[TEST 387 - 69.json]
+	MEM WRITE: f3d4 / (62420) => 69 / (105)
+	MEM WRITE: f3d5 / (62421) => 1b / (27)
+	MEM WRITE: f3d6 / (62422) => 25 / (37)
+	MEM READ: f3d4 / (62420) => 69 / (105)
+[OP START 62420 -> 0x69 -> adc]
+	REGS:
+		PC: 62420 (f3d4)
+		SP: 37 (25)
+		A:  108 (6c)
+		X:  176 (b0)
+		Y:  7 (7)
+		P:  238 (ee)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f3d5 / (62421) => 1b / (27)
+	BCD START -> 6c + 1b
+	BCD CONVERT -> 72 + 21
+	BCD SUM -> 93
+[OP END @ 62421]
+Done..

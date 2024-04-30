@@ -1,0 +1,19 @@
+[TEST 106 - 69.json]
+	MEM WRITE: c66d / (50797) => 69 / (105)
+	MEM WRITE: c66e / (50798) => ad / (173)
+	MEM WRITE: c66f / (50799) => 40 / (64)
+	MEM READ: c66d / (50797) => 69 / (105)
+[OP START 50797 -> 0x69 -> adc]
+	REGS:
+		PC: 50797 (c66d)
+		SP: 245 (f5)
+		A:  47 (2f)
+		X:  205 (cd)
+		Y:  4 (4)
+		P:  163 (a3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c66e / (50798) => ad / (173)
+	BINADC: 2f + ad = dd[OP END @ 50798]
+Done..

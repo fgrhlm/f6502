@@ -1,0 +1,19 @@
+[TEST 151 - 69.json]
+	MEM WRITE: baac / (47788) => 69 / (105)
+	MEM WRITE: baad / (47789) => cd / (205)
+	MEM WRITE: baae / (47790) => 7b / (123)
+	MEM READ: baac / (47788) => 69 / (105)
+[OP START 47788 -> 0x69 -> adc]
+	REGS:
+		PC: 47788 (baac)
+		SP: 90 (5a)
+		A:  198 (c6)
+		X:  110 (6e)
+		Y:  153 (99)
+		P:  39 (27)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: baad / (47789) => cd / (205)
+	BINADC: c6 + cd = 94[OP END @ 47789]
+Done..

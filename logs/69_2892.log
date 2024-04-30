@@ -1,0 +1,22 @@
+[TEST 392 - 69.json]
+	MEM WRITE: 2d04 / (11524) => 69 / (105)
+	MEM WRITE: 2d05 / (11525) => 1a / (26)
+	MEM WRITE: 2d06 / (11526) => 75 / (117)
+	MEM READ: 2d04 / (11524) => 69 / (105)
+[OP START 11524 -> 0x69 -> adc]
+	REGS:
+		PC: 11524 (2d04)
+		SP: 152 (98)
+		A:  231 (e7)
+		X:  212 (d4)
+		Y:  143 (8f)
+		P:  110 (6e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2d05 / (11525) => 1a / (26)
+	BCD START -> e7 + 1a
+	BCD CONVERT -> 47 + 20
+	BCD SUM -> 67
+[OP END @ 11525]
+Done..

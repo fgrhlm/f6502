@@ -1,0 +1,19 @@
+[TEST 495 - 69.json]
+	MEM WRITE: e40b / (58379) => 69 / (105)
+	MEM WRITE: e40c / (58380) => f3 / (243)
+	MEM WRITE: e40d / (58381) => 12 / (18)
+	MEM READ: e40b / (58379) => 69 / (105)
+[OP START 58379 -> 0x69 -> adc]
+	REGS:
+		PC: 58379 (e40b)
+		SP: 168 (a8)
+		A:  106 (6a)
+		X:  129 (81)
+		Y:  74 (4a)
+		P:  102 (66)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e40c / (58380) => f3 / (243)
+	BINADC: 6a + f3 = 5d[OP END @ 58380]
+Done..

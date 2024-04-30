@@ -1,0 +1,19 @@
+[TEST 437 - 69.json]
+	MEM WRITE: be78 / (48760) => 69 / (105)
+	MEM WRITE: be79 / (48761) => 3e / (62)
+	MEM WRITE: be7a / (48762) => d2 / (210)
+	MEM READ: be78 / (48760) => 69 / (105)
+[OP START 48760 -> 0x69 -> adc]
+	REGS:
+		PC: 48760 (be78)
+		SP: 28 (1c)
+		A:  178 (b2)
+		X:  238 (ee)
+		Y:  230 (e6)
+		P:  164 (a4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: be79 / (48761) => 3e / (62)
+	BINADC: b2 + 3e = f0[OP END @ 48761]
+Done..

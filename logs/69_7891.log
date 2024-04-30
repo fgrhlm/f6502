@@ -1,0 +1,22 @@
+[TEST 391 - 69.json]
+	MEM WRITE: d120 / (53536) => 69 / (105)
+	MEM WRITE: d121 / (53537) => 23 / (35)
+	MEM WRITE: d122 / (53538) => e / (14)
+	MEM READ: d120 / (53536) => 69 / (105)
+[OP START 53536 -> 0x69 -> adc]
+	REGS:
+		PC: 53536 (d120)
+		SP: 101 (65)
+		A:  100 (64)
+		X:  245 (f5)
+		Y:  155 (9b)
+		P:  232 (e8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d121 / (53537) => 23 / (35)
+	BCD START -> 64 + 23
+	BCD CONVERT -> 64 + 23
+	BCD SUM -> 87
+[OP END @ 53537]
+Done..

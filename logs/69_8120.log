@@ -1,0 +1,19 @@
+[TEST 620 - 69.json]
+	MEM WRITE: 7f3f / (32575) => 69 / (105)
+	MEM WRITE: 7f40 / (32576) => 4e / (78)
+	MEM WRITE: 7f41 / (32577) => b4 / (180)
+	MEM READ: 7f3f / (32575) => 69 / (105)
+[OP START 32575 -> 0x69 -> adc]
+	REGS:
+		PC: 32575 (7f3f)
+		SP: 43 (2b)
+		A:  154 (9a)
+		X:  130 (82)
+		Y:  224 (e0)
+		P:  160 (a0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7f40 / (32576) => 4e / (78)
+	BINADC: 9a + 4e = e8[OP END @ 32576]
+Done..

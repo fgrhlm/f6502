@@ -1,0 +1,19 @@
+[TEST 65 - 69.json]
+	MEM WRITE: 1132 / (4402) => 69 / (105)
+	MEM WRITE: 1133 / (4403) => 50 / (80)
+	MEM WRITE: 1134 / (4404) => 4e / (78)
+	MEM READ: 1132 / (4402) => 69 / (105)
+[OP START 4402 -> 0x69 -> adc]
+	REGS:
+		PC: 4402 (1132)
+		SP: 86 (56)
+		A:  241 (f1)
+		X:  247 (f7)
+		Y:  41 (29)
+		P:  224 (e0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1133 / (4403) => 50 / (80)
+	BINADC: f1 + 50 = 41[OP END @ 4403]
+Done..

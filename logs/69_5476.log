@@ -1,0 +1,19 @@
+[TEST 476 - 69.json]
+	MEM WRITE: b25c / (45660) => 69 / (105)
+	MEM WRITE: b25d / (45661) => f1 / (241)
+	MEM WRITE: b25e / (45662) => c1 / (193)
+	MEM READ: b25c / (45660) => 69 / (105)
+[OP START 45660 -> 0x69 -> adc]
+	REGS:
+		PC: 45660 (b25c)
+		SP: 248 (f8)
+		A:  35 (23)
+		X:  67 (43)
+		Y:  208 (d0)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b25d / (45661) => f1 / (241)
+	BINADC: 23 + f1 = 15[OP END @ 45661]
+Done..

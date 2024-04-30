@@ -1,0 +1,19 @@
+[TEST 238 - 69.json]
+	MEM WRITE: 60a6 / (24742) => 69 / (105)
+	MEM WRITE: 60a7 / (24743) => 47 / (71)
+	MEM WRITE: 60a8 / (24744) => 73 / (115)
+	MEM READ: 60a6 / (24742) => 69 / (105)
+[OP START 24742 -> 0x69 -> adc]
+	REGS:
+		PC: 24742 (60a6)
+		SP: 187 (bb)
+		A:  88 (58)
+		X:  54 (36)
+		Y:  128 (80)
+		P:  167 (a7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 60a7 / (24743) => 47 / (71)
+	BINADC: 58 + 47 = a0[OP END @ 24743]
+Done..

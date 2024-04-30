@@ -1,0 +1,19 @@
+[TEST 404 - 69.json]
+	MEM WRITE: f0dd / (61661) => 69 / (105)
+	MEM WRITE: f0de / (61662) => 47 / (71)
+	MEM WRITE: f0df / (61663) => 89 / (137)
+	MEM READ: f0dd / (61661) => 69 / (105)
+[OP START 61661 -> 0x69 -> adc]
+	REGS:
+		PC: 61661 (f0dd)
+		SP: 14 (e)
+		A:  103 (67)
+		X:  21 (15)
+		Y:  152 (98)
+		P:  36 (24)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f0de / (61662) => 47 / (71)
+	BINADC: 67 + 47 = ae[OP END @ 61662]
+Done..

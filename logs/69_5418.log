@@ -1,0 +1,19 @@
+[TEST 418 - 69.json]
+	MEM WRITE: b134 / (45364) => 69 / (105)
+	MEM WRITE: b135 / (45365) => 55 / (85)
+	MEM WRITE: b136 / (45366) => db / (219)
+	MEM READ: b134 / (45364) => 69 / (105)
+[OP START 45364 -> 0x69 -> adc]
+	REGS:
+		PC: 45364 (b134)
+		SP: 68 (44)
+		A:  151 (97)
+		X:  132 (84)
+		Y:  81 (51)
+		P:  160 (a0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b135 / (45365) => 55 / (85)
+	BINADC: 97 + 55 = ec[OP END @ 45365]
+Done..

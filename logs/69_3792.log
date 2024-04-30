@@ -1,0 +1,19 @@
+[TEST 42 - 69.json]
+	MEM WRITE: c8a / (3210) => 69 / (105)
+	MEM WRITE: c8b / (3211) => 41 / (65)
+	MEM WRITE: c8c / (3212) => 82 / (130)
+	MEM READ: c8a / (3210) => 69 / (105)
+[OP START 3210 -> 0x69 -> adc]
+	REGS:
+		PC: 3210 (c8a)
+		SP: 87 (57)
+		A:  89 (59)
+		X:  143 (8f)
+		Y:  4 (4)
+		P:  33 (21)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c8b / (3211) => 41 / (65)
+	BINADC: 59 + 41 = 9b[OP END @ 3211]
+Done..

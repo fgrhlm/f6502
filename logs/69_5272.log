@@ -1,0 +1,19 @@
+[TEST 272 - 69.json]
+	MEM WRITE: c4b6 / (50358) => 69 / (105)
+	MEM WRITE: c4b7 / (50359) => 29 / (41)
+	MEM WRITE: c4b8 / (50360) => c5 / (197)
+	MEM READ: c4b6 / (50358) => 69 / (105)
+[OP START 50358 -> 0x69 -> adc]
+	REGS:
+		PC: 50358 (c4b6)
+		SP: 118 (76)
+		A:  164 (a4)
+		X:  214 (d6)
+		Y:  77 (4d)
+		P:  162 (a2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c4b7 / (50359) => 29 / (41)
+	BINADC: a4 + 29 = cd[OP END @ 50359]
+Done..

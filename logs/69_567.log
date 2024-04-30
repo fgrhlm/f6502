@@ -1,0 +1,22 @@
+[TEST 567 - 69.json]
+	MEM WRITE: 5e6a / (24170) => 69 / (105)
+	MEM WRITE: 5e6b / (24171) => d4 / (212)
+	MEM WRITE: 5e6c / (24172) => 8e / (142)
+	MEM READ: 5e6a / (24170) => 69 / (105)
+[OP START 24170 -> 0x69 -> adc]
+	REGS:
+		PC: 24170 (5e6a)
+		SP: 48 (30)
+		A:  49 (31)
+		X:  76 (4c)
+		Y:  163 (a3)
+		P:  174 (ae)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5e6b / (24171) => d4 / (212)
+	BCD START -> 31 + d4
+	BCD CONVERT -> 31 + 34
+	BCD SUM -> 65
+[OP END @ 24171]
+Done..

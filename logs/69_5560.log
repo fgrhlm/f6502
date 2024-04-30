@@ -1,0 +1,22 @@
+[TEST 560 - 69.json]
+	MEM WRITE: 24a5 / (9381) => 69 / (105)
+	MEM WRITE: 24a6 / (9382) => 15 / (21)
+	MEM WRITE: 24a7 / (9383) => 78 / (120)
+	MEM READ: 24a5 / (9381) => 69 / (105)
+[OP START 9381 -> 0x69 -> adc]
+	REGS:
+		PC: 9381 (24a5)
+		SP: 163 (a3)
+		A:  251 (fb)
+		X:  55 (37)
+		Y:  221 (dd)
+		P:  233 (e9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 24a6 / (9382) => 15 / (21)
+	BCD START -> fb + 15
+	BCD CONVERT -> 61 + 15
+	BCD SUM -> 77
+[OP END @ 9382]
+Done..

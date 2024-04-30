@@ -1,0 +1,22 @@
+[TEST 536 - 69.json]
+	MEM WRITE: 7ef / (2031) => 69 / (105)
+	MEM WRITE: 7f0 / (2032) => 5c / (92)
+	MEM WRITE: 7f1 / (2033) => 13 / (19)
+	MEM READ: 7ef / (2031) => 69 / (105)
+[OP START 2031 -> 0x69 -> adc]
+	REGS:
+		PC: 2031 (7ef)
+		SP: 165 (a5)
+		A:  113 (71)
+		X:  126 (7e)
+		Y:  140 (8c)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7f0 / (2032) => 5c / (92)
+	BCD START -> 71 + 5c
+	BCD CONVERT -> 71 + 62
+	BCD SUM -> 34
+[OP END @ 2032]
+Done..

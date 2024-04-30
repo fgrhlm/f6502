@@ -1,0 +1,19 @@
+[TEST 107 - 69.json]
+	MEM WRITE: 491a / (18714) => 69 / (105)
+	MEM WRITE: 491b / (18715) => 74 / (116)
+	MEM WRITE: 491c / (18716) => b6 / (182)
+	MEM READ: 491a / (18714) => 69 / (105)
+[OP START 18714 -> 0x69 -> adc]
+	REGS:
+		PC: 18714 (491a)
+		SP: 228 (e4)
+		A:  42 (2a)
+		X:  115 (73)
+		Y:  126 (7e)
+		P:  163 (a3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 491b / (18715) => 74 / (116)
+	BINADC: 2a + 74 = 9f[OP END @ 18715]
+Done..

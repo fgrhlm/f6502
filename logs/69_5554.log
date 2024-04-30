@@ -1,0 +1,19 @@
+[TEST 554 - 69.json]
+	MEM WRITE: d167 / (53607) => 69 / (105)
+	MEM WRITE: d168 / (53608) => 68 / (104)
+	MEM WRITE: d169 / (53609) => b / (11)
+	MEM READ: d167 / (53607) => 69 / (105)
+[OP START 53607 -> 0x69 -> adc]
+	REGS:
+		PC: 53607 (d167)
+		SP: 214 (d6)
+		A:  7 (7)
+		X:  185 (b9)
+		Y:  159 (9f)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d168 / (53608) => 68 / (104)
+	BINADC: 7 + 68 = 70[OP END @ 53608]
+Done..

@@ -1,0 +1,19 @@
+[TEST 590 - 69.json]
+	MEM WRITE: 2894 / (10388) => 69 / (105)
+	MEM WRITE: 2895 / (10389) => 72 / (114)
+	MEM WRITE: 2896 / (10390) => d5 / (213)
+	MEM READ: 2894 / (10388) => 69 / (105)
+[OP START 10388 -> 0x69 -> adc]
+	REGS:
+		PC: 10388 (2894)
+		SP: 153 (99)
+		A:  200 (c8)
+		X:  16 (10)
+		Y:  5 (5)
+		P:  100 (64)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2895 / (10389) => 72 / (114)
+	BINADC: c8 + 72 = 3a[OP END @ 10389]
+Done..

@@ -1,0 +1,19 @@
+[TEST 473 - 69.json]
+	MEM WRITE: ac9 / (2761) => 69 / (105)
+	MEM WRITE: aca / (2762) => c3 / (195)
+	MEM WRITE: acb / (2763) => 4d / (77)
+	MEM READ: ac9 / (2761) => 69 / (105)
+[OP START 2761 -> 0x69 -> adc]
+	REGS:
+		PC: 2761 (ac9)
+		SP: 88 (58)
+		A:  189 (bd)
+		X:  148 (94)
+		Y:  91 (5b)
+		P:  167 (a7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: aca / (2762) => c3 / (195)
+	BINADC: bd + c3 = 81[OP END @ 2762]
+Done..

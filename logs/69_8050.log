@@ -1,0 +1,19 @@
+[TEST 550 - 69.json]
+	MEM WRITE: 364d / (13901) => 69 / (105)
+	MEM WRITE: 364e / (13902) => 65 / (101)
+	MEM WRITE: 364f / (13903) => 15 / (21)
+	MEM READ: 364d / (13901) => 69 / (105)
+[OP START 13901 -> 0x69 -> adc]
+	REGS:
+		PC: 13901 (364d)
+		SP: 35 (23)
+		A:  137 (89)
+		X:  205 (cd)
+		Y:  172 (ac)
+		P:  96 (60)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 364e / (13902) => 65 / (101)
+	BINADC: 89 + 65 = ee[OP END @ 13902]
+Done..

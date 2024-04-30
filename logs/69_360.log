@@ -1,0 +1,22 @@
+[TEST 360 - 69.json]
+	MEM WRITE: e9c1 / (59841) => 69 / (105)
+	MEM WRITE: e9c2 / (59842) => 12 / (18)
+	MEM WRITE: e9c3 / (59843) => ba / (186)
+	MEM READ: e9c1 / (59841) => 69 / (105)
+[OP START 59841 -> 0x69 -> adc]
+	REGS:
+		PC: 59841 (e9c1)
+		SP: 205 (cd)
+		A:  139 (8b)
+		X:  163 (a3)
+		Y:  100 (64)
+		P:  47 (2f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e9c2 / (59842) => 12 / (18)
+	BCD START -> 8b + 12
+	BCD CONVERT -> 91 + 12
+	BCD SUM -> 4
+[OP END @ 59842]
+Done..

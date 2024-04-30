@@ -1,0 +1,22 @@
+[TEST 479 - 69.json]
+	MEM WRITE: 4f1b / (20251) => 69 / (105)
+	MEM WRITE: 4f1c / (20252) => 2c / (44)
+	MEM WRITE: 4f1d / (20253) => fe / (254)
+	MEM READ: 4f1b / (20251) => 69 / (105)
+[OP START 20251 -> 0x69 -> adc]
+	REGS:
+		PC: 20251 (4f1b)
+		SP: 31 (1f)
+		A:  34 (22)
+		X:  196 (c4)
+		Y:  170 (aa)
+		P:  174 (ae)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4f1c / (20252) => 2c / (44)
+	BCD START -> 22 + 2c
+	BCD CONVERT -> 22 + 32
+	BCD SUM -> 54
+[OP END @ 20252]
+Done..

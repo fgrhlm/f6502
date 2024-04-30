@@ -1,0 +1,19 @@
+[TEST 12 - 69.json]
+	MEM WRITE: 61bd / (25021) => 69 / (105)
+	MEM WRITE: 61be / (25022) => 9f / (159)
+	MEM WRITE: 61bf / (25023) => 4e / (78)
+	MEM READ: 61bd / (25021) => 69 / (105)
+[OP START 25021 -> 0x69 -> adc]
+	REGS:
+		PC: 25021 (61bd)
+		SP: 212 (d4)
+		A:  4 (4)
+		X:  35 (23)
+		Y:  222 (de)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 61be / (25022) => 9f / (159)
+	BINADC: 4 + 9f = a3[OP END @ 25022]
+Done..

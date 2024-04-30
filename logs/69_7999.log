@@ -1,0 +1,19 @@
+[TEST 499 - 69.json]
+	MEM WRITE: de44 / (56900) => 69 / (105)
+	MEM WRITE: de45 / (56901) => 41 / (65)
+	MEM WRITE: de46 / (56902) => ef / (239)
+	MEM READ: de44 / (56900) => 69 / (105)
+[OP START 56900 -> 0x69 -> adc]
+	REGS:
+		PC: 56900 (de44)
+		SP: 191 (bf)
+		A:  49 (31)
+		X:  140 (8c)
+		Y:  124 (7c)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: de45 / (56901) => 41 / (65)
+	BINADC: 31 + 41 = 73[OP END @ 56901]
+Done..

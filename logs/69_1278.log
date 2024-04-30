@@ -1,0 +1,19 @@
+[TEST 28 - 69.json]
+	MEM WRITE: ca2f / (51759) => 69 / (105)
+	MEM WRITE: ca30 / (51760) => b / (11)
+	MEM WRITE: ca31 / (51761) => a6 / (166)
+	MEM READ: ca2f / (51759) => 69 / (105)
+[OP START 51759 -> 0x69 -> adc]
+	REGS:
+		PC: 51759 (ca2f)
+		SP: 7 (7)
+		A:  214 (d6)
+		X:  75 (4b)
+		Y:  89 (59)
+		P:  97 (61)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ca30 / (51760) => b / (11)
+	BINADC: d6 + b = e2[OP END @ 51760]
+Done..

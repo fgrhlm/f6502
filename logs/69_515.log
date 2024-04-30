@@ -1,0 +1,22 @@
+[TEST 515 - 69.json]
+	MEM WRITE: 1055 / (4181) => 69 / (105)
+	MEM WRITE: 1056 / (4182) => 55 / (85)
+	MEM WRITE: 1057 / (4183) => 76 / (118)
+	MEM READ: 1055 / (4181) => 69 / (105)
+[OP START 4181 -> 0x69 -> adc]
+	REGS:
+		PC: 4181 (1055)
+		SP: 110 (6e)
+		A:  49 (31)
+		X:  110 (6e)
+		Y:  251 (fb)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1056 / (4182) => 55 / (85)
+	BCD START -> 31 + 55
+	BCD CONVERT -> 31 + 55
+	BCD SUM -> 87
+[OP END @ 4182]
+Done..

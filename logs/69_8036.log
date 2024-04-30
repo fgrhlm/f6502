@@ -1,0 +1,22 @@
+[TEST 536 - 69.json]
+	MEM WRITE: 970e / (38670) => 69 / (105)
+	MEM WRITE: 970f / (38671) => b6 / (182)
+	MEM WRITE: 9710 / (38672) => 76 / (118)
+	MEM READ: 970e / (38670) => 69 / (105)
+[OP START 38670 -> 0x69 -> adc]
+	REGS:
+		PC: 38670 (970e)
+		SP: 238 (ee)
+		A:  225 (e1)
+		X:  44 (2c)
+		Y:  127 (7f)
+		P:  239 (ef)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 970f / (38671) => b6 / (182)
+	BCD START -> e1 + b6
+	BCD CONVERT -> 41 + 16
+	BCD SUM -> 58
+[OP END @ 38671]
+Done..

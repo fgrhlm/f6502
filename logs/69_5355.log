@@ -1,0 +1,22 @@
+[TEST 355 - 69.json]
+	MEM WRITE: 7417 / (29719) => 69 / (105)
+	MEM WRITE: 7418 / (29720) => 75 / (117)
+	MEM WRITE: 7419 / (29721) => df / (223)
+	MEM READ: 7417 / (29719) => 69 / (105)
+[OP START 29719 -> 0x69 -> adc]
+	REGS:
+		PC: 29719 (7417)
+		SP: 11 (b)
+		A:  242 (f2)
+		X:  180 (b4)
+		Y:  27 (1b)
+		P:  233 (e9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7418 / (29720) => 75 / (117)
+	BCD START -> f2 + 75
+	BCD CONVERT -> 52 + 75
+	BCD SUM -> 28
+[OP END @ 29720]
+Done..

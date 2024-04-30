@@ -1,0 +1,22 @@
+[TEST 470 - 69.json]
+	MEM WRITE: 3db6 / (15798) => 69 / (105)
+	MEM WRITE: 3db7 / (15799) => 6 / (6)
+	MEM WRITE: 3db8 / (15800) => ed / (237)
+	MEM READ: 3db6 / (15798) => 69 / (105)
+[OP START 15798 -> 0x69 -> adc]
+	REGS:
+		PC: 15798 (3db6)
+		SP: 248 (f8)
+		A:  187 (bb)
+		X:  122 (7a)
+		Y:  58 (3a)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3db7 / (15799) => 6 / (6)
+	BCD START -> bb + 6
+	BCD CONVERT -> 21 + 6
+	BCD SUM -> 27
+[OP END @ 15799]
+Done..

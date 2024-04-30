@@ -1,0 +1,22 @@
+[TEST 509 - 69.json]
+	MEM WRITE: 2da2 / (11682) => 69 / (105)
+	MEM WRITE: 2da3 / (11683) => 97 / (151)
+	MEM WRITE: 2da4 / (11684) => 40 / (64)
+	MEM READ: 2da2 / (11682) => 69 / (105)
+[OP START 11682 -> 0x69 -> adc]
+	REGS:
+		PC: 11682 (2da2)
+		SP: 223 (df)
+		A:  82 (52)
+		X:  81 (51)
+		Y:  14 (e)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2da3 / (11683) => 97 / (151)
+	BCD START -> 52 + 97
+	BCD CONVERT -> 52 + 97
+	BCD SUM -> 49
+[OP END @ 11683]
+Done..

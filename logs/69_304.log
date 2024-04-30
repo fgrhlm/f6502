@@ -1,0 +1,19 @@
+[TEST 304 - 69.json]
+	MEM WRITE: c393 / (50067) => 69 / (105)
+	MEM WRITE: c394 / (50068) => 91 / (145)
+	MEM WRITE: c395 / (50069) => 9d / (157)
+	MEM READ: c393 / (50067) => 69 / (105)
+[OP START 50067 -> 0x69 -> adc]
+	REGS:
+		PC: 50067 (c393)
+		SP: 213 (d5)
+		A:  209 (d1)
+		X:  173 (ad)
+		Y:  47 (2f)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c394 / (50068) => 91 / (145)
+	BINADC: d1 + 91 = 63[OP END @ 50068]
+Done..

@@ -1,0 +1,19 @@
+[TEST 589 - 69.json]
+	MEM WRITE: d3bc / (54204) => 69 / (105)
+	MEM WRITE: d3bd / (54205) => f2 / (242)
+	MEM WRITE: d3be / (54206) => f3 / (243)
+	MEM READ: d3bc / (54204) => 69 / (105)
+[OP START 54204 -> 0x69 -> adc]
+	REGS:
+		PC: 54204 (d3bc)
+		SP: 218 (da)
+		A:  169 (a9)
+		X:  95 (5f)
+		Y:  187 (bb)
+		P:  98 (62)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d3bd / (54205) => f2 / (242)
+	BINADC: a9 + f2 = 9b[OP END @ 54205]
+Done..

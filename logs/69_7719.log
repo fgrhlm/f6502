@@ -1,0 +1,22 @@
+[TEST 219 - 69.json]
+	MEM WRITE: 7d5a / (32090) => 69 / (105)
+	MEM WRITE: 7d5b / (32091) => 2b / (43)
+	MEM WRITE: 7d5c / (32092) => b7 / (183)
+	MEM READ: 7d5a / (32090) => 69 / (105)
+[OP START 32090 -> 0x69 -> adc]
+	REGS:
+		PC: 32090 (7d5a)
+		SP: 110 (6e)
+		A:  217 (d9)
+		X:  93 (5d)
+		Y:  255 (ff)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7d5b / (32091) => 2b / (43)
+	BCD START -> d9 + 2b
+	BCD CONVERT -> 39 + 31
+	BCD SUM -> 70
+[OP END @ 32091]
+Done..

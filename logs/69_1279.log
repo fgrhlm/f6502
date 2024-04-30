@@ -1,0 +1,19 @@
+[TEST 29 - 69.json]
+	MEM WRITE: eff0 / (61424) => 69 / (105)
+	MEM WRITE: eff1 / (61425) => eb / (235)
+	MEM WRITE: eff2 / (61426) => 80 / (128)
+	MEM READ: eff0 / (61424) => 69 / (105)
+[OP START 61424 -> 0x69 -> adc]
+	REGS:
+		PC: 61424 (eff0)
+		SP: 231 (e7)
+		A:  36 (24)
+		X:  48 (30)
+		Y:  14 (e)
+		P:  164 (a4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eff1 / (61425) => eb / (235)
+	BINADC: 24 + eb = f[OP END @ 61425]
+Done..

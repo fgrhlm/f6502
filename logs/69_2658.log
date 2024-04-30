@@ -1,0 +1,22 @@
+[TEST 158 - 69.json]
+	MEM WRITE: 8032 / (32818) => 69 / (105)
+	MEM WRITE: 8033 / (32819) => 47 / (71)
+	MEM WRITE: 8034 / (32820) => 63 / (99)
+	MEM READ: 8032 / (32818) => 69 / (105)
+[OP START 32818 -> 0x69 -> adc]
+	REGS:
+		PC: 32818 (8032)
+		SP: 19 (13)
+		A:  32 (20)
+		X:  169 (a9)
+		Y:  6 (6)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8033 / (32819) => 47 / (71)
+	BCD START -> 20 + 47
+	BCD CONVERT -> 20 + 47
+	BCD SUM -> 67
+[OP END @ 32819]
+Done..

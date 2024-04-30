@@ -1,0 +1,19 @@
+[TEST 159 - 69.json]
+	MEM WRITE: fb14 / (64276) => 69 / (105)
+	MEM WRITE: fb15 / (64277) => 77 / (119)
+	MEM WRITE: fb16 / (64278) => 24 / (36)
+	MEM READ: fb14 / (64276) => 69 / (105)
+[OP START 64276 -> 0x69 -> adc]
+	REGS:
+		PC: 64276 (fb14)
+		SP: 110 (6e)
+		A:  3 (3)
+		X:  84 (54)
+		Y:  212 (d4)
+		P:  103 (67)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fb15 / (64277) => 77 / (119)
+	BINADC: 3 + 77 = 7b[OP END @ 64277]
+Done..

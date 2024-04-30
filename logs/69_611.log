@@ -1,0 +1,19 @@
+[TEST 611 - 69.json]
+	MEM WRITE: 288f / (10383) => 69 / (105)
+	MEM WRITE: 2890 / (10384) => ca / (202)
+	MEM WRITE: 2891 / (10385) => 5d / (93)
+	MEM READ: 288f / (10383) => 69 / (105)
+[OP START 10383 -> 0x69 -> adc]
+	REGS:
+		PC: 10383 (288f)
+		SP: 152 (98)
+		A:  152 (98)
+		X:  0 (0)
+		Y:  173 (ad)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2890 / (10384) => ca / (202)
+	BINADC: 98 + ca = 63[OP END @ 10384]
+Done..

@@ -1,0 +1,22 @@
+[TEST 77 - 69.json]
+	MEM WRITE: f819 / (63513) => 69 / (105)
+	MEM WRITE: f81a / (63514) => ef / (239)
+	MEM WRITE: f81b / (63515) => 23 / (35)
+	MEM READ: f819 / (63513) => 69 / (105)
+[OP START 63513 -> 0x69 -> adc]
+	REGS:
+		PC: 63513 (f819)
+		SP: 205 (cd)
+		A:  116 (74)
+		X:  116 (74)
+		Y:  191 (bf)
+		P:  45 (2d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f81a / (63514) => ef / (239)
+	BCD START -> 74 + ef
+	BCD CONVERT -> 74 + 55
+	BCD SUM -> 2a
+[OP END @ 63514]
+Done..

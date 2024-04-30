@@ -1,0 +1,22 @@
+[TEST 184 - 69.json]
+	MEM WRITE: ac64 / (44132) => 69 / (105)
+	MEM WRITE: ac65 / (44133) => 9f / (159)
+	MEM WRITE: ac66 / (44134) => da / (218)
+	MEM READ: ac64 / (44132) => 69 / (105)
+[OP START 44132 -> 0x69 -> adc]
+	REGS:
+		PC: 44132 (ac64)
+		SP: 200 (c8)
+		A:  8 (8)
+		X:  148 (94)
+		Y:  147 (93)
+		P:  47 (2f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ac65 / (44133) => 9f / (159)
+	BCD START -> 8 + 9f
+	BCD CONVERT -> 8 + a5
+	BCD SUM -> 14
+[OP END @ 44133]
+Done..

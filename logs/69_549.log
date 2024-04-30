@@ -1,0 +1,19 @@
+[TEST 549 - 69.json]
+	MEM WRITE: 9f1f / (40735) => 69 / (105)
+	MEM WRITE: 9f20 / (40736) => ad / (173)
+	MEM WRITE: 9f21 / (40737) => bb / (187)
+	MEM READ: 9f1f / (40735) => 69 / (105)
+[OP START 40735 -> 0x69 -> adc]
+	REGS:
+		PC: 40735 (9f1f)
+		SP: 159 (9f)
+		A:  79 (4f)
+		X:  78 (4e)
+		Y:  224 (e0)
+		P:  163 (a3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9f20 / (40736) => ad / (173)
+	BINADC: 4f + ad = fd[OP END @ 40736]
+Done..

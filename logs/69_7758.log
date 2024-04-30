@@ -1,0 +1,19 @@
+[TEST 258 - 69.json]
+	MEM WRITE: e30b / (58123) => 69 / (105)
+	MEM WRITE: e30c / (58124) => 66 / (102)
+	MEM WRITE: e30d / (58125) => 7b / (123)
+	MEM READ: e30b / (58123) => 69 / (105)
+[OP START 58123 -> 0x69 -> adc]
+	REGS:
+		PC: 58123 (e30b)
+		SP: 126 (7e)
+		A:  236 (ec)
+		X:  222 (de)
+		Y:  159 (9f)
+		P:  228 (e4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e30c / (58124) => 66 / (102)
+	BINADC: ec + 66 = 52[OP END @ 58124]
+Done..

@@ -1,0 +1,19 @@
+[TEST 412 - 69.json]
+	MEM WRITE: 996f / (39279) => 69 / (105)
+	MEM WRITE: 9970 / (39280) => 8b / (139)
+	MEM WRITE: 9971 / (39281) => 75 / (117)
+	MEM READ: 996f / (39279) => 69 / (105)
+[OP START 39279 -> 0x69 -> adc]
+	REGS:
+		PC: 39279 (996f)
+		SP: 80 (50)
+		A:  68 (44)
+		X:  102 (66)
+		Y:  252 (fc)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9970 / (39280) => 8b / (139)
+	BINADC: 44 + 8b = cf[OP END @ 39280]
+Done..

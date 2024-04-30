@@ -1,0 +1,22 @@
+[TEST 28 - 69.json]
+	MEM WRITE: dbe2 / (56290) => 69 / (105)
+	MEM WRITE: dbe3 / (56291) => 3b / (59)
+	MEM WRITE: dbe4 / (56292) => b2 / (178)
+	MEM READ: dbe2 / (56290) => 69 / (105)
+[OP START 56290 -> 0x69 -> adc]
+	REGS:
+		PC: 56290 (dbe2)
+		SP: 64 (40)
+		A:  206 (ce)
+		X:  131 (83)
+		Y:  112 (70)
+		P:  235 (eb)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: dbe3 / (56291) => 3b / (59)
+	BCD START -> ce + 3b
+	BCD CONVERT -> 34 + 41
+	BCD SUM -> 76
+[OP END @ 56291]
+Done..

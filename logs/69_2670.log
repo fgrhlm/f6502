@@ -1,0 +1,19 @@
+[TEST 170 - 69.json]
+	MEM WRITE: 5cf0 / (23792) => 69 / (105)
+	MEM WRITE: 5cf1 / (23793) => 14 / (20)
+	MEM WRITE: 5cf2 / (23794) => 71 / (113)
+	MEM READ: 5cf0 / (23792) => 69 / (105)
+[OP START 23792 -> 0x69 -> adc]
+	REGS:
+		PC: 23792 (5cf0)
+		SP: 14 (e)
+		A:  75 (4b)
+		X:  150 (96)
+		Y:  203 (cb)
+		P:  38 (26)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5cf1 / (23793) => 14 / (20)
+	BINADC: 4b + 14 = 5f[OP END @ 23793]
+Done..

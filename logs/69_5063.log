@@ -1,0 +1,19 @@
+[TEST 63 - 69.json]
+	MEM WRITE: cd8f / (52623) => 69 / (105)
+	MEM WRITE: cd90 / (52624) => d8 / (216)
+	MEM WRITE: cd91 / (52625) => 85 / (133)
+	MEM READ: cd8f / (52623) => 69 / (105)
+[OP START 52623 -> 0x69 -> adc]
+	REGS:
+		PC: 52623 (cd8f)
+		SP: 230 (e6)
+		A:  72 (48)
+		X:  207 (cf)
+		Y:  221 (dd)
+		P:  224 (e0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cd90 / (52624) => d8 / (216)
+	BINADC: 48 + d8 = 20[OP END @ 52624]
+Done..

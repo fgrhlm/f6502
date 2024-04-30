@@ -1,0 +1,19 @@
+[TEST 168 - 69.json]
+	MEM WRITE: 3518 / (13592) => 69 / (105)
+	MEM WRITE: 3519 / (13593) => d4 / (212)
+	MEM WRITE: 351a / (13594) => 9f / (159)
+	MEM READ: 3518 / (13592) => 69 / (105)
+[OP START 13592 -> 0x69 -> adc]
+	REGS:
+		PC: 13592 (3518)
+		SP: 117 (75)
+		A:  6 (6)
+		X:  220 (dc)
+		Y:  254 (fe)
+		P:  38 (26)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3519 / (13593) => d4 / (212)
+	BINADC: 6 + d4 = da[OP END @ 13593]
+Done..

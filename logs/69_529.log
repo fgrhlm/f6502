@@ -1,0 +1,22 @@
+[TEST 529 - 69.json]
+	MEM WRITE: eb71 / (60273) => 69 / (105)
+	MEM WRITE: eb72 / (60274) => c1 / (193)
+	MEM WRITE: eb73 / (60275) => bf / (191)
+	MEM READ: eb71 / (60273) => 69 / (105)
+[OP START 60273 -> 0x69 -> adc]
+	REGS:
+		PC: 60273 (eb71)
+		SP: 183 (b7)
+		A:  116 (74)
+		X:  184 (b8)
+		Y:  207 (cf)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eb72 / (60274) => c1 / (193)
+	BCD START -> 74 + c1
+	BCD CONVERT -> 74 + 21
+	BCD SUM -> 96
+[OP END @ 60274]
+Done..

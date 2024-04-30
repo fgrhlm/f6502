@@ -1,0 +1,19 @@
+[TEST 217 - 69.json]
+	MEM WRITE: cebe / (52926) => 69 / (105)
+	MEM WRITE: cebf / (52927) => 5 / (5)
+	MEM WRITE: cec0 / (52928) => 78 / (120)
+	MEM READ: cebe / (52926) => 69 / (105)
+[OP START 52926 -> 0x69 -> adc]
+	REGS:
+		PC: 52926 (cebe)
+		SP: 122 (7a)
+		A:  67 (43)
+		X:  143 (8f)
+		Y:  171 (ab)
+		P:  161 (a1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cebf / (52927) => 5 / (5)
+	BINADC: 43 + 5 = 49[OP END @ 52927]
+Done..

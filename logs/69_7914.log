@@ -1,0 +1,19 @@
+[TEST 414 - 69.json]
+	MEM WRITE: ccd3 / (52435) => 69 / (105)
+	MEM WRITE: ccd4 / (52436) => 66 / (102)
+	MEM WRITE: ccd5 / (52437) => b3 / (179)
+	MEM READ: ccd3 / (52435) => 69 / (105)
+[OP START 52435 -> 0x69 -> adc]
+	REGS:
+		PC: 52435 (ccd3)
+		SP: 220 (dc)
+		A:  157 (9d)
+		X:  45 (2d)
+		Y:  159 (9f)
+		P:  160 (a0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ccd4 / (52436) => 66 / (102)
+	BINADC: 9d + 66 = 3[OP END @ 52436]
+Done..

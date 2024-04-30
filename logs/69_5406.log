@@ -1,0 +1,22 @@
+[TEST 406 - 69.json]
+	MEM WRITE: 7946 / (31046) => 69 / (105)
+	MEM WRITE: 7947 / (31047) => 3 / (3)
+	MEM WRITE: 7948 / (31048) => 7d / (125)
+	MEM READ: 7946 / (31046) => 69 / (105)
+[OP START 31046 -> 0x69 -> adc]
+	REGS:
+		PC: 31046 (7946)
+		SP: 170 (aa)
+		A:  110 (6e)
+		X:  17 (11)
+		Y:  73 (49)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7947 / (31047) => 3 / (3)
+	BCD START -> 6e + 3
+	BCD CONVERT -> 74 + 3
+	BCD SUM -> 78
+[OP END @ 31047]
+Done..

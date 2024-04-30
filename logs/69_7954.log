@@ -1,0 +1,22 @@
+[TEST 454 - 69.json]
+	MEM WRITE: 1104 / (4356) => 69 / (105)
+	MEM WRITE: 1105 / (4357) => 7 / (7)
+	MEM WRITE: 1106 / (4358) => a4 / (164)
+	MEM READ: 1104 / (4356) => 69 / (105)
+[OP START 4356 -> 0x69 -> adc]
+	REGS:
+		PC: 4356 (1104)
+		SP: 166 (a6)
+		A:  247 (f7)
+		X:  153 (99)
+		Y:  1 (1)
+		P:  232 (e8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1105 / (4357) => 7 / (7)
+	BCD START -> f7 + 7
+	BCD CONVERT -> 57 + 7
+	BCD SUM -> 64
+[OP END @ 4357]
+Done..

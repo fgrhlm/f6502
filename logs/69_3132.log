@@ -1,0 +1,22 @@
+[TEST 7 - 69.json]
+	MEM WRITE: bb80 / (48000) => 69 / (105)
+	MEM WRITE: bb81 / (48001) => c8 / (200)
+	MEM WRITE: bb82 / (48002) => 8b / (139)
+	MEM READ: bb80 / (48000) => 69 / (105)
+[OP START 48000 -> 0x69 -> adc]
+	REGS:
+		PC: 48000 (bb80)
+		SP: 201 (c9)
+		A:  129 (81)
+		X:  124 (7c)
+		Y:  246 (f6)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bb81 / (48001) => c8 / (200)
+	BCD START -> 81 + c8
+	BCD CONVERT -> 81 + 28
+	BCD SUM -> a
+[OP END @ 48001]
+Done..

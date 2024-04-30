@@ -1,0 +1,22 @@
+[TEST 21 - 69.json]
+	MEM WRITE: a7c1 / (42945) => 69 / (105)
+	MEM WRITE: a7c2 / (42946) => b3 / (179)
+	MEM WRITE: a7c3 / (42947) => d8 / (216)
+	MEM READ: a7c1 / (42945) => 69 / (105)
+[OP START 42945 -> 0x69 -> adc]
+	REGS:
+		PC: 42945 (a7c1)
+		SP: 141 (8d)
+		A:  32 (20)
+		X:  90 (5a)
+		Y:  250 (fa)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a7c2 / (42946) => b3 / (179)
+	BCD START -> 20 + b3
+	BCD CONVERT -> 20 + 13
+	BCD SUM -> 33
+[OP END @ 42946]
+Done..

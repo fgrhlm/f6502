@@ -1,0 +1,19 @@
+[TEST 422 - 69.json]
+	MEM WRITE: 1fd6 / (8150) => 69 / (105)
+	MEM WRITE: 1fd7 / (8151) => c / (12)
+	MEM WRITE: 1fd8 / (8152) => 63 / (99)
+	MEM READ: 1fd6 / (8150) => 69 / (105)
+[OP START 8150 -> 0x69 -> adc]
+	REGS:
+		PC: 8150 (1fd6)
+		SP: 211 (d3)
+		A:  36 (24)
+		X:  231 (e7)
+		Y:  126 (7e)
+		P:  33 (21)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1fd7 / (8151) => c / (12)
+	BINADC: 24 + c = 31[OP END @ 8151]
+Done..

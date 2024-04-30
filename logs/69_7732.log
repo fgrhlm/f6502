@@ -1,0 +1,22 @@
+[TEST 232 - 69.json]
+	MEM WRITE: ed95 / (60821) => 69 / (105)
+	MEM WRITE: ed96 / (60822) => 63 / (99)
+	MEM WRITE: ed97 / (60823) => 5e / (94)
+	MEM READ: ed95 / (60821) => 69 / (105)
+[OP START 60821 -> 0x69 -> adc]
+	REGS:
+		PC: 60821 (ed95)
+		SP: 76 (4c)
+		A:  47 (2f)
+		X:  254 (fe)
+		Y:  6 (6)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ed96 / (60822) => 63 / (99)
+	BCD START -> 2f + 63
+	BCD CONVERT -> 35 + 63
+	BCD SUM -> 98
+[OP END @ 60822]
+Done..

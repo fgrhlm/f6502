@@ -1,0 +1,19 @@
+[TEST 227 - 69.json]
+	MEM WRITE: 402c / (16428) => 69 / (105)
+	MEM WRITE: 402d / (16429) => d6 / (214)
+	MEM WRITE: 402e / (16430) => 5d / (93)
+	MEM READ: 402c / (16428) => 69 / (105)
+[OP START 16428 -> 0x69 -> adc]
+	REGS:
+		PC: 16428 (402c)
+		SP: 71 (47)
+		A:  195 (c3)
+		X:  214 (d6)
+		Y:  32 (20)
+		P:  97 (61)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 402d / (16429) => d6 / (214)
+	BINADC: c3 + d6 = 9a[OP END @ 16429]
+Done..

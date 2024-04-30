@@ -1,0 +1,22 @@
+[TEST 219 - 69.json]
+	MEM WRITE: cee2 / (52962) => 69 / (105)
+	MEM WRITE: cee3 / (52963) => 37 / (55)
+	MEM WRITE: cee4 / (52964) => b8 / (184)
+	MEM READ: cee2 / (52962) => 69 / (105)
+[OP START 52962 -> 0x69 -> adc]
+	REGS:
+		PC: 52962 (cee2)
+		SP: 21 (15)
+		A:  90 (5a)
+		X:  102 (66)
+		Y:  134 (86)
+		P:  104 (68)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cee3 / (52963) => 37 / (55)
+	BCD START -> 5a + 37
+	BCD CONVERT -> 60 + 37
+	BCD SUM -> 97
+[OP END @ 52963]
+Done..

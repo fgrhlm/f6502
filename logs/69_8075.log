@@ -1,0 +1,22 @@
+[TEST 575 - 69.json]
+	MEM WRITE: da0b / (55819) => 69 / (105)
+	MEM WRITE: da0c / (55820) => e1 / (225)
+	MEM WRITE: da0d / (55821) => 36 / (54)
+	MEM READ: da0b / (55819) => 69 / (105)
+[OP START 55819 -> 0x69 -> adc]
+	REGS:
+		PC: 55819 (da0b)
+		SP: 251 (fb)
+		A:  37 (25)
+		X:  247 (f7)
+		Y:  162 (a2)
+		P:  234 (ea)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: da0c / (55820) => e1 / (225)
+	BCD START -> 25 + e1
+	BCD CONVERT -> 25 + 41
+	BCD SUM -> 66
+[OP END @ 55820]
+Done..

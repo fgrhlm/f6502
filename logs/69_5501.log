@@ -1,0 +1,19 @@
+[TEST 501 - 69.json]
+	MEM WRITE: d227 / (53799) => 69 / (105)
+	MEM WRITE: d228 / (53800) => 55 / (85)
+	MEM WRITE: d229 / (53801) => 4b / (75)
+	MEM READ: d227 / (53799) => 69 / (105)
+[OP START 53799 -> 0x69 -> adc]
+	REGS:
+		PC: 53799 (d227)
+		SP: 231 (e7)
+		A:  25 (19)
+		X:  176 (b0)
+		Y:  152 (98)
+		P:  231 (e7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d228 / (53800) => 55 / (85)
+	BINADC: 19 + 55 = 6f[OP END @ 53800]
+Done..

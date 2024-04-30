@@ -1,0 +1,22 @@
+[TEST 492 - 69.json]
+	MEM WRITE: da51 / (55889) => 69 / (105)
+	MEM WRITE: da52 / (55890) => d / (13)
+	MEM WRITE: da53 / (55891) => e4 / (228)
+	MEM READ: da51 / (55889) => 69 / (105)
+[OP START 55889 -> 0x69 -> adc]
+	REGS:
+		PC: 55889 (da51)
+		SP: 176 (b0)
+		A:  255 (ff)
+		X:  120 (78)
+		Y:  53 (35)
+		P:  44 (2c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: da52 / (55890) => d / (13)
+	BCD START -> ff + d
+	BCD CONVERT -> 65 + 13
+	BCD SUM -> 78
+[OP END @ 55890]
+Done..

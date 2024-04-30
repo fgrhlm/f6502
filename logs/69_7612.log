@@ -1,0 +1,19 @@
+[TEST 112 - 69.json]
+	MEM WRITE: c889 / (51337) => 69 / (105)
+	MEM WRITE: c88a / (51338) => 26 / (38)
+	MEM WRITE: c88b / (51339) => cf / (207)
+	MEM READ: c889 / (51337) => 69 / (105)
+[OP START 51337 -> 0x69 -> adc]
+	REGS:
+		PC: 51337 (c889)
+		SP: 33 (21)
+		A:  249 (f9)
+		X:  30 (1e)
+		Y:  100 (64)
+		P:  230 (e6)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c88a / (51338) => 26 / (38)
+	BINADC: f9 + 26 = 1f[OP END @ 51338]
+Done..

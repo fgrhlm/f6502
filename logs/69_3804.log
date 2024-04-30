@@ -1,0 +1,22 @@
+[TEST 54 - 69.json]
+	MEM WRITE: e283 / (57987) => 69 / (105)
+	MEM WRITE: e284 / (57988) => 3c / (60)
+	MEM WRITE: e285 / (57989) => 42 / (66)
+	MEM READ: e283 / (57987) => 69 / (105)
+[OP START 57987 -> 0x69 -> adc]
+	REGS:
+		PC: 57987 (e283)
+		SP: 95 (5f)
+		A:  18 (12)
+		X:  60 (3c)
+		Y:  129 (81)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e284 / (57988) => 3c / (60)
+	BCD START -> 12 + 3c
+	BCD CONVERT -> 12 + 42
+	BCD SUM -> 54
+[OP END @ 57988]
+Done..

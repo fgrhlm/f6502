@@ -1,0 +1,22 @@
+[TEST 570 - 69.json]
+	MEM WRITE: 99fa / (39418) => 69 / (105)
+	MEM WRITE: 99fb / (39419) => be / (190)
+	MEM WRITE: 99fc / (39420) => d7 / (215)
+	MEM READ: 99fa / (39418) => 69 / (105)
+[OP START 39418 -> 0x69 -> adc]
+	REGS:
+		PC: 39418 (99fa)
+		SP: 56 (38)
+		A:  203 (cb)
+		X:  189 (bd)
+		Y:  255 (ff)
+		P:  172 (ac)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 99fb / (39419) => be / (190)
+	BCD START -> cb + be
+	BCD CONVERT -> 31 + 24
+	BCD SUM -> 55
+[OP END @ 39419]
+Done..

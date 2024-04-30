@@ -1,0 +1,19 @@
+[TEST 318 - 69.json]
+	MEM WRITE: 2362 / (9058) => 69 / (105)
+	MEM WRITE: 2363 / (9059) => 82 / (130)
+	MEM WRITE: 2364 / (9060) => f9 / (249)
+	MEM READ: 2362 / (9058) => 69 / (105)
+[OP START 9058 -> 0x69 -> adc]
+	REGS:
+		PC: 9058 (2362)
+		SP: 81 (51)
+		A:  122 (7a)
+		X:  49 (31)
+		Y:  218 (da)
+		P:  160 (a0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2363 / (9059) => 82 / (130)
+	BINADC: 7a + 82 = fc[OP END @ 9059]
+Done..

@@ -1,0 +1,19 @@
+[TEST 14 - 69.json]
+	MEM WRITE: 6780 / (26496) => 69 / (105)
+	MEM WRITE: 6781 / (26497) => d4 / (212)
+	MEM WRITE: 6782 / (26498) => 86 / (134)
+	MEM READ: 6780 / (26496) => 69 / (105)
+[OP START 26496 -> 0x69 -> adc]
+	REGS:
+		PC: 26496 (6780)
+		SP: 17 (11)
+		A:  117 (75)
+		X:  249 (f9)
+		Y:  103 (67)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6781 / (26497) => d4 / (212)
+	BINADC: 75 + d4 = 4a[OP END @ 26497]
+Done..

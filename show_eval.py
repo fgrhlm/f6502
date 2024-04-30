@@ -1,44 +1,54 @@
 import json
 from enum import Enum
-
-C_R = "\x1b[30;41m"
-C_G = "\x1b[30;42m"
-C_Y = "\x1b[30;47m"
-C_N = "\x1b[39;40m"
-C_RST = "\x1b[0m"
+from utils import color, ops
 
 if __name__=="__main__":
     with open("tests/logs/eval.json", "r") as f:
         res = json.load(f)
     
     print()
-    for n in range(16): print(f"   {n:x}", end="")
+    def istr(n): return f"{n:x}".upper()
+    for n in range(16): print(color("bold", f"    x{istr(n)}"), end="")
     
     print()
     
+    def gen_res_str(status, s):
+        match status:
+            case "FAIL": return color("r", s) 
+            case "PASS": return color("g", s)
+            case "ERROR": return color("y", s)
+            case "NONE": return color("n", s)
+
     for n in range(16*16):
         index = f"{n:02x}"
-        if index in res.keys():
-            status = res[index]["status"]
-        else:
-            status = "NONE"
+        status = res[index]["status"] if index in res.keys() else "NONE"
 
-        match status:
-            case "FAIL": color = C_R 
-            case "PASS": color = C_G
-            case "ERROR": color = C_Y
-            case "NONE": color = C_N
-
+        res_str = gen_res_str(status, f" {ops[index]['name']} ")
+        
         if n % 16 == 0: 
             if n > 0: print("\n")
-            print(f"{int((n/16)) :x}", end=" ")
-            print(f"{color}   ", end=f"{C_RST} ")
+            print(color("bold", f"{istr(int((n/16)))}x"), end=" ")
+            print(res_str, end=" ")
         else:
-            print(f"{color}   ", end=f"{C_RST} ")
-
-        if n == 15:         print(f"\t{C_G}    PASS    ", end=f"{C_RST}")
-        if n == (16)+15:    print(f"\t{C_R}    FAIL    ", end=f"{C_RST}")
-        if n == (16*2)+15:  print(f"\t{C_Y}    ERROR   ", end=f"{C_RST}")
-        if n == (16*3)+15:  print(f"\t{C_N} NOT TESTED ", end=f"{C_RST}")
+            print(res_str, end=" ")
 
     print("\n")
+
+    categories = ["load", "trans", "stack", "shift", "logic", "arith", "inc", "ctrl", "branch", "flags"]
+    for c in categories:
+        print(color("bold", f"{c}"))
+        row_c = 0
+        for n in range(16*16):
+            index = f"{n:02x}"
+            status = res[index]["status"] if index in res.keys() else "NONE"
+            res_str = gen_res_str(status, f" {index} {ops[index]['name']} ")
+
+            if ops[index]["category"] == c:
+                if status != "NONE":
+                    print(res_str, end=" ")
+                    row_c += 1
+
+            if row_c == 16: 
+                print("")
+                row_c = 0
+        print("\n")

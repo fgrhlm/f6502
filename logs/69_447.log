@@ -1,0 +1,22 @@
+[TEST 447 - 69.json]
+	MEM WRITE: dac / (3500) => 69 / (105)
+	MEM WRITE: dad / (3501) => 5a / (90)
+	MEM WRITE: dae / (3502) => f5 / (245)
+	MEM READ: dac / (3500) => 69 / (105)
+[OP START 3500 -> 0x69 -> adc]
+	REGS:
+		PC: 3500 (dac)
+		SP: 22 (16)
+		A:  129 (81)
+		X:  122 (7a)
+		Y:  84 (54)
+		P:  173 (ad)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: dad / (3501) => 5a / (90)
+	BCD START -> 81 + 5a
+	BCD CONVERT -> 81 + 60
+	BCD SUM -> 42
+[OP END @ 3501]
+Done..

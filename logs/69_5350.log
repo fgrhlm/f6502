@@ -1,0 +1,22 @@
+[TEST 350 - 69.json]
+	MEM WRITE: c547 / (50503) => 69 / (105)
+	MEM WRITE: c548 / (50504) => 3a / (58)
+	MEM WRITE: c549 / (50505) => d6 / (214)
+	MEM READ: c547 / (50503) => 69 / (105)
+[OP START 50503 -> 0x69 -> adc]
+	REGS:
+		PC: 50503 (c547)
+		SP: 15 (f)
+		A:  241 (f1)
+		X:  174 (ae)
+		Y:  238 (ee)
+		P:  174 (ae)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c548 / (50504) => 3a / (58)
+	BCD START -> f1 + 3a
+	BCD CONVERT -> 51 + 40
+	BCD SUM -> 91
+[OP END @ 50504]
+Done..

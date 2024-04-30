@@ -1,0 +1,22 @@
+[TEST 446 - 69.json]
+	MEM WRITE: 1608 / (5640) => 69 / (105)
+	MEM WRITE: 1609 / (5641) => 38 / (56)
+	MEM WRITE: 160a / (5642) => 91 / (145)
+	MEM READ: 1608 / (5640) => 69 / (105)
+[OP START 5640 -> 0x69 -> adc]
+	REGS:
+		PC: 5640 (1608)
+		SP: 230 (e6)
+		A:  229 (e5)
+		X:  13 (d)
+		Y:  96 (60)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1609 / (5641) => 38 / (56)
+	BCD START -> e5 + 38
+	BCD CONVERT -> 45 + 38
+	BCD SUM -> 84
+[OP END @ 5641]
+Done..

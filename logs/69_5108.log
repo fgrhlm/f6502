@@ -1,0 +1,19 @@
+[TEST 108 - 69.json]
+	MEM WRITE: 5469 / (21609) => 69 / (105)
+	MEM WRITE: 546a / (21610) => e5 / (229)
+	MEM WRITE: 546b / (21611) => c0 / (192)
+	MEM READ: 5469 / (21609) => 69 / (105)
+[OP START 21609 -> 0x69 -> adc]
+	REGS:
+		PC: 21609 (5469)
+		SP: 61 (3d)
+		A:  214 (d6)
+		X:  144 (90)
+		Y:  158 (9e)
+		P:  230 (e6)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 546a / (21610) => e5 / (229)
+	BINADC: d6 + e5 = bb[OP END @ 21610]
+Done..

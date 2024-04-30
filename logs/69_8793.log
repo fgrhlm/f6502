@@ -1,0 +1,19 @@
+[TEST 43 - 69.json]
+	MEM WRITE: ea87 / (60039) => 69 / (105)
+	MEM WRITE: ea88 / (60040) => e6 / (230)
+	MEM WRITE: ea89 / (60041) => 18 / (24)
+	MEM READ: ea87 / (60039) => 69 / (105)
+[OP START 60039 -> 0x69 -> adc]
+	REGS:
+		PC: 60039 (ea87)
+		SP: 43 (2b)
+		A:  147 (93)
+		X:  42 (2a)
+		Y:  193 (c1)
+		P:  36 (24)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ea88 / (60040) => e6 / (230)
+	BINADC: 93 + e6 = 79[OP END @ 60040]
+Done..

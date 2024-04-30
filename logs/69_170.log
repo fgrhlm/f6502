@@ -1,0 +1,19 @@
+[TEST 170 - 69.json]
+	MEM WRITE: bde5 / (48613) => 69 / (105)
+	MEM WRITE: bde6 / (48614) => c / (12)
+	MEM WRITE: bde7 / (48615) => c0 / (192)
+	MEM READ: bde5 / (48613) => 69 / (105)
+[OP START 48613 -> 0x69 -> adc]
+	REGS:
+		PC: 48613 (bde5)
+		SP: 174 (ae)
+		A:  51 (33)
+		X:  253 (fd)
+		Y:  201 (c9)
+		P:  228 (e4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bde6 / (48614) => c / (12)
+	BINADC: 33 + c = 3f[OP END @ 48614]
+Done..

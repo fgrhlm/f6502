@@ -1,0 +1,22 @@
+[TEST 352 - 69.json]
+	MEM WRITE: 8332 / (33586) => 69 / (105)
+	MEM WRITE: 8333 / (33587) => a5 / (165)
+	MEM WRITE: 8334 / (33588) => a7 / (167)
+	MEM READ: 8332 / (33586) => 69 / (105)
+[OP START 33586 -> 0x69 -> adc]
+	REGS:
+		PC: 33586 (8332)
+		SP: 111 (6f)
+		A:  78 (4e)
+		X:  53 (35)
+		Y:  243 (f3)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8333 / (33587) => a5 / (165)
+	BCD START -> 4e + a5
+	BCD CONVERT -> 54 + 5
+	BCD SUM -> 5a
+[OP END @ 33587]
+Done..

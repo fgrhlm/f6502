@@ -1,0 +1,22 @@
+[TEST 273 - 69.json]
+	MEM WRITE: ae87 / (44679) => 69 / (105)
+	MEM WRITE: ae88 / (44680) => 55 / (85)
+	MEM WRITE: ae89 / (44681) => d0 / (208)
+	MEM READ: ae87 / (44679) => 69 / (105)
+[OP START 44679 -> 0x69 -> adc]
+	REGS:
+		PC: 44679 (ae87)
+		SP: 55 (37)
+		A:  86 (56)
+		X:  190 (be)
+		Y:  81 (51)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ae88 / (44680) => 55 / (85)
+	BCD START -> 56 + 55
+	BCD CONVERT -> 56 + 55
+	BCD SUM -> 11
+[OP END @ 44680]
+Done..

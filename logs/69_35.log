@@ -1,0 +1,19 @@
+[TEST 35 - 69.json]
+	MEM WRITE: 339a / (13210) => 69 / (105)
+	MEM WRITE: 339b / (13211) => 66 / (102)
+	MEM WRITE: 339c / (13212) => cd / (205)
+	MEM READ: 339a / (13210) => 69 / (105)
+[OP START 13210 -> 0x69 -> adc]
+	REGS:
+		PC: 13210 (339a)
+		SP: 130 (82)
+		A:  178 (b2)
+		X:  205 (cd)
+		Y:  137 (89)
+		P:  100 (64)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 339b / (13211) => 66 / (102)
+	BINADC: b2 + 66 = 18[OP END @ 13211]
+Done..

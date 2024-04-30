@@ -1,0 +1,19 @@
+[TEST 408 - 69.json]
+	MEM WRITE: a6d2 / (42706) => 69 / (105)
+	MEM WRITE: a6d3 / (42707) => a6 / (166)
+	MEM WRITE: a6d4 / (42708) => 3d / (61)
+	MEM READ: a6d2 / (42706) => 69 / (105)
+[OP START 42706 -> 0x69 -> adc]
+	REGS:
+		PC: 42706 (a6d2)
+		SP: 85 (55)
+		A:  105 (69)
+		X:  64 (40)
+		Y:  231 (e7)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a6d3 / (42707) => a6 / (166)
+	BINADC: 69 + a6 = 10[OP END @ 42707]
+Done..

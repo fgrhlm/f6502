@@ -1,0 +1,22 @@
+[TEST 285 - 69.json]
+	MEM WRITE: af24 / (44836) => 69 / (105)
+	MEM WRITE: af25 / (44837) => 1a / (26)
+	MEM WRITE: af26 / (44838) => 25 / (37)
+	MEM READ: af24 / (44836) => 69 / (105)
+[OP START 44836 -> 0x69 -> adc]
+	REGS:
+		PC: 44836 (af24)
+		SP: 42 (2a)
+		A:  80 (50)
+		X:  71 (47)
+		Y:  251 (fb)
+		P:  105 (69)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: af25 / (44837) => 1a / (26)
+	BCD START -> 50 + 1a
+	BCD CONVERT -> 50 + 20
+	BCD SUM -> 71
+[OP END @ 44837]
+Done..

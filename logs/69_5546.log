@@ -1,0 +1,19 @@
+[TEST 546 - 69.json]
+	MEM WRITE: 7b8 / (1976) => 69 / (105)
+	MEM WRITE: 7b9 / (1977) => b6 / (182)
+	MEM WRITE: 7ba / (1978) => 3c / (60)
+	MEM READ: 7b8 / (1976) => 69 / (105)
+[OP START 1976 -> 0x69 -> adc]
+	REGS:
+		PC: 1976 (7b8)
+		SP: 29 (1d)
+		A:  143 (8f)
+		X:  128 (80)
+		Y:  245 (f5)
+		P:  38 (26)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7b9 / (1977) => b6 / (182)
+	BINADC: 8f + b6 = 45[OP END @ 1977]
+Done..

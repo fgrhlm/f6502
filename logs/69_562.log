@@ -1,0 +1,19 @@
+[TEST 562 - 69.json]
+	MEM WRITE: e2bb / (58043) => 69 / (105)
+	MEM WRITE: e2bc / (58044) => 65 / (101)
+	MEM WRITE: e2bd / (58045) => 53 / (83)
+	MEM READ: e2bb / (58043) => 69 / (105)
+[OP START 58043 -> 0x69 -> adc]
+	REGS:
+		PC: 58043 (e2bb)
+		SP: 55 (37)
+		A:  252 (fc)
+		X:  41 (29)
+		Y:  59 (3b)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e2bc / (58044) => 65 / (101)
+	BINADC: fc + 65 = 62[OP END @ 58044]
+Done..

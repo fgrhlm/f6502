@@ -1,0 +1,22 @@
+[TEST 608 - 69.json]
+	MEM WRITE: 2b68 / (11112) => 69 / (105)
+	MEM WRITE: 2b69 / (11113) => 3 / (3)
+	MEM WRITE: 2b6a / (11114) => 5 / (5)
+	MEM READ: 2b68 / (11112) => 69 / (105)
+[OP START 11112 -> 0x69 -> adc]
+	REGS:
+		PC: 11112 (2b68)
+		SP: 157 (9d)
+		A:  224 (e0)
+		X:  100 (64)
+		Y:  232 (e8)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2b69 / (11113) => 3 / (3)
+	BCD START -> e0 + 3
+	BCD CONVERT -> 40 + 3
+	BCD SUM -> 44
+[OP END @ 11113]
+Done..

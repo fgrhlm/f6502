@@ -1,0 +1,19 @@
+[TEST 302 - 69.json]
+	MEM WRITE: 358c / (13708) => 69 / (105)
+	MEM WRITE: 358d / (13709) => b4 / (180)
+	MEM WRITE: 358e / (13710) => 43 / (67)
+	MEM READ: 358c / (13708) => 69 / (105)
+[OP START 13708 -> 0x69 -> adc]
+	REGS:
+		PC: 13708 (358c)
+		SP: 50 (32)
+		A:  227 (e3)
+		X:  220 (dc)
+		Y:  155 (9b)
+		P:  38 (26)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 358d / (13709) => b4 / (180)
+	BINADC: e3 + b4 = 97[OP END @ 13709]
+Done..

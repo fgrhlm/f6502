@@ -1,0 +1,19 @@
+[TEST 390 - 69.json]
+	MEM WRITE: 7cdb / (31963) => 69 / (105)
+	MEM WRITE: 7cdc / (31964) => 1e / (30)
+	MEM WRITE: 7cdd / (31965) => f3 / (243)
+	MEM READ: 7cdb / (31963) => 69 / (105)
+[OP START 31963 -> 0x69 -> adc]
+	REGS:
+		PC: 31963 (7cdb)
+		SP: 76 (4c)
+		A:  145 (91)
+		X:  58 (3a)
+		Y:  71 (47)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7cdc / (31964) => 1e / (30)
+	BINADC: 91 + 1e = b0[OP END @ 31964]
+Done..

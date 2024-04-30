@@ -1,0 +1,22 @@
+[TEST 87 - 69.json]
+	MEM WRITE: ac81 / (44161) => 69 / (105)
+	MEM WRITE: ac82 / (44162) => a5 / (165)
+	MEM WRITE: ac83 / (44163) => 82 / (130)
+	MEM READ: ac81 / (44161) => 69 / (105)
+[OP START 44161 -> 0x69 -> adc]
+	REGS:
+		PC: 44161 (ac81)
+		SP: 58 (3a)
+		A:  144 (90)
+		X:  81 (51)
+		Y:  45 (2d)
+		P:  108 (6c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ac82 / (44162) => a5 / (165)
+	BCD START -> 90 + a5
+	BCD CONVERT -> 90 + 5
+	BCD SUM -> 95
+[OP END @ 44162]
+Done..

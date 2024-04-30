@@ -1,0 +1,19 @@
+[TEST 85 - 69.json]
+	MEM WRITE: 789d / (30877) => 69 / (105)
+	MEM WRITE: 789e / (30878) => 96 / (150)
+	MEM WRITE: 789f / (30879) => 37 / (55)
+	MEM READ: 789d / (30877) => 69 / (105)
+[OP START 30877 -> 0x69 -> adc]
+	REGS:
+		PC: 30877 (789d)
+		SP: 178 (b2)
+		A:  166 (a6)
+		X:  126 (7e)
+		Y:  138 (8a)
+		P:  167 (a7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 789e / (30878) => 96 / (150)
+	BINADC: a6 + 96 = 3d[OP END @ 30878]
+Done..

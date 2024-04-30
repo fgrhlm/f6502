@@ -1,0 +1,19 @@
+[TEST 355 - 69.json]
+	MEM WRITE: 7e8a / (32394) => 69 / (105)
+	MEM WRITE: 7e8b / (32395) => dd / (221)
+	MEM WRITE: 7e8c / (32396) => 30 / (48)
+	MEM READ: 7e8a / (32394) => 69 / (105)
+[OP START 32394 -> 0x69 -> adc]
+	REGS:
+		PC: 32394 (7e8a)
+		SP: 148 (94)
+		A:  109 (6d)
+		X:  203 (cb)
+		Y:  225 (e1)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7e8b / (32395) => dd / (221)
+	BINADC: 6d + dd = 4a[OP END @ 32395]
+Done..

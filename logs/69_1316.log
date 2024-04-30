@@ -1,0 +1,22 @@
+[TEST 66 - 69.json]
+	MEM WRITE: a3ac / (41900) => 69 / (105)
+	MEM WRITE: a3ad / (41901) => 57 / (87)
+	MEM WRITE: a3ae / (41902) => 79 / (121)
+	MEM READ: a3ac / (41900) => 69 / (105)
+[OP START 41900 -> 0x69 -> adc]
+	REGS:
+		PC: 41900 (a3ac)
+		SP: 34 (22)
+		A:  199 (c7)
+		X:  162 (a2)
+		Y:  76 (4c)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a3ad / (41901) => 57 / (87)
+	BCD START -> c7 + 57
+	BCD CONVERT -> 27 + 57
+	BCD SUM -> 84
+[OP END @ 41901]
+Done..

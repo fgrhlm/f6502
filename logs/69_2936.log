@@ -1,0 +1,22 @@
+[TEST 436 - 69.json]
+	MEM WRITE: d5e9 / (54761) => 69 / (105)
+	MEM WRITE: d5ea / (54762) => 81 / (129)
+	MEM WRITE: d5eb / (54763) => d6 / (214)
+	MEM READ: d5e9 / (54761) => 69 / (105)
+[OP START 54761 -> 0x69 -> adc]
+	REGS:
+		PC: 54761 (d5e9)
+		SP: 31 (1f)
+		A:  100 (64)
+		X:  47 (2f)
+		Y:  118 (76)
+		P:  239 (ef)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d5ea / (54762) => 81 / (129)
+	BCD START -> 64 + 81
+	BCD CONVERT -> 64 + 81
+	BCD SUM -> 46
+[OP END @ 54762]
+Done..

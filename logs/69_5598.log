@@ -1,0 +1,19 @@
+[TEST 598 - 69.json]
+	MEM WRITE: 2bc0 / (11200) => 69 / (105)
+	MEM WRITE: 2bc1 / (11201) => ae / (174)
+	MEM WRITE: 2bc2 / (11202) => 7f / (127)
+	MEM READ: 2bc0 / (11200) => 69 / (105)
+[OP START 11200 -> 0x69 -> adc]
+	REGS:
+		PC: 11200 (2bc0)
+		SP: 36 (24)
+		A:  6 (6)
+		X:  69 (45)
+		Y:  237 (ed)
+		P:  33 (21)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2bc1 / (11201) => ae / (174)
+	BINADC: 6 + ae = b5[OP END @ 11201]
+Done..

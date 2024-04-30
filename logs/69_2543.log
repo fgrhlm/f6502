@@ -1,0 +1,22 @@
+[TEST 43 - 69.json]
+	MEM WRITE: e7b8 / (59320) => 69 / (105)
+	MEM WRITE: e7b9 / (59321) => 2a / (42)
+	MEM WRITE: e7ba / (59322) => 81 / (129)
+	MEM READ: e7b8 / (59320) => 69 / (105)
+[OP START 59320 -> 0x69 -> adc]
+	REGS:
+		PC: 59320 (e7b8)
+		SP: 171 (ab)
+		A:  60 (3c)
+		X:  57 (39)
+		Y:  50 (32)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e7b9 / (59321) => 2a / (42)
+	BCD START -> 3c + 2a
+	BCD CONVERT -> 42 + 30
+	BCD SUM -> 73
+[OP END @ 59321]
+Done..

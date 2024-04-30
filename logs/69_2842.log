@@ -1,0 +1,22 @@
+[TEST 342 - 69.json]
+	MEM WRITE: eb5 / (3765) => 69 / (105)
+	MEM WRITE: eb6 / (3766) => b6 / (182)
+	MEM WRITE: eb7 / (3767) => c0 / (192)
+	MEM READ: eb5 / (3765) => 69 / (105)
+[OP START 3765 -> 0x69 -> adc]
+	REGS:
+		PC: 3765 (eb5)
+		SP: 56 (38)
+		A:  177 (b1)
+		X:  138 (8a)
+		Y:  65 (41)
+		P:  108 (6c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eb6 / (3766) => b6 / (182)
+	BCD START -> b1 + b6
+	BCD CONVERT -> 11 + 16
+	BCD SUM -> 27
+[OP END @ 3766]
+Done..

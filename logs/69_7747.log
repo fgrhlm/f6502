@@ -1,0 +1,19 @@
+[TEST 247 - 69.json]
+	MEM WRITE: 16ed / (5869) => 69 / (105)
+	MEM WRITE: 16ee / (5870) => 58 / (88)
+	MEM WRITE: 16ef / (5871) => b5 / (181)
+	MEM READ: 16ed / (5869) => 69 / (105)
+[OP START 5869 -> 0x69 -> adc]
+	REGS:
+		PC: 5869 (16ed)
+		SP: 120 (78)
+		A:  98 (62)
+		X:  54 (36)
+		Y:  40 (28)
+		P:  33 (21)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 16ee / (5870) => 58 / (88)
+	BINADC: 62 + 58 = bb[OP END @ 5870]
+Done..

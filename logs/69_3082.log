@@ -1,0 +1,19 @@
+[TEST 582 - 69.json]
+	MEM WRITE: 6df1 / (28145) => 69 / (105)
+	MEM WRITE: 6df2 / (28146) => 5e / (94)
+	MEM WRITE: 6df3 / (28147) => 52 / (82)
+	MEM READ: 6df1 / (28145) => 69 / (105)
+[OP START 28145 -> 0x69 -> adc]
+	REGS:
+		PC: 28145 (6df1)
+		SP: 224 (e0)
+		A:  191 (bf)
+		X:  153 (99)
+		Y:  63 (3f)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6df2 / (28146) => 5e / (94)
+	BINADC: bf + 5e = 1e[OP END @ 28146]
+Done..

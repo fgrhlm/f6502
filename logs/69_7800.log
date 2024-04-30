@@ -1,0 +1,19 @@
+[TEST 300 - 69.json]
+	MEM WRITE: 466b / (18027) => 69 / (105)
+	MEM WRITE: 466c / (18028) => 61 / (97)
+	MEM WRITE: 466d / (18029) => 7d / (125)
+	MEM READ: 466b / (18027) => 69 / (105)
+[OP START 18027 -> 0x69 -> adc]
+	REGS:
+		PC: 18027 (466b)
+		SP: 74 (4a)
+		A:  123 (7b)
+		X:  187 (bb)
+		Y:  18 (12)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 466c / (18028) => 61 / (97)
+	BINADC: 7b + 61 = dc[OP END @ 18028]
+Done..

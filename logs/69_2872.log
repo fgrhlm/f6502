@@ -1,0 +1,19 @@
+[TEST 372 - 69.json]
+	MEM WRITE: 7fcc / (32716) => 69 / (105)
+	MEM WRITE: 7fcd / (32717) => 32 / (50)
+	MEM WRITE: 7fce / (32718) => 6c / (108)
+	MEM READ: 7fcc / (32716) => 69 / (105)
+[OP START 32716 -> 0x69 -> adc]
+	REGS:
+		PC: 32716 (7fcc)
+		SP: 142 (8e)
+		A:  206 (ce)
+		X:  142 (8e)
+		Y:  75 (4b)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7fcd / (32717) => 32 / (50)
+	BINADC: ce + 32 = 0[OP END @ 32717]
+Done..

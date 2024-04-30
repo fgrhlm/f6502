@@ -1,0 +1,19 @@
+[TEST 604 - 69.json]
+	MEM WRITE: 9f74 / (40820) => 69 / (105)
+	MEM WRITE: 9f75 / (40821) => 44 / (68)
+	MEM WRITE: 9f76 / (40822) => 1d / (29)
+	MEM READ: 9f74 / (40820) => 69 / (105)
+[OP START 40820 -> 0x69 -> adc]
+	REGS:
+		PC: 40820 (9f74)
+		SP: 17 (11)
+		A:  47 (2f)
+		X:  1 (1)
+		Y:  151 (97)
+		P:  102 (66)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9f75 / (40821) => 44 / (68)
+	BINADC: 2f + 44 = 73[OP END @ 40821]
+Done..

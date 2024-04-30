@@ -1,0 +1,19 @@
+[TEST 389 - 69.json]
+	MEM WRITE: 4900 / (18688) => 69 / (105)
+	MEM WRITE: 4901 / (18689) => 1c / (28)
+	MEM WRITE: 4902 / (18690) => bf / (191)
+	MEM READ: 4900 / (18688) => 69 / (105)
+[OP START 18688 -> 0x69 -> adc]
+	REGS:
+		PC: 18688 (4900)
+		SP: 234 (ea)
+		A:  76 (4c)
+		X:  33 (21)
+		Y:  135 (87)
+		P:  38 (26)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4901 / (18689) => 1c / (28)
+	BINADC: 4c + 1c = 68[OP END @ 18689]
+Done..

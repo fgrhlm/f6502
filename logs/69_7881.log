@@ -1,0 +1,19 @@
+[TEST 381 - 69.json]
+	MEM WRITE: 1b0d / (6925) => 69 / (105)
+	MEM WRITE: 1b0e / (6926) => e9 / (233)
+	MEM WRITE: 1b0f / (6927) => cb / (203)
+	MEM READ: 1b0d / (6925) => 69 / (105)
+[OP START 6925 -> 0x69 -> adc]
+	REGS:
+		PC: 6925 (1b0d)
+		SP: 166 (a6)
+		A:  157 (9d)
+		X:  189 (bd)
+		Y:  87 (57)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1b0e / (6926) => e9 / (233)
+	BINADC: 9d + e9 = 87[OP END @ 6926]
+Done..

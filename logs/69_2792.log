@@ -1,0 +1,19 @@
+[TEST 292 - 69.json]
+	MEM WRITE: f912 / (63762) => 69 / (105)
+	MEM WRITE: f913 / (63763) => 64 / (100)
+	MEM WRITE: f914 / (63764) => 81 / (129)
+	MEM READ: f912 / (63762) => 69 / (105)
+[OP START 63762 -> 0x69 -> adc]
+	REGS:
+		PC: 63762 (f912)
+		SP: 113 (71)
+		A:  164 (a4)
+		X:  170 (aa)
+		Y:  94 (5e)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f913 / (63763) => 64 / (100)
+	BINADC: a4 + 64 = 9[OP END @ 63763]
+Done..

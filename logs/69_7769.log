@@ -1,0 +1,22 @@
+[TEST 269 - 69.json]
+	MEM WRITE: cdad / (52653) => 69 / (105)
+	MEM WRITE: cdae / (52654) => ed / (237)
+	MEM WRITE: cdaf / (52655) => b2 / (178)
+	MEM READ: cdad / (52653) => 69 / (105)
+[OP START 52653 -> 0x69 -> adc]
+	REGS:
+		PC: 52653 (cdad)
+		SP: 90 (5a)
+		A:  75 (4b)
+		X:  94 (5e)
+		Y:  255 (ff)
+		P:  45 (2d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cdae / (52654) => ed / (237)
+	BCD START -> 4b + ed
+	BCD CONVERT -> 51 + 53
+	BCD SUM -> 5
+[OP END @ 52654]
+Done..

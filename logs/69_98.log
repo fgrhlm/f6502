@@ -1,0 +1,19 @@
+[TEST 98 - 69.json]
+	MEM WRITE: 43c3 / (17347) => 69 / (105)
+	MEM WRITE: 43c4 / (17348) => da / (218)
+	MEM WRITE: 43c5 / (17349) => 87 / (135)
+	MEM READ: 43c3 / (17347) => 69 / (105)
+[OP START 17347 -> 0x69 -> adc]
+	REGS:
+		PC: 17347 (43c3)
+		SP: 157 (9d)
+		A:  143 (8f)
+		X:  167 (a7)
+		Y:  142 (8e)
+		P:  164 (a4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 43c4 / (17348) => da / (218)
+	BINADC: 8f + da = 69[OP END @ 17348]
+Done..

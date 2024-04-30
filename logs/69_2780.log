@@ -1,0 +1,19 @@
+[TEST 280 - 69.json]
+	MEM WRITE: 6528 / (25896) => 69 / (105)
+	MEM WRITE: 6529 / (25897) => e1 / (225)
+	MEM WRITE: 652a / (25898) => 84 / (132)
+	MEM READ: 6528 / (25896) => 69 / (105)
+[OP START 25896 -> 0x69 -> adc]
+	REGS:
+		PC: 25896 (6528)
+		SP: 237 (ed)
+		A:  120 (78)
+		X:  143 (8f)
+		Y:  249 (f9)
+		P:  39 (27)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6529 / (25897) => e1 / (225)
+	BINADC: 78 + e1 = 5a[OP END @ 25897]
+Done..

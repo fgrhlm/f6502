@@ -1,0 +1,22 @@
+[TEST 371 - 69.json]
+	MEM WRITE: 9015 / (36885) => 69 / (105)
+	MEM WRITE: 9016 / (36886) => 0 / (0)
+	MEM WRITE: 9017 / (36887) => ad / (173)
+	MEM READ: 9015 / (36885) => 69 / (105)
+[OP START 36885 -> 0x69 -> adc]
+	REGS:
+		PC: 36885 (9015)
+		SP: 211 (d3)
+		A:  99 (63)
+		X:  80 (50)
+		Y:  73 (49)
+		P:  173 (ad)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9016 / (36886) => 0 / (0)
+	BCD START -> 63 + 0
+	BCD CONVERT -> 63 + 0
+	BCD SUM -> 64
+[OP END @ 36886]
+Done..

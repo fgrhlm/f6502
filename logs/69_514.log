@@ -1,0 +1,22 @@
+[TEST 514 - 69.json]
+	MEM WRITE: 315a / (12634) => 69 / (105)
+	MEM WRITE: 315b / (12635) => ba / (186)
+	MEM WRITE: 315c / (12636) => ee / (238)
+	MEM READ: 315a / (12634) => 69 / (105)
+[OP START 12634 -> 0x69 -> adc]
+	REGS:
+		PC: 12634 (315a)
+		SP: 232 (e8)
+		A:  179 (b3)
+		X:  29 (1d)
+		Y:  205 (cd)
+		P:  238 (ee)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 315b / (12635) => ba / (186)
+	BCD START -> b3 + ba
+	BCD CONVERT -> 13 + 20
+	BCD SUM -> 33
+[OP END @ 12635]
+Done..

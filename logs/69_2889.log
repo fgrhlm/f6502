@@ -1,0 +1,19 @@
+[TEST 389 - 69.json]
+	MEM WRITE: 36d6 / (14038) => 69 / (105)
+	MEM WRITE: 36d7 / (14039) => de / (222)
+	MEM WRITE: 36d8 / (14040) => 10 / (16)
+	MEM READ: 36d6 / (14038) => 69 / (105)
+[OP START 14038 -> 0x69 -> adc]
+	REGS:
+		PC: 14038 (36d6)
+		SP: 11 (b)
+		A:  126 (7e)
+		X:  112 (70)
+		Y:  224 (e0)
+		P:  167 (a7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 36d7 / (14039) => de / (222)
+	BINADC: 7e + de = 5d[OP END @ 14039]
+Done..

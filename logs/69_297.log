@@ -1,0 +1,19 @@
+[TEST 297 - 69.json]
+	MEM WRITE: 116c / (4460) => 69 / (105)
+	MEM WRITE: 116d / (4461) => ec / (236)
+	MEM WRITE: 116e / (4462) => 8b / (139)
+	MEM READ: 116c / (4460) => 69 / (105)
+[OP START 4460 -> 0x69 -> adc]
+	REGS:
+		PC: 4460 (116c)
+		SP: 13 (d)
+		A:  184 (b8)
+		X:  60 (3c)
+		Y:  185 (b9)
+		P:  227 (e3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 116d / (4461) => ec / (236)
+	BINADC: b8 + ec = a5[OP END @ 4461]
+Done..

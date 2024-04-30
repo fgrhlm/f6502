@@ -1,0 +1,22 @@
+[TEST 19 - 69.json]
+	MEM WRITE: a74a / (42826) => 69 / (105)
+	MEM WRITE: a74b / (42827) => d4 / (212)
+	MEM WRITE: a74c / (42828) => db / (219)
+	MEM READ: a74a / (42826) => 69 / (105)
+[OP START 42826 -> 0x69 -> adc]
+	REGS:
+		PC: 42826 (a74a)
+		SP: 61 (3d)
+		A:  174 (ae)
+		X:  209 (d1)
+		Y:  207 (cf)
+		P:  110 (6e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a74b / (42827) => d4 / (212)
+	BCD START -> ae + d4
+	BCD CONVERT -> 14 + 34
+	BCD SUM -> 48
+[OP END @ 42827]
+Done..

@@ -1,0 +1,19 @@
+[TEST 74 - 69.json]
+	MEM WRITE: a332 / (41778) => 69 / (105)
+	MEM WRITE: a333 / (41779) => 35 / (53)
+	MEM WRITE: a334 / (41780) => 11 / (17)
+	MEM READ: a332 / (41778) => 69 / (105)
+[OP START 41778 -> 0x69 -> adc]
+	REGS:
+		PC: 41778 (a332)
+		SP: 85 (55)
+		A:  73 (49)
+		X:  105 (69)
+		Y:  37 (25)
+		P:  230 (e6)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a333 / (41779) => 35 / (53)
+	BINADC: 49 + 35 = 7e[OP END @ 41779]
+Done..

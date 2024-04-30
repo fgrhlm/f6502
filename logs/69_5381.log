@@ -1,0 +1,22 @@
+[TEST 381 - 69.json]
+	MEM WRITE: 13c9 / (5065) => 69 / (105)
+	MEM WRITE: 13ca / (5066) => b5 / (181)
+	MEM WRITE: 13cb / (5067) => d3 / (211)
+	MEM READ: 13c9 / (5065) => 69 / (105)
+[OP START 5065 -> 0x69 -> adc]
+	REGS:
+		PC: 5065 (13c9)
+		SP: 2 (2)
+		A:  172 (ac)
+		X:  211 (d3)
+		Y:  77 (4d)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 13ca / (5066) => b5 / (181)
+	BCD START -> ac + b5
+	BCD CONVERT -> 12 + 15
+	BCD SUM -> 28
+[OP END @ 5066]
+Done..

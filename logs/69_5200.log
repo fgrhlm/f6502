@@ -1,0 +1,22 @@
+[TEST 200 - 69.json]
+	MEM WRITE: 224a / (8778) => 69 / (105)
+	MEM WRITE: 224b / (8779) => 88 / (136)
+	MEM WRITE: 224c / (8780) => 7a / (122)
+	MEM READ: 224a / (8778) => 69 / (105)
+[OP START 8778 -> 0x69 -> adc]
+	REGS:
+		PC: 8778 (224a)
+		SP: 113 (71)
+		A:  215 (d7)
+		X:  117 (75)
+		Y:  231 (e7)
+		P:  173 (ad)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 224b / (8779) => 88 / (136)
+	BCD START -> d7 + 88
+	BCD CONVERT -> 37 + 88
+	BCD SUM -> 26
+[OP END @ 8779]
+Done..

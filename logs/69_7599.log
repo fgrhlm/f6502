@@ -1,0 +1,19 @@
+[TEST 99 - 69.json]
+	MEM WRITE: 45ed / (17901) => 69 / (105)
+	MEM WRITE: 45ee / (17902) => 94 / (148)
+	MEM WRITE: 45ef / (17903) => 7 / (7)
+	MEM READ: 45ed / (17901) => 69 / (105)
+[OP START 17901 -> 0x69 -> adc]
+	REGS:
+		PC: 17901 (45ed)
+		SP: 118 (76)
+		A:  238 (ee)
+		X:  197 (c5)
+		Y:  9 (9)
+		P:  38 (26)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 45ee / (17902) => 94 / (148)
+	BINADC: ee + 94 = 82[OP END @ 17902]
+Done..

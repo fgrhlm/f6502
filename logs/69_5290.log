@@ -1,0 +1,19 @@
+[TEST 290 - 69.json]
+	MEM WRITE: 5f74 / (24436) => 69 / (105)
+	MEM WRITE: 5f75 / (24437) => 4e / (78)
+	MEM WRITE: 5f76 / (24438) => 8f / (143)
+	MEM READ: 5f74 / (24436) => 69 / (105)
+[OP START 24436 -> 0x69 -> adc]
+	REGS:
+		PC: 24436 (5f74)
+		SP: 228 (e4)
+		A:  255 (ff)
+		X:  119 (77)
+		Y:  64 (40)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5f75 / (24437) => 4e / (78)
+	BINADC: ff + 4e = 4e[OP END @ 24437]
+Done..

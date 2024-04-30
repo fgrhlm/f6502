@@ -1,0 +1,22 @@
+[TEST 592 - 69.json]
+	MEM WRITE: 3be1 / (15329) => 69 / (105)
+	MEM WRITE: 3be2 / (15330) => f6 / (246)
+	MEM WRITE: 3be3 / (15331) => 2f / (47)
+	MEM READ: 3be1 / (15329) => 69 / (105)
+[OP START 15329 -> 0x69 -> adc]
+	REGS:
+		PC: 15329 (3be1)
+		SP: 163 (a3)
+		A:  169 (a9)
+		X:  250 (fa)
+		Y:  244 (f4)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3be2 / (15330) => f6 / (246)
+	BCD START -> a9 + f6
+	BCD CONVERT -> 9 + 56
+	BCD SUM -> 66
+[OP END @ 15330]
+Done..

@@ -1,0 +1,19 @@
+[TEST 534 - 69.json]
+	MEM WRITE: b8e / (2958) => 69 / (105)
+	MEM WRITE: b8f / (2959) => 48 / (72)
+	MEM WRITE: b90 / (2960) => 93 / (147)
+	MEM READ: b8e / (2958) => 69 / (105)
+[OP START 2958 -> 0x69 -> adc]
+	REGS:
+		PC: 2958 (b8e)
+		SP: 130 (82)
+		A:  164 (a4)
+		X:  25 (19)
+		Y:  255 (ff)
+		P:  231 (e7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b8f / (2959) => 48 / (72)
+	BINADC: a4 + 48 = ed[OP END @ 2959]
+Done..

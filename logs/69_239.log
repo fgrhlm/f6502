@@ -1,0 +1,19 @@
+[TEST 239 - 69.json]
+	MEM WRITE: f3c9 / (62409) => 69 / (105)
+	MEM WRITE: f3ca / (62410) => a5 / (165)
+	MEM WRITE: f3cb / (62411) => 5a / (90)
+	MEM READ: f3c9 / (62409) => 69 / (105)
+[OP START 62409 -> 0x69 -> adc]
+	REGS:
+		PC: 62409 (f3c9)
+		SP: 251 (fb)
+		A:  234 (ea)
+		X:  47 (2f)
+		Y:  0 (0)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f3ca / (62410) => a5 / (165)
+	BINADC: ea + a5 = 90[OP END @ 62410]
+Done..

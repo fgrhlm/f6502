@@ -1,0 +1,22 @@
+[TEST 155 - 69.json]
+	MEM WRITE: ea3e / (59966) => 69 / (105)
+	MEM WRITE: ea3f / (59967) => 9e / (158)
+	MEM WRITE: ea40 / (59968) => fd / (253)
+	MEM READ: ea3e / (59966) => 69 / (105)
+[OP START 59966 -> 0x69 -> adc]
+	REGS:
+		PC: 59966 (ea3e)
+		SP: 61 (3d)
+		A:  186 (ba)
+		X:  19 (13)
+		Y:  171 (ab)
+		P:  105 (69)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ea3f / (59967) => 9e / (158)
+	BCD START -> ba + 9e
+	BCD CONVERT -> 20 + a4
+	BCD SUM -> 25
+[OP END @ 59967]
+Done..

@@ -1,0 +1,22 @@
+[TEST 412 - 69.json]
+	MEM WRITE: 454e / (17742) => 69 / (105)
+	MEM WRITE: 454f / (17743) => f0 / (240)
+	MEM WRITE: 4550 / (17744) => cb / (203)
+	MEM READ: 454e / (17742) => 69 / (105)
+[OP START 17742 -> 0x69 -> adc]
+	REGS:
+		PC: 17742 (454e)
+		SP: 80 (50)
+		A:  151 (97)
+		X:  250 (fa)
+		Y:  180 (b4)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 454f / (17743) => f0 / (240)
+	BCD START -> 97 + f0
+	BCD CONVERT -> 97 + 50
+	BCD SUM -> 47
+[OP END @ 17743]
+Done..

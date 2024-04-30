@@ -1,0 +1,22 @@
+[TEST 457 - 69.json]
+	MEM WRITE: fee3 / (65251) => 69 / (105)
+	MEM WRITE: fee4 / (65252) => d1 / (209)
+	MEM WRITE: fee5 / (65253) => e6 / (230)
+	MEM READ: fee3 / (65251) => 69 / (105)
+[OP START 65251 -> 0x69 -> adc]
+	REGS:
+		PC: 65251 (fee3)
+		SP: 246 (f6)
+		A:  235 (eb)
+		X:  127 (7f)
+		Y:  35 (23)
+		P:  174 (ae)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fee4 / (65252) => d1 / (209)
+	BCD START -> eb + d1
+	BCD CONVERT -> 51 + 31
+	BCD SUM -> 82
+[OP END @ 65252]
+Done..

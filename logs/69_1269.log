@@ -1,0 +1,19 @@
+[TEST 19 - 69.json]
+	MEM WRITE: 12e4 / (4836) => 69 / (105)
+	MEM WRITE: 12e5 / (4837) => 65 / (101)
+	MEM WRITE: 12e6 / (4838) => 39 / (57)
+	MEM READ: 12e4 / (4836) => 69 / (105)
+[OP START 4836 -> 0x69 -> adc]
+	REGS:
+		PC: 4836 (12e4)
+		SP: 84 (54)
+		A:  153 (99)
+		X:  32 (20)
+		Y:  111 (6f)
+		P:  36 (24)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 12e5 / (4837) => 65 / (101)
+	BINADC: 99 + 65 = fe[OP END @ 4837]
+Done..

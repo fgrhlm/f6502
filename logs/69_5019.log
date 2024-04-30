@@ -1,0 +1,19 @@
+[TEST 19 - 69.json]
+	MEM WRITE: bafd / (47869) => 69 / (105)
+	MEM WRITE: bafe / (47870) => 5b / (91)
+	MEM WRITE: baff / (47871) => 66 / (102)
+	MEM READ: bafd / (47869) => 69 / (105)
+[OP START 47869 -> 0x69 -> adc]
+	REGS:
+		PC: 47869 (bafd)
+		SP: 90 (5a)
+		A:  14 (e)
+		X:  121 (79)
+		Y:  194 (c2)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bafe / (47870) => 5b / (91)
+	BINADC: e + 5b = 6a[OP END @ 47870]
+Done..

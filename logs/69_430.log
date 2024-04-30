@@ -1,0 +1,22 @@
+[TEST 430 - 69.json]
+	MEM WRITE: 431a / (17178) => 69 / (105)
+	MEM WRITE: 431b / (17179) => e6 / (230)
+	MEM WRITE: 431c / (17180) => f9 / (249)
+	MEM READ: 431a / (17178) => 69 / (105)
+[OP START 17178 -> 0x69 -> adc]
+	REGS:
+		PC: 17178 (431a)
+		SP: 253 (fd)
+		A:  18 (12)
+		X:  30 (1e)
+		Y:  180 (b4)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 431b / (17179) => e6 / (230)
+	BCD START -> 12 + e6
+	BCD CONVERT -> 12 + 46
+	BCD SUM -> 58
+[OP END @ 17179]
+Done..

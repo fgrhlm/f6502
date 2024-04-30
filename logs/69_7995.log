@@ -1,0 +1,22 @@
+[TEST 495 - 69.json]
+	MEM WRITE: 7553 / (30035) => 69 / (105)
+	MEM WRITE: 7554 / (30036) => bf / (191)
+	MEM WRITE: 7555 / (30037) => 85 / (133)
+	MEM READ: 7553 / (30035) => 69 / (105)
+[OP START 30035 -> 0x69 -> adc]
+	REGS:
+		PC: 30035 (7553)
+		SP: 236 (ec)
+		A:  213 (d5)
+		X:  68 (44)
+		Y:  74 (4a)
+		P:  174 (ae)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7554 / (30036) => bf / (191)
+	BCD START -> d5 + bf
+	BCD CONVERT -> 35 + 25
+	BCD SUM -> 60
+[OP END @ 30036]
+Done..

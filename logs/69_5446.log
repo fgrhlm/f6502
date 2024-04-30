@@ -1,0 +1,19 @@
+[TEST 446 - 69.json]
+	MEM WRITE: 7c56 / (31830) => 69 / (105)
+	MEM WRITE: 7c57 / (31831) => 4d / (77)
+	MEM WRITE: 7c58 / (31832) => af / (175)
+	MEM READ: 7c56 / (31830) => 69 / (105)
+[OP START 31830 -> 0x69 -> adc]
+	REGS:
+		PC: 31830 (7c56)
+		SP: 167 (a7)
+		A:  132 (84)
+		X:  75 (4b)
+		Y:  98 (62)
+		P:  160 (a0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7c57 / (31831) => 4d / (77)
+	BINADC: 84 + 4d = d1[OP END @ 31831]
+Done..

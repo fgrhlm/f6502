@@ -1,0 +1,22 @@
+[TEST 293 - 69.json]
+	MEM WRITE: 2eca / (11978) => 69 / (105)
+	MEM WRITE: 2ecb / (11979) => c9 / (201)
+	MEM WRITE: 2ecc / (11980) => df / (223)
+	MEM READ: 2eca / (11978) => 69 / (105)
+[OP START 11978 -> 0x69 -> adc]
+	REGS:
+		PC: 11978 (2eca)
+		SP: 232 (e8)
+		A:  117 (75)
+		X:  217 (d9)
+		Y:  80 (50)
+		P:  232 (e8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2ecb / (11979) => c9 / (201)
+	BCD START -> 75 + c9
+	BCD CONVERT -> 75 + 29
+	BCD SUM -> 4
+[OP END @ 11979]
+Done..

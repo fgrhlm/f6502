@@ -1,0 +1,22 @@
+[TEST 358 - 69.json]
+	MEM WRITE: bed6 / (48854) => 69 / (105)
+	MEM WRITE: bed7 / (48855) => 43 / (67)
+	MEM WRITE: bed8 / (48856) => 62 / (98)
+	MEM READ: bed6 / (48854) => 69 / (105)
+[OP START 48854 -> 0x69 -> adc]
+	REGS:
+		PC: 48854 (bed6)
+		SP: 70 (46)
+		A:  4 (4)
+		X:  113 (71)
+		Y:  6 (6)
+		P:  235 (eb)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bed7 / (48855) => 43 / (67)
+	BCD START -> 4 + 43
+	BCD CONVERT -> 4 + 43
+	BCD SUM -> 48
+[OP END @ 48855]
+Done..

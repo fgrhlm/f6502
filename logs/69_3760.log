@@ -1,0 +1,22 @@
+[TEST 10 - 69.json]
+	MEM WRITE: f15e / (61790) => 69 / (105)
+	MEM WRITE: f15f / (61791) => 43 / (67)
+	MEM WRITE: f160 / (61792) => 9f / (159)
+	MEM READ: f15e / (61790) => 69 / (105)
+[OP START 61790 -> 0x69 -> adc]
+	REGS:
+		PC: 61790 (f15e)
+		SP: 130 (82)
+		A:  49 (31)
+		X:  12 (c)
+		Y:  238 (ee)
+		P:  107 (6b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f15f / (61791) => 43 / (67)
+	BCD START -> 31 + 43
+	BCD CONVERT -> 31 + 43
+	BCD SUM -> 75
+[OP END @ 61791]
+Done..

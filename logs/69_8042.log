@@ -1,0 +1,19 @@
+[TEST 542 - 69.json]
+	MEM WRITE: 54ab / (21675) => 69 / (105)
+	MEM WRITE: 54ac / (21676) => 3f / (63)
+	MEM WRITE: 54ad / (21677) => 3b / (59)
+	MEM READ: 54ab / (21675) => 69 / (105)
+[OP START 21675 -> 0x69 -> adc]
+	REGS:
+		PC: 21675 (54ab)
+		SP: 18 (12)
+		A:  94 (5e)
+		X:  201 (c9)
+		Y:  207 (cf)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 54ac / (21676) => 3f / (63)
+	BINADC: 5e + 3f = 9e[OP END @ 21676]
+Done..

@@ -1,0 +1,19 @@
+[TEST 432 - 69.json]
+	MEM WRITE: e492 / (58514) => 69 / (105)
+	MEM WRITE: e493 / (58515) => dc / (220)
+	MEM WRITE: e494 / (58516) => 77 / (119)
+	MEM READ: e492 / (58514) => 69 / (105)
+[OP START 58514 -> 0x69 -> adc]
+	REGS:
+		PC: 58514 (e492)
+		SP: 144 (90)
+		A:  167 (a7)
+		X:  131 (83)
+		Y:  27 (1b)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e493 / (58515) => dc / (220)
+	BINADC: a7 + dc = 84[OP END @ 58515]
+Done..

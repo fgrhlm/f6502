@@ -1,0 +1,22 @@
+[TEST 363 - 69.json]
+	MEM WRITE: f7cb / (63435) => 69 / (105)
+	MEM WRITE: f7cc / (63436) => 49 / (73)
+	MEM WRITE: f7cd / (63437) => c8 / (200)
+	MEM READ: f7cb / (63435) => 69 / (105)
+[OP START 63435 -> 0x69 -> adc]
+	REGS:
+		PC: 63435 (f7cb)
+		SP: 109 (6d)
+		A:  204 (cc)
+		X:  30 (1e)
+		Y:  252 (fc)
+		P:  110 (6e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f7cc / (63436) => 49 / (73)
+	BCD START -> cc + 49
+	BCD CONVERT -> 32 + 49
+	BCD SUM -> 81
+[OP END @ 63436]
+Done..

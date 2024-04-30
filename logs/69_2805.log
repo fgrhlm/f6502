@@ -1,0 +1,22 @@
+[TEST 305 - 69.json]
+	MEM WRITE: c29d / (49821) => 69 / (105)
+	MEM WRITE: c29e / (49822) => d7 / (215)
+	MEM WRITE: c29f / (49823) => 3d / (61)
+	MEM READ: c29d / (49821) => 69 / (105)
+[OP START 49821 -> 0x69 -> adc]
+	REGS:
+		PC: 49821 (c29d)
+		SP: 40 (28)
+		A:  82 (52)
+		X:  199 (c7)
+		Y:  137 (89)
+		P:  237 (ed)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c29e / (49822) => d7 / (215)
+	BCD START -> 52 + d7
+	BCD CONVERT -> 52 + 37
+	BCD SUM -> 8a
+[OP END @ 49822]
+Done..

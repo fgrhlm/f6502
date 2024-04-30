@@ -1,0 +1,22 @@
+[TEST 45 - 69.json]
+	MEM WRITE: 342a / (13354) => 69 / (105)
+	MEM WRITE: 342b / (13355) => 7f / (127)
+	MEM WRITE: 342c / (13356) => ce / (206)
+	MEM READ: 342a / (13354) => 69 / (105)
+[OP START 13354 -> 0x69 -> adc]
+	REGS:
+		PC: 13354 (342a)
+		SP: 254 (fe)
+		A:  46 (2e)
+		X:  1 (1)
+		Y:  40 (28)
+		P:  175 (af)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 342b / (13355) => 7f / (127)
+	BCD START -> 2e + 7f
+	BCD CONVERT -> 34 + 85
+	BCD SUM -> 1a
+[OP END @ 13355]
+Done..

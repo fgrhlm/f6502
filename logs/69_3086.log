@@ -1,0 +1,19 @@
+[TEST 586 - 69.json]
+	MEM WRITE: 22ad / (8877) => 69 / (105)
+	MEM WRITE: 22ae / (8878) => 6d / (109)
+	MEM WRITE: 22af / (8879) => f0 / (240)
+	MEM READ: 22ad / (8877) => 69 / (105)
+[OP START 8877 -> 0x69 -> adc]
+	REGS:
+		PC: 8877 (22ad)
+		SP: 2 (2)
+		A:  201 (c9)
+		X:  180 (b4)
+		Y:  9 (9)
+		P:  100 (64)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 22ae / (8878) => 6d / (109)
+	BINADC: c9 + 6d = 36[OP END @ 8878]
+Done..

@@ -1,0 +1,19 @@
+[TEST 98 - 69.json]
+	MEM WRITE: 1c62 / (7266) => 69 / (105)
+	MEM WRITE: 1c63 / (7267) => 74 / (116)
+	MEM WRITE: 1c64 / (7268) => c7 / (199)
+	MEM READ: 1c62 / (7266) => 69 / (105)
+[OP START 7266 -> 0x69 -> adc]
+	REGS:
+		PC: 7266 (1c62)
+		SP: 136 (88)
+		A:  90 (5a)
+		X:  150 (96)
+		Y:  7 (7)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1c63 / (7267) => 74 / (116)
+	BINADC: 5a + 74 = cf[OP END @ 7267]
+Done..

@@ -1,0 +1,19 @@
+[TEST 410 - 69.json]
+	MEM WRITE: 6e1d / (28189) => 69 / (105)
+	MEM WRITE: 6e1e / (28190) => 1f / (31)
+	MEM WRITE: 6e1f / (28191) => 76 / (118)
+	MEM READ: 6e1d / (28189) => 69 / (105)
+[OP START 28189 -> 0x69 -> adc]
+	REGS:
+		PC: 28189 (6e1d)
+		SP: 43 (2b)
+		A:  23 (17)
+		X:  6 (6)
+		Y:  57 (39)
+		P:  227 (e3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6e1e / (28190) => 1f / (31)
+	BINADC: 17 + 1f = 37[OP END @ 28190]
+Done..

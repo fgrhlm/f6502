@@ -1,0 +1,19 @@
+[TEST 511 - 69.json]
+	MEM WRITE: 4415 / (17429) => 69 / (105)
+	MEM WRITE: 4416 / (17430) => 1b / (27)
+	MEM WRITE: 4417 / (17431) => dc / (220)
+	MEM READ: 4415 / (17429) => 69 / (105)
+[OP START 17429 -> 0x69 -> adc]
+	REGS:
+		PC: 17429 (4415)
+		SP: 66 (42)
+		A:  198 (c6)
+		X:  2 (2)
+		Y:  108 (6c)
+		P:  33 (21)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4416 / (17430) => 1b / (27)
+	BINADC: c6 + 1b = e2[OP END @ 17430]
+Done..

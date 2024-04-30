@@ -1,0 +1,22 @@
+[TEST 437 - 69.json]
+	MEM WRITE: fcee / (64750) => 69 / (105)
+	MEM WRITE: fcef / (64751) => f3 / (243)
+	MEM WRITE: fcf0 / (64752) => 4c / (76)
+	MEM READ: fcee / (64750) => 69 / (105)
+[OP START 64750 -> 0x69 -> adc]
+	REGS:
+		PC: 64750 (fcee)
+		SP: 15 (f)
+		A:  137 (89)
+		X:  43 (2b)
+		Y:  216 (d8)
+		P:  235 (eb)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fcef / (64751) => f3 / (243)
+	BCD START -> 89 + f3
+	BCD CONVERT -> 89 + 53
+	BCD SUM -> 43
+[OP END @ 64751]
+Done..

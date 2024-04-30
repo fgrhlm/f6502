@@ -1,0 +1,22 @@
+[TEST 132 - 69.json]
+	MEM WRITE: fbdc / (64476) => 69 / (105)
+	MEM WRITE: fbdd / (64477) => ab / (171)
+	MEM WRITE: fbde / (64478) => 26 / (38)
+	MEM READ: fbdc / (64476) => 69 / (105)
+[OP START 64476 -> 0x69 -> adc]
+	REGS:
+		PC: 64476 (fbdc)
+		SP: 13 (d)
+		A:  43 (2b)
+		X:  87 (57)
+		Y:  5 (5)
+		P:  45 (2d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fbdd / (64477) => ab / (171)
+	BCD START -> 2b + ab
+	BCD CONVERT -> 31 + 11
+	BCD SUM -> 43
+[OP END @ 64477]
+Done..

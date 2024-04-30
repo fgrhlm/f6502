@@ -1,0 +1,22 @@
+[TEST 183 - 69.json]
+	MEM WRITE: a6cb / (42699) => 69 / (105)
+	MEM WRITE: a6cc / (42700) => 55 / (85)
+	MEM WRITE: a6cd / (42701) => 5c / (92)
+	MEM READ: a6cb / (42699) => 69 / (105)
+[OP START 42699 -> 0x69 -> adc]
+	REGS:
+		PC: 42699 (a6cb)
+		SP: 87 (57)
+		A:  193 (c1)
+		X:  63 (3f)
+		Y:  171 (ab)
+		P:  235 (eb)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a6cc / (42700) => 55 / (85)
+	BCD START -> c1 + 55
+	BCD CONVERT -> 21 + 55
+	BCD SUM -> 77
+[OP END @ 42700]
+Done..

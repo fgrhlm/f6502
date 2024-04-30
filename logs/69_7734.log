@@ -1,0 +1,22 @@
+[TEST 234 - 69.json]
+	MEM WRITE: d4f5 / (54517) => 69 / (105)
+	MEM WRITE: d4f6 / (54518) => 4b / (75)
+	MEM WRITE: d4f7 / (54519) => a7 / (167)
+	MEM READ: d4f5 / (54517) => 69 / (105)
+[OP START 54517 -> 0x69 -> adc]
+	REGS:
+		PC: 54517 (d4f5)
+		SP: 148 (94)
+		A:  164 (a4)
+		X:  145 (91)
+		Y:  15 (f)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d4f6 / (54518) => 4b / (75)
+	BCD START -> a4 + 4b
+	BCD CONVERT -> 4 + 51
+	BCD SUM -> 56
+[OP END @ 54518]
+Done..

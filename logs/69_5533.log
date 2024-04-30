@@ -1,0 +1,22 @@
+[TEST 533 - 69.json]
+	MEM WRITE: 47ae / (18350) => 69 / (105)
+	MEM WRITE: 47af / (18351) => 73 / (115)
+	MEM WRITE: 47b0 / (18352) => 30 / (48)
+	MEM READ: 47ae / (18350) => 69 / (105)
+[OP START 18350 -> 0x69 -> adc]
+	REGS:
+		PC: 18350 (47ae)
+		SP: 91 (5b)
+		A:  253 (fd)
+		X:  204 (cc)
+		Y:  142 (8e)
+		P:  175 (af)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 47af / (18351) => 73 / (115)
+	BCD START -> fd + 73
+	BCD CONVERT -> 63 + 73
+	BCD SUM -> 37
+[OP END @ 18351]
+Done..

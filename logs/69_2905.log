@@ -1,0 +1,22 @@
+[TEST 405 - 69.json]
+	MEM WRITE: f8a7 / (63655) => 69 / (105)
+	MEM WRITE: f8a8 / (63656) => 39 / (57)
+	MEM WRITE: f8a9 / (63657) => 5f / (95)
+	MEM READ: f8a7 / (63655) => 69 / (105)
+[OP START 63655 -> 0x69 -> adc]
+	REGS:
+		PC: 63655 (f8a7)
+		SP: 50 (32)
+		A:  180 (b4)
+		X:  16 (10)
+		Y:  241 (f1)
+		P:  45 (2d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f8a8 / (63656) => 39 / (57)
+	BCD START -> b4 + 39
+	BCD CONVERT -> 14 + 39
+	BCD SUM -> 54
+[OP END @ 63656]
+Done..

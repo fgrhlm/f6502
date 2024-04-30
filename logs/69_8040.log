@@ -1,0 +1,19 @@
+[TEST 540 - 69.json]
+	MEM WRITE: e254 / (57940) => 69 / (105)
+	MEM WRITE: e255 / (57941) => 10 / (16)
+	MEM WRITE: e256 / (57942) => b6 / (182)
+	MEM READ: e254 / (57940) => 69 / (105)
+[OP START 57940 -> 0x69 -> adc]
+	REGS:
+		PC: 57940 (e254)
+		SP: 2 (2)
+		A:  74 (4a)
+		X:  95 (5f)
+		Y:  139 (8b)
+		P:  167 (a7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e255 / (57941) => 10 / (16)
+	BINADC: 4a + 10 = 5b[OP END @ 57941]
+Done..

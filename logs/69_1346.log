@@ -1,0 +1,19 @@
+[TEST 96 - 69.json]
+	MEM WRITE: cc9 / (3273) => 69 / (105)
+	MEM WRITE: cca / (3274) => 69 / (105)
+	MEM WRITE: ccb / (3275) => 32 / (50)
+	MEM READ: cc9 / (3273) => 69 / (105)
+[OP START 3273 -> 0x69 -> adc]
+	REGS:
+		PC: 3273 (cc9)
+		SP: 167 (a7)
+		A:  27 (1b)
+		X:  110 (6e)
+		Y:  44 (2c)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cca / (3274) => 69 / (105)
+	BINADC: 1b + 69 = 85[OP END @ 3274]
+Done..

@@ -1,0 +1,19 @@
+[TEST 492 - 69.json]
+	MEM WRITE: a9d4 / (43476) => 69 / (105)
+	MEM WRITE: a9d5 / (43477) => 3d / (61)
+	MEM WRITE: a9d6 / (43478) => 5c / (92)
+	MEM READ: a9d4 / (43476) => 69 / (105)
+[OP START 43476 -> 0x69 -> adc]
+	REGS:
+		PC: 43476 (a9d4)
+		SP: 186 (ba)
+		A:  27 (1b)
+		X:  33 (21)
+		Y:  26 (1a)
+		P:  231 (e7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a9d5 / (43477) => 3d / (61)
+	BINADC: 1b + 3d = 59[OP END @ 43477]
+Done..

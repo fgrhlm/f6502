@@ -1,0 +1,22 @@
+[TEST 200 - 69.json]
+	MEM WRITE: afb5 / (44981) => 69 / (105)
+	MEM WRITE: afb6 / (44982) => ab / (171)
+	MEM WRITE: afb7 / (44983) => cf / (207)
+	MEM READ: afb5 / (44981) => 69 / (105)
+[OP START 44981 -> 0x69 -> adc]
+	REGS:
+		PC: 44981 (afb5)
+		SP: 122 (7a)
+		A:  201 (c9)
+		X:  93 (5d)
+		Y:  32 (20)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: afb6 / (44982) => ab / (171)
+	BCD START -> c9 + ab
+	BCD CONVERT -> 29 + 11
+	BCD SUM -> 41
+[OP END @ 44982]
+Done..

@@ -1,0 +1,19 @@
+[TEST 97 - 69.json]
+	MEM WRITE: 73f7 / (29687) => 69 / (105)
+	MEM WRITE: 73f8 / (29688) => e8 / (232)
+	MEM WRITE: 73f9 / (29689) => e2 / (226)
+	MEM READ: 73f7 / (29687) => 69 / (105)
+[OP START 29687 -> 0x69 -> adc]
+	REGS:
+		PC: 29687 (73f7)
+		SP: 8 (8)
+		A:  210 (d2)
+		X:  181 (b5)
+		Y:  121 (79)
+		P:  96 (60)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 73f8 / (29688) => e8 / (232)
+	BINADC: d2 + e8 = ba[OP END @ 29688]
+Done..

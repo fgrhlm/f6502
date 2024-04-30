@@ -1,0 +1,19 @@
+[TEST 41 - 69.json]
+	MEM WRITE: 8864 / (34916) => 69 / (105)
+	MEM WRITE: 8865 / (34917) => 4d / (77)
+	MEM WRITE: 8866 / (34918) => 61 / (97)
+	MEM READ: 8864 / (34916) => 69 / (105)
+[OP START 34916 -> 0x69 -> adc]
+	REGS:
+		PC: 34916 (8864)
+		SP: 216 (d8)
+		A:  161 (a1)
+		X:  243 (f3)
+		Y:  2 (2)
+		P:  227 (e3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8865 / (34917) => 4d / (77)
+	BINADC: a1 + 4d = ef[OP END @ 34917]
+Done..

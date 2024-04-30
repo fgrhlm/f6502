@@ -1,0 +1,22 @@
+[TEST 364 - 69.json]
+	MEM WRITE: 860d / (34317) => 69 / (105)
+	MEM WRITE: 860e / (34318) => 3c / (60)
+	MEM WRITE: 860f / (34319) => c7 / (199)
+	MEM READ: 860d / (34317) => 69 / (105)
+[OP START 34317 -> 0x69 -> adc]
+	REGS:
+		PC: 34317 (860d)
+		SP: 184 (b8)
+		A:  166 (a6)
+		X:  206 (ce)
+		Y:  187 (bb)
+		P:  175 (af)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 860e / (34318) => 3c / (60)
+	BCD START -> a6 + 3c
+	BCD CONVERT -> 6 + 42
+	BCD SUM -> 49
+[OP END @ 34318]
+Done..

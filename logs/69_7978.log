@@ -1,0 +1,19 @@
+[TEST 478 - 69.json]
+	MEM WRITE: 7b9f / (31647) => 69 / (105)
+	MEM WRITE: 7ba0 / (31648) => e3 / (227)
+	MEM WRITE: 7ba1 / (31649) => ef / (239)
+	MEM READ: 7b9f / (31647) => 69 / (105)
+[OP START 31647 -> 0x69 -> adc]
+	REGS:
+		PC: 31647 (7b9f)
+		SP: 178 (b2)
+		A:  155 (9b)
+		X:  196 (c4)
+		Y:  87 (57)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7ba0 / (31648) => e3 / (227)
+	BINADC: 9b + e3 = 7f[OP END @ 31648]
+Done..

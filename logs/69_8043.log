@@ -1,0 +1,19 @@
+[TEST 543 - 69.json]
+	MEM WRITE: 71f1 / (29169) => 69 / (105)
+	MEM WRITE: 71f2 / (29170) => fa / (250)
+	MEM WRITE: 71f3 / (29171) => 2d / (45)
+	MEM READ: 71f1 / (29169) => 69 / (105)
+[OP START 29169 -> 0x69 -> adc]
+	REGS:
+		PC: 29169 (71f1)
+		SP: 142 (8e)
+		A:  99 (63)
+		X:  125 (7d)
+		Y:  161 (a1)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 71f2 / (29170) => fa / (250)
+	BINADC: 63 + fa = 5e[OP END @ 29170]
+Done..

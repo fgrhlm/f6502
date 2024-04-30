@@ -1,0 +1,19 @@
+[TEST 573 - 69.json]
+	MEM WRITE: c44f / (50255) => 69 / (105)
+	MEM WRITE: c450 / (50256) => a1 / (161)
+	MEM WRITE: c451 / (50257) => a9 / (169)
+	MEM READ: c44f / (50255) => 69 / (105)
+[OP START 50255 -> 0x69 -> adc]
+	REGS:
+		PC: 50255 (c44f)
+		SP: 175 (af)
+		A:  199 (c7)
+		X:  62 (3e)
+		Y:  85 (55)
+		P:  32 (20)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c450 / (50256) => a1 / (161)
+	BINADC: c7 + a1 = 68[OP END @ 50256]
+Done..

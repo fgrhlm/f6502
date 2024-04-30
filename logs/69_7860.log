@@ -1,0 +1,22 @@
+[TEST 360 - 69.json]
+	MEM WRITE: fe3c / (65084) => 69 / (105)
+	MEM WRITE: fe3d / (65085) => 1a / (26)
+	MEM WRITE: fe3e / (65086) => d1 / (209)
+	MEM READ: fe3c / (65084) => 69 / (105)
+[OP START 65084 -> 0x69 -> adc]
+	REGS:
+		PC: 65084 (fe3c)
+		SP: 89 (59)
+		A:  178 (b2)
+		X:  174 (ae)
+		Y:  249 (f9)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fe3d / (65085) => 1a / (26)
+	BCD START -> b2 + 1a
+	BCD CONVERT -> 12 + 20
+	BCD SUM -> 33
+[OP END @ 65085]
+Done..

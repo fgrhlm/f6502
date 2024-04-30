@@ -1,0 +1,19 @@
+[TEST 30 - 69.json]
+	MEM WRITE: 73f1 / (29681) => 69 / (105)
+	MEM WRITE: 73f2 / (29682) => 35 / (53)
+	MEM WRITE: 73f3 / (29683) => 33 / (51)
+	MEM READ: 73f1 / (29681) => 69 / (105)
+[OP START 29681 -> 0x69 -> adc]
+	REGS:
+		PC: 29681 (73f1)
+		SP: 147 (93)
+		A:  63 (3f)
+		X:  160 (a0)
+		Y:  138 (8a)
+		P:  39 (27)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 73f2 / (29682) => 35 / (53)
+	BINADC: 3f + 35 = 75[OP END @ 29682]
+Done..

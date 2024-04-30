@@ -1,0 +1,19 @@
+[TEST 400 - 69.json]
+	MEM WRITE: a335 / (41781) => 69 / (105)
+	MEM WRITE: a336 / (41782) => ba / (186)
+	MEM WRITE: a337 / (41783) => 77 / (119)
+	MEM READ: a335 / (41781) => 69 / (105)
+[OP START 41781 -> 0x69 -> adc]
+	REGS:
+		PC: 41781 (a335)
+		SP: 89 (59)
+		A:  180 (b4)
+		X:  206 (ce)
+		Y:  236 (ec)
+		P:  96 (60)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a336 / (41782) => ba / (186)
+	BINADC: b4 + ba = 6e[OP END @ 41782]
+Done..

@@ -1,0 +1,19 @@
+[TEST 0 - 69.json]
+	MEM WRITE: b1d / (2845) => 69 / (105)
+	MEM WRITE: b1e / (2846) => 18 / (24)
+	MEM WRITE: b1f / (2847) => d1 / (209)
+	MEM READ: b1d / (2845) => 69 / (105)
+[OP START 2845 -> 0x69 -> adc]
+	REGS:
+		PC: 2845 (b1d)
+		SP: 144 (90)
+		A:  227 (e3)
+		X:  46 (2e)
+		Y:  200 (c8)
+		P:  230 (e6)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b1e / (2846) => 18 / (24)
+	BINADC: e3 + 18 = fb[OP END @ 2846]
+Done..

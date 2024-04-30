@@ -1,0 +1,19 @@
+[TEST 188 - 69.json]
+	MEM WRITE: b181 / (45441) => 69 / (105)
+	MEM WRITE: b182 / (45442) => 29 / (41)
+	MEM WRITE: b183 / (45443) => 30 / (48)
+	MEM READ: b181 / (45441) => 69 / (105)
+[OP START 45441 -> 0x69 -> adc]
+	REGS:
+		PC: 45441 (b181)
+		SP: 136 (88)
+		A:  189 (bd)
+		X:  176 (b0)
+		Y:  251 (fb)
+		P:  98 (62)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b182 / (45442) => 29 / (41)
+	BINADC: bd + 29 = e6[OP END @ 45442]
+Done..

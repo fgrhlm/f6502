@@ -1,0 +1,22 @@
+[TEST 67 - 69.json]
+	MEM WRITE: c60d / (50701) => 69 / (105)
+	MEM WRITE: c60e / (50702) => 29 / (41)
+	MEM WRITE: c60f / (50703) => ce / (206)
+	MEM READ: c60d / (50701) => 69 / (105)
+[OP START 50701 -> 0x69 -> adc]
+	REGS:
+		PC: 50701 (c60d)
+		SP: 190 (be)
+		A:  18 (12)
+		X:  188 (bc)
+		Y:  107 (6b)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c60e / (50702) => 29 / (41)
+	BCD START -> 12 + 29
+	BCD CONVERT -> 12 + 29
+	BCD SUM -> 42
+[OP END @ 50702]
+Done..

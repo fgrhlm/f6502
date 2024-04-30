@@ -1,0 +1,19 @@
+[TEST 482 - 69.json]
+	MEM WRITE: e4cb / (58571) => 69 / (105)
+	MEM WRITE: e4cc / (58572) => 33 / (51)
+	MEM WRITE: e4cd / (58573) => 17 / (23)
+	MEM READ: e4cb / (58571) => 69 / (105)
+[OP START 58571 -> 0x69 -> adc]
+	REGS:
+		PC: 58571 (e4cb)
+		SP: 35 (23)
+		A:  186 (ba)
+		X:  85 (55)
+		Y:  34 (22)
+		P:  34 (22)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e4cc / (58572) => 33 / (51)
+	BINADC: ba + 33 = ed[OP END @ 58572]
+Done..

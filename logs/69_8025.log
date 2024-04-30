@@ -1,0 +1,22 @@
+[TEST 525 - 69.json]
+	MEM WRITE: 33e9 / (13289) => 69 / (105)
+	MEM WRITE: 33ea / (13290) => 1d / (29)
+	MEM WRITE: 33eb / (13291) => f9 / (249)
+	MEM READ: 33e9 / (13289) => 69 / (105)
+[OP START 13289 -> 0x69 -> adc]
+	REGS:
+		PC: 13289 (33e9)
+		SP: 77 (4d)
+		A:  122 (7a)
+		X:  234 (ea)
+		Y:  131 (83)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 33ea / (13290) => 1d / (29)
+	BCD START -> 7a + 1d
+	BCD CONVERT -> 80 + 23
+	BCD SUM -> 3
+[OP END @ 13290]
+Done..

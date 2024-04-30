@@ -1,0 +1,22 @@
+[TEST 45 - 69.json]
+	MEM WRITE: 58ab / (22699) => 69 / (105)
+	MEM WRITE: 58ac / (22700) => 31 / (49)
+	MEM WRITE: 58ad / (22701) => 4b / (75)
+	MEM READ: 58ab / (22699) => 69 / (105)
+[OP START 22699 -> 0x69 -> adc]
+	REGS:
+		PC: 22699 (58ab)
+		SP: 215 (d7)
+		A:  22 (16)
+		X:  143 (8f)
+		Y:  182 (b6)
+		P:  107 (6b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 58ac / (22700) => 31 / (49)
+	BCD START -> 16 + 31
+	BCD CONVERT -> 16 + 31
+	BCD SUM -> 48
+[OP END @ 22700]
+Done..

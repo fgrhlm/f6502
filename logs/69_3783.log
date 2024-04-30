@@ -1,0 +1,19 @@
+[TEST 33 - 69.json]
+	MEM WRITE: 2607 / (9735) => 69 / (105)
+	MEM WRITE: 2608 / (9736) => 23 / (35)
+	MEM WRITE: 2609 / (9737) => de / (222)
+	MEM READ: 2607 / (9735) => 69 / (105)
+[OP START 9735 -> 0x69 -> adc]
+	REGS:
+		PC: 9735 (2607)
+		SP: 184 (b8)
+		A:  192 (c0)
+		X:  237 (ed)
+		Y:  87 (57)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2608 / (9736) => 23 / (35)
+	BINADC: c0 + 23 = e4[OP END @ 9736]
+Done..

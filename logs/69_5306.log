@@ -1,0 +1,19 @@
+[TEST 306 - 69.json]
+	MEM WRITE: de6d / (56941) => 69 / (105)
+	MEM WRITE: de6e / (56942) => 87 / (135)
+	MEM WRITE: de6f / (56943) => 75 / (117)
+	MEM READ: de6d / (56941) => 69 / (105)
+[OP START 56941 -> 0x69 -> adc]
+	REGS:
+		PC: 56941 (de6d)
+		SP: 126 (7e)
+		A:  89 (59)
+		X:  167 (a7)
+		Y:  69 (45)
+		P:  162 (a2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: de6e / (56942) => 87 / (135)
+	BINADC: 59 + 87 = e0[OP END @ 56942]
+Done..

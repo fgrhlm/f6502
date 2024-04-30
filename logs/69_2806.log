@@ -1,0 +1,19 @@
+[TEST 306 - 69.json]
+	MEM WRITE: c8e7 / (51431) => 69 / (105)
+	MEM WRITE: c8e8 / (51432) => 68 / (104)
+	MEM WRITE: c8e9 / (51433) => 8e / (142)
+	MEM READ: c8e7 / (51431) => 69 / (105)
+[OP START 51431 -> 0x69 -> adc]
+	REGS:
+		PC: 51431 (c8e7)
+		SP: 79 (4f)
+		A:  81 (51)
+		X:  204 (cc)
+		Y:  221 (dd)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c8e8 / (51432) => 68 / (104)
+	BINADC: 51 + 68 = b9[OP END @ 51432]
+Done..

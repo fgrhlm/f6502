@@ -1,0 +1,19 @@
+[TEST 58 - 69.json]
+	MEM WRITE: f2da / (62170) => 69 / (105)
+	MEM WRITE: f2db / (62171) => ff / (255)
+	MEM WRITE: f2dc / (62172) => 92 / (146)
+	MEM READ: f2da / (62170) => 69 / (105)
+[OP START 62170 -> 0x69 -> adc]
+	REGS:
+		PC: 62170 (f2da)
+		SP: 237 (ed)
+		A:  137 (89)
+		X:  62 (3e)
+		Y:  76 (4c)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f2db / (62171) => ff / (255)
+	BINADC: 89 + ff = 89[OP END @ 62171]
+Done..

@@ -1,0 +1,22 @@
+[TEST 108 - 69.json]
+	MEM WRITE: f949 / (63817) => 69 / (105)
+	MEM WRITE: f94a / (63818) => a3 / (163)
+	MEM WRITE: f94b / (63819) => a9 / (169)
+	MEM READ: f949 / (63817) => 69 / (105)
+[OP START 63817 -> 0x69 -> adc]
+	REGS:
+		PC: 63817 (f949)
+		SP: 196 (c4)
+		A:  47 (2f)
+		X:  150 (96)
+		Y:  66 (42)
+		P:  172 (ac)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f94a / (63818) => a3 / (163)
+	BCD START -> 2f + a3
+	BCD CONVERT -> 35 + 3
+	BCD SUM -> 38
+[OP END @ 63818]
+Done..

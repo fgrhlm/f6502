@@ -1,0 +1,19 @@
+[TEST 324 - 69.json]
+	MEM WRITE: 152d / (5421) => 69 / (105)
+	MEM WRITE: 152e / (5422) => 9a / (154)
+	MEM WRITE: 152f / (5423) => f8 / (248)
+	MEM READ: 152d / (5421) => 69 / (105)
+[OP START 5421 -> 0x69 -> adc]
+	REGS:
+		PC: 5421 (152d)
+		SP: 176 (b0)
+		A:  116 (74)
+		X:  177 (b1)
+		Y:  215 (d7)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 152e / (5422) => 9a / (154)
+	BINADC: 74 + 9a = f[OP END @ 5422]
+Done..

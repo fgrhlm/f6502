@@ -1,0 +1,22 @@
+[TEST 57 - 69.json]
+	MEM WRITE: dcaa / (56490) => 69 / (105)
+	MEM WRITE: dcab / (56491) => 69 / (105)
+	MEM WRITE: dcac / (56492) => 41 / (65)
+	MEM READ: dcaa / (56490) => 69 / (105)
+[OP START 56490 -> 0x69 -> adc]
+	REGS:
+		PC: 56490 (dcaa)
+		SP: 110 (6e)
+		A:  235 (eb)
+		X:  77 (4d)
+		Y:  67 (43)
+		P:  44 (2c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: dcab / (56491) => 69 / (105)
+	BCD START -> eb + 69
+	BCD CONVERT -> 51 + 69
+	BCD SUM -> 20
+[OP END @ 56491]
+Done..

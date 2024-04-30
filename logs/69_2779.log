@@ -1,0 +1,19 @@
+[TEST 279 - 69.json]
+	MEM WRITE: adfe / (44542) => 69 / (105)
+	MEM WRITE: adff / (44543) => 2 / (2)
+	MEM WRITE: ae00 / (44544) => 43 / (67)
+	MEM READ: adfe / (44542) => 69 / (105)
+[OP START 44542 -> 0x69 -> adc]
+	REGS:
+		PC: 44542 (adfe)
+		SP: 228 (e4)
+		A:  206 (ce)
+		X:  255 (ff)
+		Y:  66 (42)
+		P:  161 (a1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: adff / (44543) => 2 / (2)
+	BINADC: ce + 2 = d1[OP END @ 44543]
+Done..

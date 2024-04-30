@@ -1,0 +1,22 @@
+[TEST 384 - 69.json]
+	MEM WRITE: 191c / (6428) => 69 / (105)
+	MEM WRITE: 191d / (6429) => d6 / (214)
+	MEM WRITE: 191e / (6430) => fb / (251)
+	MEM READ: 191c / (6428) => 69 / (105)
+[OP START 6428 -> 0x69 -> adc]
+	REGS:
+		PC: 6428 (191c)
+		SP: 249 (f9)
+		A:  220 (dc)
+		X:  139 (8b)
+		Y:  19 (13)
+		P:  169 (a9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 191d / (6429) => d6 / (214)
+	BCD START -> dc + d6
+	BCD CONVERT -> 42 + 36
+	BCD SUM -> 79
+[OP END @ 6429]
+Done..

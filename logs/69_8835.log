@@ -1,0 +1,22 @@
+[TEST 85 - 69.json]
+	MEM WRITE: deb9 / (57017) => 69 / (105)
+	MEM WRITE: deba / (57018) => dd / (221)
+	MEM WRITE: debb / (57019) => c7 / (199)
+	MEM READ: deb9 / (57017) => 69 / (105)
+[OP START 57017 -> 0x69 -> adc]
+	REGS:
+		PC: 57017 (deb9)
+		SP: 161 (a1)
+		A:  128 (80)
+		X:  102 (66)
+		Y:  93 (5d)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: deba / (57018) => dd / (221)
+	BCD START -> 80 + dd
+	BCD CONVERT -> 80 + 43
+	BCD SUM -> 23
+[OP END @ 57018]
+Done..

@@ -1,0 +1,22 @@
+[TEST 204 - 69.json]
+	MEM WRITE: 720b / (29195) => 69 / (105)
+	MEM WRITE: 720c / (29196) => 0 / (0)
+	MEM WRITE: 720d / (29197) => f8 / (248)
+	MEM READ: 720b / (29195) => 69 / (105)
+[OP START 29195 -> 0x69 -> adc]
+	REGS:
+		PC: 29195 (720b)
+		SP: 194 (c2)
+		A:  102 (66)
+		X:  170 (aa)
+		Y:  172 (ac)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 720c / (29196) => 0 / (0)
+	BCD START -> 66 + 0
+	BCD CONVERT -> 66 + 0
+	BCD SUM -> 67
+[OP END @ 29196]
+Done..

@@ -1,0 +1,19 @@
+[TEST 487 - 69.json]
+	MEM WRITE: 6b52 / (27474) => 69 / (105)
+	MEM WRITE: 6b53 / (27475) => 60 / (96)
+	MEM WRITE: 6b54 / (27476) => 5 / (5)
+	MEM READ: 6b52 / (27474) => 69 / (105)
+[OP START 27474 -> 0x69 -> adc]
+	REGS:
+		PC: 27474 (6b52)
+		SP: 35 (23)
+		A:  108 (6c)
+		X:  203 (cb)
+		Y:  16 (10)
+		P:  96 (60)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6b53 / (27475) => 60 / (96)
+	BINADC: 6c + 60 = cc[OP END @ 27475]
+Done..

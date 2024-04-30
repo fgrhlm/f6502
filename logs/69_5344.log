@@ -1,0 +1,19 @@
+[TEST 344 - 69.json]
+	MEM WRITE: 5369 / (21353) => 69 / (105)
+	MEM WRITE: 536a / (21354) => d9 / (217)
+	MEM WRITE: 536b / (21355) => a4 / (164)
+	MEM READ: 5369 / (21353) => 69 / (105)
+[OP START 21353 -> 0x69 -> adc]
+	REGS:
+		PC: 21353 (5369)
+		SP: 88 (58)
+		A:  81 (51)
+		X:  245 (f5)
+		Y:  207 (cf)
+		P:  165 (a5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 536a / (21354) => d9 / (217)
+	BINADC: 51 + d9 = 2b[OP END @ 21354]
+Done..

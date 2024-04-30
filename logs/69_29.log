@@ -1,0 +1,19 @@
+[TEST 29 - 69.json]
+	MEM WRITE: 569c / (22172) => 69 / (105)
+	MEM WRITE: 569d / (22173) => 47 / (71)
+	MEM WRITE: 569e / (22174) => a7 / (167)
+	MEM READ: 569c / (22172) => 69 / (105)
+[OP START 22172 -> 0x69 -> adc]
+	REGS:
+		PC: 22172 (569c)
+		SP: 148 (94)
+		A:  170 (aa)
+		X:  214 (d6)
+		Y:  231 (e7)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 569d / (22173) => 47 / (71)
+	BINADC: aa + 47 = f2[OP END @ 22173]
+Done..

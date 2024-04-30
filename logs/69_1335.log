@@ -1,0 +1,22 @@
+[TEST 85 - 69.json]
+	MEM WRITE: cd8b / (52619) => 69 / (105)
+	MEM WRITE: cd8c / (52620) => 3c / (60)
+	MEM WRITE: cd8d / (52621) => 9e / (158)
+	MEM READ: cd8b / (52619) => 69 / (105)
+[OP START 52619 -> 0x69 -> adc]
+	REGS:
+		PC: 52619 (cd8b)
+		SP: 44 (2c)
+		A:  51 (33)
+		X:  158 (9e)
+		Y:  100 (64)
+		P:  237 (ed)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cd8c / (52620) => 3c / (60)
+	BCD START -> 33 + 3c
+	BCD CONVERT -> 33 + 42
+	BCD SUM -> 76
+[OP END @ 52620]
+Done..

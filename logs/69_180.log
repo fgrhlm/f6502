@@ -1,0 +1,22 @@
+[TEST 180 - 69.json]
+	MEM WRITE: 456c / (17772) => 69 / (105)
+	MEM WRITE: 456d / (17773) => d3 / (211)
+	MEM WRITE: 456e / (17774) => ac / (172)
+	MEM READ: 456c / (17772) => 69 / (105)
+[OP START 17772 -> 0x69 -> adc]
+	REGS:
+		PC: 17772 (456c)
+		SP: 249 (f9)
+		A:  247 (f7)
+		X:  100 (64)
+		Y:  173 (ad)
+		P:  107 (6b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 456d / (17773) => d3 / (211)
+	BCD START -> f7 + d3
+	BCD CONVERT -> 57 + 33
+	BCD SUM -> 91
+[OP END @ 17773]
+Done..

@@ -1,0 +1,22 @@
+[TEST 269 - 69.json]
+	MEM WRITE: ac2 / (2754) => 69 / (105)
+	MEM WRITE: ac3 / (2755) => ce / (206)
+	MEM WRITE: ac4 / (2756) => fe / (254)
+	MEM READ: ac2 / (2754) => 69 / (105)
+[OP START 2754 -> 0x69 -> adc]
+	REGS:
+		PC: 2754 (ac2)
+		SP: 117 (75)
+		A:  64 (40)
+		X:  62 (3e)
+		Y:  219 (db)
+		P:  106 (6a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ac3 / (2755) => ce / (206)
+	BCD START -> 40 + ce
+	BCD CONVERT -> 40 + 34
+	BCD SUM -> 74
+[OP END @ 2755]
+Done..

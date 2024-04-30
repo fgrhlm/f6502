@@ -1,0 +1,19 @@
+[TEST 114 - 69.json]
+	MEM WRITE: 1ef4 / (7924) => 69 / (105)
+	MEM WRITE: 1ef5 / (7925) => ef / (239)
+	MEM WRITE: 1ef6 / (7926) => 83 / (131)
+	MEM READ: 1ef4 / (7924) => 69 / (105)
+[OP START 7924 -> 0x69 -> adc]
+	REGS:
+		PC: 7924 (1ef4)
+		SP: 107 (6b)
+		A:  206 (ce)
+		X:  33 (21)
+		Y:  3 (3)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1ef5 / (7925) => ef / (239)
+	BINADC: ce + ef = be[OP END @ 7925]
+Done..

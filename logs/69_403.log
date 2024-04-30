@@ -1,0 +1,19 @@
+[TEST 403 - 69.json]
+	MEM WRITE: 8519 / (34073) => 69 / (105)
+	MEM WRITE: 851a / (34074) => c6 / (198)
+	MEM WRITE: 851b / (34075) => 3b / (59)
+	MEM READ: 8519 / (34073) => 69 / (105)
+[OP START 34073 -> 0x69 -> adc]
+	REGS:
+		PC: 34073 (8519)
+		SP: 76 (4c)
+		A:  37 (25)
+		X:  99 (63)
+		Y:  102 (66)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 851a / (34074) => c6 / (198)
+	BINADC: 25 + c6 = eb[OP END @ 34074]
+Done..

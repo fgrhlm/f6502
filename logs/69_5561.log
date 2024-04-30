@@ -1,0 +1,19 @@
+[TEST 561 - 69.json]
+	MEM WRITE: 3aa8 / (15016) => 69 / (105)
+	MEM WRITE: 3aa9 / (15017) => d1 / (209)
+	MEM WRITE: 3aaa / (15018) => 62 / (98)
+	MEM READ: 3aa8 / (15016) => 69 / (105)
+[OP START 15016 -> 0x69 -> adc]
+	REGS:
+		PC: 15016 (3aa8)
+		SP: 97 (61)
+		A:  226 (e2)
+		X:  231 (e7)
+		Y:  201 (c9)
+		P:  32 (20)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3aa9 / (15017) => d1 / (209)
+	BINADC: e2 + d1 = b3[OP END @ 15017]
+Done..

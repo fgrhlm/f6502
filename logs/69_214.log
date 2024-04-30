@@ -1,0 +1,19 @@
+[TEST 214 - 69.json]
+	MEM WRITE: 4baf / (19375) => 69 / (105)
+	MEM WRITE: 4bb0 / (19376) => 45 / (69)
+	MEM WRITE: 4bb1 / (19377) => 9 / (9)
+	MEM READ: 4baf / (19375) => 69 / (105)
+[OP START 19375 -> 0x69 -> adc]
+	REGS:
+		PC: 19375 (4baf)
+		SP: 181 (b5)
+		A:  162 (a2)
+		X:  4 (4)
+		Y:  188 (bc)
+		P:  33 (21)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4bb0 / (19376) => 45 / (69)
+	BINADC: a2 + 45 = e8[OP END @ 19376]
+Done..

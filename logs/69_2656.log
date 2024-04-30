@@ -1,0 +1,19 @@
+[TEST 156 - 69.json]
+	MEM WRITE: f1c / (3868) => 69 / (105)
+	MEM WRITE: f1d / (3869) => ca / (202)
+	MEM WRITE: f1e / (3870) => 86 / (134)
+	MEM READ: f1c / (3868) => 69 / (105)
+[OP START 3868 -> 0x69 -> adc]
+	REGS:
+		PC: 3868 (f1c)
+		SP: 132 (84)
+		A:  63 (3f)
+		X:  228 (e4)
+		Y:  43 (2b)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f1d / (3869) => ca / (202)
+	BINADC: 3f + ca = a[OP END @ 3869]
+Done..

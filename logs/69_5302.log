@@ -1,0 +1,19 @@
+[TEST 302 - 69.json]
+	MEM WRITE: 9e4 / (2532) => 69 / (105)
+	MEM WRITE: 9e5 / (2533) => 9f / (159)
+	MEM WRITE: 9e6 / (2534) => 7d / (125)
+	MEM READ: 9e4 / (2532) => 69 / (105)
+[OP START 2532 -> 0x69 -> adc]
+	REGS:
+		PC: 2532 (9e4)
+		SP: 31 (1f)
+		A:  11 (b)
+		X:  205 (cd)
+		Y:  218 (da)
+		P:  39 (27)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9e5 / (2533) => 9f / (159)
+	BINADC: b + 9f = ab[OP END @ 2533]
+Done..

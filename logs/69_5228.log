@@ -1,0 +1,22 @@
+[TEST 228 - 69.json]
+	MEM WRITE: 2255 / (8789) => 69 / (105)
+	MEM WRITE: 2256 / (8790) => cb / (203)
+	MEM WRITE: 2257 / (8791) => 3 / (3)
+	MEM READ: 2255 / (8789) => 69 / (105)
+[OP START 8789 -> 0x69 -> adc]
+	REGS:
+		PC: 8789 (2255)
+		SP: 78 (4e)
+		A:  24 (18)
+		X:  18 (12)
+		Y:  211 (d3)
+		P:  238 (ee)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2256 / (8790) => cb / (203)
+	BCD START -> 18 + cb
+	BCD CONVERT -> 18 + 31
+	BCD SUM -> 49
+[OP END @ 8790]
+Done..

@@ -1,0 +1,19 @@
+[TEST 46 - 69.json]
+	MEM WRITE: 2228 / (8744) => 69 / (105)
+	MEM WRITE: 2229 / (8745) => b5 / (181)
+	MEM WRITE: 222a / (8746) => 51 / (81)
+	MEM READ: 2228 / (8744) => 69 / (105)
+[OP START 8744 -> 0x69 -> adc]
+	REGS:
+		PC: 8744 (2228)
+		SP: 241 (f1)
+		A:  90 (5a)
+		X:  147 (93)
+		Y:  33 (21)
+		P:  231 (e7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2229 / (8745) => b5 / (181)
+	BINADC: 5a + b5 = 10[OP END @ 8745]
+Done..

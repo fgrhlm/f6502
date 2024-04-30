@@ -1,0 +1,19 @@
+[TEST 415 - 69.json]
+	MEM WRITE: dc50 / (56400) => 69 / (105)
+	MEM WRITE: dc51 / (56401) => 96 / (150)
+	MEM WRITE: dc52 / (56402) => c6 / (198)
+	MEM READ: dc50 / (56400) => 69 / (105)
+[OP START 56400 -> 0x69 -> adc]
+	REGS:
+		PC: 56400 (dc50)
+		SP: 187 (bb)
+		A:  164 (a4)
+		X:  58 (3a)
+		Y:  71 (47)
+		P:  161 (a1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: dc51 / (56401) => 96 / (150)
+	BINADC: a4 + 96 = 3b[OP END @ 56401]
+Done..

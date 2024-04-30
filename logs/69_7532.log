@@ -1,0 +1,19 @@
+[TEST 32 - 69.json]
+	MEM WRITE: bca9 / (48297) => 69 / (105)
+	MEM WRITE: bcaa / (48298) => d5 / (213)
+	MEM WRITE: bcab / (48299) => e0 / (224)
+	MEM READ: bca9 / (48297) => 69 / (105)
+[OP START 48297 -> 0x69 -> adc]
+	REGS:
+		PC: 48297 (bca9)
+		SP: 110 (6e)
+		A:  56 (38)
+		X:  173 (ad)
+		Y:  71 (47)
+		P:  33 (21)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bcaa / (48298) => d5 / (213)
+	BINADC: 38 + d5 = e[OP END @ 48298]
+Done..

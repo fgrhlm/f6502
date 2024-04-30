@@ -1,0 +1,22 @@
+[TEST 512 - 69.json]
+	MEM WRITE: 40ab / (16555) => 69 / (105)
+	MEM WRITE: 40ac / (16556) => b0 / (176)
+	MEM WRITE: 40ad / (16557) => 3b / (59)
+	MEM READ: 40ab / (16555) => 69 / (105)
+[OP START 16555 -> 0x69 -> adc]
+	REGS:
+		PC: 16555 (40ab)
+		SP: 33 (21)
+		A:  7 (7)
+		X:  116 (74)
+		Y:  68 (44)
+		P:  233 (e9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 40ac / (16556) => b0 / (176)
+	BCD START -> 7 + b0
+	BCD CONVERT -> 7 + 10
+	BCD SUM -> 18
+[OP END @ 16556]
+Done..

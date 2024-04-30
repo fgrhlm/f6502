@@ -1,0 +1,19 @@
+[TEST 66 - 69.json]
+	MEM WRITE: 4aae / (19118) => 69 / (105)
+	MEM WRITE: 4aaf / (19119) => a0 / (160)
+	MEM WRITE: 4ab0 / (19120) => 7d / (125)
+	MEM READ: 4aae / (19118) => 69 / (105)
+[OP START 19118 -> 0x69 -> adc]
+	REGS:
+		PC: 19118 (4aae)
+		SP: 75 (4b)
+		A:  187 (bb)
+		X:  237 (ed)
+		Y:  174 (ae)
+		P:  38 (26)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4aaf / (19119) => a0 / (160)
+	BINADC: bb + a0 = 5b[OP END @ 19119]
+Done..

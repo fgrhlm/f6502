@@ -1,0 +1,19 @@
+[TEST 323 - 69.json]
+	MEM WRITE: da03 / (55811) => 69 / (105)
+	MEM WRITE: da04 / (55812) => 41 / (65)
+	MEM WRITE: da05 / (55813) => 3e / (62)
+	MEM READ: da03 / (55811) => 69 / (105)
+[OP START 55811 -> 0x69 -> adc]
+	REGS:
+		PC: 55811 (da03)
+		SP: 237 (ed)
+		A:  207 (cf)
+		X:  83 (53)
+		Y:  205 (cd)
+		P:  103 (67)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: da04 / (55812) => 41 / (65)
+	BINADC: cf + 41 = 11[OP END @ 55812]
+Done..

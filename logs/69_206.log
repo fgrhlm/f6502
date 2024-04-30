@@ -1,0 +1,22 @@
+[TEST 206 - 69.json]
+	MEM WRITE: a37e / (41854) => 69 / (105)
+	MEM WRITE: a37f / (41855) => 5a / (90)
+	MEM WRITE: a380 / (41856) => b9 / (185)
+	MEM READ: a37e / (41854) => 69 / (105)
+[OP START 41854 -> 0x69 -> adc]
+	REGS:
+		PC: 41854 (a37e)
+		SP: 66 (42)
+		A:  129 (81)
+		X:  234 (ea)
+		Y:  74 (4a)
+		P:  108 (6c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a37f / (41855) => 5a / (90)
+	BCD START -> 81 + 5a
+	BCD CONVERT -> 81 + 60
+	BCD SUM -> 41
+[OP END @ 41855]
+Done..

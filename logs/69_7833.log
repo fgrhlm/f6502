@@ -1,0 +1,22 @@
+[TEST 333 - 69.json]
+	MEM WRITE: 40ca / (16586) => 69 / (105)
+	MEM WRITE: 40cb / (16587) => c1 / (193)
+	MEM WRITE: 40cc / (16588) => f1 / (241)
+	MEM READ: 40ca / (16586) => 69 / (105)
+[OP START 16586 -> 0x69 -> adc]
+	REGS:
+		PC: 16586 (40ca)
+		SP: 243 (f3)
+		A:  99 (63)
+		X:  73 (49)
+		Y:  57 (39)
+		P:  170 (aa)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 40cb / (16587) => c1 / (193)
+	BCD START -> 63 + c1
+	BCD CONVERT -> 63 + 21
+	BCD SUM -> 84
+[OP END @ 16587]
+Done..

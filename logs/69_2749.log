@@ -1,0 +1,19 @@
+[TEST 249 - 69.json]
+	MEM WRITE: 4607 / (17927) => 69 / (105)
+	MEM WRITE: 4608 / (17928) => ef / (239)
+	MEM WRITE: 4609 / (17929) => b / (11)
+	MEM READ: 4607 / (17927) => 69 / (105)
+[OP START 17927 -> 0x69 -> adc]
+	REGS:
+		PC: 17927 (4607)
+		SP: 104 (68)
+		A:  89 (59)
+		X:  85 (55)
+		Y:  145 (91)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4608 / (17928) => ef / (239)
+	BINADC: 59 + ef = 49[OP END @ 17928]
+Done..

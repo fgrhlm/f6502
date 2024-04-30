@@ -1,0 +1,22 @@
+[TEST 172 - 69.json]
+	MEM WRITE: 92a2 / (37538) => 69 / (105)
+	MEM WRITE: 92a3 / (37539) => 5f / (95)
+	MEM WRITE: 92a4 / (37540) => 55 / (85)
+	MEM READ: 92a2 / (37538) => 69 / (105)
+[OP START 37538 -> 0x69 -> adc]
+	REGS:
+		PC: 37538 (92a2)
+		SP: 22 (16)
+		A:  184 (b8)
+		X:  242 (f2)
+		Y:  83 (53)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 92a3 / (37539) => 5f / (95)
+	BCD START -> b8 + 5f
+	BCD CONVERT -> 18 + 65
+	BCD SUM -> 83
+[OP END @ 37539]
+Done..

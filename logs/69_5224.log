@@ -1,0 +1,22 @@
+[TEST 224 - 69.json]
+	MEM WRITE: 7a2 / (1954) => 69 / (105)
+	MEM WRITE: 7a3 / (1955) => 4d / (77)
+	MEM WRITE: 7a4 / (1956) => ce / (206)
+	MEM READ: 7a2 / (1954) => 69 / (105)
+[OP START 1954 -> 0x69 -> adc]
+	REGS:
+		PC: 1954 (7a2)
+		SP: 228 (e4)
+		A:  128 (80)
+		X:  80 (50)
+		Y:  223 (df)
+		P:  104 (68)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7a3 / (1955) => 4d / (77)
+	BCD START -> 80 + 4d
+	BCD CONVERT -> 80 + 53
+	BCD SUM -> 33
+[OP END @ 1955]
+Done..

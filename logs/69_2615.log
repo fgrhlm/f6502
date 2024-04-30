@@ -1,0 +1,19 @@
+[TEST 115 - 69.json]
+	MEM WRITE: b1c / (2844) => 69 / (105)
+	MEM WRITE: b1d / (2845) => 22 / (34)
+	MEM WRITE: b1e / (2846) => 37 / (55)
+	MEM READ: b1c / (2844) => 69 / (105)
+[OP START 2844 -> 0x69 -> adc]
+	REGS:
+		PC: 2844 (b1c)
+		SP: 120 (78)
+		A:  118 (76)
+		X:  227 (e3)
+		Y:  116 (74)
+		P:  33 (21)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b1d / (2845) => 22 / (34)
+	BINADC: 76 + 22 = 99[OP END @ 2845]
+Done..

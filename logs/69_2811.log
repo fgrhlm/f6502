@@ -1,0 +1,22 @@
+[TEST 311 - 69.json]
+	MEM WRITE: 830e / (33550) => 69 / (105)
+	MEM WRITE: 830f / (33551) => ba / (186)
+	MEM WRITE: 8310 / (33552) => fb / (251)
+	MEM READ: 830e / (33550) => 69 / (105)
+[OP START 33550 -> 0x69 -> adc]
+	REGS:
+		PC: 33550 (830e)
+		SP: 78 (4e)
+		A:  119 (77)
+		X:  240 (f0)
+		Y:  247 (f7)
+		P:  169 (a9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 830f / (33551) => ba / (186)
+	BCD START -> 77 + ba
+	BCD CONVERT -> 77 + 20
+	BCD SUM -> 98
+[OP END @ 33551]
+Done..

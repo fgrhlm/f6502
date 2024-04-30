@@ -1,0 +1,19 @@
+[TEST 173 - 69.json]
+	MEM WRITE: 63ea / (25578) => 69 / (105)
+	MEM WRITE: 63eb / (25579) => 9 / (9)
+	MEM WRITE: 63ec / (25580) => e7 / (231)
+	MEM READ: 63ea / (25578) => 69 / (105)
+[OP START 25578 -> 0x69 -> adc]
+	REGS:
+		PC: 25578 (63ea)
+		SP: 195 (c3)
+		A:  5 (5)
+		X:  165 (a5)
+		Y:  48 (30)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 63eb / (25579) => 9 / (9)
+	BINADC: 5 + 9 = f[OP END @ 25579]
+Done..

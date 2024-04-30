@@ -1,0 +1,22 @@
+[TEST 26 - 69.json]
+	MEM WRITE: 3dca / (15818) => 69 / (105)
+	MEM WRITE: 3dcb / (15819) => e3 / (227)
+	MEM WRITE: 3dcc / (15820) => e9 / (233)
+	MEM READ: 3dca / (15818) => 69 / (105)
+[OP START 15818 -> 0x69 -> adc]
+	REGS:
+		PC: 15818 (3dca)
+		SP: 37 (25)
+		A:  128 (80)
+		X:  65 (41)
+		Y:  131 (83)
+		P:  173 (ad)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3dcb / (15819) => e3 / (227)
+	BCD START -> 80 + e3
+	BCD CONVERT -> 80 + 43
+	BCD SUM -> 24
+[OP END @ 15819]
+Done..

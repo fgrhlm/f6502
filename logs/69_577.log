@@ -1,0 +1,22 @@
+[TEST 577 - 69.json]
+	MEM WRITE: d5b / (3419) => 69 / (105)
+	MEM WRITE: d5c / (3420) => 53 / (83)
+	MEM WRITE: d5d / (3421) => 3d / (61)
+	MEM READ: d5b / (3419) => 69 / (105)
+[OP START 3419 -> 0x69 -> adc]
+	REGS:
+		PC: 3419 (d5b)
+		SP: 133 (85)
+		A:  217 (d9)
+		X:  166 (a6)
+		Y:  142 (8e)
+		P:  108 (6c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d5c / (3420) => 53 / (83)
+	BCD START -> d9 + 53
+	BCD CONVERT -> 39 + 53
+	BCD SUM -> 92
+[OP END @ 3420]
+Done..

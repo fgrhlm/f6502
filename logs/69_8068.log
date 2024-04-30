@@ -1,0 +1,19 @@
+[TEST 568 - 69.json]
+	MEM WRITE: 87c4 / (34756) => 69 / (105)
+	MEM WRITE: 87c5 / (34757) => 90 / (144)
+	MEM WRITE: 87c6 / (34758) => 75 / (117)
+	MEM READ: 87c4 / (34756) => 69 / (105)
+[OP START 34756 -> 0x69 -> adc]
+	REGS:
+		PC: 34756 (87c4)
+		SP: 80 (50)
+		A:  239 (ef)
+		X:  21 (15)
+		Y:  177 (b1)
+		P:  102 (66)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 87c5 / (34757) => 90 / (144)
+	BINADC: ef + 90 = 7f[OP END @ 34757]
+Done..

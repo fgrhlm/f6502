@@ -1,0 +1,22 @@
+[TEST 565 - 69.json]
+	MEM WRITE: 365d / (13917) => 69 / (105)
+	MEM WRITE: 365e / (13918) => 63 / (99)
+	MEM WRITE: 365f / (13919) => a3 / (163)
+	MEM READ: 365d / (13917) => 69 / (105)
+[OP START 13917 -> 0x69 -> adc]
+	REGS:
+		PC: 13917 (365d)
+		SP: 67 (43)
+		A:  196 (c4)
+		X:  95 (5f)
+		Y:  157 (9d)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 365e / (13918) => 63 / (99)
+	BCD START -> c4 + 63
+	BCD CONVERT -> 24 + 63
+	BCD SUM -> 88
+[OP END @ 13918]
+Done..

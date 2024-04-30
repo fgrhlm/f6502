@@ -1,0 +1,19 @@
+[TEST 20 - 69.json]
+	MEM WRITE: 1724 / (5924) => 69 / (105)
+	MEM WRITE: 1725 / (5925) => c6 / (198)
+	MEM WRITE: 1726 / (5926) => 9b / (155)
+	MEM READ: 1724 / (5924) => 69 / (105)
+[OP START 5924 -> 0x69 -> adc]
+	REGS:
+		PC: 5924 (1724)
+		SP: 152 (98)
+		A:  230 (e6)
+		X:  30 (1e)
+		Y:  105 (69)
+		P:  228 (e4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1725 / (5925) => c6 / (198)
+	BINADC: e6 + c6 = ac[OP END @ 5925]
+Done..

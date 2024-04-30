@@ -1,0 +1,19 @@
+[TEST 307 - 69.json]
+	MEM WRITE: a2dc / (41692) => 69 / (105)
+	MEM WRITE: a2dd / (41693) => e / (14)
+	MEM WRITE: a2de / (41694) => ff / (255)
+	MEM READ: a2dc / (41692) => 69 / (105)
+[OP START 41692 -> 0x69 -> adc]
+	REGS:
+		PC: 41692 (a2dc)
+		SP: 61 (3d)
+		A:  148 (94)
+		X:  230 (e6)
+		Y:  31 (1f)
+		P:  163 (a3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a2dd / (41693) => e / (14)
+	BINADC: 94 + e = a3[OP END @ 41693]
+Done..

@@ -1,0 +1,19 @@
+[TEST 564 - 69.json]
+	MEM WRITE: 13da / (5082) => 69 / (105)
+	MEM WRITE: 13db / (5083) => df / (223)
+	MEM WRITE: 13dc / (5084) => c5 / (197)
+	MEM READ: 13da / (5082) => 69 / (105)
+[OP START 5082 -> 0x69 -> adc]
+	REGS:
+		PC: 5082 (13da)
+		SP: 221 (dd)
+		A:  3 (3)
+		X:  45 (2d)
+		Y:  220 (dc)
+		P:  103 (67)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 13db / (5083) => df / (223)
+	BINADC: 3 + df = e3[OP END @ 5083]
+Done..

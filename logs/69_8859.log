@@ -1,0 +1,22 @@
+[TEST 109 - 69.json]
+	MEM WRITE: 3a87 / (14983) => 69 / (105)
+	MEM WRITE: 3a88 / (14984) => 2d / (45)
+	MEM WRITE: 3a89 / (14985) => 47 / (71)
+	MEM READ: 3a87 / (14983) => 69 / (105)
+[OP START 14983 -> 0x69 -> adc]
+	REGS:
+		PC: 14983 (3a87)
+		SP: 197 (c5)
+		A:  129 (81)
+		X:  183 (b7)
+		Y:  70 (46)
+		P:  173 (ad)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3a88 / (14984) => 2d / (45)
+	BCD START -> 81 + 2d
+	BCD CONVERT -> 81 + 33
+	BCD SUM -> 15
+[OP END @ 14984]
+Done..

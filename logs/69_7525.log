@@ -1,0 +1,19 @@
+[TEST 25 - 69.json]
+	MEM WRITE: f4b / (3915) => 69 / (105)
+	MEM WRITE: f4c / (3916) => 96 / (150)
+	MEM WRITE: f4d / (3917) => bc / (188)
+	MEM READ: f4b / (3915) => 69 / (105)
+[OP START 3915 -> 0x69 -> adc]
+	REGS:
+		PC: 3915 (f4b)
+		SP: 244 (f4)
+		A:  62 (3e)
+		X:  164 (a4)
+		Y:  56 (38)
+		P:  39 (27)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f4c / (3916) => 96 / (150)
+	BINADC: 3e + 96 = d5[OP END @ 3916]
+Done..

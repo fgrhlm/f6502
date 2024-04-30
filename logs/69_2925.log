@@ -1,0 +1,22 @@
+[TEST 425 - 69.json]
+	MEM WRITE: daf4 / (56052) => 69 / (105)
+	MEM WRITE: daf5 / (56053) => 6 / (6)
+	MEM WRITE: daf6 / (56054) => b9 / (185)
+	MEM READ: daf4 / (56052) => 69 / (105)
+[OP START 56052 -> 0x69 -> adc]
+	REGS:
+		PC: 56052 (daf4)
+		SP: 40 (28)
+		A:  3 (3)
+		X:  98 (62)
+		Y:  70 (46)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: daf5 / (56053) => 6 / (6)
+	BCD START -> 3 + 6
+	BCD CONVERT -> 3 + 6
+	BCD SUM -> 9
+[OP END @ 56053]
+Done..

@@ -1,0 +1,22 @@
+[TEST 278 - 69.json]
+	MEM WRITE: e4e8 / (58600) => 69 / (105)
+	MEM WRITE: e4e9 / (58601) => 76 / (118)
+	MEM WRITE: e4ea / (58602) => c8 / (200)
+	MEM READ: e4e8 / (58600) => 69 / (105)
+[OP START 58600 -> 0x69 -> adc]
+	REGS:
+		PC: 58600 (e4e8)
+		SP: 78 (4e)
+		A:  115 (73)
+		X:  176 (b0)
+		Y:  82 (52)
+		P:  170 (aa)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e4e9 / (58601) => 76 / (118)
+	BCD START -> 73 + 76
+	BCD CONVERT -> 73 + 76
+	BCD SUM -> 49
+[OP END @ 58601]
+Done..

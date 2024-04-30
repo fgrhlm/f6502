@@ -1,0 +1,22 @@
+[TEST 509 - 69.json]
+	MEM WRITE: 6d50 / (27984) => 69 / (105)
+	MEM WRITE: 6d51 / (27985) => 3d / (61)
+	MEM WRITE: 6d52 / (27986) => da / (218)
+	MEM READ: 6d50 / (27984) => 69 / (105)
+[OP START 27984 -> 0x69 -> adc]
+	REGS:
+		PC: 27984 (6d50)
+		SP: 117 (75)
+		A:  147 (93)
+		X:  53 (35)
+		Y:  187 (bb)
+		P:  169 (a9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6d51 / (27985) => 3d / (61)
+	BCD START -> 93 + 3d
+	BCD CONVERT -> 93 + 43
+	BCD SUM -> 37
+[OP END @ 27985]
+Done..

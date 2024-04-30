@@ -1,0 +1,22 @@
+[TEST 501 - 69.json]
+	MEM WRITE: ca98 / (51864) => 69 / (105)
+	MEM WRITE: ca99 / (51865) => a0 / (160)
+	MEM WRITE: ca9a / (51866) => b1 / (177)
+	MEM READ: ca98 / (51864) => 69 / (105)
+[OP START 51864 -> 0x69 -> adc]
+	REGS:
+		PC: 51864 (ca98)
+		SP: 195 (c3)
+		A:  64 (40)
+		X:  202 (ca)
+		Y:  254 (fe)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ca99 / (51865) => a0 / (160)
+	BCD START -> 40 + a0
+	BCD CONVERT -> 40 + 0
+	BCD SUM -> 40
+[OP END @ 51865]
+Done..

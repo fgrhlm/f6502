@@ -1,0 +1,22 @@
+[TEST 578 - 69.json]
+	MEM WRITE: 2dfa / (11770) => 69 / (105)
+	MEM WRITE: 2dfb / (11771) => 18 / (24)
+	MEM WRITE: 2dfc / (11772) => 77 / (119)
+	MEM READ: 2dfa / (11770) => 69 / (105)
+[OP START 11770 -> 0x69 -> adc]
+	REGS:
+		PC: 11770 (2dfa)
+		SP: 54 (36)
+		A:  100 (64)
+		X:  103 (67)
+		Y:  0 (0)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2dfb / (11771) => 18 / (24)
+	BCD START -> 64 + 18
+	BCD CONVERT -> 64 + 18
+	BCD SUM -> 83
+[OP END @ 11771]
+Done..

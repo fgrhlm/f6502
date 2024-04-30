@@ -1,0 +1,19 @@
+[TEST 396 - 69.json]
+	MEM WRITE: bfa9 / (49065) => 69 / (105)
+	MEM WRITE: bfaa / (49066) => bc / (188)
+	MEM WRITE: bfab / (49067) => 64 / (100)
+	MEM READ: bfa9 / (49065) => 69 / (105)
+[OP START 49065 -> 0x69 -> adc]
+	REGS:
+		PC: 49065 (bfa9)
+		SP: 17 (11)
+		A:  33 (21)
+		X:  6 (6)
+		Y:  122 (7a)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bfaa / (49066) => bc / (188)
+	BINADC: 21 + bc = de[OP END @ 49066]
+Done..

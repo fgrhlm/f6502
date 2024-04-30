@@ -1,0 +1,19 @@
+[TEST 132 - 69.json]
+	MEM WRITE: dcc5 / (56517) => 69 / (105)
+	MEM WRITE: dcc6 / (56518) => c / (12)
+	MEM WRITE: dcc7 / (56519) => 2e / (46)
+	MEM READ: dcc5 / (56517) => 69 / (105)
+[OP START 56517 -> 0x69 -> adc]
+	REGS:
+		PC: 56517 (dcc5)
+		SP: 142 (8e)
+		A:  70 (46)
+		X:  179 (b3)
+		Y:  223 (df)
+		P:  98 (62)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: dcc6 / (56518) => c / (12)
+	BINADC: 46 + c = 52[OP END @ 56518]
+Done..

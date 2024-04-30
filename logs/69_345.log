@@ -1,0 +1,22 @@
+[TEST 345 - 69.json]
+	MEM WRITE: e3c6 / (58310) => 69 / (105)
+	MEM WRITE: e3c7 / (58311) => 79 / (121)
+	MEM WRITE: e3c8 / (58312) => 84 / (132)
+	MEM READ: e3c6 / (58310) => 69 / (105)
+[OP START 58310 -> 0x69 -> adc]
+	REGS:
+		PC: 58310 (e3c6)
+		SP: 103 (67)
+		A:  159 (9f)
+		X:  96 (60)
+		Y:  81 (51)
+		P:  172 (ac)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e3c7 / (58311) => 79 / (121)
+	BCD START -> 9f + 79
+	BCD CONVERT -> a5 + 79
+	BCD SUM -> 84
+[OP END @ 58311]
+Done..

@@ -1,0 +1,22 @@
+[TEST 9 - 69.json]
+	MEM WRITE: e691 / (59025) => 69 / (105)
+	MEM WRITE: e692 / (59026) => ff / (255)
+	MEM WRITE: e693 / (59027) => 80 / (128)
+	MEM READ: e691 / (59025) => 69 / (105)
+[OP START 59025 -> 0x69 -> adc]
+	REGS:
+		PC: 59025 (e691)
+		SP: 45 (2d)
+		A:  8 (8)
+		X:  98 (62)
+		Y:  131 (83)
+		P:  106 (6a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e692 / (59026) => ff / (255)
+	BCD START -> 8 + ff
+	BCD CONVERT -> 8 + 65
+	BCD SUM -> 73
+[OP END @ 59026]
+Done..

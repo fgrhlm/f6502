@@ -1,0 +1,19 @@
+[TEST 504 - 69.json]
+	MEM WRITE: 5df0 / (24048) => 69 / (105)
+	MEM WRITE: 5df1 / (24049) => 44 / (68)
+	MEM WRITE: 5df2 / (24050) => f0 / (240)
+	MEM READ: 5df0 / (24048) => 69 / (105)
+[OP START 24048 -> 0x69 -> adc]
+	REGS:
+		PC: 24048 (5df0)
+		SP: 4 (4)
+		A:  126 (7e)
+		X:  231 (e7)
+		Y:  155 (9b)
+		P:  100 (64)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5df1 / (24049) => 44 / (68)
+	BINADC: 7e + 44 = c2[OP END @ 24049]
+Done..

@@ -1,0 +1,19 @@
+[TEST 259 - 69.json]
+	MEM WRITE: fc5 / (4037) => 69 / (105)
+	MEM WRITE: fc6 / (4038) => 72 / (114)
+	MEM WRITE: fc7 / (4039) => 23 / (35)
+	MEM READ: fc5 / (4037) => 69 / (105)
+[OP START 4037 -> 0x69 -> adc]
+	REGS:
+		PC: 4037 (fc5)
+		SP: 156 (9c)
+		A:  165 (a5)
+		X:  120 (78)
+		Y:  65 (41)
+		P:  224 (e0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fc6 / (4038) => 72 / (114)
+	BINADC: a5 + 72 = 17[OP END @ 4038]
+Done..

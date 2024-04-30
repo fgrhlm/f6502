@@ -1,0 +1,19 @@
+[TEST 118 - 69.json]
+	MEM WRITE: 66f8 / (26360) => 69 / (105)
+	MEM WRITE: 66f9 / (26361) => 3a / (58)
+	MEM WRITE: 66fa / (26362) => 6c / (108)
+	MEM READ: 66f8 / (26360) => 69 / (105)
+[OP START 26360 -> 0x69 -> adc]
+	REGS:
+		PC: 26360 (66f8)
+		SP: 49 (31)
+		A:  208 (d0)
+		X:  76 (4c)
+		Y:  81 (51)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 66f9 / (26361) => 3a / (58)
+	BINADC: d0 + 3a = b[OP END @ 26361]
+Done..

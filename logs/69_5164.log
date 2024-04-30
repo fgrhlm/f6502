@@ -1,0 +1,19 @@
+[TEST 164 - 69.json]
+	MEM WRITE: f49d / (62621) => 69 / (105)
+	MEM WRITE: f49e / (62622) => ad / (173)
+	MEM WRITE: f49f / (62623) => f / (15)
+	MEM READ: f49d / (62621) => 69 / (105)
+[OP START 62621 -> 0x69 -> adc]
+	REGS:
+		PC: 62621 (f49d)
+		SP: 151 (97)
+		A:  252 (fc)
+		X:  81 (51)
+		Y:  127 (7f)
+		P:  230 (e6)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f49e / (62622) => ad / (173)
+	BINADC: fc + ad = a9[OP END @ 62622]
+Done..

@@ -1,0 +1,22 @@
+[TEST 614 - 69.json]
+	MEM WRITE: 4bf2 / (19442) => 69 / (105)
+	MEM WRITE: 4bf3 / (19443) => 10 / (16)
+	MEM WRITE: 4bf4 / (19444) => 24 / (36)
+	MEM READ: 4bf2 / (19442) => 69 / (105)
+[OP START 19442 -> 0x69 -> adc]
+	REGS:
+		PC: 19442 (4bf2)
+		SP: 118 (76)
+		A:  20 (14)
+		X:  155 (9b)
+		Y:  121 (79)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4bf3 / (19443) => 10 / (16)
+	BCD START -> 14 + 10
+	BCD CONVERT -> 14 + 10
+	BCD SUM -> 24
+[OP END @ 19443]
+Done..

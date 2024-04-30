@@ -1,0 +1,19 @@
+[TEST 256 - 69.json]
+	MEM WRITE: acee / (44270) => 69 / (105)
+	MEM WRITE: acef / (44271) => 6d / (109)
+	MEM WRITE: acf0 / (44272) => 9c / (156)
+	MEM READ: acee / (44270) => 69 / (105)
+[OP START 44270 -> 0x69 -> adc]
+	REGS:
+		PC: 44270 (acee)
+		SP: 205 (cd)
+		A:  31 (1f)
+		X:  165 (a5)
+		Y:  190 (be)
+		P:  103 (67)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: acef / (44271) => 6d / (109)
+	BINADC: 1f + 6d = 8d[OP END @ 44271]
+Done..

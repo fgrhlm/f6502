@@ -1,0 +1,22 @@
+[TEST 268 - 69.json]
+	MEM WRITE: ad28 / (44328) => 69 / (105)
+	MEM WRITE: ad29 / (44329) => d6 / (214)
+	MEM WRITE: ad2a / (44330) => 81 / (129)
+	MEM READ: ad28 / (44328) => 69 / (105)
+[OP START 44328 -> 0x69 -> adc]
+	REGS:
+		PC: 44328 (ad28)
+		SP: 135 (87)
+		A:  4 (4)
+		X:  37 (25)
+		Y:  119 (77)
+		P:  173 (ad)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ad29 / (44329) => d6 / (214)
+	BCD START -> 4 + d6
+	BCD CONVERT -> 4 + 36
+	BCD SUM -> 41
+[OP END @ 44329]
+Done..

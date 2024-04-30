@@ -1,0 +1,22 @@
+[TEST 38 - 69.json]
+	MEM WRITE: fc4b / (64587) => 69 / (105)
+	MEM WRITE: fc4c / (64588) => 75 / (117)
+	MEM WRITE: fc4d / (64589) => a8 / (168)
+	MEM READ: fc4b / (64587) => 69 / (105)
+[OP START 64587 -> 0x69 -> adc]
+	REGS:
+		PC: 64587 (fc4b)
+		SP: 124 (7c)
+		A:  142 (8e)
+		X:  31 (1f)
+		Y:  100 (64)
+		P:  233 (e9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fc4c / (64588) => 75 / (117)
+	BCD START -> 8e + 75
+	BCD CONVERT -> 94 + 75
+	BCD SUM -> 6a
+[OP END @ 64588]
+Done..

@@ -1,0 +1,19 @@
+[TEST 538 - 69.json]
+	MEM WRITE: a4b2 / (42162) => 69 / (105)
+	MEM WRITE: a4b3 / (42163) => c1 / (193)
+	MEM WRITE: a4b4 / (42164) => c2 / (194)
+	MEM READ: a4b2 / (42162) => 69 / (105)
+[OP START 42162 -> 0x69 -> adc]
+	REGS:
+		PC: 42162 (a4b2)
+		SP: 115 (73)
+		A:  204 (cc)
+		X:  63 (3f)
+		Y:  17 (11)
+		P:  227 (e3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a4b3 / (42163) => c1 / (193)
+	BINADC: cc + c1 = 8e[OP END @ 42163]
+Done..

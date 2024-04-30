@@ -1,0 +1,22 @@
+[TEST 474 - 69.json]
+	MEM WRITE: 9ae6 / (39654) => 69 / (105)
+	MEM WRITE: 9ae7 / (39655) => 2f / (47)
+	MEM WRITE: 9ae8 / (39656) => 27 / (39)
+	MEM READ: 9ae6 / (39654) => 69 / (105)
+[OP START 39654 -> 0x69 -> adc]
+	REGS:
+		PC: 39654 (9ae6)
+		SP: 8 (8)
+		A:  87 (57)
+		X:  146 (92)
+		Y:  38 (26)
+		P:  169 (a9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9ae7 / (39655) => 2f / (47)
+	BCD START -> 57 + 2f
+	BCD CONVERT -> 57 + 35
+	BCD SUM -> 93
+[OP END @ 39655]
+Done..

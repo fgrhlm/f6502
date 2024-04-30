@@ -1,0 +1,22 @@
+[TEST 242 - 69.json]
+	MEM WRITE: c49c / (50332) => 69 / (105)
+	MEM WRITE: c49d / (50333) => 12 / (18)
+	MEM WRITE: c49e / (50334) => c8 / (200)
+	MEM READ: c49c / (50332) => 69 / (105)
+[OP START 50332 -> 0x69 -> adc]
+	REGS:
+		PC: 50332 (c49c)
+		SP: 10 (a)
+		A:  183 (b7)
+		X:  29 (1d)
+		Y:  35 (23)
+		P:  235 (eb)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c49d / (50333) => 12 / (18)
+	BCD START -> b7 + 12
+	BCD CONVERT -> 17 + 12
+	BCD SUM -> 2a
+[OP END @ 50333]
+Done..

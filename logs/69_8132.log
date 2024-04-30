@@ -1,0 +1,19 @@
+[TEST 7 - 69.json]
+	MEM WRITE: ade9 / (44521) => 69 / (105)
+	MEM WRITE: adea / (44522) => c / (12)
+	MEM WRITE: adeb / (44523) => 91 / (145)
+	MEM READ: ade9 / (44521) => 69 / (105)
+[OP START 44521 -> 0x69 -> adc]
+	REGS:
+		PC: 44521 (ade9)
+		SP: 171 (ab)
+		A:  127 (7f)
+		X:  202 (ca)
+		Y:  27 (1b)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: adea / (44522) => c / (12)
+	BINADC: 7f + c = 8c[OP END @ 44522]
+Done..

@@ -1,0 +1,22 @@
+[TEST 84 - 69.json]
+	MEM WRITE: 1be4 / (7140) => 69 / (105)
+	MEM WRITE: 1be5 / (7141) => 1b / (27)
+	MEM WRITE: 1be6 / (7142) => cb / (203)
+	MEM READ: 1be4 / (7140) => 69 / (105)
+[OP START 7140 -> 0x69 -> adc]
+	REGS:
+		PC: 7140 (1be4)
+		SP: 23 (17)
+		A:  92 (5c)
+		X:  188 (bc)
+		Y:  16 (10)
+		P:  45 (2d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1be5 / (7141) => 1b / (27)
+	BCD START -> 5c + 1b
+	BCD CONVERT -> 62 + 21
+	BCD SUM -> 84
+[OP END @ 7141]
+Done..

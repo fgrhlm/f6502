@@ -1,0 +1,19 @@
+[TEST 100 - 69.json]
+	MEM WRITE: eda4 / (60836) => 69 / (105)
+	MEM WRITE: eda5 / (60837) => 8e / (142)
+	MEM WRITE: eda6 / (60838) => 74 / (116)
+	MEM READ: eda4 / (60836) => 69 / (105)
+[OP START 60836 -> 0x69 -> adc]
+	REGS:
+		PC: 60836 (eda4)
+		SP: 62 (3e)
+		A:  130 (82)
+		X:  165 (a5)
+		Y:  203 (cb)
+		P:  32 (20)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eda5 / (60837) => 8e / (142)
+	BINADC: 82 + 8e = 10[OP END @ 60837]
+Done..

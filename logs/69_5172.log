@@ -1,0 +1,22 @@
+[TEST 172 - 69.json]
+	MEM WRITE: 5121 / (20769) => 69 / (105)
+	MEM WRITE: 5122 / (20770) => 48 / (72)
+	MEM WRITE: 5123 / (20771) => 22 / (34)
+	MEM READ: 5121 / (20769) => 69 / (105)
+[OP START 20769 -> 0x69 -> adc]
+	REGS:
+		PC: 20769 (5121)
+		SP: 109 (6d)
+		A:  43 (2b)
+		X:  170 (aa)
+		Y:  6 (6)
+		P:  47 (2f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5122 / (20770) => 48 / (72)
+	BCD START -> 2b + 48
+	BCD CONVERT -> 31 + 48
+	BCD SUM -> 7a
+[OP END @ 20770]
+Done..

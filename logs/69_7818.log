@@ -1,0 +1,22 @@
+[TEST 318 - 69.json]
+	MEM WRITE: 2b20 / (11040) => 69 / (105)
+	MEM WRITE: 2b21 / (11041) => cb / (203)
+	MEM WRITE: 2b22 / (11042) => fa / (250)
+	MEM READ: 2b20 / (11040) => 69 / (105)
+[OP START 11040 -> 0x69 -> adc]
+	REGS:
+		PC: 11040 (2b20)
+		SP: 56 (38)
+		A:  55 (37)
+		X:  33 (21)
+		Y:  75 (4b)
+		P:  47 (2f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2b21 / (11041) => cb / (203)
+	BCD START -> 37 + cb
+	BCD CONVERT -> 37 + 31
+	BCD SUM -> 69
+[OP END @ 11041]
+Done..

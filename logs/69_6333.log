@@ -1,0 +1,22 @@
+[TEST 83 - 69.json]
+	MEM WRITE: f35e / (62302) => 69 / (105)
+	MEM WRITE: f35f / (62303) => 5 / (5)
+	MEM WRITE: f360 / (62304) => 77 / (119)
+	MEM READ: f35e / (62302) => 69 / (105)
+[OP START 62302 -> 0x69 -> adc]
+	REGS:
+		PC: 62302 (f35e)
+		SP: 4 (4)
+		A:  133 (85)
+		X:  94 (5e)
+		Y:  27 (1b)
+		P:  238 (ee)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f35f / (62303) => 5 / (5)
+	BCD START -> 85 + 5
+	BCD CONVERT -> 85 + 5
+	BCD SUM -> 90
+[OP END @ 62303]
+Done..

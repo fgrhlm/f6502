@@ -1,0 +1,22 @@
+[TEST 300 - 69.json]
+	MEM WRITE: 2922 / (10530) => 69 / (105)
+	MEM WRITE: 2923 / (10531) => c4 / (196)
+	MEM WRITE: 2924 / (10532) => 1c / (28)
+	MEM READ: 2922 / (10530) => 69 / (105)
+[OP START 10530 -> 0x69 -> adc]
+	REGS:
+		PC: 10530 (2922)
+		SP: 160 (a0)
+		A:  159 (9f)
+		X:  103 (67)
+		Y:  188 (bc)
+		P:  105 (69)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2923 / (10531) => c4 / (196)
+	BCD START -> 9f + c4
+	BCD CONVERT -> a5 + 24
+	BCD SUM -> 2a
+[OP END @ 10531]
+Done..

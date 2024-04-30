@@ -1,0 +1,19 @@
+[TEST 466 - 69.json]
+	MEM WRITE: a474 / (42100) => 69 / (105)
+	MEM WRITE: a475 / (42101) => 14 / (20)
+	MEM WRITE: a476 / (42102) => 5b / (91)
+	MEM READ: a474 / (42100) => 69 / (105)
+[OP START 42100 -> 0x69 -> adc]
+	REGS:
+		PC: 42100 (a474)
+		SP: 71 (47)
+		A:  77 (4d)
+		X:  44 (2c)
+		Y:  177 (b1)
+		P:  34 (22)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a475 / (42101) => 14 / (20)
+	BINADC: 4d + 14 = 61[OP END @ 42101]
+Done..

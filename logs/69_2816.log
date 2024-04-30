@@ -1,0 +1,22 @@
+[TEST 316 - 69.json]
+	MEM WRITE: 2fed / (12269) => 69 / (105)
+	MEM WRITE: 2fee / (12270) => 7d / (125)
+	MEM WRITE: 2fef / (12271) => 51 / (81)
+	MEM READ: 2fed / (12269) => 69 / (105)
+[OP START 12269 -> 0x69 -> adc]
+	REGS:
+		PC: 12269 (2fed)
+		SP: 235 (eb)
+		A:  131 (83)
+		X:  239 (ef)
+		Y:  148 (94)
+		P:  111 (6f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2fee / (12270) => 7d / (125)
+	BCD START -> 83 + 7d
+	BCD CONVERT -> 83 + 83
+	BCD SUM -> 67
+[OP END @ 12270]
+Done..

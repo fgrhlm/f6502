@@ -1,0 +1,19 @@
+[TEST 46 - 69.json]
+	MEM WRITE: 4fde / (20446) => 69 / (105)
+	MEM WRITE: 4fdf / (20447) => 52 / (82)
+	MEM WRITE: 4fe0 / (20448) => 57 / (87)
+	MEM READ: 4fde / (20446) => 69 / (105)
+[OP START 20446 -> 0x69 -> adc]
+	REGS:
+		PC: 20446 (4fde)
+		SP: 68 (44)
+		A:  122 (7a)
+		X:  238 (ee)
+		Y:  146 (92)
+		P:  161 (a1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4fdf / (20447) => 52 / (82)
+	BINADC: 7a + 52 = cd[OP END @ 20447]
+Done..

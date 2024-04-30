@@ -1,0 +1,22 @@
+[TEST 622 - 69.json]
+	MEM WRITE: 6ae7 / (27367) => 69 / (105)
+	MEM WRITE: 6ae8 / (27368) => 21 / (33)
+	MEM WRITE: 6ae9 / (27369) => 2c / (44)
+	MEM READ: 6ae7 / (27367) => 69 / (105)
+[OP START 27367 -> 0x69 -> adc]
+	REGS:
+		PC: 27367 (6ae7)
+		SP: 236 (ec)
+		A:  63 (3f)
+		X:  177 (b1)
+		Y:  151 (97)
+		P:  172 (ac)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6ae8 / (27368) => 21 / (33)
+	BCD START -> 3f + 21
+	BCD CONVERT -> 45 + 21
+	BCD SUM -> 66
+[OP END @ 27368]
+Done..

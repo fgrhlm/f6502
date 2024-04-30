@@ -1,0 +1,19 @@
+[TEST 402 - 69.json]
+	MEM WRITE: eb39 / (60217) => 69 / (105)
+	MEM WRITE: eb3a / (60218) => 5f / (95)
+	MEM WRITE: eb3b / (60219) => 5e / (94)
+	MEM READ: eb39 / (60217) => 69 / (105)
+[OP START 60217 -> 0x69 -> adc]
+	REGS:
+		PC: 60217 (eb39)
+		SP: 16 (10)
+		A:  28 (1c)
+		X:  37 (25)
+		Y:  249 (f9)
+		P:  100 (64)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eb3a / (60218) => 5f / (95)
+	BINADC: 1c + 5f = 7b[OP END @ 60218]
+Done..

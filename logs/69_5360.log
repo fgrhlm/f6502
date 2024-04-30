@@ -1,0 +1,22 @@
+[TEST 360 - 69.json]
+	MEM WRITE: 1071 / (4209) => 69 / (105)
+	MEM WRITE: 1072 / (4210) => 52 / (82)
+	MEM WRITE: 1073 / (4211) => 1c / (28)
+	MEM READ: 1071 / (4209) => 69 / (105)
+[OP START 4209 -> 0x69 -> adc]
+	REGS:
+		PC: 4209 (1071)
+		SP: 188 (bc)
+		A:  254 (fe)
+		X:  3 (3)
+		Y:  20 (14)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1072 / (4210) => 52 / (82)
+	BCD START -> fe + 52
+	BCD CONVERT -> 64 + 52
+	BCD SUM -> 17
+[OP END @ 4210]
+Done..

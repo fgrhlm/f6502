@@ -1,0 +1,19 @@
+[TEST 501 - 69.json]
+	MEM WRITE: 4e51 / (20049) => 69 / (105)
+	MEM WRITE: 4e52 / (20050) => 3c / (60)
+	MEM WRITE: 4e53 / (20051) => be / (190)
+	MEM READ: 4e51 / (20049) => 69 / (105)
+[OP START 20049 -> 0x69 -> adc]
+	REGS:
+		PC: 20049 (4e51)
+		SP: 249 (f9)
+		A:  97 (61)
+		X:  202 (ca)
+		Y:  131 (83)
+		P:  164 (a4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4e52 / (20050) => 3c / (60)
+	BINADC: 61 + 3c = 9d[OP END @ 20050]
+Done..

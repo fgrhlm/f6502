@@ -1,0 +1,22 @@
+[TEST 588 - 69.json]
+	MEM WRITE: f61c / (63004) => 69 / (105)
+	MEM WRITE: f61d / (63005) => e3 / (227)
+	MEM WRITE: f61e / (63006) => f / (15)
+	MEM READ: f61c / (63004) => 69 / (105)
+[OP START 63004 -> 0x69 -> adc]
+	REGS:
+		PC: 63004 (f61c)
+		SP: 88 (58)
+		A:  116 (74)
+		X:  176 (b0)
+		Y:  14 (e)
+		P:  175 (af)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f61d / (63005) => e3 / (227)
+	BCD START -> 74 + e3
+	BCD CONVERT -> 74 + 43
+	BCD SUM -> 18
+[OP END @ 63005]
+Done..

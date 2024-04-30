@@ -1,0 +1,19 @@
+[TEST 416 - 69.json]
+	MEM WRITE: f6f0 / (63216) => 69 / (105)
+	MEM WRITE: f6f1 / (63217) => da / (218)
+	MEM WRITE: f6f2 / (63218) => d6 / (214)
+	MEM READ: f6f0 / (63216) => 69 / (105)
+[OP START 63216 -> 0x69 -> adc]
+	REGS:
+		PC: 63216 (f6f0)
+		SP: 12 (c)
+		A:  153 (99)
+		X:  166 (a6)
+		Y:  23 (17)
+		P:  32 (20)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f6f1 / (63217) => da / (218)
+	BINADC: 99 + da = 73[OP END @ 63217]
+Done..

@@ -1,0 +1,22 @@
+[TEST 560 - 69.json]
+	MEM WRITE: 2903 / (10499) => 69 / (105)
+	MEM WRITE: 2904 / (10500) => 8b / (139)
+	MEM WRITE: 2905 / (10501) => 55 / (85)
+	MEM READ: 2903 / (10499) => 69 / (105)
+[OP START 10499 -> 0x69 -> adc]
+	REGS:
+		PC: 10499 (2903)
+		SP: 146 (92)
+		A:  97 (61)
+		X:  129 (81)
+		Y:  87 (57)
+		P:  169 (a9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2904 / (10500) => 8b / (139)
+	BCD START -> 61 + 8b
+	BCD CONVERT -> 61 + 91
+	BCD SUM -> 53
+[OP END @ 10500]
+Done..

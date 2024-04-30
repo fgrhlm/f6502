@@ -1,0 +1,19 @@
+[TEST 588 - 69.json]
+	MEM WRITE: ee5e / (61022) => 69 / (105)
+	MEM WRITE: ee5f / (61023) => c2 / (194)
+	MEM WRITE: ee60 / (61024) => 34 / (52)
+	MEM READ: ee5e / (61022) => 69 / (105)
+[OP START 61022 -> 0x69 -> adc]
+	REGS:
+		PC: 61022 (ee5e)
+		SP: 137 (89)
+		A:  199 (c7)
+		X:  176 (b0)
+		Y:  31 (1f)
+		P:  224 (e0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ee5f / (61023) => c2 / (194)
+	BINADC: c7 + c2 = 89[OP END @ 61023]
+Done..

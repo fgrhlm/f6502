@@ -1,0 +1,22 @@
+[TEST 527 - 69.json]
+	MEM WRITE: f0e9 / (61673) => 69 / (105)
+	MEM WRITE: f0ea / (61674) => b8 / (184)
+	MEM WRITE: f0eb / (61675) => 3c / (60)
+	MEM READ: f0e9 / (61673) => 69 / (105)
+[OP START 61673 -> 0x69 -> adc]
+	REGS:
+		PC: 61673 (f0e9)
+		SP: 16 (10)
+		A:  57 (39)
+		X:  96 (60)
+		Y:  31 (1f)
+		P:  235 (eb)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f0ea / (61674) => b8 / (184)
+	BCD START -> 39 + b8
+	BCD CONVERT -> 39 + 18
+	BCD SUM -> 58
+[OP END @ 61674]
+Done..

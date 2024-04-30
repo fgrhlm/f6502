@@ -1,0 +1,19 @@
+[TEST 454 - 69.json]
+	MEM WRITE: acbd / (44221) => 69 / (105)
+	MEM WRITE: acbe / (44222) => 63 / (99)
+	MEM WRITE: acbf / (44223) => 52 / (82)
+	MEM READ: acbd / (44221) => 69 / (105)
+[OP START 44221 -> 0x69 -> adc]
+	REGS:
+		PC: 44221 (acbd)
+		SP: 239 (ef)
+		A:  74 (4a)
+		X:  202 (ca)
+		Y:  46 (2e)
+		P:  96 (60)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: acbe / (44222) => 63 / (99)
+	BINADC: 4a + 63 = ad[OP END @ 44222]
+Done..

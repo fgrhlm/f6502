@@ -1,0 +1,19 @@
+[TEST 30 - 69.json]
+	MEM WRITE: 91b4 / (37300) => 69 / (105)
+	MEM WRITE: 91b5 / (37301) => 6f / (111)
+	MEM WRITE: 91b6 / (37302) => 6f / (111)
+	MEM READ: 91b4 / (37300) => 69 / (105)
+[OP START 37300 -> 0x69 -> adc]
+	REGS:
+		PC: 37300 (91b4)
+		SP: 95 (5f)
+		A:  238 (ee)
+		X:  237 (ed)
+		Y:  121 (79)
+		P:  39 (27)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 91b5 / (37301) => 6f / (111)
+	BINADC: ee + 6f = 5e[OP END @ 37301]
+Done..

@@ -1,0 +1,19 @@
+[TEST 434 - 69.json]
+	MEM WRITE: ca78 / (51832) => 69 / (105)
+	MEM WRITE: ca79 / (51833) => c3 / (195)
+	MEM WRITE: ca7a / (51834) => 87 / (135)
+	MEM READ: ca78 / (51832) => 69 / (105)
+[OP START 51832 -> 0x69 -> adc]
+	REGS:
+		PC: 51832 (ca78)
+		SP: 144 (90)
+		A:  184 (b8)
+		X:  124 (7c)
+		Y:  194 (c2)
+		P:  96 (60)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ca79 / (51833) => c3 / (195)
+	BINADC: b8 + c3 = 7b[OP END @ 51833]
+Done..

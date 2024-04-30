@@ -1,0 +1,22 @@
+[TEST 532 - 69.json]
+	MEM WRITE: e1e9 / (57833) => 69 / (105)
+	MEM WRITE: e1ea / (57834) => 66 / (102)
+	MEM WRITE: e1eb / (57835) => 74 / (116)
+	MEM READ: e1e9 / (57833) => 69 / (105)
+[OP START 57833 -> 0x69 -> adc]
+	REGS:
+		PC: 57833 (e1e9)
+		SP: 55 (37)
+		A:  107 (6b)
+		X:  251 (fb)
+		Y:  199 (c7)
+		P:  233 (e9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e1ea / (57834) => 66 / (102)
+	BCD START -> 6b + 66
+	BCD CONVERT -> 71 + 66
+	BCD SUM -> 38
+[OP END @ 57834]
+Done..

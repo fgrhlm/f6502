@@ -1,0 +1,19 @@
+[TEST 577 - 69.json]
+	MEM WRITE: 30fa / (12538) => 69 / (105)
+	MEM WRITE: 30fb / (12539) => 34 / (52)
+	MEM WRITE: 30fc / (12540) => 3b / (59)
+	MEM READ: 30fa / (12538) => 69 / (105)
+[OP START 12538 -> 0x69 -> adc]
+	REGS:
+		PC: 12538 (30fa)
+		SP: 130 (82)
+		A:  248 (f8)
+		X:  100 (64)
+		Y:  237 (ed)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 30fb / (12539) => 34 / (52)
+	BINADC: f8 + 34 = 2d[OP END @ 12539]
+Done..

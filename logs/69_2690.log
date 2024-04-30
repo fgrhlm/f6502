@@ -1,0 +1,19 @@
+[TEST 190 - 69.json]
+	MEM WRITE: 41e4 / (16868) => 69 / (105)
+	MEM WRITE: 41e5 / (16869) => ff / (255)
+	MEM WRITE: 41e6 / (16870) => 8e / (142)
+	MEM READ: 41e4 / (16868) => 69 / (105)
+[OP START 16868 -> 0x69 -> adc]
+	REGS:
+		PC: 16868 (41e4)
+		SP: 238 (ee)
+		A:  158 (9e)
+		X:  123 (7b)
+		Y:  107 (6b)
+		P:  102 (66)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 41e5 / (16869) => ff / (255)
+	BINADC: 9e + ff = 9d[OP END @ 16869]
+Done..

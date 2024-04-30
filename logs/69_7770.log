@@ -1,0 +1,19 @@
+[TEST 270 - 69.json]
+	MEM WRITE: fb58 / (64344) => 69 / (105)
+	MEM WRITE: fb59 / (64345) => 26 / (38)
+	MEM WRITE: fb5a / (64346) => 70 / (112)
+	MEM READ: fb58 / (64344) => 69 / (105)
+[OP START 64344 -> 0x69 -> adc]
+	REGS:
+		PC: 64344 (fb58)
+		SP: 147 (93)
+		A:  68 (44)
+		X:  153 (99)
+		Y:  216 (d8)
+		P:  228 (e4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fb59 / (64345) => 26 / (38)
+	BINADC: 44 + 26 = 6a[OP END @ 64345]
+Done..

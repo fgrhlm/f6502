@@ -1,0 +1,22 @@
+[TEST 218 - 69.json]
+	MEM WRITE: e232 / (57906) => 69 / (105)
+	MEM WRITE: e233 / (57907) => 5 / (5)
+	MEM WRITE: e234 / (57908) => 1 / (1)
+	MEM READ: e232 / (57906) => 69 / (105)
+[OP START 57906 -> 0x69 -> adc]
+	REGS:
+		PC: 57906 (e232)
+		SP: 113 (71)
+		A:  57 (39)
+		X:  8 (8)
+		Y:  31 (1f)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e233 / (57907) => 5 / (5)
+	BCD START -> 39 + 5
+	BCD CONVERT -> 39 + 5
+	BCD SUM -> 45
+[OP END @ 57907]
+Done..

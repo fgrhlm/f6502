@@ -1,0 +1,19 @@
+[TEST 131 - 69.json]
+	MEM WRITE: 2a8e / (10894) => 69 / (105)
+	MEM WRITE: 2a8f / (10895) => 4c / (76)
+	MEM WRITE: 2a90 / (10896) => 34 / (52)
+	MEM READ: 2a8e / (10894) => 69 / (105)
+[OP START 10894 -> 0x69 -> adc]
+	REGS:
+		PC: 10894 (2a8e)
+		SP: 8 (8)
+		A:  108 (6c)
+		X:  242 (f2)
+		Y:  120 (78)
+		P:  102 (66)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2a8f / (10895) => 4c / (76)
+	BINADC: 6c + 4c = b8[OP END @ 10895]
+Done..

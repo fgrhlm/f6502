@@ -1,0 +1,19 @@
+[TEST 581 - 69.json]
+	MEM WRITE: 356a / (13674) => 69 / (105)
+	MEM WRITE: 356b / (13675) => 18 / (24)
+	MEM WRITE: 356c / (13676) => e2 / (226)
+	MEM READ: 356a / (13674) => 69 / (105)
+[OP START 13674 -> 0x69 -> adc]
+	REGS:
+		PC: 13674 (356a)
+		SP: 222 (de)
+		A:  16 (10)
+		X:  74 (4a)
+		Y:  82 (52)
+		P:  103 (67)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 356b / (13675) => 18 / (24)
+	BINADC: 10 + 18 = 29[OP END @ 13675]
+Done..

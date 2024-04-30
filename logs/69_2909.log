@@ -1,0 +1,22 @@
+[TEST 409 - 69.json]
+	MEM WRITE: 7866 / (30822) => 69 / (105)
+	MEM WRITE: 7867 / (30823) => 96 / (150)
+	MEM WRITE: 7868 / (30824) => fc / (252)
+	MEM READ: 7866 / (30822) => 69 / (105)
+[OP START 30822 -> 0x69 -> adc]
+	REGS:
+		PC: 30822 (7866)
+		SP: 21 (15)
+		A:  147 (93)
+		X:  199 (c7)
+		Y:  25 (19)
+		P:  168 (a8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7867 / (30823) => 96 / (150)
+	BCD START -> 93 + 96
+	BCD CONVERT -> 93 + 96
+	BCD SUM -> 89
+[OP END @ 30823]
+Done..

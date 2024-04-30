@@ -1,0 +1,19 @@
+[TEST 26 - 69.json]
+	MEM WRITE: c4f0 / (50416) => 69 / (105)
+	MEM WRITE: c4f1 / (50417) => 6e / (110)
+	MEM WRITE: c4f2 / (50418) => 6f / (111)
+	MEM READ: c4f0 / (50416) => 69 / (105)
+[OP START 50416 -> 0x69 -> adc]
+	REGS:
+		PC: 50416 (c4f0)
+		SP: 69 (45)
+		A:  129 (81)
+		X:  132 (84)
+		Y:  219 (db)
+		P:  38 (26)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c4f1 / (50417) => 6e / (110)
+	BINADC: 81 + 6e = ef[OP END @ 50417]
+Done..

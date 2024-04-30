@@ -1,0 +1,19 @@
+[TEST 503 - 69.json]
+	MEM WRITE: 7577 / (30071) => 69 / (105)
+	MEM WRITE: 7578 / (30072) => 2e / (46)
+	MEM WRITE: 7579 / (30073) => b3 / (179)
+	MEM READ: 7577 / (30071) => 69 / (105)
+[OP START 30071 -> 0x69 -> adc]
+	REGS:
+		PC: 30071 (7577)
+		SP: 25 (19)
+		A:  60 (3c)
+		X:  227 (e3)
+		Y:  82 (52)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7578 / (30072) => 2e / (46)
+	BINADC: 3c + 2e = 6b[OP END @ 30072]
+Done..

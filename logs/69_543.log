@@ -1,0 +1,22 @@
+[TEST 543 - 69.json]
+	MEM WRITE: 248 / (584) => 69 / (105)
+	MEM WRITE: 249 / (585) => 8c / (140)
+	MEM WRITE: 24a / (586) => 91 / (145)
+	MEM READ: 248 / (584) => 69 / (105)
+[OP START 584 -> 0x69 -> adc]
+	REGS:
+		PC: 584 (248)
+		SP: 115 (73)
+		A:  46 (2e)
+		X:  172 (ac)
+		Y:  85 (55)
+		P:  110 (6e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 249 / (585) => 8c / (140)
+	BCD START -> 2e + 8c
+	BCD CONVERT -> 34 + 92
+	BCD SUM -> 26
+[OP END @ 585]
+Done..

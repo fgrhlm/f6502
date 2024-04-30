@@ -1,0 +1,22 @@
+[TEST 559 - 69.json]
+	MEM WRITE: 51b / (1307) => 69 / (105)
+	MEM WRITE: 51c / (1308) => 46 / (70)
+	MEM WRITE: 51d / (1309) => 15 / (21)
+	MEM READ: 51b / (1307) => 69 / (105)
+[OP START 1307 -> 0x69 -> adc]
+	REGS:
+		PC: 1307 (51b)
+		SP: 206 (ce)
+		A:  227 (e3)
+		X:  6 (6)
+		Y:  38 (26)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 51c / (1308) => 46 / (70)
+	BCD START -> e3 + 46
+	BCD CONVERT -> 43 + 46
+	BCD SUM -> 89
+[OP END @ 1308]
+Done..

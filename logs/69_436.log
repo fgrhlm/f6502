@@ -1,0 +1,19 @@
+[TEST 436 - 69.json]
+	MEM WRITE: efe7 / (61415) => 69 / (105)
+	MEM WRITE: efe8 / (61416) => 86 / (134)
+	MEM WRITE: efe9 / (61417) => 77 / (119)
+	MEM READ: efe7 / (61415) => 69 / (105)
+[OP START 61415 -> 0x69 -> adc]
+	REGS:
+		PC: 61415 (efe7)
+		SP: 147 (93)
+		A:  204 (cc)
+		X:  77 (4d)
+		Y:  165 (a5)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: efe8 / (61416) => 86 / (134)
+	BINADC: cc + 86 = 53[OP END @ 61416]
+Done..

@@ -1,0 +1,19 @@
+[TEST 500 - 69.json]
+	MEM WRITE: efeb / (61419) => 69 / (105)
+	MEM WRITE: efec / (61420) => 4f / (79)
+	MEM WRITE: efed / (61421) => 68 / (104)
+	MEM READ: efeb / (61419) => 69 / (105)
+[OP START 61419 -> 0x69 -> adc]
+	REGS:
+		PC: 61419 (efeb)
+		SP: 120 (78)
+		A:  170 (aa)
+		X:  1 (1)
+		Y:  175 (af)
+		P:  97 (61)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: efec / (61420) => 4f / (79)
+	BINADC: aa + 4f = fa[OP END @ 61420]
+Done..

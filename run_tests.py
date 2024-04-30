@@ -1,37 +1,14 @@
 import json
 import sys
+import os
 
 from subprocess import run
 from os import listdir, path, makedirs, remove
-from threading import Thread
-from enum import Enum
+from threading import Thread, Lock
 from shutil import copyfile
 from numpy import array_split
-
-class TestResult(Enum):
-    SKIP = 0
-    PASS = 1
-    FAIL = 2
-    ERROR = 3
-
-doc_opcodes = [
-    0x00, 0x01, 0x05, 0x06, 0x08, 0x09, 0x0a, 0x0d, 0x0e,
-    0x10, 0x11, 0x15, 0x16, 0x18, 0x19, 0x1d, 0x1e,
-    0x20, 0x21, 0x24, 0x25, 0x26, 0x28, 0x29, 0x2a, 0x2c, 0x2d, 0x2e,
-    0x30, 0x31, 0x35, 0x36, 0x38, 0x39, 0x3d, 0x3e,
-    0x40, 0x41, 0x45, 0x46, 0x48, 0x49, 0x4a, 0x4c, 0x4d, 0x4e,
-    0x50, 0x51, 0x55, 0x56, 0x58, 0x59, 0x5d, 0x5e,
-    0x60, 0x61, 0x65, 0x66, 0x68, 0x69, 0x6a, 0x6c, 0x6d, 0x6e,
-    0x70, 0x71, 0x75, 0x76, 0x78, 0x79, 0x7d, 0x7e,
-    0x81, 0x84, 0x85, 0x86, 0x88, 0x8a, 0x8c, 0x8d, 0x8e,
-    0x90, 0x91, 0x94, 0x95, 0x96, 0x98, 0x99, 0x9a, 0x9d,
-    0xa0, 0xa1, 0xa2, 0xa4, 0xa5, 0xa6, 0xa8, 0xa9, 0xaa, 0xad,
-    0xb0, 0xb1, 0xb4, 0xb5, 0xb6, 0xb8, 0xb9, 0xba, 0xbc, 0xbd, 0xbe,
-    0xc0, 0xc1, 0xc4, 0xc5, 0xc6, 0xc8, 0xc9, 0xca, 0xcc, 0xcd, 0xce,
-    0xd0, 0xd1, 0xd5, 0xd6, 0xd8, 0xd9, 0xdd, 0xde,
-    0xe0, 0xe1, 0xe4, 0xe5, 0xe6, 0xe8, 0xe9, 0xea, 0xec, 0xed, 0xee,
-    0xf0, 0xf1, 0xf5, 0xf6, 0xf8, 0xf9, 0xfd, 0xfe 
-]
+from utils import ops, TestResult, color 
+from time import sleep, time
 
 emu_path = "./build/sfotemu"
 tests_dir = "tests/ProcessorTests/6502/v1"
@@ -46,7 +23,8 @@ def parse_args():
         "file": "",
         "index": 0,
         "verbose": False,
-        "undocumented": False
+        "undocumented": False,
+        "limit": 0
     }
 
     # Test args
@@ -55,6 +33,7 @@ def parse_args():
     ARG_SINGLE = "--single"
     ARG_FULL = "--full"
     ARG_EVAL = "--eval"
+    ARG_LIMIT = "--limit"
 
     def arg_value(a, i):
         return sys.argv[sys.argv.index(a) + i]
@@ -77,6 +56,9 @@ def parse_args():
     if ARG_EVAL in sys.argv:
         test_prefs["mode"] = 2
     
+    if ARG_LIMIT in sys.argv:
+        test_prefs["limit"] = int(arg_value(ARG_LIMIT, 1))
+    
     return test_prefs
 
 def make_result(status, test_index, test_filename, expected, produced, log):
@@ -90,18 +72,16 @@ def make_result(status, test_index, test_filename, expected, produced, log):
     }
 
 def run_t(n_test, test_data, prefs):
-    test = test_data[n_test]
+    test = test_data[n_test]["test"]
+    test_index = test_data[n_test]["index"]
     # Check for undocumented opcodes
     def check_undoc():
-        ops = [int(x, 16) for x in test["name"].split(" ")]
-        for x in ops:
-            if x not in doc_opcodes:
-                return True
-
-        return False
+        test_ops = [x for x in test["name"].split(" ")]
+        for x in test_ops:
+            return ops[x]["doc"]
 
     undoc = check_undoc()
-    if undoc and not prefs["undocumented"]: 
+    if not undoc and not prefs["undocumented"]: 
         if prefs["verbose"]:
             print(f"SKIP [{prefs['file']} - {n_test}]")
         
@@ -132,12 +112,27 @@ def run_t(n_test, test_data, prefs):
     args = [emu_path] + args
 
     #print(" ".join(args))
+   
+    log_root = "logs/"
+    if not os.path.exists(log_root):
+        os.makedirs(log_root)
+    
+    dump_fn = f"{log_root}{prefs['file']}_{test_index}.dump"
+    log_fn = f"{log_root}{prefs['file']}_{test_index}.log"
     
     # Run test
-    result = run(args, capture_output=True, text=True)
+    try:
+        result = run(
+            args, 
+            env={
+                "EMU_DUMP_FILE": str(dump_fn),
+                "EMU_LOG_FILE": str(log_fn)
+            }
+        )
+    except:
+        print("Exec failed!")
 
     # Save results
-    dump_fn = result.stdout.strip()
     with open(dump_fn, "r") as f:
         dl = [n.strip() for n in f.readlines()]
 
@@ -167,14 +162,13 @@ def run_t(n_test, test_data, prefs):
     # Print results
     def print_result(k, pad='03'):
         if conditions[k]:
-            print("\x1b[30;42m[Y]\x1b[0m", end=" ")
-            print(f"{k.upper()}: {format(final[k], pad)} == {format(res[k], pad)}")
+            print(color("g", "[Y]"), end=" ")
         else:
-            print("\x1b[30;41m[N]\x1b[0m", end=" ")
-            print(f"{k.upper()}: {format(final[k], pad)} != {format(res[k], pad)}")
+            print(color("r", "[N]"), end=" ")
+        
+        print(f"{k.upper()}: {format(final[k], pad)} ({format(hex(final[k]), pad)}) -> {format(res[k], pad)} ({format(hex(res[k]), pad)})")
    
     if prefs["verbose"]:
-        print("")
         print_result("pc", '05')
         print("")
 
@@ -187,21 +181,15 @@ def run_t(n_test, test_data, prefs):
 
             v_match = (v_l == v_r)
             if v_match:
-                print("\x1b[30;42m[Y]\x1b[0m", end=" ")
-                print(f"{loc:05}: {v_l:03} == {v_r:03}")
+                print(color("g", "[Y]"), end=" ")
             else:
-                print("\x1b[30;41m[N]\x1b[0m", end=" ")
-                print(f"{loc:05}: {v_l:03} != {v_r:03}")
+                print(color("r", "[N]"), end=" ")
+            
+            print(f"{loc:05}: {v_l:03} -> {v_r:03}")
             
             #print(f"{n[0]}: {n[1]} -> {res['ram'][i][0]}: {res['ram'][i][1]}")
 
     # Results
-
-    # def make_result(status, test_index, test_filename, expected, produced, log)
-    old_log_filename = "tests/logs/log"
-    new_log_filename = f"tests/logs/{prefs['file']}_{n_test}.log"
-    copyfile(old_log_filename, new_log_filename)
-
     test_status = TestResult.FAIL if sum(conditions.values()) != len(conditions.values()) else TestResult.PASS
     test_results = make_result(
         test_status,
@@ -209,7 +197,7 @@ def run_t(n_test, test_data, prefs):
         prefs["file"],
         final,
         res,
-        new_log_filename
+        log_fn
     )
     
     return test_results
@@ -218,8 +206,85 @@ def open_test(f_op):
     ftest = f"{tests_dir}/{f_op}.json"
     f = open(ftest)
     data = json.load(f)
+    data = [{"index": n, "test": d} for n,d in enumerate(data)]
 
     return data
+
+class Progress():
+    def __init__(self, nproc, icount):
+        self.start = None
+        self.elapsed = None
+        self.end = None
+        self.lock = Lock()
+        self.icount = icount 
+        self.icount_total = sum(icount)
+        self.count = [0 for n in range(nproc)]
+        self.last_count = [0 for n in range(nproc)]
+        self.best = [0 for n in range(nproc)]
+
+    def time_start(self):
+        if self.start == None:
+            self.start = time()
+    
+    def get_total(self): return sum(self.count)
+    def get_last_total(self): return sum(self.last_count)
+
+    def get_count(self, n): return self.count[n]
+    def get_last_count(self, n): return self.last_count[n]
+    def set_last_count(self): self.last_count = self.count
+
+    def get_best(self): return sum(self.best)
+    def get_ibest(self, n): return self.best[n]
+    def time_get(self):
+        if self.start:
+            return time() - self.start
+        
+        return 0
+    
+    def set_last_total(self, i, n): self.last_count[i] = n
+
+    def set_best(self, i, n):
+        if n > self.best[i]:
+            self.best[i] = n
+
+
+    def inc(self, n):
+        self.lock.acquire()
+        self.count[n] += 1
+        self.lock.release()
+
+    def show(self):
+        while sum(self.count) < sum(self.icount):
+            rate = 0.5
+            sleep(rate)
+            t_time = self.time_get()
+            total = self.get_total()
+            global_performance = (self.get_total() - self.get_last_total()) * 1/rate
+            local_performance = [(self.get_count(n) - self.get_last_count(n)) * 1/rate for n,_ in enumerate(self.count)]
+            for i,n in enumerate(local_performance): self.set_best(i, n)
+
+            os.system("clear")
+            print(color("bold", f"Time Elapsed:  {round(t_time, 2)}s"))
+            print(color("bold", f"Current perf:  {global_performance}/s"))
+            print(color("bold", f"Best perf:     {self.get_best()}/s"))
+            print(color("bold", f"Total:         {total} / {self.icount_total}"))
+
+            colors = ["y", "b", "m", "c"]
+            for i,n in enumerate(self.count):
+                color_i = (i+1) % len(colors)
+                print(color(colors[color_i], f"(best: {self.get_ibest(i)}/s )[T{i}]:          {n} / {self.icount[i]}"))
+
+            for i,n in enumerate(self.count):
+                self.set_last_total(i,n)
+
+
+        print("Done!")
+
+def thread_test(data, prefs, progn, prog):
+    for i in range(len(data)):
+        res = run_t(i, data, prefs)
+        if prog:
+            prog.inc(progn)
 
 if __name__=="__main__":
     prefs = parse_args()
@@ -233,35 +298,50 @@ if __name__=="__main__":
             res = run_t(prefs["index"], test_data, prefs)
             exit()
         case 1:
+            n_threads = 1
             test_data = open_test(prefs["file"])
-            for i in range(len(test_data)):
-                run_t(i, test_data, prefs)
+            test_data = array_split(test_data, n_threads)
+            progress = Progress(n_threads, [len(n) for n in test_data])
+            threads = [Thread(target=thread_test, args=(test_data[n], prefs, n, progress)) for n in range(n_threads)]
+            prog_t = Thread(target=progress.show)
 
+            progress.time_start()
+            for n in threads: n.start()
+            prog_t.start()
+            prog_t.join()
+            for n in threads: n.join()
+            
             exit()
+
         case 2:
             test_files = listdir(tests_dir)
             test_files = [n.split('.')[0] for n in test_files]
 
             if not prefs["undocumented"]:
-                test_files = [n for n in test_files if int(n, 16) in doc_opcodes] 
+                test_files = [n for n in test_files if ops[n]["doc"]] 
             
             result_output = {}
-
-            index = 0
+            if prefs["limit"] > 0: print(f"Limited eval @ {prefs['limit']}")
             for i, f in enumerate(test_files):
+                index = 0
                 prefs["file"] = f
                 test_data = open_test(f)
 
                 try: 
                     res = run_t(index, test_data, prefs)
-                    while res["status"] == TestResult.SKIP:
+                    next_test = res["status"] == TestResult.SKIP or res["status"] == TestResult.PASS
+                    while next_test:
+                        if index >= prefs["limit"]: break
+                        print(f"\r{f} {index} / {'10000' if prefs['limit'] == 0 else prefs['limit']}", end="")
                         index += 1
                         res = run_t(index, test_data, prefs)
                 except:
                     res = make_result(TestResult.ERROR,index,prefs["file"],{},{},"")
                 
                 result_output[res["opcode"]] = res
-                print(f"({i}/{len(test_files)}) {res['opcode']} - {res['status']}")
+                status = res["status"]
+                res_str = color("g", f" TEST: {res['opcode']},json\tSTATUS: PASS ") if status == TestResult.PASS else color("r", f" TEST: {res['opcode']}.json\tSTATUS: FAIL @ {index} ")
+                print(f"\r{res_str}")
            
             with open("tests/logs/eval.json", "w") as f:
                 for k in result_output.keys():

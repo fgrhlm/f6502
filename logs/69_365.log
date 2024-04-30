@@ -1,0 +1,22 @@
+[TEST 365 - 69.json]
+	MEM WRITE: 4252 / (16978) => 69 / (105)
+	MEM WRITE: 4253 / (16979) => 0 / (0)
+	MEM WRITE: 4254 / (16980) => 4a / (74)
+	MEM READ: 4252 / (16978) => 69 / (105)
+[OP START 16978 -> 0x69 -> adc]
+	REGS:
+		PC: 16978 (4252)
+		SP: 8 (8)
+		A:  95 (5f)
+		X:  250 (fa)
+		Y:  3 (3)
+		P:  175 (af)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4253 / (16979) => 0 / (0)
+	BCD START -> 5f + 0
+	BCD CONVERT -> 65 + 0
+	BCD SUM -> 66
+[OP END @ 16979]
+Done..

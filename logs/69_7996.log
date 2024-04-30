@@ -1,0 +1,22 @@
+[TEST 496 - 69.json]
+	MEM WRITE: 7648 / (30280) => 69 / (105)
+	MEM WRITE: 7649 / (30281) => 10 / (16)
+	MEM WRITE: 764a / (30282) => 5a / (90)
+	MEM READ: 7648 / (30280) => 69 / (105)
+[OP START 30280 -> 0x69 -> adc]
+	REGS:
+		PC: 30280 (7648)
+		SP: 194 (c2)
+		A:  58 (3a)
+		X:  154 (9a)
+		Y:  159 (9f)
+		P:  238 (ee)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7649 / (30281) => 10 / (16)
+	BCD START -> 3a + 10
+	BCD CONVERT -> 40 + 10
+	BCD SUM -> 50
+[OP END @ 30281]
+Done..

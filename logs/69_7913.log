@@ -1,0 +1,22 @@
+[TEST 413 - 69.json]
+	MEM WRITE: a99f / (43423) => 69 / (105)
+	MEM WRITE: a9a0 / (43424) => a4 / (164)
+	MEM WRITE: a9a1 / (43425) => 24 / (36)
+	MEM READ: a99f / (43423) => 69 / (105)
+[OP START 43423 -> 0x69 -> adc]
+	REGS:
+		PC: 43423 (a99f)
+		SP: 21 (15)
+		A:  119 (77)
+		X:  76 (4c)
+		Y:  20 (14)
+		P:  111 (6f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a9a0 / (43424) => a4 / (164)
+	BCD START -> 77 + a4
+	BCD CONVERT -> 77 + 4
+	BCD SUM -> 82
+[OP END @ 43424]
+Done..

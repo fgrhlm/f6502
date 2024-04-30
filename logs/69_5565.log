@@ -1,0 +1,22 @@
+[TEST 565 - 69.json]
+	MEM WRITE: 15b4 / (5556) => 69 / (105)
+	MEM WRITE: 15b5 / (5557) => ed / (237)
+	MEM WRITE: 15b6 / (5558) => e5 / (229)
+	MEM READ: 15b4 / (5556) => 69 / (105)
+[OP START 5556 -> 0x69 -> adc]
+	REGS:
+		PC: 5556 (15b4)
+		SP: 65 (41)
+		A:  122 (7a)
+		X:  112 (70)
+		Y:  90 (5a)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 15b5 / (5557) => ed / (237)
+	BCD START -> 7a + ed
+	BCD CONVERT -> 80 + 53
+	BCD SUM -> 34
+[OP END @ 5557]
+Done..

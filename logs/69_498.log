@@ -1,0 +1,19 @@
+[TEST 498 - 69.json]
+	MEM WRITE: 8f91 / (36753) => 69 / (105)
+	MEM WRITE: 8f92 / (36754) => ea / (234)
+	MEM WRITE: 8f93 / (36755) => 6c / (108)
+	MEM READ: 8f91 / (36753) => 69 / (105)
+[OP START 36753 -> 0x69 -> adc]
+	REGS:
+		PC: 36753 (8f91)
+		SP: 150 (96)
+		A:  12 (c)
+		X:  231 (e7)
+		Y:  170 (aa)
+		P:  96 (60)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8f92 / (36754) => ea / (234)
+	BINADC: c + ea = f6[OP END @ 36754]
+Done..

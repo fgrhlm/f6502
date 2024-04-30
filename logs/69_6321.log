@@ -1,0 +1,22 @@
+[TEST 71 - 69.json]
+	MEM WRITE: 277a / (10106) => 69 / (105)
+	MEM WRITE: 277b / (10107) => 6f / (111)
+	MEM WRITE: 277c / (10108) => e0 / (224)
+	MEM READ: 277a / (10106) => 69 / (105)
+[OP START 10106 -> 0x69 -> adc]
+	REGS:
+		PC: 10106 (277a)
+		SP: 156 (9c)
+		A:  177 (b1)
+		X:  106 (6a)
+		Y:  161 (a1)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 277b / (10107) => 6f / (111)
+	BCD START -> b1 + 6f
+	BCD CONVERT -> 11 + 75
+	BCD SUM -> 87
+[OP END @ 10107]
+Done..

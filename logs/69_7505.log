@@ -1,0 +1,19 @@
+[TEST 5 - 69.json]
+	MEM WRITE: 49c8 / (18888) => 69 / (105)
+	MEM WRITE: 49c9 / (18889) => 29 / (41)
+	MEM WRITE: 49ca / (18890) => be / (190)
+	MEM READ: 49c8 / (18888) => 69 / (105)
+[OP START 18888 -> 0x69 -> adc]
+	REGS:
+		PC: 18888 (49c8)
+		SP: 149 (95)
+		A:  39 (27)
+		X:  149 (95)
+		Y:  66 (42)
+		P:  36 (24)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 49c9 / (18889) => 29 / (41)
+	BINADC: 27 + 29 = 50[OP END @ 18889]
+Done..

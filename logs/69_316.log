@@ -1,0 +1,22 @@
+[TEST 316 - 69.json]
+	MEM WRITE: 880e / (34830) => 69 / (105)
+	MEM WRITE: 880f / (34831) => f6 / (246)
+	MEM WRITE: 8810 / (34832) => 5d / (93)
+	MEM READ: 880e / (34830) => 69 / (105)
+[OP START 34830 -> 0x69 -> adc]
+	REGS:
+		PC: 34830 (880e)
+		SP: 78 (4e)
+		A:  30 (1e)
+		X:  245 (f5)
+		Y:  61 (3d)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 880f / (34831) => f6 / (246)
+	BCD START -> 1e + f6
+	BCD CONVERT -> 24 + 56
+	BCD SUM -> 81
+[OP END @ 34831]
+Done..

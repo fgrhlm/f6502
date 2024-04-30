@@ -1,0 +1,19 @@
+[TEST 525 - 69.json]
+	MEM WRITE: 5c76 / (23670) => 69 / (105)
+	MEM WRITE: 5c77 / (23671) => 2f / (47)
+	MEM WRITE: 5c78 / (23672) => 8a / (138)
+	MEM READ: 5c76 / (23670) => 69 / (105)
+[OP START 23670 -> 0x69 -> adc]
+	REGS:
+		PC: 23670 (5c76)
+		SP: 109 (6d)
+		A:  146 (92)
+		X:  29 (1d)
+		Y:  86 (56)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5c77 / (23671) => 2f / (47)
+	BINADC: 92 + 2f = c2[OP END @ 23671]
+Done..

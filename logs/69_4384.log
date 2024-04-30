@@ -1,0 +1,22 @@
+[TEST 9 - 69.json]
+	MEM WRITE: fc29 / (64553) => 69 / (105)
+	MEM WRITE: fc2a / (64554) => 95 / (149)
+	MEM WRITE: fc2b / (64555) => c0 / (192)
+	MEM READ: fc29 / (64553) => 69 / (105)
+[OP START 64553 -> 0x69 -> adc]
+	REGS:
+		PC: 64553 (fc29)
+		SP: 17 (11)
+		A:  58 (3a)
+		X:  51 (33)
+		Y:  58 (3a)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fc2a / (64554) => 95 / (149)
+	BCD START -> 3a + 95
+	BCD CONVERT -> 40 + 95
+	BCD SUM -> 36
+[OP END @ 64554]
+Done..

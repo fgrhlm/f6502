@@ -1,0 +1,22 @@
+[TEST 601 - 69.json]
+	MEM WRITE: 22c7 / (8903) => 69 / (105)
+	MEM WRITE: 22c8 / (8904) => 89 / (137)
+	MEM WRITE: 22c9 / (8905) => 2a / (42)
+	MEM READ: 22c7 / (8903) => 69 / (105)
+[OP START 8903 -> 0x69 -> adc]
+	REGS:
+		PC: 8903 (22c7)
+		SP: 94 (5e)
+		A:  136 (88)
+		X:  99 (63)
+		Y:  183 (b7)
+		P:  105 (69)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 22c8 / (8904) => 89 / (137)
+	BCD START -> 88 + 89
+	BCD CONVERT -> 88 + 89
+	BCD SUM -> 78
+[OP END @ 8904]
+Done..

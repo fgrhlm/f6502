@@ -1,0 +1,22 @@
+[TEST 4 - 69.json]
+	MEM WRITE: 9ca5 / (40101) => 69 / (105)
+	MEM WRITE: 9ca6 / (40102) => 2e / (46)
+	MEM WRITE: 9ca7 / (40103) => 71 / (113)
+	MEM READ: 9ca5 / (40101) => 69 / (105)
+[OP START 40101 -> 0x69 -> adc]
+	REGS:
+		PC: 40101 (9ca5)
+		SP: 149 (95)
+		A:  9 (9)
+		X:  127 (7f)
+		Y:  84 (54)
+		P:  47 (2f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9ca6 / (40102) => 2e / (46)
+	BCD START -> 9 + 2e
+	BCD CONVERT -> 9 + 34
+	BCD SUM -> 44
+[OP END @ 40102]
+Done..

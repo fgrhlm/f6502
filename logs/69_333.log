@@ -1,0 +1,19 @@
+[TEST 333 - 69.json]
+	MEM WRITE: b872 / (47218) => 69 / (105)
+	MEM WRITE: b873 / (47219) => 8 / (8)
+	MEM WRITE: b874 / (47220) => 37 / (55)
+	MEM READ: b872 / (47218) => 69 / (105)
+[OP START 47218 -> 0x69 -> adc]
+	REGS:
+		PC: 47218 (b872)
+		SP: 115 (73)
+		A:  225 (e1)
+		X:  181 (b5)
+		Y:  62 (3e)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b873 / (47219) => 8 / (8)
+	BINADC: e1 + 8 = ea[OP END @ 47219]
+Done..

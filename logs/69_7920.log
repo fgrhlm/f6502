@@ -1,0 +1,19 @@
+[TEST 420 - 69.json]
+	MEM WRITE: 4bf3 / (19443) => 69 / (105)
+	MEM WRITE: 4bf4 / (19444) => 6a / (106)
+	MEM WRITE: 4bf5 / (19445) => 99 / (153)
+	MEM READ: 4bf3 / (19443) => 69 / (105)
+[OP START 19443 -> 0x69 -> adc]
+	REGS:
+		PC: 19443 (4bf3)
+		SP: 191 (bf)
+		A:  107 (6b)
+		X:  5 (5)
+		Y:  19 (13)
+		P:  98 (62)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4bf4 / (19444) => 6a / (106)
+	BINADC: 6b + 6a = d5[OP END @ 19444]
+Done..

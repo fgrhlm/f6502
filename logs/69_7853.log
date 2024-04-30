@@ -1,0 +1,19 @@
+[TEST 353 - 69.json]
+	MEM WRITE: eee7 / (61159) => 69 / (105)
+	MEM WRITE: eee8 / (61160) => 3c / (60)
+	MEM WRITE: eee9 / (61161) => 5d / (93)
+	MEM READ: eee7 / (61159) => 69 / (105)
+[OP START 61159 -> 0x69 -> adc]
+	REGS:
+		PC: 61159 (eee7)
+		SP: 131 (83)
+		A:  242 (f2)
+		X:  121 (79)
+		Y:  103 (67)
+		P:  163 (a3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eee8 / (61160) => 3c / (60)
+	BINADC: f2 + 3c = 2f[OP END @ 61160]
+Done..

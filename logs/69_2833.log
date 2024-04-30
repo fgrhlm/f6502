@@ -1,0 +1,19 @@
+[TEST 333 - 69.json]
+	MEM WRITE: 80d4 / (32980) => 69 / (105)
+	MEM WRITE: 80d5 / (32981) => 3c / (60)
+	MEM WRITE: 80d6 / (32982) => b1 / (177)
+	MEM READ: 80d4 / (32980) => 69 / (105)
+[OP START 32980 -> 0x69 -> adc]
+	REGS:
+		PC: 32980 (80d4)
+		SP: 254 (fe)
+		A:  207 (cf)
+		X:  28 (1c)
+		Y:  195 (c3)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 80d5 / (32981) => 3c / (60)
+	BINADC: cf + 3c = b[OP END @ 32981]
+Done..

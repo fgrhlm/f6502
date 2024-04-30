@@ -1,0 +1,19 @@
+[TEST 583 - 69.json]
+	MEM WRITE: 3c13 / (15379) => 69 / (105)
+	MEM WRITE: 3c14 / (15380) => 14 / (20)
+	MEM WRITE: 3c15 / (15381) => 0 / (0)
+	MEM READ: 3c13 / (15379) => 69 / (105)
+[OP START 15379 -> 0x69 -> adc]
+	REGS:
+		PC: 15379 (3c13)
+		SP: 69 (45)
+		A:  246 (f6)
+		X:  199 (c7)
+		Y:  250 (fa)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3c14 / (15380) => 14 / (20)
+	BINADC: f6 + 14 = b[OP END @ 15380]
+Done..

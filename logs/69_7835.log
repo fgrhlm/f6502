@@ -1,0 +1,19 @@
+[TEST 335 - 69.json]
+	MEM WRITE: 7fa4 / (32676) => 69 / (105)
+	MEM WRITE: 7fa5 / (32677) => fd / (253)
+	MEM WRITE: 7fa6 / (32678) => db / (219)
+	MEM READ: 7fa4 / (32676) => 69 / (105)
+[OP START 32676 -> 0x69 -> adc]
+	REGS:
+		PC: 32676 (7fa4)
+		SP: 74 (4a)
+		A:  253 (fd)
+		X:  246 (f6)
+		Y:  183 (b7)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7fa5 / (32677) => fd / (253)
+	BINADC: fd + fd = fa[OP END @ 32677]
+Done..

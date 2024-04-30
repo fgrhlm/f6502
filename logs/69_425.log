@@ -1,0 +1,19 @@
+[TEST 425 - 69.json]
+	MEM WRITE: 75f / (1887) => 69 / (105)
+	MEM WRITE: 760 / (1888) => 1d / (29)
+	MEM WRITE: 761 / (1889) => b / (11)
+	MEM READ: 75f / (1887) => 69 / (105)
+[OP START 1887 -> 0x69 -> adc]
+	REGS:
+		PC: 1887 (75f)
+		SP: 75 (4b)
+		A:  226 (e2)
+		X:  111 (6f)
+		Y:  32 (20)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 760 / (1888) => 1d / (29)
+	BINADC: e2 + 1d = 0[OP END @ 1888]
+Done..

@@ -1,0 +1,22 @@
+[TEST 401 - 69.json]
+	MEM WRITE: 432c / (17196) => 69 / (105)
+	MEM WRITE: 432d / (17197) => 44 / (68)
+	MEM WRITE: 432e / (17198) => e3 / (227)
+	MEM READ: 432c / (17196) => 69 / (105)
+[OP START 17196 -> 0x69 -> adc]
+	REGS:
+		PC: 17196 (432c)
+		SP: 50 (32)
+		A:  35 (23)
+		X:  237 (ed)
+		Y:  65 (41)
+		P:  106 (6a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 432d / (17197) => 44 / (68)
+	BCD START -> 23 + 44
+	BCD CONVERT -> 23 + 44
+	BCD SUM -> 67
+[OP END @ 17197]
+Done..

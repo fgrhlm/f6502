@@ -1,0 +1,22 @@
+[TEST 398 - 69.json]
+	MEM WRITE: 237e / (9086) => 69 / (105)
+	MEM WRITE: 237f / (9087) => a9 / (169)
+	MEM WRITE: 2380 / (9088) => 78 / (120)
+	MEM READ: 237e / (9086) => 69 / (105)
+[OP START 9086 -> 0x69 -> adc]
+	REGS:
+		PC: 9086 (237e)
+		SP: 107 (6b)
+		A:  163 (a3)
+		X:  157 (9d)
+		Y:  53 (35)
+		P:  110 (6e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 237f / (9087) => a9 / (169)
+	BCD START -> a3 + a9
+	BCD CONVERT -> 3 + 9
+	BCD SUM -> 12
+[OP END @ 9087]
+Done..

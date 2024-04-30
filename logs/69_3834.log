@@ -1,0 +1,22 @@
+[TEST 84 - 69.json]
+	MEM WRITE: 506 / (1286) => 69 / (105)
+	MEM WRITE: 507 / (1287) => e3 / (227)
+	MEM WRITE: 508 / (1288) => bb / (187)
+	MEM READ: 506 / (1286) => 69 / (105)
+[OP START 1286 -> 0x69 -> adc]
+	REGS:
+		PC: 1286 (506)
+		SP: 46 (2e)
+		A:  71 (47)
+		X:  30 (1e)
+		Y:  233 (e9)
+		P:  40 (28)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 507 / (1287) => e3 / (227)
+	BCD START -> 47 + e3
+	BCD CONVERT -> 47 + 43
+	BCD SUM -> 90
+[OP END @ 1287]
+Done..

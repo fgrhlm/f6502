@@ -1,0 +1,19 @@
+[TEST 9 - 69.json]
+	MEM WRITE: 5cae / (23726) => 69 / (105)
+	MEM WRITE: 5caf / (23727) => 88 / (136)
+	MEM WRITE: 5cb0 / (23728) => ca / (202)
+	MEM READ: 5cae / (23726) => 69 / (105)
+[OP START 23726 -> 0x69 -> adc]
+	REGS:
+		PC: 23726 (5cae)
+		SP: 212 (d4)
+		A:  173 (ad)
+		X:  222 (de)
+		Y:  13 (d)
+		P:  39 (27)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5caf / (23727) => 88 / (136)
+	BINADC: ad + 88 = 36[OP END @ 23727]
+Done..

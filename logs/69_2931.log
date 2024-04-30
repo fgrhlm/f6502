@@ -1,0 +1,22 @@
+[TEST 431 - 69.json]
+	MEM WRITE: ab12 / (43794) => 69 / (105)
+	MEM WRITE: ab13 / (43795) => 3b / (59)
+	MEM WRITE: ab14 / (43796) => 71 / (113)
+	MEM READ: ab12 / (43794) => 69 / (105)
+[OP START 43794 -> 0x69 -> adc]
+	REGS:
+		PC: 43794 (ab12)
+		SP: 80 (50)
+		A:  138 (8a)
+		X:  18 (12)
+		Y:  117 (75)
+		P:  106 (6a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ab13 / (43795) => 3b / (59)
+	BCD START -> 8a + 3b
+	BCD CONVERT -> 90 + 41
+	BCD SUM -> 31
+[OP END @ 43795]
+Done..

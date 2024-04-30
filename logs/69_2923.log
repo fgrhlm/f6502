@@ -1,0 +1,22 @@
+[TEST 423 - 69.json]
+	MEM WRITE: 945e / (37982) => 69 / (105)
+	MEM WRITE: 945f / (37983) => af / (175)
+	MEM WRITE: 9460 / (37984) => ed / (237)
+	MEM READ: 945e / (37982) => 69 / (105)
+[OP START 37982 -> 0x69 -> adc]
+	REGS:
+		PC: 37982 (945e)
+		SP: 187 (bb)
+		A:  147 (93)
+		X:  94 (5e)
+		Y:  213 (d5)
+		P:  170 (aa)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 945f / (37983) => af / (175)
+	BCD START -> 93 + af
+	BCD CONVERT -> 93 + 15
+	BCD SUM -> 8
+[OP END @ 37983]
+Done..

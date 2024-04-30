@@ -1,0 +1,22 @@
+[TEST 2 - 69.json]
+	MEM WRITE: dccc / (56524) => 69 / (105)
+	MEM WRITE: dccd / (56525) => a4 / (164)
+	MEM WRITE: dcce / (56526) => 94 / (148)
+	MEM READ: dccc / (56524) => 69 / (105)
+[OP START 56524 -> 0x69 -> adc]
+	REGS:
+		PC: 56524 (dccc)
+		SP: 151 (97)
+		A:  186 (ba)
+		X:  76 (4c)
+		Y:  85 (55)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: dccd / (56525) => a4 / (164)
+	BCD START -> ba + a4
+	BCD CONVERT -> 20 + 4
+	BCD SUM -> 24
+[OP END @ 56525]
+Done..

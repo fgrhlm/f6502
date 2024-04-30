@@ -1,0 +1,19 @@
+[TEST 114 - 69.json]
+	MEM WRITE: 5b8c / (23436) => 69 / (105)
+	MEM WRITE: 5b8d / (23437) => d5 / (213)
+	MEM WRITE: 5b8e / (23438) => ce / (206)
+	MEM READ: 5b8c / (23436) => 69 / (105)
+[OP START 23436 -> 0x69 -> adc]
+	REGS:
+		PC: 23436 (5b8c)
+		SP: 205 (cd)
+		A:  53 (35)
+		X:  31 (1f)
+		Y:  83 (53)
+		P:  167 (a7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5b8d / (23437) => d5 / (213)
+	BINADC: 35 + d5 = b[OP END @ 23437]
+Done..

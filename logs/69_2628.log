@@ -1,0 +1,19 @@
+[TEST 128 - 69.json]
+	MEM WRITE: 9025 / (36901) => 69 / (105)
+	MEM WRITE: 9026 / (36902) => 36 / (54)
+	MEM WRITE: 9027 / (36903) => d9 / (217)
+	MEM READ: 9025 / (36901) => 69 / (105)
+[OP START 36901 -> 0x69 -> adc]
+	REGS:
+		PC: 36901 (9025)
+		SP: 163 (a3)
+		A:  97 (61)
+		X:  25 (19)
+		Y:  30 (1e)
+		P:  103 (67)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9026 / (36902) => 36 / (54)
+	BINADC: 61 + 36 = 98[OP END @ 36902]
+Done..

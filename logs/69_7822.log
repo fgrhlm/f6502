@@ -1,0 +1,19 @@
+[TEST 322 - 69.json]
+	MEM WRITE: 28f5 / (10485) => 69 / (105)
+	MEM WRITE: 28f6 / (10486) => 90 / (144)
+	MEM WRITE: 28f7 / (10487) => dc / (220)
+	MEM READ: 28f5 / (10485) => 69 / (105)
+[OP START 10485 -> 0x69 -> adc]
+	REGS:
+		PC: 10485 (28f5)
+		SP: 43 (2b)
+		A:  37 (25)
+		X:  29 (1d)
+		Y:  169 (a9)
+		P:  231 (e7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 28f6 / (10486) => 90 / (144)
+	BINADC: 25 + 90 = b6[OP END @ 10486]
+Done..

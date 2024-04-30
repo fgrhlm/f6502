@@ -1,0 +1,19 @@
+[TEST 212 - 69.json]
+	MEM WRITE: b720 / (46880) => 69 / (105)
+	MEM WRITE: b721 / (46881) => df / (223)
+	MEM WRITE: b722 / (46882) => a7 / (167)
+	MEM READ: b720 / (46880) => 69 / (105)
+[OP START 46880 -> 0x69 -> adc]
+	REGS:
+		PC: 46880 (b720)
+		SP: 82 (52)
+		A:  185 (b9)
+		X:  112 (70)
+		Y:  49 (31)
+		P:  224 (e0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b721 / (46881) => df / (223)
+	BINADC: b9 + df = 98[OP END @ 46881]
+Done..

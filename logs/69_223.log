@@ -1,0 +1,19 @@
+[TEST 223 - 69.json]
+	MEM WRITE: 8607 / (34311) => 69 / (105)
+	MEM WRITE: 8608 / (34312) => 90 / (144)
+	MEM WRITE: 8609 / (34313) => 35 / (53)
+	MEM READ: 8607 / (34311) => 69 / (105)
+[OP START 34311 -> 0x69 -> adc]
+	REGS:
+		PC: 34311 (8607)
+		SP: 225 (e1)
+		A:  128 (80)
+		X:  223 (df)
+		Y:  70 (46)
+		P:  100 (64)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8608 / (34312) => 90 / (144)
+	BINADC: 80 + 90 = 10[OP END @ 34312]
+Done..

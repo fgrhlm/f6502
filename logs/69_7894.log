@@ -1,0 +1,22 @@
+[TEST 394 - 69.json]
+	MEM WRITE: f52 / (3922) => 69 / (105)
+	MEM WRITE: f53 / (3923) => ce / (206)
+	MEM WRITE: f54 / (3924) => f8 / (248)
+	MEM READ: f52 / (3922) => 69 / (105)
+[OP START 3922 -> 0x69 -> adc]
+	REGS:
+		PC: 3922 (f52)
+		SP: 218 (da)
+		A:  114 (72)
+		X:  89 (59)
+		Y:  6 (6)
+		P:  44 (2c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f53 / (3923) => ce / (206)
+	BCD START -> 72 + ce
+	BCD CONVERT -> 72 + 34
+	BCD SUM -> 6
+[OP END @ 3923]
+Done..

@@ -1,0 +1,19 @@
+[TEST 33 - 69.json]
+	MEM WRITE: aad9 / (43737) => 69 / (105)
+	MEM WRITE: aada / (43738) => ba / (186)
+	MEM WRITE: aadb / (43739) => 51 / (81)
+	MEM READ: aad9 / (43737) => 69 / (105)
+[OP START 43737 -> 0x69 -> adc]
+	REGS:
+		PC: 43737 (aad9)
+		SP: 237 (ed)
+		A:  191 (bf)
+		X:  97 (61)
+		Y:  20 (14)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: aada / (43738) => ba / (186)
+	BINADC: bf + ba = 7a[OP END @ 43738]
+Done..

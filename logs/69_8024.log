@@ -1,0 +1,19 @@
+[TEST 524 - 69.json]
+	MEM WRITE: c0e4 / (49380) => 69 / (105)
+	MEM WRITE: c0e5 / (49381) => 4e / (78)
+	MEM WRITE: c0e6 / (49382) => c / (12)
+	MEM READ: c0e4 / (49380) => 69 / (105)
+[OP START 49380 -> 0x69 -> adc]
+	REGS:
+		PC: 49380 (c0e4)
+		SP: 140 (8c)
+		A:  13 (d)
+		X:  206 (ce)
+		Y:  176 (b0)
+		P:  34 (22)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c0e5 / (49381) => 4e / (78)
+	BINADC: d + 4e = 5b[OP END @ 49381]
+Done..

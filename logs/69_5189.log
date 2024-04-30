@@ -1,0 +1,22 @@
+[TEST 189 - 69.json]
+	MEM WRITE: e80b / (59403) => 69 / (105)
+	MEM WRITE: e80c / (59404) => 2 / (2)
+	MEM WRITE: e80d / (59405) => 41 / (65)
+	MEM READ: e80b / (59403) => 69 / (105)
+[OP START 59403 -> 0x69 -> adc]
+	REGS:
+		PC: 59403 (e80b)
+		SP: 204 (cc)
+		A:  183 (b7)
+		X:  239 (ef)
+		Y:  119 (77)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e80c / (59404) => 2 / (2)
+	BCD START -> b7 + 2
+	BCD CONVERT -> 17 + 2
+	BCD SUM -> 1a
+[OP END @ 59404]
+Done..

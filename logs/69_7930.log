@@ -1,0 +1,19 @@
+[TEST 430 - 69.json]
+	MEM WRITE: 1e8e / (7822) => 69 / (105)
+	MEM WRITE: 1e8f / (7823) => ed / (237)
+	MEM WRITE: 1e90 / (7824) => 1c / (28)
+	MEM READ: 1e8e / (7822) => 69 / (105)
+[OP START 7822 -> 0x69 -> adc]
+	REGS:
+		PC: 7822 (1e8e)
+		SP: 214 (d6)
+		A:  105 (69)
+		X:  222 (de)
+		Y:  75 (4b)
+		P:  165 (a5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1e8f / (7823) => ed / (237)
+	BINADC: 69 + ed = 57[OP END @ 7823]
+Done..

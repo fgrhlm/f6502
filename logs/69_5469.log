@@ -1,0 +1,22 @@
+[TEST 469 - 69.json]
+	MEM WRITE: 3bab / (15275) => 69 / (105)
+	MEM WRITE: 3bac / (15276) => 38 / (56)
+	MEM WRITE: 3bad / (15277) => ab / (171)
+	MEM READ: 3bab / (15275) => 69 / (105)
+[OP START 15275 -> 0x69 -> adc]
+	REGS:
+		PC: 15275 (3bab)
+		SP: 197 (c5)
+		A:  155 (9b)
+		X:  230 (e6)
+		Y:  190 (be)
+		P:  169 (a9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3bac / (15276) => 38 / (56)
+	BCD START -> 9b + 38
+	BCD CONVERT -> a1 + 38
+	BCD SUM -> 3a
+[OP END @ 15276]
+Done..

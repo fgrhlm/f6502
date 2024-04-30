@@ -1,0 +1,19 @@
+[TEST 487 - 69.json]
+	MEM WRITE: 20aa / (8362) => 69 / (105)
+	MEM WRITE: 20ab / (8363) => a8 / (168)
+	MEM WRITE: 20ac / (8364) => 80 / (128)
+	MEM READ: 20aa / (8362) => 69 / (105)
+[OP START 8362 -> 0x69 -> adc]
+	REGS:
+		PC: 8362 (20aa)
+		SP: 183 (b7)
+		A:  59 (3b)
+		X:  18 (12)
+		Y:  31 (1f)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 20ab / (8363) => a8 / (168)
+	BINADC: 3b + a8 = e4[OP END @ 8363]
+Done..

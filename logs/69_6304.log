@@ -1,0 +1,22 @@
+[TEST 54 - 69.json]
+	MEM WRITE: 3340 / (13120) => 69 / (105)
+	MEM WRITE: 3341 / (13121) => 71 / (113)
+	MEM WRITE: 3342 / (13122) => a2 / (162)
+	MEM READ: 3340 / (13120) => 69 / (105)
+[OP START 13120 -> 0x69 -> adc]
+	REGS:
+		PC: 13120 (3340)
+		SP: 122 (7a)
+		A:  218 (da)
+		X:  173 (ad)
+		Y:  64 (40)
+		P:  110 (6e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3341 / (13121) => 71 / (113)
+	BCD START -> da + 71
+	BCD CONVERT -> 40 + 71
+	BCD SUM -> 11
+[OP END @ 13121]
+Done..

@@ -1,0 +1,19 @@
+[TEST 389 - 69.json]
+	MEM WRITE: 5016 / (20502) => 69 / (105)
+	MEM WRITE: 5017 / (20503) => 1d / (29)
+	MEM WRITE: 5018 / (20504) => 74 / (116)
+	MEM READ: 5016 / (20502) => 69 / (105)
+[OP START 20502 -> 0x69 -> adc]
+	REGS:
+		PC: 20502 (5016)
+		SP: 67 (43)
+		A:  84 (54)
+		X:  56 (38)
+		Y:  95 (5f)
+		P:  163 (a3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5017 / (20503) => 1d / (29)
+	BINADC: 54 + 1d = 72[OP END @ 20503]
+Done..

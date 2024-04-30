@@ -1,0 +1,19 @@
+[TEST 55 - 69.json]
+	MEM WRITE: 983c / (38972) => 69 / (105)
+	MEM WRITE: 983d / (38973) => 29 / (41)
+	MEM WRITE: 983e / (38974) => 6d / (109)
+	MEM READ: 983c / (38972) => 69 / (105)
+[OP START 38972 -> 0x69 -> adc]
+	REGS:
+		PC: 38972 (983c)
+		SP: 237 (ed)
+		A:  209 (d1)
+		X:  228 (e4)
+		Y:  242 (f2)
+		P:  96 (60)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 983d / (38973) => 29 / (41)
+	BINADC: d1 + 29 = fa[OP END @ 38973]
+Done..

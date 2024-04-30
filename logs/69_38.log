@@ -1,0 +1,19 @@
+[TEST 38 - 69.json]
+	MEM WRITE: 5039 / (20537) => 69 / (105)
+	MEM WRITE: 503a / (20538) => bb / (187)
+	MEM WRITE: 503b / (20539) => b5 / (181)
+	MEM READ: 5039 / (20537) => 69 / (105)
+[OP START 20537 -> 0x69 -> adc]
+	REGS:
+		PC: 20537 (5039)
+		SP: 202 (ca)
+		A:  186 (ba)
+		X:  165 (a5)
+		Y:  228 (e4)
+		P:  102 (66)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 503a / (20538) => bb / (187)
+	BINADC: ba + bb = 75[OP END @ 20538]
+Done..

@@ -1,0 +1,19 @@
+[TEST 9 - 69.json]
+	MEM WRITE: 7186 / (29062) => 69 / (105)
+	MEM WRITE: 7187 / (29063) => d8 / (216)
+	MEM WRITE: 7188 / (29064) => 7f / (127)
+	MEM READ: 7186 / (29062) => 69 / (105)
+[OP START 29062 -> 0x69 -> adc]
+	REGS:
+		PC: 29062 (7186)
+		SP: 145 (91)
+		A:  125 (7d)
+		X:  120 (78)
+		Y:  24 (18)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7187 / (29063) => d8 / (216)
+	BINADC: 7d + d8 = 56[OP END @ 29063]
+Done..

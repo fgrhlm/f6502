@@ -1,0 +1,19 @@
+[TEST 539 - 69.json]
+	MEM WRITE: 36eb / (14059) => 69 / (105)
+	MEM WRITE: 36ec / (14060) => c3 / (195)
+	MEM WRITE: 36ed / (14061) => 30 / (48)
+	MEM READ: 36eb / (14059) => 69 / (105)
+[OP START 14059 -> 0x69 -> adc]
+	REGS:
+		PC: 14059 (36eb)
+		SP: 101 (65)
+		A:  39 (27)
+		X:  203 (cb)
+		Y:  125 (7d)
+		P:  167 (a7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 36ec / (14060) => c3 / (195)
+	BINADC: 27 + c3 = eb[OP END @ 14060]
+Done..

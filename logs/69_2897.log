@@ -1,0 +1,19 @@
+[TEST 397 - 69.json]
+	MEM WRITE: 9803 / (38915) => 69 / (105)
+	MEM WRITE: 9804 / (38916) => a9 / (169)
+	MEM WRITE: 9805 / (38917) => 3b / (59)
+	MEM READ: 9803 / (38915) => 69 / (105)
+[OP START 38915 -> 0x69 -> adc]
+	REGS:
+		PC: 38915 (9803)
+		SP: 162 (a2)
+		A:  23 (17)
+		X:  137 (89)
+		Y:  237 (ed)
+		P:  97 (61)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9804 / (38916) => a9 / (169)
+	BINADC: 17 + a9 = c1[OP END @ 38916]
+Done..

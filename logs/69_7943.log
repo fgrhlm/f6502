@@ -1,0 +1,19 @@
+[TEST 443 - 69.json]
+	MEM WRITE: fc / (252) => 69 / (105)
+	MEM WRITE: fd / (253) => 28 / (40)
+	MEM WRITE: fe / (254) => ff / (255)
+	MEM READ: fc / (252) => 69 / (105)
+[OP START 252 -> 0x69 -> adc]
+	REGS:
+		PC: 252 (fc)
+		SP: 48 (30)
+		A:  18 (12)
+		X:  226 (e2)
+		Y:  169 (a9)
+		P:  39 (27)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fd / (253) => 28 / (40)
+	BINADC: 12 + 28 = 3b[OP END @ 253]
+Done..

@@ -1,0 +1,22 @@
+[TEST 135 - 69.json]
+	MEM WRITE: 49cb / (18891) => 69 / (105)
+	MEM WRITE: 49cc / (18892) => 8d / (141)
+	MEM WRITE: 49cd / (18893) => b5 / (181)
+	MEM READ: 49cb / (18891) => 69 / (105)
+[OP START 18891 -> 0x69 -> adc]
+	REGS:
+		PC: 18891 (49cb)
+		SP: 199 (c7)
+		A:  135 (87)
+		X:  93 (5d)
+		Y:  229 (e5)
+		P:  173 (ad)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 49cc / (18892) => 8d / (141)
+	BCD START -> 87 + 8d
+	BCD CONVERT -> 87 + 93
+	BCD SUM -> 81
+[OP END @ 18892]
+Done..

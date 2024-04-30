@@ -1,0 +1,19 @@
+[TEST 529 - 69.json]
+	MEM WRITE: bb89 / (48009) => 69 / (105)
+	MEM WRITE: bb8a / (48010) => 50 / (80)
+	MEM WRITE: bb8b / (48011) => 56 / (86)
+	MEM READ: bb89 / (48009) => 69 / (105)
+[OP START 48009 -> 0x69 -> adc]
+	REGS:
+		PC: 48009 (bb89)
+		SP: 250 (fa)
+		A:  188 (bc)
+		X:  64 (40)
+		Y:  33 (21)
+		P:  164 (a4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bb8a / (48010) => 50 / (80)
+	BINADC: bc + 50 = c[OP END @ 48010]
+Done..

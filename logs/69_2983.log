@@ -1,0 +1,19 @@
+[TEST 483 - 69.json]
+	MEM WRITE: ed2e / (60718) => 69 / (105)
+	MEM WRITE: ed2f / (60719) => ad / (173)
+	MEM WRITE: ed30 / (60720) => 6b / (107)
+	MEM READ: ed2e / (60718) => 69 / (105)
+[OP START 60718 -> 0x69 -> adc]
+	REGS:
+		PC: 60718 (ed2e)
+		SP: 211 (d3)
+		A:  141 (8d)
+		X:  93 (5d)
+		Y:  227 (e3)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ed2f / (60719) => ad / (173)
+	BINADC: 8d + ad = 3b[OP END @ 60719]
+Done..

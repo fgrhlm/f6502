@@ -1,0 +1,19 @@
+[TEST 121 - 69.json]
+	MEM WRITE: bc8a / (48266) => 69 / (105)
+	MEM WRITE: bc8b / (48267) => 17 / (23)
+	MEM WRITE: bc8c / (48268) => 2a / (42)
+	MEM READ: bc8a / (48266) => 69 / (105)
+[OP START 48266 -> 0x69 -> adc]
+	REGS:
+		PC: 48266 (bc8a)
+		SP: 45 (2d)
+		A:  250 (fa)
+		X:  133 (85)
+		Y:  132 (84)
+		P:  167 (a7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bc8b / (48267) => 17 / (23)
+	BINADC: fa + 17 = 12[OP END @ 48267]
+Done..

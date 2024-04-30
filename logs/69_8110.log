@@ -1,0 +1,22 @@
+[TEST 610 - 69.json]
+	MEM WRITE: 8e9b / (36507) => 69 / (105)
+	MEM WRITE: 8e9c / (36508) => 5d / (93)
+	MEM WRITE: 8e9d / (36509) => 92 / (146)
+	MEM READ: 8e9b / (36507) => 69 / (105)
+[OP START 36507 -> 0x69 -> adc]
+	REGS:
+		PC: 36507 (8e9b)
+		SP: 108 (6c)
+		A:  160 (a0)
+		X:  9 (9)
+		Y:  68 (44)
+		P:  237 (ed)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8e9c / (36508) => 5d / (93)
+	BCD START -> a0 + 5d
+	BCD CONVERT -> 0 + 63
+	BCD SUM -> 64
+[OP END @ 36508]
+Done..

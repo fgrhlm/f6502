@@ -1,0 +1,19 @@
+[TEST 395 - 69.json]
+	MEM WRITE: 3c31 / (15409) => 69 / (105)
+	MEM WRITE: 3c32 / (15410) => 6a / (106)
+	MEM WRITE: 3c33 / (15411) => 7d / (125)
+	MEM READ: 3c31 / (15409) => 69 / (105)
+[OP START 15409 -> 0x69 -> adc]
+	REGS:
+		PC: 15409 (3c31)
+		SP: 114 (72)
+		A:  236 (ec)
+		X:  250 (fa)
+		Y:  131 (83)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3c32 / (15410) => 6a / (106)
+	BINADC: ec + 6a = 57[OP END @ 15410]
+Done..

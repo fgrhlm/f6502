@@ -1,0 +1,19 @@
+[TEST 342 - 69.json]
+	MEM WRITE: 26be / (9918) => 69 / (105)
+	MEM WRITE: 26bf / (9919) => 3d / (61)
+	MEM WRITE: 26c0 / (9920) => ec / (236)
+	MEM READ: 26be / (9918) => 69 / (105)
+[OP START 9918 -> 0x69 -> adc]
+	REGS:
+		PC: 9918 (26be)
+		SP: 202 (ca)
+		A:  192 (c0)
+		X:  157 (9d)
+		Y:  135 (87)
+		P:  227 (e3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 26bf / (9919) => 3d / (61)
+	BINADC: c0 + 3d = fe[OP END @ 9919]
+Done..

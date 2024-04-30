@@ -1,0 +1,22 @@
+[TEST 213 - 69.json]
+	MEM WRITE: 3ce / (974) => 69 / (105)
+	MEM WRITE: 3cf / (975) => 50 / (80)
+	MEM WRITE: 3d0 / (976) => e / (14)
+	MEM READ: 3ce / (974) => 69 / (105)
+[OP START 974 -> 0x69 -> adc]
+	REGS:
+		PC: 974 (3ce)
+		SP: 181 (b5)
+		A:  24 (18)
+		X:  77 (4d)
+		Y:  153 (99)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3cf / (975) => 50 / (80)
+	BCD START -> 18 + 50
+	BCD CONVERT -> 18 + 50
+	BCD SUM -> 69
+[OP END @ 975]
+Done..

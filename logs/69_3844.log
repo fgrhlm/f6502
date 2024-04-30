@@ -1,0 +1,22 @@
+[TEST 94 - 69.json]
+	MEM WRITE: ff0b / (65291) => 69 / (105)
+	MEM WRITE: ff0c / (65292) => a / (10)
+	MEM WRITE: ff0d / (65293) => b6 / (182)
+	MEM READ: ff0b / (65291) => 69 / (105)
+[OP START 65291 -> 0x69 -> adc]
+	REGS:
+		PC: 65291 (ff0b)
+		SP: 105 (69)
+		A:  153 (99)
+		X:  67 (43)
+		Y:  58 (3a)
+		P:  239 (ef)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ff0c / (65292) => a / (10)
+	BCD START -> 99 + a
+	BCD CONVERT -> 99 + 10
+	BCD SUM -> a
+[OP END @ 65292]
+Done..

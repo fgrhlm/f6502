@@ -1,0 +1,19 @@
+[TEST 392 - 69.json]
+	MEM WRITE: 9223 / (37411) => 69 / (105)
+	MEM WRITE: 9224 / (37412) => 3d / (61)
+	MEM WRITE: 9225 / (37413) => c2 / (194)
+	MEM READ: 9223 / (37411) => 69 / (105)
+[OP START 37411 -> 0x69 -> adc]
+	REGS:
+		PC: 37411 (9223)
+		SP: 30 (1e)
+		A:  58 (3a)
+		X:  146 (92)
+		Y:  96 (60)
+		P:  224 (e0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9224 / (37412) => 3d / (61)
+	BINADC: 3a + 3d = 77[OP END @ 37412]
+Done..

@@ -1,0 +1,22 @@
+[TEST 74 - 69.json]
+	MEM WRITE: fe88 / (65160) => 69 / (105)
+	MEM WRITE: fe89 / (65161) => 55 / (85)
+	MEM WRITE: fe8a / (65162) => 1 / (1)
+	MEM READ: fe88 / (65160) => 69 / (105)
+[OP START 65160 -> 0x69 -> adc]
+	REGS:
+		PC: 65160 (fe88)
+		SP: 156 (9c)
+		A:  250 (fa)
+		X:  32 (20)
+		Y:  103 (67)
+		P:  237 (ed)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fe89 / (65161) => 55 / (85)
+	BCD START -> fa + 55
+	BCD CONVERT -> 60 + 55
+	BCD SUM -> 16
+[OP END @ 65161]
+Done..

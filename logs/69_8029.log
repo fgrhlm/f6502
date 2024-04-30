@@ -1,0 +1,22 @@
+[TEST 529 - 69.json]
+	MEM WRITE: 3fd9 / (16345) => 69 / (105)
+	MEM WRITE: 3fda / (16346) => 85 / (133)
+	MEM WRITE: 3fdb / (16347) => 4b / (75)
+	MEM READ: 3fd9 / (16345) => 69 / (105)
+[OP START 16345 -> 0x69 -> adc]
+	REGS:
+		PC: 16345 (3fd9)
+		SP: 166 (a6)
+		A:  106 (6a)
+		X:  74 (4a)
+		Y:  90 (5a)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3fda / (16346) => 85 / (133)
+	BCD START -> 6a + 85
+	BCD CONVERT -> 70 + 85
+	BCD SUM -> 55
+[OP END @ 16346]
+Done..

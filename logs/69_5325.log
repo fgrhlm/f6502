@@ -1,0 +1,22 @@
+[TEST 325 - 69.json]
+	MEM WRITE: ba99 / (47769) => 69 / (105)
+	MEM WRITE: ba9a / (47770) => f8 / (248)
+	MEM WRITE: ba9b / (47771) => 3d / (61)
+	MEM READ: ba99 / (47769) => 69 / (105)
+[OP START 47769 -> 0x69 -> adc]
+	REGS:
+		PC: 47769 (ba99)
+		SP: 200 (c8)
+		A:  45 (2d)
+		X:  235 (eb)
+		Y:  108 (6c)
+		P:  104 (68)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ba9a / (47770) => f8 / (248)
+	BCD START -> 2d + f8
+	BCD CONVERT -> 33 + 58
+	BCD SUM -> 91
+[OP END @ 47770]
+Done..

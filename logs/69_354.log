@@ -1,0 +1,19 @@
+[TEST 354 - 69.json]
+	MEM WRITE: 9cea / (40170) => 69 / (105)
+	MEM WRITE: 9ceb / (40171) => d9 / (217)
+	MEM WRITE: 9cec / (40172) => 84 / (132)
+	MEM READ: 9cea / (40170) => 69 / (105)
+[OP START 40170 -> 0x69 -> adc]
+	REGS:
+		PC: 40170 (9cea)
+		SP: 98 (62)
+		A:  245 (f5)
+		X:  50 (32)
+		Y:  130 (82)
+		P:  160 (a0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9ceb / (40171) => d9 / (217)
+	BINADC: f5 + d9 = ce[OP END @ 40171]
+Done..

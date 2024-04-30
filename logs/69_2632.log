@@ -1,0 +1,19 @@
+[TEST 132 - 69.json]
+	MEM WRITE: 23f3 / (9203) => 69 / (105)
+	MEM WRITE: 23f4 / (9204) => 5d / (93)
+	MEM WRITE: 23f5 / (9205) => 39 / (57)
+	MEM READ: 23f3 / (9203) => 69 / (105)
+[OP START 9203 -> 0x69 -> adc]
+	REGS:
+		PC: 9203 (23f3)
+		SP: 34 (22)
+		A:  22 (16)
+		X:  254 (fe)
+		Y:  38 (26)
+		P:  32 (20)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 23f4 / (9204) => 5d / (93)
+	BINADC: 16 + 5d = 73[OP END @ 9204]
+Done..

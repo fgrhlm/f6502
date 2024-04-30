@@ -1,0 +1,19 @@
+[TEST 68 - 69.json]
+	MEM WRITE: ac53 / (44115) => 69 / (105)
+	MEM WRITE: ac54 / (44116) => 7d / (125)
+	MEM WRITE: ac55 / (44117) => c1 / (193)
+	MEM READ: ac53 / (44115) => 69 / (105)
+[OP START 44115 -> 0x69 -> adc]
+	REGS:
+		PC: 44115 (ac53)
+		SP: 136 (88)
+		A:  118 (76)
+		X:  232 (e8)
+		Y:  190 (be)
+		P:  38 (26)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ac54 / (44116) => 7d / (125)
+	BINADC: 76 + 7d = f3[OP END @ 44116]
+Done..

@@ -1,0 +1,19 @@
+[TEST 277 - 69.json]
+	MEM WRITE: fac3 / (64195) => 69 / (105)
+	MEM WRITE: fac4 / (64196) => 39 / (57)
+	MEM WRITE: fac5 / (64197) => d2 / (210)
+	MEM READ: fac3 / (64195) => 69 / (105)
+[OP START 64195 -> 0x69 -> adc]
+	REGS:
+		PC: 64195 (fac3)
+		SP: 20 (14)
+		A:  200 (c8)
+		X:  137 (89)
+		Y:  29 (1d)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fac4 / (64196) => 39 / (57)
+	BINADC: c8 + 39 = 2[OP END @ 64196]
+Done..

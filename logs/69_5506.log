@@ -1,0 +1,22 @@
+[TEST 506 - 69.json]
+	MEM WRITE: fa54 / (64084) => 69 / (105)
+	MEM WRITE: fa55 / (64085) => 9e / (158)
+	MEM WRITE: fa56 / (64086) => 81 / (129)
+	MEM READ: fa54 / (64084) => 69 / (105)
+[OP START 64084 -> 0x69 -> adc]
+	REGS:
+		PC: 64084 (fa54)
+		SP: 235 (eb)
+		A:  133 (85)
+		X:  73 (49)
+		Y:  71 (47)
+		P:  40 (28)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fa55 / (64085) => 9e / (158)
+	BCD START -> 85 + 9e
+	BCD CONVERT -> 85 + a4
+	BCD SUM -> 89
+[OP END @ 64085]
+Done..

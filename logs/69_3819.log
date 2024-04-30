@@ -1,0 +1,19 @@
+[TEST 69 - 69.json]
+	MEM WRITE: 2601 / (9729) => 69 / (105)
+	MEM WRITE: 2602 / (9730) => 49 / (73)
+	MEM WRITE: 2603 / (9731) => 56 / (86)
+	MEM READ: 2601 / (9729) => 69 / (105)
+[OP START 9729 -> 0x69 -> adc]
+	REGS:
+		PC: 9729 (2601)
+		SP: 140 (8c)
+		A:  170 (aa)
+		X:  88 (58)
+		Y:  73 (49)
+		P:  96 (60)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2602 / (9730) => 49 / (73)
+	BINADC: aa + 49 = f3[OP END @ 9730]
+Done..

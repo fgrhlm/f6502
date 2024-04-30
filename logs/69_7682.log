@@ -1,0 +1,22 @@
+[TEST 182 - 69.json]
+	MEM WRITE: 34c8 / (13512) => 69 / (105)
+	MEM WRITE: 34c9 / (13513) => 22 / (34)
+	MEM WRITE: 34ca / (13514) => 54 / (84)
+	MEM READ: 34c8 / (13512) => 69 / (105)
+[OP START 13512 -> 0x69 -> adc]
+	REGS:
+		PC: 13512 (34c8)
+		SP: 55 (37)
+		A:  248 (f8)
+		X:  206 (ce)
+		Y:  177 (b1)
+		P:  107 (6b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 34c9 / (13513) => 22 / (34)
+	BCD START -> f8 + 22
+	BCD CONVERT -> 58 + 22
+	BCD SUM -> 81
+[OP END @ 13513]
+Done..

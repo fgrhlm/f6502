@@ -1,0 +1,19 @@
+[TEST 398 - 69.json]
+	MEM WRITE: 7483 / (29827) => 69 / (105)
+	MEM WRITE: 7484 / (29828) => 1f / (31)
+	MEM WRITE: 7485 / (29829) => 70 / (112)
+	MEM READ: 7483 / (29827) => 69 / (105)
+[OP START 29827 -> 0x69 -> adc]
+	REGS:
+		PC: 29827 (7483)
+		SP: 0 (0)
+		A:  181 (b5)
+		X:  138 (8a)
+		Y:  99 (63)
+		P:  162 (a2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7484 / (29828) => 1f / (31)
+	BINADC: b5 + 1f = d4[OP END @ 29828]
+Done..

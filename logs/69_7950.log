@@ -1,0 +1,22 @@
+[TEST 450 - 69.json]
+	MEM WRITE: 8b4c / (35660) => 69 / (105)
+	MEM WRITE: 8b4d / (35661) => 78 / (120)
+	MEM WRITE: 8b4e / (35662) => a6 / (166)
+	MEM READ: 8b4c / (35660) => 69 / (105)
+[OP START 35660 -> 0x69 -> adc]
+	REGS:
+		PC: 35660 (8b4c)
+		SP: 127 (7f)
+		A:  11 (b)
+		X:  39 (27)
+		Y:  243 (f3)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8b4d / (35661) => 78 / (120)
+	BCD START -> b + 78
+	BCD CONVERT -> 11 + 78
+	BCD SUM -> 8a
+[OP END @ 35661]
+Done..

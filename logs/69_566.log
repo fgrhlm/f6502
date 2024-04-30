@@ -1,0 +1,19 @@
+[TEST 566 - 69.json]
+	MEM WRITE: c7c1 / (51137) => 69 / (105)
+	MEM WRITE: c7c2 / (51138) => f3 / (243)
+	MEM WRITE: c7c3 / (51139) => c6 / (198)
+	MEM READ: c7c1 / (51137) => 69 / (105)
+[OP START 51137 -> 0x69 -> adc]
+	REGS:
+		PC: 51137 (c7c1)
+		SP: 179 (b3)
+		A:  86 (56)
+		X:  93 (5d)
+		Y:  226 (e2)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c7c2 / (51138) => f3 / (243)
+	BINADC: 56 + f3 = 4a[OP END @ 51138]
+Done..

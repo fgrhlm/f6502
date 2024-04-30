@@ -1,0 +1,22 @@
+[TEST 278 - 69.json]
+	MEM WRITE: a81a / (43034) => 69 / (105)
+	MEM WRITE: a81b / (43035) => 98 / (152)
+	MEM WRITE: a81c / (43036) => 51 / (81)
+	MEM READ: a81a / (43034) => 69 / (105)
+[OP START 43034 -> 0x69 -> adc]
+	REGS:
+		PC: 43034 (a81a)
+		SP: 15 (f)
+		A:  72 (48)
+		X:  127 (7f)
+		Y:  135 (87)
+		P:  45 (2d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a81b / (43035) => 98 / (152)
+	BCD START -> 48 + 98
+	BCD CONVERT -> 48 + 98
+	BCD SUM -> 47
+[OP END @ 43035]
+Done..

@@ -1,0 +1,22 @@
+[TEST 363 - 69.json]
+	MEM WRITE: 159a / (5530) => 69 / (105)
+	MEM WRITE: 159b / (5531) => 46 / (70)
+	MEM WRITE: 159c / (5532) => 2d / (45)
+	MEM READ: 159a / (5530) => 69 / (105)
+[OP START 5530 -> 0x69 -> adc]
+	REGS:
+		PC: 5530 (159a)
+		SP: 181 (b5)
+		A:  81 (51)
+		X:  78 (4e)
+		Y:  29 (1d)
+		P:  108 (6c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 159b / (5531) => 46 / (70)
+	BCD START -> 51 + 46
+	BCD CONVERT -> 51 + 46
+	BCD SUM -> 97
+[OP END @ 5531]
+Done..

@@ -1,0 +1,22 @@
+[TEST 388 - 69.json]
+	MEM WRITE: a945 / (43333) => 69 / (105)
+	MEM WRITE: a946 / (43334) => 47 / (71)
+	MEM WRITE: a947 / (43335) => 64 / (100)
+	MEM READ: a945 / (43333) => 69 / (105)
+[OP START 43333 -> 0x69 -> adc]
+	REGS:
+		PC: 43333 (a945)
+		SP: 54 (36)
+		A:  7 (7)
+		X:  211 (d3)
+		Y:  40 (28)
+		P:  238 (ee)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a946 / (43334) => 47 / (71)
+	BCD START -> 7 + 47
+	BCD CONVERT -> 7 + 47
+	BCD SUM -> 54
+[OP END @ 43334]
+Done..

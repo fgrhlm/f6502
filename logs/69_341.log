@@ -1,0 +1,22 @@
+[TEST 341 - 69.json]
+	MEM WRITE: ffe1 / (65505) => 69 / (105)
+	MEM WRITE: ffe2 / (65506) => 6 / (6)
+	MEM WRITE: ffe3 / (65507) => 7 / (7)
+	MEM READ: ffe1 / (65505) => 69 / (105)
+[OP START 65505 -> 0x69 -> adc]
+	REGS:
+		PC: 65505 (ffe1)
+		SP: 249 (f9)
+		A:  119 (77)
+		X:  170 (aa)
+		Y:  184 (b8)
+		P:  233 (e9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ffe2 / (65506) => 6 / (6)
+	BCD START -> 77 + 6
+	BCD CONVERT -> 77 + 6
+	BCD SUM -> 84
+[OP END @ 65506]
+Done..

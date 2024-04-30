@@ -1,0 +1,22 @@
+[TEST 34 - 69.json]
+	MEM WRITE: aa22 / (43554) => 69 / (105)
+	MEM WRITE: aa23 / (43555) => eb / (235)
+	MEM WRITE: aa24 / (43556) => e / (14)
+	MEM READ: aa22 / (43554) => 69 / (105)
+[OP START 43554 -> 0x69 -> adc]
+	REGS:
+		PC: 43554 (aa22)
+		SP: 111 (6f)
+		A:  70 (46)
+		X:  179 (b3)
+		Y:  228 (e4)
+		P:  44 (2c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: aa23 / (43555) => eb / (235)
+	BCD START -> 46 + eb
+	BCD CONVERT -> 46 + 51
+	BCD SUM -> 97
+[OP END @ 43555]
+Done..

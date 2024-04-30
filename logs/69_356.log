@@ -1,0 +1,19 @@
+[TEST 356 - 69.json]
+	MEM WRITE: 2b28 / (11048) => 69 / (105)
+	MEM WRITE: 2b29 / (11049) => 33 / (51)
+	MEM WRITE: 2b2a / (11050) => a / (10)
+	MEM READ: 2b28 / (11048) => 69 / (105)
+[OP START 11048 -> 0x69 -> adc]
+	REGS:
+		PC: 11048 (2b28)
+		SP: 187 (bb)
+		A:  136 (88)
+		X:  37 (25)
+		Y:  232 (e8)
+		P:  98 (62)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2b29 / (11049) => 33 / (51)
+	BINADC: 88 + 33 = bb[OP END @ 11049]
+Done..

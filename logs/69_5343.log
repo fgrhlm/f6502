@@ -1,0 +1,19 @@
+[TEST 343 - 69.json]
+	MEM WRITE: 1747 / (5959) => 69 / (105)
+	MEM WRITE: 1748 / (5960) => 41 / (65)
+	MEM WRITE: 1749 / (5961) => b1 / (177)
+	MEM READ: 1747 / (5959) => 69 / (105)
+[OP START 5959 -> 0x69 -> adc]
+	REGS:
+		PC: 5959 (1747)
+		SP: 201 (c9)
+		A:  4 (4)
+		X:  112 (70)
+		Y:  66 (42)
+		P:  163 (a3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1748 / (5960) => 41 / (65)
+	BINADC: 4 + 41 = 46[OP END @ 5960]
+Done..

@@ -1,0 +1,19 @@
+[TEST 71 - 69.json]
+	MEM WRITE: feda / (65242) => 69 / (105)
+	MEM WRITE: fedb / (65243) => 88 / (136)
+	MEM WRITE: fedc / (65244) => a2 / (162)
+	MEM READ: feda / (65242) => 69 / (105)
+[OP START 65242 -> 0x69 -> adc]
+	REGS:
+		PC: 65242 (feda)
+		SP: 21 (15)
+		A:  105 (69)
+		X:  243 (f3)
+		Y:  122 (7a)
+		P:  102 (66)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fedb / (65243) => 88 / (136)
+	BINADC: 69 + 88 = f1[OP END @ 65243]
+Done..

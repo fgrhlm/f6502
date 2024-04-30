@@ -1,0 +1,19 @@
+[TEST 66 - 69.json]
+	MEM WRITE: 90de / (37086) => 69 / (105)
+	MEM WRITE: 90df / (37087) => 71 / (113)
+	MEM WRITE: 90e0 / (37088) => 73 / (115)
+	MEM READ: 90de / (37086) => 69 / (105)
+[OP START 37086 -> 0x69 -> adc]
+	REGS:
+		PC: 37086 (90de)
+		SP: 22 (16)
+		A:  96 (60)
+		X:  76 (4c)
+		Y:  60 (3c)
+		P:  161 (a1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 90df / (37087) => 71 / (113)
+	BINADC: 60 + 71 = d2[OP END @ 37087]
+Done..

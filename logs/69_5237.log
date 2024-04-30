@@ -1,0 +1,19 @@
+[TEST 237 - 69.json]
+	MEM WRITE: de37 / (56887) => 69 / (105)
+	MEM WRITE: de38 / (56888) => 32 / (50)
+	MEM WRITE: de39 / (56889) => a5 / (165)
+	MEM READ: de37 / (56887) => 69 / (105)
+[OP START 56887 -> 0x69 -> adc]
+	REGS:
+		PC: 56887 (de37)
+		SP: 246 (f6)
+		A:  78 (4e)
+		X:  15 (f)
+		Y:  123 (7b)
+		P:  227 (e3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: de38 / (56888) => 32 / (50)
+	BINADC: 4e + 32 = 81[OP END @ 56888]
+Done..

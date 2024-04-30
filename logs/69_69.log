@@ -1,0 +1,19 @@
+[TEST 69 - 69.json]
+	MEM WRITE: e571 / (58737) => 69 / (105)
+	MEM WRITE: e572 / (58738) => 21 / (33)
+	MEM WRITE: e573 / (58739) => 4 / (4)
+	MEM READ: e571 / (58737) => 69 / (105)
+[OP START 58737 -> 0x69 -> adc]
+	REGS:
+		PC: 58737 (e571)
+		SP: 235 (eb)
+		A:  245 (f5)
+		X:  250 (fa)
+		Y:  86 (56)
+		P:  227 (e3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e572 / (58738) => 21 / (33)
+	BINADC: f5 + 21 = 17[OP END @ 58738]
+Done..

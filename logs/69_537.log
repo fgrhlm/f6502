@@ -1,0 +1,22 @@
+[TEST 537 - 69.json]
+	MEM WRITE: c77a / (51066) => 69 / (105)
+	MEM WRITE: c77b / (51067) => 4b / (75)
+	MEM WRITE: c77c / (51068) => 2d / (45)
+	MEM READ: c77a / (51066) => 69 / (105)
+[OP START 51066 -> 0x69 -> adc]
+	REGS:
+		PC: 51066 (c77a)
+		SP: 165 (a5)
+		A:  230 (e6)
+		X:  213 (d5)
+		Y:  89 (59)
+		P:  107 (6b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c77b / (51067) => 4b / (75)
+	BCD START -> e6 + 4b
+	BCD CONVERT -> 46 + 51
+	BCD SUM -> 98
+[OP END @ 51067]
+Done..

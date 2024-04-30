@@ -1,0 +1,19 @@
+[TEST 312 - 69.json]
+	MEM WRITE: d6b2 / (54962) => 69 / (105)
+	MEM WRITE: d6b3 / (54963) => e6 / (230)
+	MEM WRITE: d6b4 / (54964) => 9c / (156)
+	MEM READ: d6b2 / (54962) => 69 / (105)
+[OP START 54962 -> 0x69 -> adc]
+	REGS:
+		PC: 54962 (d6b2)
+		SP: 210 (d2)
+		A:  31 (1f)
+		X:  50 (32)
+		Y:  24 (18)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d6b3 / (54963) => e6 / (230)
+	BINADC: 1f + e6 = 6[OP END @ 54963]
+Done..

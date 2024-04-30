@@ -1,0 +1,19 @@
+[TEST 63 - 69.json]
+	MEM WRITE: 36db / (14043) => 69 / (105)
+	MEM WRITE: 36dc / (14044) => 16 / (22)
+	MEM WRITE: 36dd / (14045) => 7b / (123)
+	MEM READ: 36db / (14043) => 69 / (105)
+[OP START 14043 -> 0x69 -> adc]
+	REGS:
+		PC: 14043 (36db)
+		SP: 94 (5e)
+		A:  88 (58)
+		X:  248 (f8)
+		Y:  172 (ac)
+		P:  231 (e7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 36dc / (14044) => 16 / (22)
+	BINADC: 58 + 16 = 6f[OP END @ 14044]
+Done..

@@ -1,0 +1,19 @@
+[TEST 556 - 69.json]
+	MEM WRITE: bb95 / (48021) => 69 / (105)
+	MEM WRITE: bb96 / (48022) => 65 / (101)
+	MEM WRITE: bb97 / (48023) => 55 / (85)
+	MEM READ: bb95 / (48021) => 69 / (105)
+[OP START 48021 -> 0x69 -> adc]
+	REGS:
+		PC: 48021 (bb95)
+		SP: 39 (27)
+		A:  37 (25)
+		X:  175 (af)
+		Y:  101 (65)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bb96 / (48022) => 65 / (101)
+	BINADC: 25 + 65 = 8b[OP END @ 48022]
+Done..

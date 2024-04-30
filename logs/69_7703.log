@@ -1,0 +1,19 @@
+[TEST 203 - 69.json]
+	MEM WRITE: 3aad / (15021) => 69 / (105)
+	MEM WRITE: 3aae / (15022) => 55 / (85)
+	MEM WRITE: 3aaf / (15023) => 23 / (35)
+	MEM READ: 3aad / (15021) => 69 / (105)
+[OP START 15021 -> 0x69 -> adc]
+	REGS:
+		PC: 15021 (3aad)
+		SP: 237 (ed)
+		A:  1 (1)
+		X:  68 (44)
+		Y:  106 (6a)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3aae / (15022) => 55 / (85)
+	BINADC: 1 + 55 = 57[OP END @ 15022]
+Done..

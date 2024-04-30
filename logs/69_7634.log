@@ -1,0 +1,22 @@
+[TEST 134 - 69.json]
+	MEM WRITE: e4ca / (58570) => 69 / (105)
+	MEM WRITE: e4cb / (58571) => 4d / (77)
+	MEM WRITE: e4cc / (58572) => a1 / (161)
+	MEM READ: e4ca / (58570) => 69 / (105)
+[OP START 58570 -> 0x69 -> adc]
+	REGS:
+		PC: 58570 (e4ca)
+		SP: 120 (78)
+		A:  113 (71)
+		X:  20 (14)
+		Y:  15 (f)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e4cb / (58571) => 4d / (77)
+	BCD START -> 71 + 4d
+	BCD CONVERT -> 71 + 53
+	BCD SUM -> 24
+[OP END @ 58571]
+Done..

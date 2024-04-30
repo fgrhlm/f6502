@@ -1,0 +1,19 @@
+[TEST 338 - 69.json]
+	MEM WRITE: 69da / (27098) => 69 / (105)
+	MEM WRITE: 69db / (27099) => 3 / (3)
+	MEM WRITE: 69dc / (27100) => ed / (237)
+	MEM READ: 69da / (27098) => 69 / (105)
+[OP START 27098 -> 0x69 -> adc]
+	REGS:
+		PC: 27098 (69da)
+		SP: 245 (f5)
+		A:  43 (2b)
+		X:  88 (58)
+		Y:  93 (5d)
+		P:  161 (a1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 69db / (27099) => 3 / (3)
+	BINADC: 2b + 3 = 2f[OP END @ 27099]
+Done..

@@ -1,0 +1,22 @@
+[TEST 442 - 69.json]
+	MEM WRITE: 1772 / (6002) => 69 / (105)
+	MEM WRITE: 1773 / (6003) => c1 / (193)
+	MEM WRITE: 1774 / (6004) => 1b / (27)
+	MEM READ: 1772 / (6002) => 69 / (105)
+[OP START 6002 -> 0x69 -> adc]
+	REGS:
+		PC: 6002 (1772)
+		SP: 48 (30)
+		A:  180 (b4)
+		X:  74 (4a)
+		Y:  98 (62)
+		P:  105 (69)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1773 / (6003) => c1 / (193)
+	BCD START -> b4 + c1
+	BCD CONVERT -> 14 + 21
+	BCD SUM -> 36
+[OP END @ 6003]
+Done..

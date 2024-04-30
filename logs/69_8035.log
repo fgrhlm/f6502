@@ -1,0 +1,22 @@
+[TEST 535 - 69.json]
+	MEM WRITE: cb0e / (51982) => 69 / (105)
+	MEM WRITE: cb0f / (51983) => 5 / (5)
+	MEM WRITE: cb10 / (51984) => ce / (206)
+	MEM READ: cb0e / (51982) => 69 / (105)
+[OP START 51982 -> 0x69 -> adc]
+	REGS:
+		PC: 51982 (cb0e)
+		SP: 228 (e4)
+		A:  186 (ba)
+		X:  154 (9a)
+		Y:  191 (bf)
+		P:  106 (6a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cb0f / (51983) => 5 / (5)
+	BCD START -> ba + 5
+	BCD CONVERT -> 20 + 5
+	BCD SUM -> 25
+[OP END @ 51983]
+Done..

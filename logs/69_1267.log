@@ -1,0 +1,19 @@
+[TEST 17 - 69.json]
+	MEM WRITE: d8b1 / (55473) => 69 / (105)
+	MEM WRITE: d8b2 / (55474) => 22 / (34)
+	MEM WRITE: d8b3 / (55475) => 39 / (57)
+	MEM READ: d8b1 / (55473) => 69 / (105)
+[OP START 55473 -> 0x69 -> adc]
+	REGS:
+		PC: 55473 (d8b1)
+		SP: 225 (e1)
+		A:  200 (c8)
+		X:  250 (fa)
+		Y:  143 (8f)
+		P:  224 (e0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d8b2 / (55474) => 22 / (34)
+	BINADC: c8 + 22 = ea[OP END @ 55474]
+Done..
