@@ -1,0 +1,19 @@
+[TEST 3716 - 69.json]
+	MEM WRITE: 15e0 / (5600) => 69 / (105)
+	MEM WRITE: 15e1 / (5601) => 6c / (108)
+	MEM WRITE: 15e2 / (5602) => b2 / (178)
+	MEM READ: 15e0 / (5600) => 69 / (105)
+[OP START 5600 -> 0x69 -> adc]
+	REGS:
+		PC: 5600 (15e0)
+		SP: 207 (cf)
+		A:  109 (6d)
+		X:  11 (b)
+		Y:  0 (0)
+		P:  33 (21)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 15e1 / (5601) => 6c / (108)
+[OP END @ 5601]
+Done..

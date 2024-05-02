@@ -1,0 +1,19 @@
+[TEST 5778 - 69.json]
+	MEM WRITE: a6da / (42714) => 69 / (105)
+	MEM WRITE: a6db / (42715) => 98 / (152)
+	MEM WRITE: a6dc / (42716) => 9a / (154)
+	MEM READ: a6da / (42714) => 69 / (105)
+[OP START 42714 -> 0x69 -> adc]
+	REGS:
+		PC: 42714 (a6da)
+		SP: 191 (bf)
+		A:  28 (1c)
+		X:  92 (5c)
+		Y:  77 (4d)
+		P:  235 (eb)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a6db / (42715) => 98 / (152)
+[OP END @ 42715]
+Done..

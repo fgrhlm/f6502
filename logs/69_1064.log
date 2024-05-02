@@ -1,0 +1,19 @@
+[TEST 1064 - 69.json]
+	MEM WRITE: f2cc / (62156) => 69 / (105)
+	MEM WRITE: f2cd / (62157) => e7 / (231)
+	MEM WRITE: f2ce / (62158) => 4f / (79)
+	MEM READ: f2cc / (62156) => 69 / (105)
+[OP START 62156 -> 0x69 -> adc]
+	REGS:
+		PC: 62156 (f2cc)
+		SP: 34 (22)
+		A:  32 (20)
+		X:  17 (11)
+		Y:  221 (dd)
+		P:  165 (a5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f2cd / (62157) => e7 / (231)
+[OP END @ 62157]
+Done..

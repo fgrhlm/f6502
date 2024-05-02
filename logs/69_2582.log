@@ -1,4 +1,4 @@
-[TEST 82 - 69.json]
+[TEST 2582 - 69.json]
 	MEM WRITE: ea7e / (60030) => 69 / (105)
 	MEM WRITE: ea7f / (60031) => db / (219)
 	MEM WRITE: ea80 / (60032) => df / (223)
@@ -15,8 +15,5 @@
 		|0|1|0|1|0|1|1|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: ea7f / (60031) => db / (219)
-	BCD START -> 47 + db
-	BCD CONVERT -> 47 + 41
-	BCD SUM -> 88
 [OP END @ 60031]
 Done..

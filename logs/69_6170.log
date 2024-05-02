@@ -1,0 +1,19 @@
+[TEST 6170 - 69.json]
+	MEM WRITE: 25f1 / (9713) => 69 / (105)
+	MEM WRITE: 25f2 / (9714) => 0 / (0)
+	MEM WRITE: 25f3 / (9715) => ce / (206)
+	MEM READ: 25f1 / (9713) => 69 / (105)
+[OP START 9713 -> 0x69 -> adc]
+	REGS:
+		PC: 9713 (25f1)
+		SP: 171 (ab)
+		A:  252 (fc)
+		X:  216 (d8)
+		Y:  91 (5b)
+		P:  232 (e8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 25f2 / (9714) => 0 / (0)
+[OP END @ 9714]
+Done..

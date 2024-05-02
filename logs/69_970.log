@@ -1,0 +1,19 @@
+[TEST 970 - 69.json]
+	MEM WRITE: a35c / (41820) => 69 / (105)
+	MEM WRITE: a35d / (41821) => 11 / (17)
+	MEM WRITE: a35e / (41822) => 78 / (120)
+	MEM READ: a35c / (41820) => 69 / (105)
+[OP START 41820 -> 0x69 -> adc]
+	REGS:
+		PC: 41820 (a35c)
+		SP: 221 (dd)
+		A:  185 (b9)
+		X:  90 (5a)
+		Y:  174 (ae)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a35d / (41821) => 11 / (17)
+[OP END @ 41821]
+Done..

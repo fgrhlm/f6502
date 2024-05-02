@@ -1,0 +1,19 @@
+[TEST 6008 - 69.json]
+	MEM WRITE: 2d8d / (11661) => 69 / (105)
+	MEM WRITE: 2d8e / (11662) => 30 / (48)
+	MEM WRITE: 2d8f / (11663) => 48 / (72)
+	MEM READ: 2d8d / (11661) => 69 / (105)
+[OP START 11661 -> 0x69 -> adc]
+	REGS:
+		PC: 11661 (2d8d)
+		SP: 206 (ce)
+		A:  179 (b3)
+		X:  196 (c4)
+		Y:  29 (1d)
+		P:  169 (a9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2d8e / (11662) => 30 / (48)
+[OP END @ 11662]
+Done..

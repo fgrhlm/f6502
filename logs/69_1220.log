@@ -1,0 +1,19 @@
+[TEST 1220 - 69.json]
+	MEM WRITE: 2ea0 / (11936) => 69 / (105)
+	MEM WRITE: 2ea1 / (11937) => f / (15)
+	MEM WRITE: 2ea2 / (11938) => 7d / (125)
+	MEM READ: 2ea0 / (11936) => 69 / (105)
+[OP START 11936 -> 0x69 -> adc]
+	REGS:
+		PC: 11936 (2ea0)
+		SP: 220 (dc)
+		A:  111 (6f)
+		X:  103 (67)
+		Y:  113 (71)
+		P:  175 (af)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2ea1 / (11937) => f / (15)
+[OP END @ 11937]
+Done..

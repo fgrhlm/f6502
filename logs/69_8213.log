@@ -1,0 +1,19 @@
+[TEST 8213 - 69.json]
+	MEM WRITE: afff / (45055) => 69 / (105)
+	MEM WRITE: b000 / (45056) => e5 / (229)
+	MEM WRITE: b001 / (45057) => 7 / (7)
+	MEM READ: afff / (45055) => 69 / (105)
+[OP START 45055 -> 0x69 -> adc]
+	REGS:
+		PC: 45055 (afff)
+		SP: 215 (d7)
+		A:  161 (a1)
+		X:  236 (ec)
+		Y:  157 (9d)
+		P:  39 (27)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b000 / (45056) => e5 / (229)
+[OP END @ 45056]
+Done..

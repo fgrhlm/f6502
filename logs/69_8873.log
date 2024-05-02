@@ -1,0 +1,19 @@
+[TEST 8873 - 69.json]
+	MEM WRITE: f7a / (3962) => 69 / (105)
+	MEM WRITE: f7b / (3963) => 80 / (128)
+	MEM WRITE: f7c / (3964) => d6 / (214)
+	MEM READ: f7a / (3962) => 69 / (105)
+[OP START 3962 -> 0x69 -> adc]
+	REGS:
+		PC: 3962 (f7a)
+		SP: 137 (89)
+		A:  2 (2)
+		X:  181 (b5)
+		Y:  135 (87)
+		P:  164 (a4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f7b / (3963) => 80 / (128)
+[OP END @ 3963]
+Done..

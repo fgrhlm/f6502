@@ -1,0 +1,19 @@
+[TEST 8309 - 69.json]
+	MEM WRITE: 5d96 / (23958) => 69 / (105)
+	MEM WRITE: 5d97 / (23959) => 2b / (43)
+	MEM WRITE: 5d98 / (23960) => 14 / (20)
+	MEM READ: 5d96 / (23958) => 69 / (105)
+[OP START 23958 -> 0x69 -> adc]
+	REGS:
+		PC: 23958 (5d96)
+		SP: 136 (88)
+		A:  173 (ad)
+		X:  121 (79)
+		Y:  20 (14)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5d97 / (23959) => 2b / (43)
+[OP END @ 23959]
+Done..

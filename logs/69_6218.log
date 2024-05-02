@@ -1,0 +1,19 @@
+[TEST 6218 - 69.json]
+	MEM WRITE: 2339 / (9017) => 69 / (105)
+	MEM WRITE: 233a / (9018) => 1a / (26)
+	MEM WRITE: 233b / (9019) => 23 / (35)
+	MEM READ: 2339 / (9017) => 69 / (105)
+[OP START 9017 -> 0x69 -> adc]
+	REGS:
+		PC: 9017 (2339)
+		SP: 56 (38)
+		A:  131 (83)
+		X:  30 (1e)
+		Y:  128 (80)
+		P:  235 (eb)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 233a / (9018) => 1a / (26)
+[OP END @ 9018]
+Done..

@@ -1,0 +1,19 @@
+[TEST 5704 - 69.json]
+	MEM WRITE: 7521 / (29985) => 69 / (105)
+	MEM WRITE: 7522 / (29986) => d0 / (208)
+	MEM WRITE: 7523 / (29987) => d7 / (215)
+	MEM READ: 7521 / (29985) => 69 / (105)
+[OP START 29985 -> 0x69 -> adc]
+	REGS:
+		PC: 29985 (7521)
+		SP: 118 (76)
+		A:  216 (d8)
+		X:  207 (cf)
+		Y:  0 (0)
+		P:  47 (2f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7522 / (29986) => d0 / (208)
+[OP END @ 29986]
+Done..

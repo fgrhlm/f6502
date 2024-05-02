@@ -1,0 +1,19 @@
+[TEST 788 - 69.json]
+	MEM WRITE: eaa / (3754) => 69 / (105)
+	MEM WRITE: eab / (3755) => 8f / (143)
+	MEM WRITE: eac / (3756) => 44 / (68)
+	MEM READ: eaa / (3754) => 69 / (105)
+[OP START 3754 -> 0x69 -> adc]
+	REGS:
+		PC: 3754 (eaa)
+		SP: 134 (86)
+		A:  105 (69)
+		X:  14 (e)
+		Y:  149 (95)
+		P:  102 (66)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eab / (3755) => 8f / (143)
+[OP END @ 3755]
+Done..

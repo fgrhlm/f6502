@@ -1,0 +1,19 @@
+[TEST 886 - 69.json]
+	MEM WRITE: 6aee / (27374) => 69 / (105)
+	MEM WRITE: 6aef / (27375) => b1 / (177)
+	MEM WRITE: 6af0 / (27376) => 5a / (90)
+	MEM READ: 6aee / (27374) => 69 / (105)
+[OP START 27374 -> 0x69 -> adc]
+	REGS:
+		PC: 27374 (6aee)
+		SP: 31 (1f)
+		A:  69 (45)
+		X:  213 (d5)
+		Y:  124 (7c)
+		P:  170 (aa)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6aef / (27375) => b1 / (177)
+[OP END @ 27375]
+Done..

@@ -1,0 +1,19 @@
+[TEST 866 - 69.json]
+	MEM WRITE: 954e / (38222) => 69 / (105)
+	MEM WRITE: 954f / (38223) => f7 / (247)
+	MEM WRITE: 9550 / (38224) => 5f / (95)
+	MEM READ: 954e / (38222) => 69 / (105)
+[OP START 38222 -> 0x69 -> adc]
+	REGS:
+		PC: 38222 (954e)
+		SP: 205 (cd)
+		A:  71 (47)
+		X:  118 (76)
+		Y:  19 (13)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 954f / (38223) => f7 / (247)
+[OP END @ 38223]
+Done..

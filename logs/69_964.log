@@ -1,0 +1,19 @@
+[TEST 964 - 69.json]
+	MEM WRITE: ef69 / (61289) => 69 / (105)
+	MEM WRITE: ef6a / (61290) => 31 / (49)
+	MEM WRITE: ef6b / (61291) => be / (190)
+	MEM READ: ef69 / (61289) => 69 / (105)
+[OP START 61289 -> 0x69 -> adc]
+	REGS:
+		PC: 61289 (ef69)
+		SP: 136 (88)
+		A:  12 (c)
+		X:  90 (5a)
+		Y:  198 (c6)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ef6a / (61290) => 31 / (49)
+[OP END @ 61290]
+Done..

@@ -15,5 +15,5 @@
 		|0|0|1|0|0|1|0|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: d359 / (54105) => df / (223)
-	BINADC: 5f + df = 3e[OP END @ 54105]
+[OP END @ 54105]
 Done..

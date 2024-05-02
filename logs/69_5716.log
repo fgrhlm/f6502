@@ -1,0 +1,19 @@
+[TEST 5716 - 69.json]
+	MEM WRITE: 9d4 / (2516) => 69 / (105)
+	MEM WRITE: 9d5 / (2517) => e5 / (229)
+	MEM WRITE: 9d6 / (2518) => de / (222)
+	MEM READ: 9d4 / (2516) => 69 / (105)
+[OP START 2516 -> 0x69 -> adc]
+	REGS:
+		PC: 2516 (9d4)
+		SP: 173 (ad)
+		A:  217 (d9)
+		X:  118 (76)
+		Y:  241 (f1)
+		P:  47 (2f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9d5 / (2517) => e5 / (229)
+[OP END @ 2517]
+Done..

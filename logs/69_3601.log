@@ -1,0 +1,19 @@
+[TEST 3601 - 69.json]
+	MEM WRITE: d80d / (55309) => 69 / (105)
+	MEM WRITE: d80e / (55310) => b8 / (184)
+	MEM WRITE: d80f / (55311) => a2 / (162)
+	MEM READ: d80d / (55309) => 69 / (105)
+[OP START 55309 -> 0x69 -> adc]
+	REGS:
+		PC: 55309 (d80d)
+		SP: 231 (e7)
+		A:  129 (81)
+		X:  146 (92)
+		Y:  173 (ad)
+		P:  170 (aa)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d80e / (55310) => b8 / (184)
+[OP END @ 55310]
+Done..

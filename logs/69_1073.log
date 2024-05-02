@@ -1,0 +1,19 @@
+[TEST 1073 - 69.json]
+	MEM WRITE: 1ceb / (7403) => 69 / (105)
+	MEM WRITE: 1cec / (7404) => c1 / (193)
+	MEM WRITE: 1ced / (7405) => fc / (252)
+	MEM READ: 1ceb / (7403) => 69 / (105)
+[OP START 7403 -> 0x69 -> adc]
+	REGS:
+		PC: 7403 (1ceb)
+		SP: 8 (8)
+		A:  22 (16)
+		X:  56 (38)
+		Y:  24 (18)
+		P:  100 (64)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1cec / (7404) => c1 / (193)
+[OP END @ 7404]
+Done..

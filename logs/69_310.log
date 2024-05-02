@@ -15,5 +15,5 @@
 		|0|1|1|0|0|1|0|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: bfa0 / (49056) => 89 / (137)
-	BINADC: 14 + 89 = 9d[OP END @ 49056]
+[OP END @ 49056]
 Done..

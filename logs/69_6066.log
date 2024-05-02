@@ -1,0 +1,19 @@
+[TEST 6066 - 69.json]
+	MEM WRITE: 6cec / (27884) => 69 / (105)
+	MEM WRITE: 6ced / (27885) => f0 / (240)
+	MEM WRITE: 6cee / (27886) => 15 / (21)
+	MEM READ: 6cec / (27884) => 69 / (105)
+[OP START 27884 -> 0x69 -> adc]
+	REGS:
+		PC: 27884 (6cec)
+		SP: 224 (e0)
+		A:  30 (1e)
+		X:  196 (c4)
+		Y:  128 (80)
+		P:  175 (af)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6ced / (27885) => f0 / (240)
+[OP END @ 27885]
+Done..

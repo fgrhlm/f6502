@@ -1,0 +1,19 @@
+[TEST 5643 - 69.json]
+	MEM WRITE: 2161 / (8545) => 69 / (105)
+	MEM WRITE: 2162 / (8546) => a4 / (164)
+	MEM WRITE: 2163 / (8547) => f3 / (243)
+	MEM READ: 2161 / (8545) => 69 / (105)
+[OP START 8545 -> 0x69 -> adc]
+	REGS:
+		PC: 8545 (2161)
+		SP: 46 (2e)
+		A:  119 (77)
+		X:  188 (bc)
+		Y:  25 (19)
+		P:  169 (a9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2162 / (8546) => a4 / (164)
+[OP END @ 8546]
+Done..

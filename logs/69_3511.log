@@ -1,0 +1,19 @@
+[TEST 3511 - 69.json]
+	MEM WRITE: fbef / (64495) => 69 / (105)
+	MEM WRITE: fbf0 / (64496) => 4e / (78)
+	MEM WRITE: fbf1 / (64497) => 67 / (103)
+	MEM READ: fbef / (64495) => 69 / (105)
+[OP START 64495 -> 0x69 -> adc]
+	REGS:
+		PC: 64495 (fbef)
+		SP: 119 (77)
+		A:  219 (db)
+		X:  105 (69)
+		Y:  239 (ef)
+		P:  98 (62)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fbf0 / (64496) => 4e / (78)
+[OP END @ 64496]
+Done..

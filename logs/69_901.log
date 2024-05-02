@@ -1,0 +1,19 @@
+[TEST 901 - 69.json]
+	MEM WRITE: 708e / (28814) => 69 / (105)
+	MEM WRITE: 708f / (28815) => c3 / (195)
+	MEM WRITE: 7090 / (28816) => a1 / (161)
+	MEM READ: 708e / (28814) => 69 / (105)
+[OP START 28814 -> 0x69 -> adc]
+	REGS:
+		PC: 28814 (708e)
+		SP: 9 (9)
+		A:  237 (ed)
+		X:  110 (6e)
+		Y:  228 (e4)
+		P:  97 (61)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 708f / (28815) => c3 / (195)
+[OP END @ 28815]
+Done..

@@ -1,0 +1,19 @@
+[TEST 8486 - 69.json]
+	MEM WRITE: 9817 / (38935) => 69 / (105)
+	MEM WRITE: 9818 / (38936) => 1c / (28)
+	MEM WRITE: 9819 / (38937) => c1 / (193)
+	MEM READ: 9817 / (38935) => 69 / (105)
+[OP START 38935 -> 0x69 -> adc]
+	REGS:
+		PC: 38935 (9817)
+		SP: 202 (ca)
+		A:  102 (66)
+		X:  4 (4)
+		Y:  191 (bf)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9818 / (38936) => 1c / (28)
+[OP END @ 38936]
+Done..

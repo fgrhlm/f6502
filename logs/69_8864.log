@@ -1,0 +1,19 @@
+[TEST 8864 - 69.json]
+	MEM WRITE: 9fc6 / (40902) => 69 / (105)
+	MEM WRITE: 9fc7 / (40903) => 68 / (104)
+	MEM WRITE: 9fc8 / (40904) => fe / (254)
+	MEM READ: 9fc6 / (40902) => 69 / (105)
+[OP START 40902 -> 0x69 -> adc]
+	REGS:
+		PC: 40902 (9fc6)
+		SP: 21 (15)
+		A:  169 (a9)
+		X:  121 (79)
+		Y:  206 (ce)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9fc7 / (40903) => 68 / (104)
+[OP END @ 40903]
+Done..

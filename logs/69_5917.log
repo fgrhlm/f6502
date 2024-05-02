@@ -1,0 +1,19 @@
+[TEST 5917 - 69.json]
+	MEM WRITE: bae3 / (47843) => 69 / (105)
+	MEM WRITE: bae4 / (47844) => 17 / (23)
+	MEM WRITE: bae5 / (47845) => 8a / (138)
+	MEM READ: bae3 / (47843) => 69 / (105)
+[OP START 47843 -> 0x69 -> adc]
+	REGS:
+		PC: 47843 (bae3)
+		SP: 146 (92)
+		A:  202 (ca)
+		X:  255 (ff)
+		Y:  75 (4b)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bae4 / (47844) => 17 / (23)
+[OP END @ 47844]
+Done..

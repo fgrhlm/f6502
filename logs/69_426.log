@@ -15,5 +15,5 @@
 		|1|1|0|0|0|1|1|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: cc60 / (52320) => 7d / (125)
-	BINADC: 50 + 7d = ce[OP END @ 52320]
+[OP END @ 52320]
 Done..

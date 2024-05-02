@@ -1,0 +1,19 @@
+[TEST 3243 - 69.json]
+	MEM WRITE: c0c / (3084) => 69 / (105)
+	MEM WRITE: c0d / (3085) => 44 / (68)
+	MEM WRITE: c0e / (3086) => 18 / (24)
+	MEM READ: c0c / (3084) => 69 / (105)
+[OP START 3084 -> 0x69 -> adc]
+	REGS:
+		PC: 3084 (c0c)
+		SP: 155 (9b)
+		A:  155 (9b)
+		X:  168 (a8)
+		Y:  40 (28)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c0d / (3085) => 44 / (68)
+[OP END @ 3085]
+Done..

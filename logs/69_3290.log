@@ -1,0 +1,19 @@
+[TEST 3290 - 69.json]
+	MEM WRITE: 63db / (25563) => 69 / (105)
+	MEM WRITE: 63dc / (25564) => cb / (203)
+	MEM WRITE: 63dd / (25565) => 5c / (92)
+	MEM READ: 63db / (25563) => 69 / (105)
+[OP START 25563 -> 0x69 -> adc]
+	REGS:
+		PC: 25563 (63db)
+		SP: 148 (94)
+		A:  85 (55)
+		X:  183 (b7)
+		Y:  173 (ad)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 63dc / (25564) => cb / (203)
+[OP END @ 25564]
+Done..

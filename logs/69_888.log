@@ -1,0 +1,19 @@
+[TEST 888 - 69.json]
+	MEM WRITE: 8b4 / (2228) => 69 / (105)
+	MEM WRITE: 8b5 / (2229) => cc / (204)
+	MEM WRITE: 8b6 / (2230) => a7 / (167)
+	MEM READ: 8b4 / (2228) => 69 / (105)
+[OP START 2228 -> 0x69 -> adc]
+	REGS:
+		PC: 2228 (8b4)
+		SP: 57 (39)
+		A:  251 (fb)
+		X:  62 (3e)
+		Y:  139 (8b)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8b5 / (2229) => cc / (204)
+[OP END @ 2229]
+Done..

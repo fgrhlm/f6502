@@ -1,0 +1,19 @@
+[TEST 663 - 69.json]
+	MEM WRITE: cbb2 / (52146) => 69 / (105)
+	MEM WRITE: cbb3 / (52147) => c6 / (198)
+	MEM WRITE: cbb4 / (52148) => a / (10)
+	MEM READ: cbb2 / (52146) => 69 / (105)
+[OP START 52146 -> 0x69 -> adc]
+	REGS:
+		PC: 52146 (cbb2)
+		SP: 38 (26)
+		A:  191 (bf)
+		X:  16 (10)
+		Y:  26 (1a)
+		P:  160 (a0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cbb3 / (52147) => c6 / (198)
+[OP END @ 52147]
+Done..

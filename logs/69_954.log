@@ -1,0 +1,19 @@
+[TEST 954 - 69.json]
+	MEM WRITE: 585f / (22623) => 69 / (105)
+	MEM WRITE: 5860 / (22624) => 31 / (49)
+	MEM WRITE: 5861 / (22625) => f3 / (243)
+	MEM READ: 585f / (22623) => 69 / (105)
+[OP START 22623 -> 0x69 -> adc]
+	REGS:
+		PC: 22623 (585f)
+		SP: 44 (2c)
+		A:  64 (40)
+		X:  67 (43)
+		Y:  171 (ab)
+		P:  227 (e3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5860 / (22624) => 31 / (49)
+[OP END @ 22624]
+Done..

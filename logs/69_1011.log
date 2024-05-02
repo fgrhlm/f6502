@@ -1,0 +1,19 @@
+[TEST 1011 - 69.json]
+	MEM WRITE: e481 / (58497) => 69 / (105)
+	MEM WRITE: e482 / (58498) => ca / (202)
+	MEM WRITE: e483 / (58499) => 1c / (28)
+	MEM READ: e481 / (58497) => 69 / (105)
+[OP START 58497 -> 0x69 -> adc]
+	REGS:
+		PC: 58497 (e481)
+		SP: 61 (3d)
+		A:  165 (a5)
+		X:  182 (b6)
+		Y:  190 (be)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e482 / (58498) => ca / (202)
+[OP END @ 58498]
+Done..

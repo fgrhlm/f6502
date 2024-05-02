@@ -1,0 +1,19 @@
+[TEST 8614 - 69.json]
+	MEM WRITE: dbbb / (56251) => 69 / (105)
+	MEM WRITE: dbbc / (56252) => 90 / (144)
+	MEM WRITE: dbbd / (56253) => 9a / (154)
+	MEM READ: dbbb / (56251) => 69 / (105)
+[OP START 56251 -> 0x69 -> adc]
+	REGS:
+		PC: 56251 (dbbb)
+		SP: 108 (6c)
+		A:  65 (41)
+		X:  186 (ba)
+		Y:  225 (e1)
+		P:  110 (6e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: dbbc / (56252) => 90 / (144)
+[OP END @ 56252]
+Done..

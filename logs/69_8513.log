@@ -1,0 +1,19 @@
+[TEST 8513 - 69.json]
+	MEM WRITE: 2704 / (9988) => 69 / (105)
+	MEM WRITE: 2705 / (9989) => 2b / (43)
+	MEM WRITE: 2706 / (9990) => b4 / (180)
+	MEM READ: 2704 / (9988) => 69 / (105)
+[OP START 9988 -> 0x69 -> adc]
+	REGS:
+		PC: 9988 (2704)
+		SP: 160 (a0)
+		A:  117 (75)
+		X:  53 (35)
+		Y:  132 (84)
+		P:  230 (e6)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2705 / (9989) => 2b / (43)
+[OP END @ 9989]
+Done..

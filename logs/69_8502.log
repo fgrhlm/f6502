@@ -1,0 +1,19 @@
+[TEST 8502 - 69.json]
+	MEM WRITE: 566a / (22122) => 69 / (105)
+	MEM WRITE: 566b / (22123) => 3e / (62)
+	MEM WRITE: 566c / (22124) => bf / (191)
+	MEM READ: 566a / (22122) => 69 / (105)
+[OP START 22122 -> 0x69 -> adc]
+	REGS:
+		PC: 22122 (566a)
+		SP: 144 (90)
+		A:  90 (5a)
+		X:  8 (8)
+		Y:  239 (ef)
+		P:  104 (68)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 566b / (22123) => 3e / (62)
+[OP END @ 22123]
+Done..

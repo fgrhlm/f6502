@@ -1,0 +1,19 @@
+[TEST 686 - 69.json]
+	MEM WRITE: e7dc / (59356) => 69 / (105)
+	MEM WRITE: e7dd / (59357) => a0 / (160)
+	MEM WRITE: e7de / (59358) => aa / (170)
+	MEM READ: e7dc / (59356) => 69 / (105)
+[OP START 59356 -> 0x69 -> adc]
+	REGS:
+		PC: 59356 (e7dc)
+		SP: 157 (9d)
+		A:  219 (db)
+		X:  55 (37)
+		Y:  16 (10)
+		P:  98 (62)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e7dd / (59357) => a0 / (160)
+[OP END @ 59357]
+Done..

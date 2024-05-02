@@ -1,0 +1,19 @@
+[TEST 1106 - 69.json]
+	MEM WRITE: cdea / (52714) => 69 / (105)
+	MEM WRITE: cdeb / (52715) => 8c / (140)
+	MEM WRITE: cdec / (52716) => c0 / (192)
+	MEM READ: cdea / (52714) => 69 / (105)
+[OP START 52714 -> 0x69 -> adc]
+	REGS:
+		PC: 52714 (cdea)
+		SP: 207 (cf)
+		A:  237 (ed)
+		X:  207 (cf)
+		Y:  81 (51)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cdeb / (52715) => 8c / (140)
+[OP END @ 52715]
+Done..

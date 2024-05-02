@@ -1,0 +1,19 @@
+[TEST 757 - 69.json]
+	MEM WRITE: f8f3 / (63731) => 69 / (105)
+	MEM WRITE: f8f4 / (63732) => 7d / (125)
+	MEM WRITE: f8f5 / (63733) => 55 / (85)
+	MEM READ: f8f3 / (63731) => 69 / (105)
+[OP START 63731 -> 0x69 -> adc]
+	REGS:
+		PC: 63731 (f8f3)
+		SP: 57 (39)
+		A:  154 (9a)
+		X:  216 (d8)
+		Y:  193 (c1)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f8f4 / (63732) => 7d / (125)
+[OP END @ 63732]
+Done..

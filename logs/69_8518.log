@@ -1,0 +1,19 @@
+[TEST 8518 - 69.json]
+	MEM WRITE: cd29 / (52521) => 69 / (105)
+	MEM WRITE: cd2a / (52522) => df / (223)
+	MEM WRITE: cd2b / (52523) => a1 / (161)
+	MEM READ: cd29 / (52521) => 69 / (105)
+[OP START 52521 -> 0x69 -> adc]
+	REGS:
+		PC: 52521 (cd29)
+		SP: 152 (98)
+		A:  14 (e)
+		X:  150 (96)
+		Y:  117 (75)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cd2a / (52522) => df / (223)
+[OP END @ 52522]
+Done..

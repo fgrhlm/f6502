@@ -1,0 +1,19 @@
+[TEST 754 - 69.json]
+	MEM WRITE: d5c4 / (54724) => 69 / (105)
+	MEM WRITE: d5c5 / (54725) => 11 / (17)
+	MEM WRITE: d5c6 / (54726) => 95 / (149)
+	MEM READ: d5c4 / (54724) => 69 / (105)
+[OP START 54724 -> 0x69 -> adc]
+	REGS:
+		PC: 54724 (d5c4)
+		SP: 10 (a)
+		A:  243 (f3)
+		X:  24 (18)
+		Y:  251 (fb)
+		P:  227 (e3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d5c5 / (54725) => 11 / (17)
+[OP END @ 54725]
+Done..

@@ -1,0 +1,19 @@
+[TEST 692 - 69.json]
+	MEM WRITE: 60bd / (24765) => 69 / (105)
+	MEM WRITE: 60be / (24766) => 83 / (131)
+	MEM WRITE: 60bf / (24767) => 4b / (75)
+	MEM READ: 60bd / (24765) => 69 / (105)
+[OP START 24765 -> 0x69 -> adc]
+	REGS:
+		PC: 24765 (60bd)
+		SP: 159 (9f)
+		A:  126 (7e)
+		X:  191 (bf)
+		Y:  73 (49)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 60be / (24766) => 83 / (131)
+[OP END @ 24766]
+Done..

@@ -1,0 +1,19 @@
+[TEST 6083 - 69.json]
+	MEM WRITE: fa8f / (64143) => 69 / (105)
+	MEM WRITE: fa90 / (64144) => d6 / (214)
+	MEM WRITE: fa91 / (64145) => be / (190)
+	MEM READ: fa8f / (64143) => 69 / (105)
+[OP START 64143 -> 0x69 -> adc]
+	REGS:
+		PC: 64143 (fa8f)
+		SP: 63 (3f)
+		A:  73 (49)
+		X:  121 (79)
+		Y:  194 (c2)
+		P:  235 (eb)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fa90 / (64144) => d6 / (214)
+[OP END @ 64144]
+Done..

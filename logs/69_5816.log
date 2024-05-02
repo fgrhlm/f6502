@@ -1,0 +1,19 @@
+[TEST 5816 - 69.json]
+	MEM WRITE: 85fc / (34300) => 69 / (105)
+	MEM WRITE: 85fd / (34301) => fb / (251)
+	MEM WRITE: 85fe / (34302) => 64 / (100)
+	MEM READ: 85fc / (34300) => 69 / (105)
+[OP START 34300 -> 0x69 -> adc]
+	REGS:
+		PC: 34300 (85fc)
+		SP: 12 (c)
+		A:  102 (66)
+		X:  223 (df)
+		Y:  41 (29)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 85fd / (34301) => fb / (251)
+[OP END @ 34301]
+Done..

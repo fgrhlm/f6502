@@ -1,0 +1,19 @@
+[TEST 8719 - 69.json]
+	MEM WRITE: 69fd / (27133) => 69 / (105)
+	MEM WRITE: 69fe / (27134) => 60 / (96)
+	MEM WRITE: 69ff / (27135) => 8d / (141)
+	MEM READ: 69fd / (27133) => 69 / (105)
+[OP START 27133 -> 0x69 -> adc]
+	REGS:
+		PC: 27133 (69fd)
+		SP: 194 (c2)
+		A:  170 (aa)
+		X:  103 (67)
+		Y:  93 (5d)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 69fe / (27134) => 60 / (96)
+[OP END @ 27134]
+Done..

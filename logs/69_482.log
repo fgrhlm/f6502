@@ -15,5 +15,5 @@
 		|0|1|0|0|0|1|0|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: e4cc / (58572) => 33 / (51)
-	BINADC: ba + 33 = ed[OP END @ 58572]
+[OP END @ 58572]
 Done..

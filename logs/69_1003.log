@@ -1,0 +1,19 @@
+[TEST 1003 - 69.json]
+	MEM WRITE: d123 / (53539) => 69 / (105)
+	MEM WRITE: d124 / (53540) => 60 / (96)
+	MEM WRITE: d125 / (53541) => 87 / (135)
+	MEM READ: d123 / (53539) => 69 / (105)
+[OP START 53539 -> 0x69 -> adc]
+	REGS:
+		PC: 53539 (d123)
+		SP: 228 (e4)
+		A:  177 (b1)
+		X:  65 (41)
+		Y:  166 (a6)
+		P:  47 (2f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d124 / (53540) => 60 / (96)
+[OP END @ 53540]
+Done..

@@ -1,0 +1,19 @@
+[TEST 1177 - 69.json]
+	MEM WRITE: 485b / (18523) => 69 / (105)
+	MEM WRITE: 485c / (18524) => f4 / (244)
+	MEM WRITE: 485d / (18525) => ce / (206)
+	MEM READ: 485b / (18523) => 69 / (105)
+[OP START 18523 -> 0x69 -> adc]
+	REGS:
+		PC: 18523 (485b)
+		SP: 218 (da)
+		A:  207 (cf)
+		X:  56 (38)
+		Y:  141 (8d)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 485c / (18524) => f4 / (244)
+[OP END @ 18524]
+Done..

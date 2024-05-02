@@ -1,0 +1,19 @@
+[TEST 783 - 69.json]
+	MEM WRITE: 2bd1 / (11217) => 69 / (105)
+	MEM WRITE: 2bd2 / (11218) => 54 / (84)
+	MEM WRITE: 2bd3 / (11219) => 1f / (31)
+	MEM READ: 2bd1 / (11217) => 69 / (105)
+[OP START 11217 -> 0x69 -> adc]
+	REGS:
+		PC: 11217 (2bd1)
+		SP: 231 (e7)
+		A:  52 (34)
+		X:  204 (cc)
+		Y:  196 (c4)
+		P:  238 (ee)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2bd2 / (11218) => 54 / (84)
+[OP END @ 11218]
+Done..

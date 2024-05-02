@@ -1,0 +1,19 @@
+[TEST 850 - 69.json]
+	MEM WRITE: c7e2 / (51170) => 69 / (105)
+	MEM WRITE: c7e3 / (51171) => 13 / (19)
+	MEM WRITE: c7e4 / (51172) => cf / (207)
+	MEM READ: c7e2 / (51170) => 69 / (105)
+[OP START 51170 -> 0x69 -> adc]
+	REGS:
+		PC: 51170 (c7e2)
+		SP: 247 (f7)
+		A:  41 (29)
+		X:  69 (45)
+		Y:  190 (be)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c7e3 / (51171) => 13 / (19)
+[OP END @ 51171]
+Done..

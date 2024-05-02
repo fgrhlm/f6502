@@ -15,5 +15,5 @@
 		|1|1|0|0|0|1|0|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 2695 / (9877) => 7e / (126)
-	BINADC: da + 7e = 59[OP END @ 9877]
+[OP END @ 9877]
 Done..

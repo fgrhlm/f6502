@@ -1,0 +1,19 @@
+[TEST 1117 - 69.json]
+	MEM WRITE: d48a / (54410) => 69 / (105)
+	MEM WRITE: d48b / (54411) => 18 / (24)
+	MEM WRITE: d48c / (54412) => 5e / (94)
+	MEM READ: d48a / (54410) => 69 / (105)
+[OP START 54410 -> 0x69 -> adc]
+	REGS:
+		PC: 54410 (d48a)
+		SP: 131 (83)
+		A:  6 (6)
+		X:  61 (3d)
+		Y:  196 (c4)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d48b / (54411) => 18 / (24)
+[OP END @ 54411]
+Done..

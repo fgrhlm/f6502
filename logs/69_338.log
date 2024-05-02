@@ -15,5 +15,5 @@
 		|1|0|0|0|0|1|0|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 69db / (27099) => 3 / (3)
-	BINADC: 2b + 3 = 2f[OP END @ 27099]
+[OP END @ 27099]
 Done..

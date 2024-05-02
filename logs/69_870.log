@@ -1,0 +1,19 @@
+[TEST 870 - 69.json]
+	MEM WRITE: df7f / (57215) => 69 / (105)
+	MEM WRITE: df80 / (57216) => 5 / (5)
+	MEM WRITE: df81 / (57217) => 67 / (103)
+	MEM READ: df7f / (57215) => 69 / (105)
+[OP START 57215 -> 0x69 -> adc]
+	REGS:
+		PC: 57215 (df7f)
+		SP: 216 (d8)
+		A:  41 (29)
+		X:  79 (4f)
+		Y:  237 (ed)
+		P:  172 (ac)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: df80 / (57216) => 5 / (5)
+[OP END @ 57216]
+Done..

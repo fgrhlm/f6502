@@ -1,0 +1,19 @@
+[TEST 3320 - 69.json]
+	MEM WRITE: 5c6b / (23659) => 69 / (105)
+	MEM WRITE: 5c6c / (23660) => 2c / (44)
+	MEM WRITE: 5c6d / (23661) => 8d / (141)
+	MEM READ: 5c6b / (23659) => 69 / (105)
+[OP START 23659 -> 0x69 -> adc]
+	REGS:
+		PC: 23659 (5c6b)
+		SP: 36 (24)
+		A:  221 (dd)
+		X:  51 (33)
+		Y:  206 (ce)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5c6c / (23660) => 2c / (44)
+[OP END @ 23660]
+Done..

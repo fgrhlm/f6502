@@ -1,0 +1,19 @@
+[TEST 8531 - 69.json]
+	MEM WRITE: 154e / (5454) => 69 / (105)
+	MEM WRITE: 154f / (5455) => f6 / (246)
+	MEM WRITE: 1550 / (5456) => 88 / (136)
+	MEM READ: 154e / (5454) => 69 / (105)
+[OP START 5454 -> 0x69 -> adc]
+	REGS:
+		PC: 5454 (154e)
+		SP: 28 (1c)
+		A:  78 (4e)
+		X:  235 (eb)
+		Y:  90 (5a)
+		P:  111 (6f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 154f / (5455) => f6 / (246)
+[OP END @ 5455]
+Done..

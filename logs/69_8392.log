@@ -1,0 +1,19 @@
+[TEST 8392 - 69.json]
+	MEM WRITE: e215 / (57877) => 69 / (105)
+	MEM WRITE: e216 / (57878) => db / (219)
+	MEM WRITE: e217 / (57879) => 79 / (121)
+	MEM READ: e215 / (57877) => 69 / (105)
+[OP START 57877 -> 0x69 -> adc]
+	REGS:
+		PC: 57877 (e215)
+		SP: 141 (8d)
+		A:  64 (40)
+		X:  249 (f9)
+		Y:  11 (b)
+		P:  102 (66)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e216 / (57878) => db / (219)
+[OP END @ 57878]
+Done..

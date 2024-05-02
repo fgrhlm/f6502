@@ -1,0 +1,19 @@
+[TEST 644 - 69.json]
+	MEM WRITE: 2692 / (9874) => 69 / (105)
+	MEM WRITE: 2693 / (9875) => 76 / (118)
+	MEM WRITE: 2694 / (9876) => 42 / (66)
+	MEM READ: 2692 / (9874) => 69 / (105)
+[OP START 9874 -> 0x69 -> adc]
+	REGS:
+		PC: 9874 (2692)
+		SP: 135 (87)
+		A:  156 (9c)
+		X:  42 (2a)
+		Y:  255 (ff)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2693 / (9875) => 76 / (118)
+[OP END @ 9875]
+Done..

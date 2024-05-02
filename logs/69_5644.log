@@ -1,0 +1,19 @@
+[TEST 5644 - 69.json]
+	MEM WRITE: eacb / (60107) => 69 / (105)
+	MEM WRITE: eacc / (60108) => 21 / (33)
+	MEM WRITE: eacd / (60109) => cb / (203)
+	MEM READ: eacb / (60107) => 69 / (105)
+[OP START 60107 -> 0x69 -> adc]
+	REGS:
+		PC: 60107 (eacb)
+		SP: 143 (8f)
+		A:  221 (dd)
+		X:  77 (4d)
+		Y:  104 (68)
+		P:  164 (a4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eacc / (60108) => 21 / (33)
+[OP END @ 60108]
+Done..

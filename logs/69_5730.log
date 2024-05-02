@@ -1,0 +1,19 @@
+[TEST 5730 - 69.json]
+	MEM WRITE: b8ec / (47340) => 69 / (105)
+	MEM WRITE: b8ed / (47341) => 10 / (16)
+	MEM WRITE: b8ee / (47342) => fc / (252)
+	MEM READ: b8ec / (47340) => 69 / (105)
+[OP START 47340 -> 0x69 -> adc]
+	REGS:
+		PC: 47340 (b8ec)
+		SP: 234 (ea)
+		A:  180 (b4)
+		X:  124 (7c)
+		Y:  176 (b0)
+		P:  44 (2c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b8ed / (47341) => 10 / (16)
+[OP END @ 47341]
+Done..

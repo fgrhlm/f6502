@@ -1,0 +1,19 @@
+[TEST 8142 - 69.json]
+	MEM WRITE: 4531 / (17713) => 69 / (105)
+	MEM WRITE: 4532 / (17714) => 87 / (135)
+	MEM WRITE: 4533 / (17715) => 1f / (31)
+	MEM READ: 4531 / (17713) => 69 / (105)
+[OP START 17713 -> 0x69 -> adc]
+	REGS:
+		PC: 17713 (4531)
+		SP: 71 (47)
+		A:  12 (c)
+		X:  61 (3d)
+		Y:  37 (25)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4532 / (17714) => 87 / (135)
+[OP END @ 17714]
+Done..

@@ -1,0 +1,19 @@
+[TEST 8645 - 69.json]
+	MEM WRITE: 6df1 / (28145) => 69 / (105)
+	MEM WRITE: 6df2 / (28146) => 66 / (102)
+	MEM WRITE: 6df3 / (28147) => 96 / (150)
+	MEM READ: 6df1 / (28145) => 69 / (105)
+[OP START 28145 -> 0x69 -> adc]
+	REGS:
+		PC: 28145 (6df1)
+		SP: 121 (79)
+		A:  206 (ce)
+		X:  250 (fa)
+		Y:  251 (fb)
+		P:  227 (e3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6df2 / (28146) => 66 / (102)
+[OP END @ 28146]
+Done..

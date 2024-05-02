@@ -15,5 +15,5 @@
 		|1|0|0|0|0|1|0|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: cebf / (52927) => 5 / (5)
-	BINADC: 43 + 5 = 49[OP END @ 52927]
+[OP END @ 52927]
 Done..

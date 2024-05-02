@@ -1,0 +1,19 @@
+[TEST 3611 - 69.json]
+	MEM WRITE: 99c2 / (39362) => 69 / (105)
+	MEM WRITE: 99c3 / (39363) => 4e / (78)
+	MEM WRITE: 99c4 / (39364) => 9c / (156)
+	MEM READ: 99c2 / (39362) => 69 / (105)
+[OP START 39362 -> 0x69 -> adc]
+	REGS:
+		PC: 39362 (99c2)
+		SP: 104 (68)
+		A:  184 (b8)
+		X:  247 (f7)
+		Y:  40 (28)
+		P:  232 (e8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 99c3 / (39363) => 4e / (78)
+[OP END @ 39363]
+Done..

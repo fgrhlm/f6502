@@ -1,0 +1,19 @@
+[TEST 804 - 69.json]
+	MEM WRITE: 382d / (14381) => 69 / (105)
+	MEM WRITE: 382e / (14382) => 19 / (25)
+	MEM WRITE: 382f / (14383) => 80 / (128)
+	MEM READ: 382d / (14381) => 69 / (105)
+[OP START 14381 -> 0x69 -> adc]
+	REGS:
+		PC: 14381 (382d)
+		SP: 55 (37)
+		A:  1 (1)
+		X:  16 (10)
+		Y:  122 (7a)
+		P:  40 (28)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 382e / (14382) => 19 / (25)
+[OP END @ 14382]
+Done..

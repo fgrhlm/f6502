@@ -1,0 +1,19 @@
+[TEST 752 - 69.json]
+	MEM WRITE: 9636 / (38454) => 69 / (105)
+	MEM WRITE: 9637 / (38455) => 55 / (85)
+	MEM WRITE: 9638 / (38456) => 4 / (4)
+	MEM READ: 9636 / (38454) => 69 / (105)
+[OP START 38454 -> 0x69 -> adc]
+	REGS:
+		PC: 38454 (9636)
+		SP: 98 (62)
+		A:  33 (21)
+		X:  203 (cb)
+		Y:  22 (16)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9637 / (38455) => 55 / (85)
+[OP END @ 38455]
+Done..

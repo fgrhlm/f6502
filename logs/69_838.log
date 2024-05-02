@@ -1,0 +1,19 @@
+[TEST 838 - 69.json]
+	MEM WRITE: eeed / (61165) => 69 / (105)
+	MEM WRITE: eeee / (61166) => 99 / (153)
+	MEM WRITE: eeef / (61167) => 3c / (60)
+	MEM READ: eeed / (61165) => 69 / (105)
+[OP START 61165 -> 0x69 -> adc]
+	REGS:
+		PC: 61165 (eeed)
+		SP: 137 (89)
+		A:  68 (44)
+		X:  195 (c3)
+		Y:  41 (29)
+		P:  97 (61)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eeee / (61166) => 99 / (153)
+[OP END @ 61166]
+Done..

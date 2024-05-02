@@ -1,0 +1,19 @@
+[TEST 5949 - 69.json]
+	MEM WRITE: 70ba / (28858) => 69 / (105)
+	MEM WRITE: 70bb / (28859) => eb / (235)
+	MEM WRITE: 70bc / (28860) => 3d / (61)
+	MEM READ: 70ba / (28858) => 69 / (105)
+[OP START 28858 -> 0x69 -> adc]
+	REGS:
+		PC: 28858 (70ba)
+		SP: 114 (72)
+		A:  177 (b1)
+		X:  249 (f9)
+		Y:  169 (a9)
+		P:  111 (6f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 70bb / (28859) => eb / (235)
+[OP END @ 28859]
+Done..

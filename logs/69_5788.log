@@ -1,0 +1,19 @@
+[TEST 5788 - 69.json]
+	MEM WRITE: 7bd / (1981) => 69 / (105)
+	MEM WRITE: 7be / (1982) => 48 / (72)
+	MEM WRITE: 7bf / (1983) => 17 / (23)
+	MEM READ: 7bd / (1981) => 69 / (105)
+[OP START 1981 -> 0x69 -> adc]
+	REGS:
+		PC: 1981 (7bd)
+		SP: 228 (e4)
+		A:  211 (d3)
+		X:  18 (12)
+		Y:  179 (b3)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7be / (1982) => 48 / (72)
+[OP END @ 1982]
+Done..

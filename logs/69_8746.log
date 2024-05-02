@@ -1,0 +1,19 @@
+[TEST 8746 - 69.json]
+	MEM WRITE: fcf / (4047) => 69 / (105)
+	MEM WRITE: fd0 / (4048) => 7d / (125)
+	MEM WRITE: fd1 / (4049) => 46 / (70)
+	MEM READ: fcf / (4047) => 69 / (105)
+[OP START 4047 -> 0x69 -> adc]
+	REGS:
+		PC: 4047 (fcf)
+		SP: 51 (33)
+		A:  25 (19)
+		X:  59 (3b)
+		Y:  82 (52)
+		P:  170 (aa)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fd0 / (4048) => 7d / (125)
+[OP END @ 4048]
+Done..

@@ -1,0 +1,19 @@
+[TEST 3530 - 69.json]
+	MEM WRITE: c8df / (51423) => 69 / (105)
+	MEM WRITE: c8e0 / (51424) => da / (218)
+	MEM WRITE: c8e1 / (51425) => cc / (204)
+	MEM READ: c8df / (51423) => 69 / (105)
+[OP START 51423 -> 0x69 -> adc]
+	REGS:
+		PC: 51423 (c8df)
+		SP: 209 (d1)
+		A:  114 (72)
+		X:  70 (46)
+		Y:  118 (76)
+		P:  234 (ea)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c8e0 / (51424) => da / (218)
+[OP END @ 51424]
+Done..

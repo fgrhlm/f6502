@@ -1,0 +1,19 @@
+[TEST 3350 - 69.json]
+	MEM WRITE: fc29 / (64553) => 69 / (105)
+	MEM WRITE: fc2a / (64554) => b6 / (182)
+	MEM WRITE: fc2b / (64555) => ff / (255)
+	MEM READ: fc29 / (64553) => 69 / (105)
+[OP START 64553 -> 0x69 -> adc]
+	REGS:
+		PC: 64553 (fc29)
+		SP: 199 (c7)
+		A:  232 (e8)
+		X:  232 (e8)
+		Y:  65 (41)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fc2a / (64554) => b6 / (182)
+[OP END @ 64554]
+Done..

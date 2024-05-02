@@ -1,0 +1,19 @@
+[TEST 1384 - 69.json]
+	MEM WRITE: edfb / (60923) => 69 / (105)
+	MEM WRITE: edfc / (60924) => d2 / (210)
+	MEM WRITE: edfd / (60925) => c7 / (199)
+	MEM READ: edfb / (60923) => 69 / (105)
+[OP START 60923 -> 0x69 -> adc]
+	REGS:
+		PC: 60923 (edfb)
+		SP: 69 (45)
+		A:  115 (73)
+		X:  53 (35)
+		Y:  20 (14)
+		P:  40 (28)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: edfc / (60924) => d2 / (210)
+[OP END @ 60924]
+Done..

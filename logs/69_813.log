@@ -1,0 +1,19 @@
+[TEST 813 - 69.json]
+	MEM WRITE: 5c9b / (23707) => 69 / (105)
+	MEM WRITE: 5c9c / (23708) => ff / (255)
+	MEM WRITE: 5c9d / (23709) => c6 / (198)
+	MEM READ: 5c9b / (23707) => 69 / (105)
+[OP START 23707 -> 0x69 -> adc]
+	REGS:
+		PC: 23707 (5c9b)
+		SP: 115 (73)
+		A:  196 (c4)
+		X:  44 (2c)
+		Y:  29 (1d)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5c9c / (23708) => ff / (255)
+[OP END @ 23708]
+Done..

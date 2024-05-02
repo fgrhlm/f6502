@@ -1,0 +1,19 @@
+[TEST 8568 - 69.json]
+	MEM WRITE: b325 / (45861) => 69 / (105)
+	MEM WRITE: b326 / (45862) => 65 / (101)
+	MEM WRITE: b327 / (45863) => c1 / (193)
+	MEM READ: b325 / (45861) => 69 / (105)
+[OP START 45861 -> 0x69 -> adc]
+	REGS:
+		PC: 45861 (b325)
+		SP: 84 (54)
+		A:  157 (9d)
+		X:  133 (85)
+		Y:  31 (1f)
+		P:  47 (2f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b326 / (45862) => 65 / (101)
+[OP END @ 45862]
+Done..

@@ -1,0 +1,19 @@
+[TEST 3656 - 69.json]
+	MEM WRITE: 7ce0 / (31968) => 69 / (105)
+	MEM WRITE: 7ce1 / (31969) => 8 / (8)
+	MEM WRITE: 7ce2 / (31970) => b9 / (185)
+	MEM READ: 7ce0 / (31968) => 69 / (105)
+[OP START 31968 -> 0x69 -> adc]
+	REGS:
+		PC: 31968 (7ce0)
+		SP: 121 (79)
+		A:  245 (f5)
+		X:  137 (89)
+		Y:  78 (4e)
+		P:  34 (22)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7ce1 / (31969) => 8 / (8)
+[OP END @ 31969]
+Done..

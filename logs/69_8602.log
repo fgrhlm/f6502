@@ -1,0 +1,19 @@
+[TEST 8602 - 69.json]
+	MEM WRITE: 4053 / (16467) => 69 / (105)
+	MEM WRITE: 4054 / (16468) => 31 / (49)
+	MEM WRITE: 4055 / (16469) => e / (14)
+	MEM READ: 4053 / (16467) => 69 / (105)
+[OP START 16467 -> 0x69 -> adc]
+	REGS:
+		PC: 16467 (4053)
+		SP: 9 (9)
+		A:  18 (12)
+		X:  224 (e0)
+		Y:  50 (32)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4054 / (16468) => 31 / (49)
+[OP END @ 16468]
+Done..

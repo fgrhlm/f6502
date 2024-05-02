@@ -15,5 +15,5 @@
 		|0|0|1|0|0|1|1|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: bac2 / (47810) => 9a / (154)
-	BINADC: 55 + 9a = ef[OP END @ 47810]
+[OP END @ 47810]
 Done..

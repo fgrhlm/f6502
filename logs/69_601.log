@@ -15,5 +15,5 @@
 		|0|1|1|0|0|1|1|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: afaf / (44975) => 74 / (116)
-	BINADC: 90 + 74 = 4[OP END @ 44975]
+[OP END @ 44975]
 Done..

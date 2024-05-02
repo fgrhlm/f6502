@@ -1,0 +1,19 @@
+[TEST 727 - 69.json]
+	MEM WRITE: 264e / (9806) => 69 / (105)
+	MEM WRITE: 264f / (9807) => 22 / (34)
+	MEM WRITE: 2650 / (9808) => cc / (204)
+	MEM READ: 264e / (9806) => 69 / (105)
+[OP START 9806 -> 0x69 -> adc]
+	REGS:
+		PC: 9806 (264e)
+		SP: 49 (31)
+		A:  222 (de)
+		X:  12 (c)
+		Y:  68 (44)
+		P:  165 (a5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 264f / (9807) => 22 / (34)
+[OP END @ 9807]
+Done..

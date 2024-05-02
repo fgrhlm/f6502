@@ -1,0 +1,19 @@
+[TEST 3607 - 69.json]
+	MEM WRITE: 76ea / (30442) => 69 / (105)
+	MEM WRITE: 76eb / (30443) => 34 / (52)
+	MEM WRITE: 76ec / (30444) => 4 / (4)
+	MEM READ: 76ea / (30442) => 69 / (105)
+[OP START 30442 -> 0x69 -> adc]
+	REGS:
+		PC: 30442 (76ea)
+		SP: 99 (63)
+		A:  80 (50)
+		X:  50 (32)
+		Y:  188 (bc)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 76eb / (30443) => 34 / (52)
+[OP END @ 30443]
+Done..

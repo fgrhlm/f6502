@@ -1,0 +1,19 @@
+[TEST 3620 - 69.json]
+	MEM WRITE: c422 / (50210) => 69 / (105)
+	MEM WRITE: c423 / (50211) => 6d / (109)
+	MEM WRITE: c424 / (50212) => 57 / (87)
+	MEM READ: c422 / (50210) => 69 / (105)
+[OP START 50210 -> 0x69 -> adc]
+	REGS:
+		PC: 50210 (c422)
+		SP: 51 (33)
+		A:  65 (41)
+		X:  20 (14)
+		Y:  162 (a2)
+		P:  32 (20)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c423 / (50211) => 6d / (109)
+[OP END @ 50211]
+Done..

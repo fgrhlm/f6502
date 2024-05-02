@@ -1,0 +1,19 @@
+[TEST 844 - 69.json]
+	MEM WRITE: f8f / (3983) => 69 / (105)
+	MEM WRITE: f90 / (3984) => f5 / (245)
+	MEM WRITE: f91 / (3985) => 64 / (100)
+	MEM READ: f8f / (3983) => 69 / (105)
+[OP START 3983 -> 0x69 -> adc]
+	REGS:
+		PC: 3983 (f8f)
+		SP: 86 (56)
+		A:  103 (67)
+		X:  139 (8b)
+		Y:  148 (94)
+		P:  238 (ee)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f90 / (3984) => f5 / (245)
+[OP END @ 3984]
+Done..

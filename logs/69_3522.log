@@ -1,0 +1,19 @@
+[TEST 3522 - 69.json]
+	MEM WRITE: e881 / (59521) => 69 / (105)
+	MEM WRITE: e882 / (59522) => 95 / (149)
+	MEM WRITE: e883 / (59523) => 61 / (97)
+	MEM READ: e881 / (59521) => 69 / (105)
+[OP START 59521 -> 0x69 -> adc]
+	REGS:
+		PC: 59521 (e881)
+		SP: 100 (64)
+		A:  251 (fb)
+		X:  172 (ac)
+		Y:  238 (ee)
+		P:  44 (2c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e882 / (59522) => 95 / (149)
+[OP END @ 59522]
+Done..

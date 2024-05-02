@@ -15,5 +15,5 @@
 		|1|0|1|0|0|1|1|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 63eb / (25579) => 9 / (9)
-	BINADC: 5 + 9 = f[OP END @ 25579]
+[OP END @ 25579]
 Done..

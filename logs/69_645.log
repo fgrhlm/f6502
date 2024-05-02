@@ -1,0 +1,19 @@
+[TEST 645 - 69.json]
+	MEM WRITE: 1961 / (6497) => 69 / (105)
+	MEM WRITE: 1962 / (6498) => 13 / (19)
+	MEM WRITE: 1963 / (6499) => e1 / (225)
+	MEM READ: 1961 / (6497) => 69 / (105)
+[OP START 6497 -> 0x69 -> adc]
+	REGS:
+		PC: 6497 (1961)
+		SP: 0 (0)
+		A:  97 (61)
+		X:  177 (b1)
+		Y:  51 (33)
+		P:  235 (eb)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1962 / (6498) => 13 / (19)
+[OP END @ 6498]
+Done..

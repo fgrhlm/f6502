@@ -1,0 +1,19 @@
+[TEST 3247 - 69.json]
+	MEM WRITE: 94de / (38110) => 69 / (105)
+	MEM WRITE: 94df / (38111) => 4 / (4)
+	MEM WRITE: 94e0 / (38112) => 8b / (139)
+	MEM READ: 94de / (38110) => 69 / (105)
+[OP START 38110 -> 0x69 -> adc]
+	REGS:
+		PC: 38110 (94de)
+		SP: 39 (27)
+		A:  57 (39)
+		X:  148 (94)
+		Y:  240 (f0)
+		P:  238 (ee)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 94df / (38111) => 4 / (4)
+[OP END @ 38111]
+Done..

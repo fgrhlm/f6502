@@ -15,5 +15,5 @@
 		|0|0|0|0|0|1|1|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: ca79 / (51833) => c3 / (195)
-	BINADC: b8 + c3 = 7b[OP END @ 51833]
+[OP END @ 51833]
 Done..

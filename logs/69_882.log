@@ -1,0 +1,19 @@
+[TEST 882 - 69.json]
+	MEM WRITE: 9ea6 / (40614) => 69 / (105)
+	MEM WRITE: 9ea7 / (40615) => 72 / (114)
+	MEM WRITE: 9ea8 / (40616) => 2f / (47)
+	MEM READ: 9ea6 / (40614) => 69 / (105)
+[OP START 40614 -> 0x69 -> adc]
+	REGS:
+		PC: 40614 (9ea6)
+		SP: 205 (cd)
+		A:  55 (37)
+		X:  213 (d5)
+		Y:  241 (f1)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9ea7 / (40615) => 72 / (114)
+[OP END @ 40615]
+Done..

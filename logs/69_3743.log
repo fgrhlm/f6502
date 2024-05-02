@@ -1,0 +1,19 @@
+[TEST 3743 - 69.json]
+	MEM WRITE: ac60 / (44128) => 69 / (105)
+	MEM WRITE: ac61 / (44129) => d8 / (216)
+	MEM WRITE: ac62 / (44130) => 55 / (85)
+	MEM READ: ac60 / (44128) => 69 / (105)
+[OP START 44128 -> 0x69 -> adc]
+	REGS:
+		PC: 44128 (ac60)
+		SP: 187 (bb)
+		A:  166 (a6)
+		X:  239 (ef)
+		Y:  244 (f4)
+		P:  170 (aa)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ac61 / (44129) => d8 / (216)
+[OP END @ 44129]
+Done..

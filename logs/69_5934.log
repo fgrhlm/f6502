@@ -1,0 +1,19 @@
+[TEST 5934 - 69.json]
+	MEM WRITE: ea7c / (60028) => 69 / (105)
+	MEM WRITE: ea7d / (60029) => b8 / (184)
+	MEM WRITE: ea7e / (60030) => a2 / (162)
+	MEM READ: ea7c / (60028) => 69 / (105)
+[OP START 60028 -> 0x69 -> adc]
+	REGS:
+		PC: 60028 (ea7c)
+		SP: 10 (a)
+		A:  240 (f0)
+		X:  206 (ce)
+		Y:  120 (78)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ea7d / (60029) => b8 / (184)
+[OP END @ 60029]
+Done..

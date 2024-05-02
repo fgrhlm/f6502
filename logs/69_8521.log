@@ -1,0 +1,19 @@
+[TEST 8521 - 69.json]
+	MEM WRITE: c925 / (51493) => 69 / (105)
+	MEM WRITE: c926 / (51494) => 66 / (102)
+	MEM WRITE: c927 / (51495) => a9 / (169)
+	MEM READ: c925 / (51493) => 69 / (105)
+[OP START 51493 -> 0x69 -> adc]
+	REGS:
+		PC: 51493 (c925)
+		SP: 39 (27)
+		A:  76 (4c)
+		X:  75 (4b)
+		Y:  10 (a)
+		P:  172 (ac)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c926 / (51494) => 66 / (102)
+[OP END @ 51494]
+Done..

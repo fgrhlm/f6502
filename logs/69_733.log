@@ -1,0 +1,19 @@
+[TEST 733 - 69.json]
+	MEM WRITE: 6fcf / (28623) => 69 / (105)
+	MEM WRITE: 6fd0 / (28624) => d6 / (214)
+	MEM WRITE: 6fd1 / (28625) => a9 / (169)
+	MEM READ: 6fcf / (28623) => 69 / (105)
+[OP START 28623 -> 0x69 -> adc]
+	REGS:
+		PC: 28623 (6fcf)
+		SP: 74 (4a)
+		A:  129 (81)
+		X:  200 (c8)
+		Y:  22 (16)
+		P:  237 (ed)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6fd0 / (28624) => d6 / (214)
+[OP END @ 28624]
+Done..

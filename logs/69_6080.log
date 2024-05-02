@@ -1,0 +1,19 @@
+[TEST 6080 - 69.json]
+	MEM WRITE: 77c1 / (30657) => 69 / (105)
+	MEM WRITE: 77c2 / (30658) => 32 / (50)
+	MEM WRITE: 77c3 / (30659) => 3d / (61)
+	MEM READ: 77c1 / (30657) => 69 / (105)
+[OP START 30657 -> 0x69 -> adc]
+	REGS:
+		PC: 30657 (77c1)
+		SP: 78 (4e)
+		A:  252 (fc)
+		X:  160 (a0)
+		Y:  173 (ad)
+		P:  163 (a3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 77c2 / (30658) => 32 / (50)
+[OP END @ 30658]
+Done..

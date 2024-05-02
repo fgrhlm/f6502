@@ -1,0 +1,19 @@
+[TEST 3172 - 69.json]
+	MEM WRITE: dbe2 / (56290) => 69 / (105)
+	MEM WRITE: dbe3 / (56291) => ee / (238)
+	MEM WRITE: dbe4 / (56292) => ec / (236)
+	MEM READ: dbe2 / (56290) => 69 / (105)
+[OP START 56290 -> 0x69 -> adc]
+	REGS:
+		PC: 56290 (dbe2)
+		SP: 137 (89)
+		A:  146 (92)
+		X:  216 (d8)
+		Y:  213 (d5)
+		P:  175 (af)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: dbe3 / (56291) => ee / (238)
+[OP END @ 56291]
+Done..

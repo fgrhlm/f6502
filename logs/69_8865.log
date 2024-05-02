@@ -1,0 +1,19 @@
+[TEST 8865 - 69.json]
+	MEM WRITE: eae5 / (60133) => 69 / (105)
+	MEM WRITE: eae6 / (60134) => 88 / (136)
+	MEM WRITE: eae7 / (60135) => b4 / (180)
+	MEM READ: eae5 / (60133) => 69 / (105)
+[OP START 60133 -> 0x69 -> adc]
+	REGS:
+		PC: 60133 (eae5)
+		SP: 250 (fa)
+		A:  24 (18)
+		X:  243 (f3)
+		Y:  105 (69)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eae6 / (60134) => 88 / (136)
+[OP END @ 60134]
+Done..

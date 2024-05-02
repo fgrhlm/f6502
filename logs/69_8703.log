@@ -1,0 +1,19 @@
+[TEST 8703 - 69.json]
+	MEM WRITE: 1285 / (4741) => 69 / (105)
+	MEM WRITE: 1286 / (4742) => dc / (220)
+	MEM WRITE: 1287 / (4743) => 46 / (70)
+	MEM READ: 1285 / (4741) => 69 / (105)
+[OP START 4741 -> 0x69 -> adc]
+	REGS:
+		PC: 4741 (1285)
+		SP: 198 (c6)
+		A:  172 (ac)
+		X:  91 (5b)
+		Y:  97 (61)
+		P:  97 (61)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1286 / (4742) => dc / (220)
+[OP END @ 4742]
+Done..

@@ -1,4 +1,4 @@
-[TEST 458 - 69.json]
+[TEST 5458 - 69.json]
 	MEM WRITE: 5f74 / (24436) => 69 / (105)
 	MEM WRITE: 5f75 / (24437) => 86 / (134)
 	MEM WRITE: 5f76 / (24438) => 29 / (41)
@@ -15,5 +15,5 @@
 		|0|1|1|0|0|1|1|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 5f75 / (24437) => 86 / (134)
-	BINADC: c1 + 86 = 47[OP END @ 24437]
+[OP END @ 24437]
 Done..

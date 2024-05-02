@@ -15,5 +15,5 @@
 		|1|0|0|0|0|1|0|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 5106 / (20742) => b2 / (178)
-	BINADC: 2f + b2 = e2[OP END @ 20742]
+[OP END @ 20742]
 Done..

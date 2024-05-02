@@ -1,0 +1,19 @@
+[TEST 8293 - 69.json]
+	MEM WRITE: 42e4 / (17124) => 69 / (105)
+	MEM WRITE: 42e5 / (17125) => 82 / (130)
+	MEM WRITE: 42e6 / (17126) => 32 / (50)
+	MEM READ: 42e4 / (17124) => 69 / (105)
+[OP START 17124 -> 0x69 -> adc]
+	REGS:
+		PC: 17124 (42e4)
+		SP: 43 (2b)
+		A:  39 (27)
+		X:  137 (89)
+		Y:  228 (e4)
+		P:  167 (a7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 42e5 / (17125) => 82 / (130)
+[OP END @ 17125]
+Done..

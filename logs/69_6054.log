@@ -1,0 +1,19 @@
+[TEST 6054 - 69.json]
+	MEM WRITE: af7d / (44925) => 69 / (105)
+	MEM WRITE: af7e / (44926) => bb / (187)
+	MEM WRITE: af7f / (44927) => f7 / (247)
+	MEM READ: af7d / (44925) => 69 / (105)
+[OP START 44925 -> 0x69 -> adc]
+	REGS:
+		PC: 44925 (af7d)
+		SP: 213 (d5)
+		A:  228 (e4)
+		X:  246 (f6)
+		Y:  189 (bd)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: af7e / (44926) => bb / (187)
+[OP END @ 44926]
+Done..

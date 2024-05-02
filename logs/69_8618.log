@@ -1,0 +1,19 @@
+[TEST 8618 - 69.json]
+	MEM WRITE: 2660 / (9824) => 69 / (105)
+	MEM WRITE: 2661 / (9825) => da / (218)
+	MEM WRITE: 2662 / (9826) => ca / (202)
+	MEM READ: 2660 / (9824) => 69 / (105)
+[OP START 9824 -> 0x69 -> adc]
+	REGS:
+		PC: 9824 (2660)
+		SP: 56 (38)
+		A:  48 (30)
+		X:  94 (5e)
+		Y:  116 (74)
+		P:  111 (6f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2661 / (9825) => da / (218)
+[OP END @ 9825]
+Done..

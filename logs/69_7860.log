@@ -1,4 +1,4 @@
-[TEST 360 - 69.json]
+[TEST 7860 - 69.json]
 	MEM WRITE: fe3c / (65084) => 69 / (105)
 	MEM WRITE: fe3d / (65085) => 1a / (26)
 	MEM WRITE: fe3e / (65086) => d1 / (209)
@@ -15,8 +15,5 @@
 		|1|0|1|1|0|1|1|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: fe3d / (65085) => 1a / (26)
-	BCD START -> b2 + 1a
-	BCD CONVERT -> 12 + 20
-	BCD SUM -> 33
 [OP END @ 65085]
 Done..

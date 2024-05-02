@@ -15,5 +15,5 @@
 		|1|0|0|0|0|1|0|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 1726 / (5926) => 26 / (38)
-	BINADC: 95 + 26 = bc[OP END @ 5926]
+[OP END @ 5926]
 Done..

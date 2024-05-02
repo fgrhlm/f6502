@@ -1,0 +1,19 @@
+[TEST 5640 - 69.json]
+	MEM WRITE: 31af / (12719) => 69 / (105)
+	MEM WRITE: 31b0 / (12720) => 7c / (124)
+	MEM WRITE: 31b1 / (12721) => e / (14)
+	MEM READ: 31af / (12719) => 69 / (105)
+[OP START 12719 -> 0x69 -> adc]
+	REGS:
+		PC: 12719 (31af)
+		SP: 255 (ff)
+		A:  14 (e)
+		X:  103 (67)
+		Y:  147 (93)
+		P:  110 (6e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 31b0 / (12720) => 7c / (124)
+[OP END @ 12720]
+Done..

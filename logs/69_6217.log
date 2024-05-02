@@ -1,0 +1,19 @@
+[TEST 6217 - 69.json]
+	MEM WRITE: fef / (4079) => 69 / (105)
+	MEM WRITE: ff0 / (4080) => e5 / (229)
+	MEM WRITE: ff1 / (4081) => 1f / (31)
+	MEM READ: fef / (4079) => 69 / (105)
+[OP START 4079 -> 0x69 -> adc]
+	REGS:
+		PC: 4079 (fef)
+		SP: 52 (34)
+		A:  51 (33)
+		X:  186 (ba)
+		Y:  98 (62)
+		P:  38 (26)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ff0 / (4080) => e5 / (229)
+[OP END @ 4080]
+Done..

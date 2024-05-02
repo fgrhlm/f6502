@@ -1,0 +1,19 @@
+[TEST 8335 - 69.json]
+	MEM WRITE: e925 / (59685) => 69 / (105)
+	MEM WRITE: e926 / (59686) => 1b / (27)
+	MEM WRITE: e927 / (59687) => 15 / (21)
+	MEM READ: e925 / (59685) => 69 / (105)
+[OP START 59685 -> 0x69 -> adc]
+	REGS:
+		PC: 59685 (e925)
+		SP: 130 (82)
+		A:  99 (63)
+		X:  29 (1d)
+		Y:  63 (3f)
+		P:  40 (28)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e926 / (59686) => 1b / (27)
+[OP END @ 59686]
+Done..

@@ -1,0 +1,19 @@
+[TEST 8523 - 69.json]
+	MEM WRITE: 102b / (4139) => 69 / (105)
+	MEM WRITE: 102c / (4140) => 98 / (152)
+	MEM WRITE: 102d / (4141) => 30 / (48)
+	MEM READ: 102b / (4139) => 69 / (105)
+[OP START 4139 -> 0x69 -> adc]
+	REGS:
+		PC: 4139 (102b)
+		SP: 135 (87)
+		A:  110 (6e)
+		X:  51 (33)
+		Y:  234 (ea)
+		P:  172 (ac)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 102c / (4140) => 98 / (152)
+[OP END @ 4140]
+Done..

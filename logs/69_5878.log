@@ -1,0 +1,19 @@
+[TEST 5878 - 69.json]
+	MEM WRITE: 76e8 / (30440) => 69 / (105)
+	MEM WRITE: 76e9 / (30441) => 45 / (69)
+	MEM WRITE: 76ea / (30442) => ae / (174)
+	MEM READ: 76e8 / (30440) => 69 / (105)
+[OP START 30440 -> 0x69 -> adc]
+	REGS:
+		PC: 30440 (76e8)
+		SP: 88 (58)
+		A:  118 (76)
+		X:  251 (fb)
+		Y:  251 (fb)
+		P:  230 (e6)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 76e9 / (30441) => 45 / (69)
+[OP END @ 30441]
+Done..

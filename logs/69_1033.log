@@ -1,0 +1,19 @@
+[TEST 1033 - 69.json]
+	MEM WRITE: 55d4 / (21972) => 69 / (105)
+	MEM WRITE: 55d5 / (21973) => 83 / (131)
+	MEM WRITE: 55d6 / (21974) => 9f / (159)
+	MEM READ: 55d4 / (21972) => 69 / (105)
+[OP START 21972 -> 0x69 -> adc]
+	REGS:
+		PC: 21972 (55d4)
+		SP: 56 (38)
+		A:  41 (29)
+		X:  209 (d1)
+		Y:  103 (67)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 55d5 / (21973) => 83 / (131)
+[OP END @ 21973]
+Done..

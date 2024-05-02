@@ -1,0 +1,19 @@
+[TEST 6035 - 69.json]
+	MEM WRITE: 5039 / (20537) => 69 / (105)
+	MEM WRITE: 503a / (20538) => d7 / (215)
+	MEM WRITE: 503b / (20539) => 63 / (99)
+	MEM READ: 5039 / (20537) => 69 / (105)
+[OP START 20537 -> 0x69 -> adc]
+	REGS:
+		PC: 20537 (5039)
+		SP: 49 (31)
+		A:  127 (7f)
+		X:  199 (c7)
+		Y:  228 (e4)
+		P:  33 (21)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 503a / (20538) => d7 / (215)
+[OP END @ 20538]
+Done..

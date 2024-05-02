@@ -1,0 +1,19 @@
+[TEST 790 - 69.json]
+	MEM WRITE: f1b7 / (61879) => 69 / (105)
+	MEM WRITE: f1b8 / (61880) => 69 / (105)
+	MEM WRITE: f1b9 / (61881) => f7 / (247)
+	MEM READ: f1b7 / (61879) => 69 / (105)
+[OP START 61879 -> 0x69 -> adc]
+	REGS:
+		PC: 61879 (f1b7)
+		SP: 190 (be)
+		A:  152 (98)
+		X:  234 (ea)
+		Y:  35 (23)
+		P:  170 (aa)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f1b8 / (61880) => 69 / (105)
+[OP END @ 61880]
+Done..

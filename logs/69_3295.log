@@ -1,0 +1,19 @@
+[TEST 3295 - 69.json]
+	MEM WRITE: 2d4a / (11594) => 69 / (105)
+	MEM WRITE: 2d4b / (11595) => 5a / (90)
+	MEM WRITE: 2d4c / (11596) => 49 / (73)
+	MEM READ: 2d4a / (11594) => 69 / (105)
+[OP START 11594 -> 0x69 -> adc]
+	REGS:
+		PC: 11594 (2d4a)
+		SP: 85 (55)
+		A:  186 (ba)
+		X:  202 (ca)
+		Y:  47 (2f)
+		P:  170 (aa)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2d4b / (11595) => 5a / (90)
+[OP END @ 11595]
+Done..

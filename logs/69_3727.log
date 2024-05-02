@@ -1,0 +1,19 @@
+[TEST 3727 - 69.json]
+	MEM WRITE: f1ba / (61882) => 69 / (105)
+	MEM WRITE: f1bb / (61883) => 4c / (76)
+	MEM WRITE: f1bc / (61884) => ca / (202)
+	MEM READ: f1ba / (61882) => 69 / (105)
+[OP START 61882 -> 0x69 -> adc]
+	REGS:
+		PC: 61882 (f1ba)
+		SP: 76 (4c)
+		A:  99 (63)
+		X:  198 (c6)
+		Y:  3 (3)
+		P:  234 (ea)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f1bb / (61883) => 4c / (76)
+[OP END @ 61883]
+Done..

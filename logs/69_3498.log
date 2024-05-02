@@ -1,0 +1,19 @@
+[TEST 3498 - 69.json]
+	MEM WRITE: be40 / (48704) => 69 / (105)
+	MEM WRITE: be41 / (48705) => 74 / (116)
+	MEM WRITE: be42 / (48706) => 88 / (136)
+	MEM READ: be40 / (48704) => 69 / (105)
+[OP START 48704 -> 0x69 -> adc]
+	REGS:
+		PC: 48704 (be40)
+		SP: 225 (e1)
+		A:  132 (84)
+		X:  173 (ad)
+		Y:  128 (80)
+		P:  34 (22)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: be41 / (48705) => 74 / (116)
+[OP END @ 48705]
+Done..

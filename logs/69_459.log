@@ -15,8 +15,5 @@
 		|0|0|0|1|0|1|0|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 4648 / (17992) => 2 / (2)
-	BCD START -> ea + 2
-	BCD CONVERT -> 50 + 2
-	BCD SUM -> 52
 [OP END @ 17992]
 Done..

@@ -1,0 +1,19 @@
+[TEST 3546 - 69.json]
+	MEM WRITE: bd5c / (48476) => 69 / (105)
+	MEM WRITE: bd5d / (48477) => ca / (202)
+	MEM WRITE: bd5e / (48478) => 1 / (1)
+	MEM READ: bd5c / (48476) => 69 / (105)
+[OP START 48476 -> 0x69 -> adc]
+	REGS:
+		PC: 48476 (bd5c)
+		SP: 86 (56)
+		A:  113 (71)
+		X:  91 (5b)
+		Y:  10 (a)
+		P:  228 (e4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bd5d / (48477) => ca / (202)
+[OP END @ 48477]
+Done..

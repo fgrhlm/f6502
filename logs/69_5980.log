@@ -1,0 +1,19 @@
+[TEST 5980 - 69.json]
+	MEM WRITE: 48e6 / (18662) => 69 / (105)
+	MEM WRITE: 48e7 / (18663) => 59 / (89)
+	MEM WRITE: 48e8 / (18664) => c6 / (198)
+	MEM READ: 48e6 / (18662) => 69 / (105)
+[OP START 18662 -> 0x69 -> adc]
+	REGS:
+		PC: 18662 (48e6)
+		SP: 239 (ef)
+		A:  124 (7c)
+		X:  55 (37)
+		Y:  184 (b8)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 48e7 / (18663) => 59 / (89)
+[OP END @ 18663]
+Done..

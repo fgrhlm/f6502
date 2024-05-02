@@ -1,0 +1,19 @@
+[TEST 732 - 69.json]
+	MEM WRITE: e11 / (3601) => 69 / (105)
+	MEM WRITE: e12 / (3602) => 44 / (68)
+	MEM WRITE: e13 / (3603) => ae / (174)
+	MEM READ: e11 / (3601) => 69 / (105)
+[OP START 3601 -> 0x69 -> adc]
+	REGS:
+		PC: 3601 (e11)
+		SP: 221 (dd)
+		A:  107 (6b)
+		X:  175 (af)
+		Y:  17 (11)
+		P:  227 (e3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e12 / (3602) => 44 / (68)
+[OP END @ 3602]
+Done..

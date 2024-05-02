@@ -1,0 +1,19 @@
+[TEST 3307 - 69.json]
+	MEM WRITE: d4ad / (54445) => 69 / (105)
+	MEM WRITE: d4ae / (54446) => 76 / (118)
+	MEM WRITE: d4af / (54447) => 66 / (102)
+	MEM READ: d4ad / (54445) => 69 / (105)
+[OP START 54445 -> 0x69 -> adc]
+	REGS:
+		PC: 54445 (d4ad)
+		SP: 151 (97)
+		A:  89 (59)
+		X:  48 (30)
+		Y:  119 (77)
+		P:  168 (a8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d4ae / (54446) => 76 / (118)
+[OP END @ 54446]
+Done..

@@ -1,0 +1,19 @@
+[TEST 8217 - 69.json]
+	MEM WRITE: cd4d / (52557) => 69 / (105)
+	MEM WRITE: cd4e / (52558) => 13 / (19)
+	MEM WRITE: cd4f / (52559) => 1d / (29)
+	MEM READ: cd4d / (52557) => 69 / (105)
+[OP START 52557 -> 0x69 -> adc]
+	REGS:
+		PC: 52557 (cd4d)
+		SP: 31 (1f)
+		A:  250 (fa)
+		X:  73 (49)
+		Y:  241 (f1)
+		P:  103 (67)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cd4e / (52558) => 13 / (19)
+[OP END @ 52558]
+Done..

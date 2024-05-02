@@ -1,0 +1,19 @@
+[TEST 779 - 69.json]
+	MEM WRITE: e8cb / (59595) => 69 / (105)
+	MEM WRITE: e8cc / (59596) => d4 / (212)
+	MEM WRITE: e8cd / (59597) => a5 / (165)
+	MEM READ: e8cb / (59595) => 69 / (105)
+[OP START 59595 -> 0x69 -> adc]
+	REGS:
+		PC: 59595 (e8cb)
+		SP: 60 (3c)
+		A:  7 (7)
+		X:  172 (ac)
+		Y:  36 (24)
+		P:  232 (e8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e8cc / (59596) => d4 / (212)
+[OP END @ 59596]
+Done..

@@ -1,0 +1,19 @@
+[TEST 6186 - 69.json]
+	MEM WRITE: 94d / (2381) => 69 / (105)
+	MEM WRITE: 94e / (2382) => 5f / (95)
+	MEM WRITE: 94f / (2383) => bb / (187)
+	MEM READ: 94d / (2381) => 69 / (105)
+[OP START 2381 -> 0x69 -> adc]
+	REGS:
+		PC: 2381 (94d)
+		SP: 206 (ce)
+		A:  105 (69)
+		X:  234 (ea)
+		Y:  208 (d0)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 94e / (2382) => 5f / (95)
+[OP END @ 2382]
+Done..

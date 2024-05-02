@@ -8,10 +8,23 @@ from threading import Thread, Lock
 from shutil import copyfile
 from numpy import array_split
 from utils import ops, TestResult, color 
-from time import sleep, time
+from time import sleep, time, perf_counter, process_time
+
+from cProfile import Profile
+from pstats import SortKey, Stats
 
 emu_path = "./build/sfotemu"
 tests_dir = "tests/ProcessorTests/6502/v1"
+
+def print_perf(t1, t2, f):
+    print("--------")
+    print(f"measurement: {f}")
+    print(f"real: {t2[0] - t1[0]:.2f}s")
+    print(f"cpu: {t2[1] - t1[1]:.2f}s")
+    print("--------")
+
+def m_perf():
+    return perf_counter(), process_time()
 
 def parse_args():
     if len(sys.argv) == 1:
@@ -24,7 +37,8 @@ def parse_args():
         "index": 0,
         "verbose": False,
         "undocumented": False,
-        "limit": 0
+        "limit": 0,
+        "group": None
     }
 
     # Test args
@@ -34,6 +48,7 @@ def parse_args():
     ARG_FULL = "--full"
     ARG_EVAL = "--eval"
     ARG_LIMIT = "--limit"
+    ARG_GROUP = "--group"
 
     def arg_value(a, i):
         return sys.argv[sys.argv.index(a) + i]
@@ -59,6 +74,10 @@ def parse_args():
     if ARG_LIMIT in sys.argv:
         test_prefs["limit"] = int(arg_value(ARG_LIMIT, 1))
     
+    if ARG_GROUP in sys.argv:
+        test_prefs["mode"] = 1
+        test_prefs["group"] = arg_value(ARG_GROUP, 1)
+    
     return test_prefs
 
 def make_result(status, test_index, test_filename, expected, produced, log):
@@ -70,6 +89,30 @@ def make_result(status, test_index, test_filename, expected, produced, log):
         "produced": produced,
         "log": log
     }
+
+def make_cmd_args(emup, testp, testi, init, final):
+    # Prepare args for emu
+    args = []
+    args.append(init["pc"])
+    args.append(final["pc"])
+    args.append(init["s"])
+    args.append(init["a"])
+    args.append(init["x"])
+    args.append(init["y"])
+    args.append(init["p"])
+
+    args.append(len(init["ram"]))
+    for n in init["ram"]:
+        args.append(n[0])
+        args.append(n[1])
+
+    args = [str(n) for n in args]
+    args.append(testp);
+    args.append(str(testi));
+    
+    args = [emup] + args
+
+    return args
 
 def run_t(n_test, test_data, prefs):
     test = test_data[n_test]["test"]
@@ -89,29 +132,7 @@ def run_t(n_test, test_data, prefs):
 
     init = test["initial"]
     final = test["final"]
-   
-    # Prepare args for emu
-    args = []
-    args.append(init["pc"])
-    args.append(final["pc"])
-    args.append(init["s"])
-    args.append(init["a"])
-    args.append(init["x"])
-    args.append(init["y"])
-    args.append(init["p"])
-
-    args.append(len(init["ram"]))
-    for n in init["ram"]:
-        args.append(n[0])
-        args.append(n[1])
-
-    args = [str(n) for n in args]
-    args.append(prefs["file"]);
-    args.append(str(n_test));
-    
-    args = [emu_path] + args
-
-    #print(" ".join(args))
+    args = make_cmd_args(emu_path, prefs["file"], test_index, init, final) 
    
     log_root = "logs/"
     if not os.path.exists(log_root):
@@ -119,7 +140,6 @@ def run_t(n_test, test_data, prefs):
     
     dump_fn = f"{log_root}{prefs['file']}_{test_index}.dump"
     log_fn = f"{log_root}{prefs['file']}_{test_index}.log"
-    
     # Run test
     try:
         result = run(
@@ -173,6 +193,12 @@ def run_t(n_test, test_data, prefs):
         print("")
 
         for n in ["s", "a", "x", "y", "p"]: print_result(n)
+       
+        print("")
+        print(f"{final['p']:08b}")
+        print(f"{res['p']:08b}")
+        print("NVXBDIZC")
+
         print("")
         for i,n in enumerate(final["ram"]):
             loc = n[0]
@@ -193,7 +219,7 @@ def run_t(n_test, test_data, prefs):
     test_status = TestResult.FAIL if sum(conditions.values()) != len(conditions.values()) else TestResult.PASS
     test_results = make_result(
         test_status,
-        n_test,
+        test_index,
         prefs["file"],
         final,
         res,
@@ -221,7 +247,9 @@ class Progress():
         self.count = [0 for n in range(nproc)]
         self.last_count = [0 for n in range(nproc)]
         self.best = [0 for n in range(nproc)]
+        self.results = []
 
+    def push_result(self, n): self.results.append(n)
     def time_start(self):
         if self.start == None:
             self.start = time()
@@ -264,18 +292,26 @@ class Progress():
             for i,n in enumerate(local_performance): self.set_best(i, n)
 
             os.system("clear")
+            result_pass = len([n for n in self.results if n["status"] == TestResult.PASS])
+            result_fail = len([n for n in self.results if n["status"] == TestResult.FAIL])
+
             print(color("bold", f"Time Elapsed:  {round(t_time, 2)}s"))
             print(color("bold", f"Current perf:  {global_performance}/s"))
             print(color("bold", f"Best perf:     {self.get_best()}/s"))
             print(color("bold", f"Total:         {total} / {self.icount_total}"))
+            print(color("bold", f"Results:       PASS: [{result_pass}] FAIL: [{result_fail}]"))
 
             colors = ["y", "b", "m", "c"]
             for i,n in enumerate(self.count):
                 color_i = (i+1) % len(colors)
-                print(color(colors[color_i], f"(best: {self.get_ibest(i)}/s )[T{i}]:          {n} / {self.icount[i]}"))
+                print(color(colors[color_i], f"[T{i}]:          {n} / {self.icount[i]}"))
 
             for i,n in enumerate(self.count):
                 self.set_last_total(i,n)
+
+            print(f"\n{color('bold', 'LOG:')}\n")
+            for n in [n for n in self.results if n["status"] == TestResult.FAIL][-10:]:
+                print(f"[OP: {n['opcode']} #{n['test_index']} -> {n['status']}]")
 
 
         print("Done!")
@@ -283,9 +319,11 @@ class Progress():
 def thread_test(data, prefs, progn, prog):
     for i in range(len(data)):
         res = run_t(i, data, prefs)
+            
         if prog:
             prog.inc(progn)
-
+            prog.push_result(res)
+        
 if __name__=="__main__":
     prefs = parse_args()
 
@@ -298,18 +336,25 @@ if __name__=="__main__":
             res = run_t(prefs["index"], test_data, prefs)
             exit()
         case 1:
-            n_threads = 1
-            test_data = open_test(prefs["file"])
-            test_data = array_split(test_data, n_threads)
-            progress = Progress(n_threads, [len(n) for n in test_data])
-            threads = [Thread(target=thread_test, args=(test_data[n], prefs, n, progress)) for n in range(n_threads)]
-            prog_t = Thread(target=progress.show)
+            if prefs["group"]: 
+                test_files = [n.split('.')[0] for n in listdir(tests_dir)]
+                test_files = [n for n in test_files if ops[n]["name"] == prefs["group"]]
+            else:
+                test_files = [prefs["file"]]
 
-            progress.time_start()
-            for n in threads: n.start()
-            prog_t.start()
-            prog_t.join()
-            for n in threads: n.join()
+            for n in test_files: 
+                n_threads = 4
+                test_data = open_test(n)
+                test_data = array_split(test_data, n_threads)
+                progress = Progress(n_threads, [len(n) for n in test_data])
+                threads = [Thread(target=thread_test, args=(test_data[n], prefs, n, progress)) for n in range(n_threads)]
+                prog_t = Thread(target=progress.show)
+
+                progress.time_start()
+                for n in threads: n.start()
+                prog_t.start()
+                prog_t.join()
+                for n in threads: n.join()
             
             exit()
 

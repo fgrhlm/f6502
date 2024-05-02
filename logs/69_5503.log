@@ -1,4 +1,4 @@
-[TEST 503 - 69.json]
+[TEST 5503 - 69.json]
 	MEM WRITE: ad3c / (44348) => 69 / (105)
 	MEM WRITE: ad3d / (44349) => ab / (171)
 	MEM WRITE: ad3e / (44350) => a / (10)
@@ -15,8 +15,5 @@
 		|0|0|0|1|0|1|1|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: ad3d / (44349) => ab / (171)
-	BCD START -> bf + ab
-	BCD CONVERT -> 25 + 11
-	BCD SUM -> 36
 [OP END @ 44349]
 Done..

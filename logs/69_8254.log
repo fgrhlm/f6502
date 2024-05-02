@@ -1,0 +1,19 @@
+[TEST 8254 - 69.json]
+	MEM WRITE: 8e1d / (36381) => 69 / (105)
+	MEM WRITE: 8e1e / (36382) => 8f / (143)
+	MEM WRITE: 8e1f / (36383) => 74 / (116)
+	MEM READ: 8e1d / (36381) => 69 / (105)
+[OP START 36381 -> 0x69 -> adc]
+	REGS:
+		PC: 36381 (8e1d)
+		SP: 42 (2a)
+		A:  180 (b4)
+		X:  78 (4e)
+		Y:  43 (2b)
+		P:  234 (ea)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8e1e / (36382) => 8f / (143)
+[OP END @ 36382]
+Done..

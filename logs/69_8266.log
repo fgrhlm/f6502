@@ -1,0 +1,19 @@
+[TEST 8266 - 69.json]
+	MEM WRITE: 5ab5 / (23221) => 69 / (105)
+	MEM WRITE: 5ab6 / (23222) => df / (223)
+	MEM WRITE: 5ab7 / (23223) => e2 / (226)
+	MEM READ: 5ab5 / (23221) => 69 / (105)
+[OP START 23221 -> 0x69 -> adc]
+	REGS:
+		PC: 23221 (5ab5)
+		SP: 201 (c9)
+		A:  198 (c6)
+		X:  124 (7c)
+		Y:  96 (60)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5ab6 / (23222) => df / (223)
+[OP END @ 23222]
+Done..

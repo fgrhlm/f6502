@@ -1,0 +1,19 @@
+[TEST 8522 - 69.json]
+	MEM WRITE: 3b30 / (15152) => 69 / (105)
+	MEM WRITE: 3b31 / (15153) => 39 / (57)
+	MEM WRITE: 3b32 / (15154) => 67 / (103)
+	MEM READ: 3b30 / (15152) => 69 / (105)
+[OP START 15152 -> 0x69 -> adc]
+	REGS:
+		PC: 15152 (3b30)
+		SP: 250 (fa)
+		A:  36 (24)
+		X:  128 (80)
+		Y:  127 (7f)
+		P:  237 (ed)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3b31 / (15153) => 39 / (57)
+[OP END @ 15153]
+Done..

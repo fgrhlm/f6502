@@ -15,5 +15,5 @@
 		|1|1|0|0|0|1|0|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: ca56 / (51798) => db / (219)
-	BINADC: f0 + db = cc[OP END @ 51798]
+[OP END @ 51798]
 Done..

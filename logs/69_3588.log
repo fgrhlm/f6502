@@ -1,0 +1,19 @@
+[TEST 3588 - 69.json]
+	MEM WRITE: fcd5 / (64725) => 69 / (105)
+	MEM WRITE: fcd6 / (64726) => eb / (235)
+	MEM WRITE: fcd7 / (64727) => bb / (187)
+	MEM READ: fcd5 / (64725) => 69 / (105)
+[OP START 64725 -> 0x69 -> adc]
+	REGS:
+		PC: 64725 (fcd5)
+		SP: 94 (5e)
+		A:  194 (c2)
+		X:  69 (45)
+		Y:  165 (a5)
+		P:  44 (2c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fcd6 / (64726) => eb / (235)
+[OP END @ 64726]
+Done..

@@ -1,0 +1,19 @@
+[TEST 3633 - 69.json]
+	MEM WRITE: dd81 / (56705) => 69 / (105)
+	MEM WRITE: dd82 / (56706) => 27 / (39)
+	MEM WRITE: dd83 / (56707) => 16 / (22)
+	MEM READ: dd81 / (56705) => 69 / (105)
+[OP START 56705 -> 0x69 -> adc]
+	REGS:
+		PC: 56705 (dd81)
+		SP: 240 (f0)
+		A:  246 (f6)
+		X:  190 (be)
+		Y:  244 (f4)
+		P:  97 (61)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: dd82 / (56706) => 27 / (39)
+[OP END @ 56706]
+Done..

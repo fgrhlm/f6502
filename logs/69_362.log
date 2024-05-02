@@ -15,5 +15,5 @@
 		|1|1|0|0|0|1|0|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 543 / (1347) => 35 / (53)
-	BINADC: c8 + 35 = fe[OP END @ 1347]
+[OP END @ 1347]
 Done..

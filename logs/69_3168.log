@@ -1,0 +1,19 @@
+[TEST 3168 - 69.json]
+	MEM WRITE: dfd / (3581) => 69 / (105)
+	MEM WRITE: dfe / (3582) => 66 / (102)
+	MEM WRITE: dff / (3583) => 39 / (57)
+	MEM READ: dfd / (3581) => 69 / (105)
+[OP START 3581 -> 0x69 -> adc]
+	REGS:
+		PC: 3581 (dfd)
+		SP: 248 (f8)
+		A:  223 (df)
+		X:  172 (ac)
+		Y:  252 (fc)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: dfe / (3582) => 66 / (102)
+[OP END @ 3582]
+Done..

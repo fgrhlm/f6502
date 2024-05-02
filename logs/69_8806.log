@@ -1,4 +1,4 @@
-[TEST 56 - 69.json]
+[TEST 8806 - 69.json]
 	MEM WRITE: 3ce8 / (15592) => 69 / (105)
 	MEM WRITE: 3ce9 / (15593) => 88 / (136)
 	MEM WRITE: 3cea / (15594) => 9 / (9)
@@ -15,5 +15,5 @@
 		|1|0|0|0|0|1|1|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 3ce9 / (15593) => 88 / (136)
-	BINADC: 8 + 88 = 91[OP END @ 15593]
+[OP END @ 15593]
 Done..

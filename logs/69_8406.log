@@ -1,0 +1,19 @@
+[TEST 8406 - 69.json]
+	MEM WRITE: f33b / (62267) => 69 / (105)
+	MEM WRITE: f33c / (62268) => ff / (255)
+	MEM WRITE: f33d / (62269) => b / (11)
+	MEM READ: f33b / (62267) => 69 / (105)
+[OP START 62267 -> 0x69 -> adc]
+	REGS:
+		PC: 62267 (f33b)
+		SP: 117 (75)
+		A:  209 (d1)
+		X:  222 (de)
+		Y:  24 (18)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f33c / (62268) => ff / (255)
+[OP END @ 62268]
+Done..

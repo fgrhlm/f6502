@@ -1,0 +1,19 @@
+[TEST 885 - 69.json]
+	MEM WRITE: 356f / (13679) => 69 / (105)
+	MEM WRITE: 3570 / (13680) => fc / (252)
+	MEM WRITE: 3571 / (13681) => d8 / (216)
+	MEM READ: 356f / (13679) => 69 / (105)
+[OP START 13679 -> 0x69 -> adc]
+	REGS:
+		PC: 13679 (356f)
+		SP: 122 (7a)
+		A:  145 (91)
+		X:  172 (ac)
+		Y:  94 (5e)
+		P:  36 (24)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3570 / (13680) => fc / (252)
+[OP END @ 13680]
+Done..

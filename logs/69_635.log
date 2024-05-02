@@ -1,0 +1,19 @@
+[TEST 635 - 69.json]
+	MEM WRITE: bf5a / (48986) => 69 / (105)
+	MEM WRITE: bf5b / (48987) => 11 / (17)
+	MEM WRITE: bf5c / (48988) => 81 / (129)
+	MEM READ: bf5a / (48986) => 69 / (105)
+[OP START 48986 -> 0x69 -> adc]
+	REGS:
+		PC: 48986 (bf5a)
+		SP: 217 (d9)
+		A:  84 (54)
+		X:  2 (2)
+		Y:  129 (81)
+		P:  231 (e7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bf5b / (48987) => 11 / (17)
+[OP END @ 48987]
+Done..

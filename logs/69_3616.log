@@ -1,0 +1,19 @@
+[TEST 3616 - 69.json]
+	MEM WRITE: 4d7d / (19837) => 69 / (105)
+	MEM WRITE: 4d7e / (19838) => e2 / (226)
+	MEM WRITE: 4d7f / (19839) => 80 / (128)
+	MEM READ: 4d7d / (19837) => 69 / (105)
+[OP START 19837 -> 0x69 -> adc]
+	REGS:
+		PC: 19837 (4d7d)
+		SP: 123 (7b)
+		A:  125 (7d)
+		X:  178 (b2)
+		Y:  81 (51)
+		P:  234 (ea)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4d7e / (19838) => e2 / (226)
+[OP END @ 19838]
+Done..

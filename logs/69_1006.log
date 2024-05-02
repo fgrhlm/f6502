@@ -1,0 +1,19 @@
+[TEST 1006 - 69.json]
+	MEM WRITE: ac7c / (44156) => 69 / (105)
+	MEM WRITE: ac7d / (44157) => 1 / (1)
+	MEM WRITE: ac7e / (44158) => 6 / (6)
+	MEM READ: ac7c / (44156) => 69 / (105)
+[OP START 44156 -> 0x69 -> adc]
+	REGS:
+		PC: 44156 (ac7c)
+		SP: 212 (d4)
+		A:  81 (51)
+		X:  49 (31)
+		Y:  82 (52)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ac7d / (44157) => 1 / (1)
+[OP END @ 44157]
+Done..

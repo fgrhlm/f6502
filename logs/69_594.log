@@ -15,8 +15,5 @@
 		|0|0|1|1|0|1|1|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: cd86 / (52614) => 5c / (92)
-	BCD START -> e + 5c
-	BCD CONVERT -> 14 + 62
-	BCD SUM -> 76
 [OP END @ 52614]
 Done..

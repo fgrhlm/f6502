@@ -1,0 +1,19 @@
+[TEST 3365 - 69.json]
+	MEM WRITE: 441a / (17434) => 69 / (105)
+	MEM WRITE: 441b / (17435) => 5b / (91)
+	MEM WRITE: 441c / (17436) => b8 / (184)
+	MEM READ: 441a / (17434) => 69 / (105)
+[OP START 17434 -> 0x69 -> adc]
+	REGS:
+		PC: 17434 (441a)
+		SP: 119 (77)
+		A:  100 (64)
+		X:  208 (d0)
+		Y:  0 (0)
+		P:  160 (a0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 441b / (17435) => 5b / (91)
+[OP END @ 17435]
+Done..

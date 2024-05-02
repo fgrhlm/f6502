@@ -1,0 +1,19 @@
+[TEST 796 - 69.json]
+	MEM WRITE: 29c8 / (10696) => 69 / (105)
+	MEM WRITE: 29c9 / (10697) => 32 / (50)
+	MEM WRITE: 29ca / (10698) => 95 / (149)
+	MEM READ: 29c8 / (10696) => 69 / (105)
+[OP START 10696 -> 0x69 -> adc]
+	REGS:
+		PC: 10696 (29c8)
+		SP: 43 (2b)
+		A:  235 (eb)
+		X:  146 (92)
+		Y:  176 (b0)
+		P:  167 (a7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 29c9 / (10697) => 32 / (50)
+[OP END @ 10697]
+Done..

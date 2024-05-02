@@ -1,0 +1,19 @@
+[TEST 8862 - 69.json]
+	MEM WRITE: 2779 / (10105) => 69 / (105)
+	MEM WRITE: 277a / (10106) => 5b / (91)
+	MEM WRITE: 277b / (10107) => 37 / (55)
+	MEM READ: 2779 / (10105) => 69 / (105)
+[OP START 10105 -> 0x69 -> adc]
+	REGS:
+		PC: 10105 (2779)
+		SP: 166 (a6)
+		A:  228 (e4)
+		X:  123 (7b)
+		Y:  125 (7d)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 277a / (10106) => 5b / (91)
+[OP END @ 10106]
+Done..

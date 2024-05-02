@@ -1,0 +1,19 @@
+[TEST 1088 - 69.json]
+	MEM WRITE: 369a / (13978) => 69 / (105)
+	MEM WRITE: 369b / (13979) => 39 / (57)
+	MEM WRITE: 369c / (13980) => 39 / (57)
+	MEM READ: 369a / (13978) => 69 / (105)
+[OP START 13978 -> 0x69 -> adc]
+	REGS:
+		PC: 13978 (369a)
+		SP: 195 (c3)
+		A:  226 (e2)
+		X:  44 (2c)
+		Y:  107 (6b)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 369b / (13979) => 39 / (57)
+[OP END @ 13979]
+Done..

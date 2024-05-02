@@ -1,0 +1,19 @@
+[TEST 8376 - 69.json]
+	MEM WRITE: de6b / (56939) => 69 / (105)
+	MEM WRITE: de6c / (56940) => 39 / (57)
+	MEM WRITE: de6d / (56941) => 3c / (60)
+	MEM READ: de6b / (56939) => 69 / (105)
+[OP START 56939 -> 0x69 -> adc]
+	REGS:
+		PC: 56939 (de6b)
+		SP: 33 (21)
+		A:  27 (1b)
+		X:  186 (ba)
+		Y:  239 (ef)
+		P:  102 (66)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: de6c / (56940) => 39 / (57)
+[OP END @ 56940]
+Done..

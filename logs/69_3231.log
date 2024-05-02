@@ -1,0 +1,19 @@
+[TEST 3231 - 69.json]
+	MEM WRITE: a08f / (41103) => 69 / (105)
+	MEM WRITE: a090 / (41104) => c8 / (200)
+	MEM WRITE: a091 / (41105) => 9a / (154)
+	MEM READ: a08f / (41103) => 69 / (105)
+[OP START 41103 -> 0x69 -> adc]
+	REGS:
+		PC: 41103 (a08f)
+		SP: 228 (e4)
+		A:  203 (cb)
+		X:  29 (1d)
+		Y:  64 (40)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a090 / (41104) => c8 / (200)
+[OP END @ 41104]
+Done..

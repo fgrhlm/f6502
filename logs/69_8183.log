@@ -1,0 +1,19 @@
+[TEST 8183 - 69.json]
+	MEM WRITE: 67b9 / (26553) => 69 / (105)
+	MEM WRITE: 67ba / (26554) => f4 / (244)
+	MEM WRITE: 67bb / (26555) => cb / (203)
+	MEM READ: 67b9 / (26553) => 69 / (105)
+[OP START 26553 -> 0x69 -> adc]
+	REGS:
+		PC: 26553 (67b9)
+		SP: 13 (d)
+		A:  96 (60)
+		X:  23 (17)
+		Y:  208 (d0)
+		P:  164 (a4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 67ba / (26554) => f4 / (244)
+[OP END @ 26554]
+Done..

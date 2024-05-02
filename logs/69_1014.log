@@ -1,0 +1,19 @@
+[TEST 1014 - 69.json]
+	MEM WRITE: cde / (3294) => 69 / (105)
+	MEM WRITE: cdf / (3295) => dd / (221)
+	MEM WRITE: ce0 / (3296) => c6 / (198)
+	MEM READ: cde / (3294) => 69 / (105)
+[OP START 3294 -> 0x69 -> adc]
+	REGS:
+		PC: 3294 (cde)
+		SP: 36 (24)
+		A:  36 (24)
+		X:  64 (40)
+		Y:  205 (cd)
+		P:  107 (6b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cdf / (3295) => dd / (221)
+[OP END @ 3295]
+Done..

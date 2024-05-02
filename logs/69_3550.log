@@ -1,0 +1,19 @@
+[TEST 3550 - 69.json]
+	MEM WRITE: f885 / (63621) => 69 / (105)
+	MEM WRITE: f886 / (63622) => 6e / (110)
+	MEM WRITE: f887 / (63623) => ef / (239)
+	MEM READ: f885 / (63621) => 69 / (105)
+[OP START 63621 -> 0x69 -> adc]
+	REGS:
+		PC: 63621 (f885)
+		SP: 154 (9a)
+		A:  155 (9b)
+		X:  11 (b)
+		Y:  106 (6a)
+		P:  161 (a1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f886 / (63622) => 6e / (110)
+[OP END @ 63622]
+Done..

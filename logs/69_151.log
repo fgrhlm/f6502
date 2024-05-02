@@ -15,5 +15,5 @@
 		|1|1|1|0|0|1|0|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: baad / (47789) => cd / (205)
-	BINADC: c6 + cd = 94[OP END @ 47789]
+[OP END @ 47789]
 Done..

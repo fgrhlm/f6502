@@ -1,0 +1,19 @@
+[TEST 3414 - 69.json]
+	MEM WRITE: bb8 / (3000) => 69 / (105)
+	MEM WRITE: bb9 / (3001) => 81 / (129)
+	MEM WRITE: bba / (3002) => 42 / (66)
+	MEM READ: bb8 / (3000) => 69 / (105)
+[OP START 3000 -> 0x69 -> adc]
+	REGS:
+		PC: 3000 (bb8)
+		SP: 157 (9d)
+		A:  227 (e3)
+		X:  143 (8f)
+		Y:  22 (16)
+		P:  169 (a9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bb9 / (3001) => 81 / (129)
+[OP END @ 3001]
+Done..

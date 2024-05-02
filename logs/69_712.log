@@ -1,0 +1,19 @@
+[TEST 712 - 69.json]
+	MEM WRITE: c0e7 / (49383) => 69 / (105)
+	MEM WRITE: c0e8 / (49384) => 8e / (142)
+	MEM WRITE: c0e9 / (49385) => ec / (236)
+	MEM READ: c0e7 / (49383) => 69 / (105)
+[OP START 49383 -> 0x69 -> adc]
+	REGS:
+		PC: 49383 (c0e7)
+		SP: 133 (85)
+		A:  166 (a6)
+		X:  253 (fd)
+		Y:  135 (87)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c0e8 / (49384) => 8e / (142)
+[OP END @ 49384]
+Done..

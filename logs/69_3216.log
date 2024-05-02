@@ -1,0 +1,19 @@
+[TEST 3216 - 69.json]
+	MEM WRITE: 5002 / (20482) => 69 / (105)
+	MEM WRITE: 5003 / (20483) => 8c / (140)
+	MEM WRITE: 5004 / (20484) => a8 / (168)
+	MEM READ: 5002 / (20482) => 69 / (105)
+[OP START 20482 -> 0x69 -> adc]
+	REGS:
+		PC: 20482 (5002)
+		SP: 207 (cf)
+		A:  222 (de)
+		X:  25 (19)
+		Y:  219 (db)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5003 / (20483) => 8c / (140)
+[OP END @ 20483]
+Done..

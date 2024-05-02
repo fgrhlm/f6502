@@ -1,0 +1,19 @@
+[TEST 1182 - 69.json]
+	MEM WRITE: 3e13 / (15891) => 69 / (105)
+	MEM WRITE: 3e14 / (15892) => 8f / (143)
+	MEM WRITE: 3e15 / (15893) => fa / (250)
+	MEM READ: 3e13 / (15891) => 69 / (105)
+[OP START 15891 -> 0x69 -> adc]
+	REGS:
+		PC: 15891 (3e13)
+		SP: 238 (ee)
+		A:  59 (3b)
+		X:  10 (a)
+		Y:  205 (cd)
+		P:  165 (a5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3e14 / (15892) => 8f / (143)
+[OP END @ 15892]
+Done..

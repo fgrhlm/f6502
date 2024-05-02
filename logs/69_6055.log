@@ -1,0 +1,19 @@
+[TEST 6055 - 69.json]
+	MEM WRITE: 6fda / (28634) => 69 / (105)
+	MEM WRITE: 6fdb / (28635) => b2 / (178)
+	MEM WRITE: 6fdc / (28636) => b / (11)
+	MEM READ: 6fda / (28634) => 69 / (105)
+[OP START 28634 -> 0x69 -> adc]
+	REGS:
+		PC: 28634 (6fda)
+		SP: 132 (84)
+		A:  204 (cc)
+		X:  135 (87)
+		Y:  95 (5f)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6fdb / (28635) => b2 / (178)
+[OP END @ 28635]
+Done..

@@ -1,0 +1,19 @@
+[TEST 985 - 69.json]
+	MEM WRITE: df99 / (57241) => 69 / (105)
+	MEM WRITE: df9a / (57242) => 24 / (36)
+	MEM WRITE: df9b / (57243) => 19 / (25)
+	MEM READ: df99 / (57241) => 69 / (105)
+[OP START 57241 -> 0x69 -> adc]
+	REGS:
+		PC: 57241 (df99)
+		SP: 19 (13)
+		A:  230 (e6)
+		X:  147 (93)
+		Y:  186 (ba)
+		P:  169 (a9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: df9a / (57242) => 24 / (36)
+[OP END @ 57242]
+Done..

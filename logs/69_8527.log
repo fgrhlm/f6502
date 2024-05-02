@@ -1,0 +1,19 @@
+[TEST 8527 - 69.json]
+	MEM WRITE: 1cbb / (7355) => 69 / (105)
+	MEM WRITE: 1cbc / (7356) => d0 / (208)
+	MEM WRITE: 1cbd / (7357) => d8 / (216)
+	MEM READ: 1cbb / (7355) => 69 / (105)
+[OP START 7355 -> 0x69 -> adc]
+	REGS:
+		PC: 7355 (1cbb)
+		SP: 21 (15)
+		A:  192 (c0)
+		X:  209 (d1)
+		Y:  122 (7a)
+		P:  165 (a5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1cbc / (7356) => d0 / (208)
+[OP END @ 7356]
+Done..

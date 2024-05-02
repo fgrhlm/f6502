@@ -1,0 +1,19 @@
+[TEST 837 - 69.json]
+	MEM WRITE: 78ce / (30926) => 69 / (105)
+	MEM WRITE: 78cf / (30927) => f4 / (244)
+	MEM WRITE: 78d0 / (30928) => 4b / (75)
+	MEM READ: 78ce / (30926) => 69 / (105)
+[OP START 30926 -> 0x69 -> adc]
+	REGS:
+		PC: 30926 (78ce)
+		SP: 62 (3e)
+		A:  158 (9e)
+		X:  34 (22)
+		Y:  213 (d5)
+		P:  173 (ad)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 78cf / (30927) => f4 / (244)
+[OP END @ 30927]
+Done..

@@ -1,0 +1,19 @@
+[TEST 953 - 69.json]
+	MEM WRITE: 36ae / (13998) => 69 / (105)
+	MEM WRITE: 36af / (13999) => e6 / (230)
+	MEM WRITE: 36b0 / (14000) => 1 / (1)
+	MEM READ: 36ae / (13998) => 69 / (105)
+[OP START 13998 -> 0x69 -> adc]
+	REGS:
+		PC: 13998 (36ae)
+		SP: 66 (42)
+		A:  241 (f1)
+		X:  149 (95)
+		Y:  68 (44)
+		P:  36 (24)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 36af / (13999) => e6 / (230)
+[OP END @ 13999]
+Done..

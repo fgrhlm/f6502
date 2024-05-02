@@ -15,8 +15,5 @@
 		|1|0|1|1|0|1|0|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: cdca / (52682) => 99 / (153)
-	BCD START -> 77 + 99
-	BCD CONVERT -> 77 + 99
-	BCD SUM -> 77
 [OP END @ 52682]
 Done..

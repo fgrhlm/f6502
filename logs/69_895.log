@@ -1,0 +1,19 @@
+[TEST 895 - 69.json]
+	MEM WRITE: 51d2 / (20946) => 69 / (105)
+	MEM WRITE: 51d3 / (20947) => d4 / (212)
+	MEM WRITE: 51d4 / (20948) => 7d / (125)
+	MEM READ: 51d2 / (20946) => 69 / (105)
+[OP START 20946 -> 0x69 -> adc]
+	REGS:
+		PC: 20946 (51d2)
+		SP: 115 (73)
+		A:  44 (2c)
+		X:  171 (ab)
+		Y:  223 (df)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 51d3 / (20947) => d4 / (212)
+[OP END @ 20947]
+Done..

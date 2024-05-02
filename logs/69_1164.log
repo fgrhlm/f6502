@@ -1,0 +1,19 @@
+[TEST 1164 - 69.json]
+	MEM WRITE: d3dd / (54237) => 69 / (105)
+	MEM WRITE: d3de / (54238) => b1 / (177)
+	MEM WRITE: d3df / (54239) => d7 / (215)
+	MEM READ: d3dd / (54237) => 69 / (105)
+[OP START 54237 -> 0x69 -> adc]
+	REGS:
+		PC: 54237 (d3dd)
+		SP: 95 (5f)
+		A:  19 (13)
+		X:  35 (23)
+		Y:  52 (34)
+		P:  162 (a2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d3de / (54238) => b1 / (177)
+[OP END @ 54238]
+Done..

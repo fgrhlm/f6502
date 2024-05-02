@@ -1,0 +1,19 @@
+[TEST 697 - 69.json]
+	MEM WRITE: 9c7b / (40059) => 69 / (105)
+	MEM WRITE: 9c7c / (40060) => 73 / (115)
+	MEM WRITE: 9c7d / (40061) => 14 / (20)
+	MEM READ: 9c7b / (40059) => 69 / (105)
+[OP START 40059 -> 0x69 -> adc]
+	REGS:
+		PC: 40059 (9c7b)
+		SP: 207 (cf)
+		A:  129 (81)
+		X:  95 (5f)
+		Y:  108 (6c)
+		P:  110 (6e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9c7c / (40060) => 73 / (115)
+[OP END @ 40060]
+Done..

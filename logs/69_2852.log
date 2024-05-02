@@ -1,4 +1,4 @@
-[TEST 352 - 69.json]
+[TEST 2852 - 69.json]
 	MEM WRITE: ff3c / (65340) => 69 / (105)
 	MEM WRITE: ff3d / (65341) => 8 / (8)
 	MEM WRITE: ff3e / (65342) => 81 / (129)
@@ -15,8 +15,5 @@
 		|0|1|1|1|0|1|1|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: ff3d / (65341) => 8 / (8)
-	BCD START -> 6a + 8
-	BCD CONVERT -> 70 + 8
-	BCD SUM -> 78
 [OP END @ 65341]
 Done..

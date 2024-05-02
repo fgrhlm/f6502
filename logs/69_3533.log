@@ -1,0 +1,19 @@
+[TEST 3533 - 69.json]
+	MEM WRITE: f770 / (63344) => 69 / (105)
+	MEM WRITE: f771 / (63345) => 3c / (60)
+	MEM WRITE: f772 / (63346) => 44 / (68)
+	MEM READ: f770 / (63344) => 69 / (105)
+[OP START 63344 -> 0x69 -> adc]
+	REGS:
+		PC: 63344 (f770)
+		SP: 179 (b3)
+		A:  114 (72)
+		X:  226 (e2)
+		Y:  145 (91)
+		P:  175 (af)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f771 / (63345) => 3c / (60)
+[OP END @ 63345]
+Done..

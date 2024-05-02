@@ -1,0 +1,19 @@
+[TEST 736 - 69.json]
+	MEM WRITE: 8fcf / (36815) => 69 / (105)
+	MEM WRITE: 8fd0 / (36816) => d / (13)
+	MEM WRITE: 8fd1 / (36817) => c1 / (193)
+	MEM READ: 8fcf / (36815) => 69 / (105)
+[OP START 36815 -> 0x69 -> adc]
+	REGS:
+		PC: 36815 (8fcf)
+		SP: 159 (9f)
+		A:  59 (3b)
+		X:  214 (d6)
+		Y:  132 (84)
+		P:  45 (2d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8fd0 / (36816) => d / (13)
+[OP END @ 36816]
+Done..

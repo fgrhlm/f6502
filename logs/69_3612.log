@@ -1,0 +1,19 @@
+[TEST 3612 - 69.json]
+	MEM WRITE: aa58 / (43608) => 69 / (105)
+	MEM WRITE: aa59 / (43609) => 45 / (69)
+	MEM WRITE: aa5a / (43610) => 64 / (100)
+	MEM READ: aa58 / (43608) => 69 / (105)
+[OP START 43608 -> 0x69 -> adc]
+	REGS:
+		PC: 43608 (aa58)
+		SP: 14 (e)
+		A:  150 (96)
+		X:  229 (e5)
+		Y:  159 (9f)
+		P:  164 (a4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: aa59 / (43609) => 45 / (69)
+[OP END @ 43609]
+Done..

@@ -1,0 +1,19 @@
+[TEST 5645 - 69.json]
+	MEM WRITE: 3a3 / (931) => 69 / (105)
+	MEM WRITE: 3a4 / (932) => 32 / (50)
+	MEM WRITE: 3a5 / (933) => 67 / (103)
+	MEM READ: 3a3 / (931) => 69 / (105)
+[OP START 931 -> 0x69 -> adc]
+	REGS:
+		PC: 931 (3a3)
+		SP: 115 (73)
+		A:  83 (53)
+		X:  1 (1)
+		Y:  240 (f0)
+		P:  231 (e7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3a4 / (932) => 32 / (50)
+[OP END @ 932]
+Done..

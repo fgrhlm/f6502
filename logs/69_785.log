@@ -1,0 +1,19 @@
+[TEST 785 - 69.json]
+	MEM WRITE: 17e4 / (6116) => 69 / (105)
+	MEM WRITE: 17e5 / (6117) => fc / (252)
+	MEM WRITE: 17e6 / (6118) => 9d / (157)
+	MEM READ: 17e4 / (6116) => 69 / (105)
+[OP START 6116 -> 0x69 -> adc]
+	REGS:
+		PC: 6116 (17e4)
+		SP: 11 (b)
+		A:  254 (fe)
+		X:  170 (aa)
+		Y:  123 (7b)
+		P:  105 (69)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 17e5 / (6117) => fc / (252)
+[OP END @ 6117]
+Done..

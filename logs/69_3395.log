@@ -1,0 +1,19 @@
+[TEST 3395 - 69.json]
+	MEM WRITE: de4f / (56911) => 69 / (105)
+	MEM WRITE: de50 / (56912) => d0 / (208)
+	MEM WRITE: de51 / (56913) => a0 / (160)
+	MEM READ: de4f / (56911) => 69 / (105)
+[OP START 56911 -> 0x69 -> adc]
+	REGS:
+		PC: 56911 (de4f)
+		SP: 44 (2c)
+		A:  20 (14)
+		X:  201 (c9)
+		Y:  47 (2f)
+		P:  174 (ae)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: de50 / (56912) => d0 / (208)
+[OP END @ 56912]
+Done..

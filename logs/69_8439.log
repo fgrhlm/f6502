@@ -1,0 +1,19 @@
+[TEST 8439 - 69.json]
+	MEM WRITE: 24db / (9435) => 69 / (105)
+	MEM WRITE: 24dc / (9436) => 74 / (116)
+	MEM WRITE: 24dd / (9437) => d8 / (216)
+	MEM READ: 24db / (9435) => 69 / (105)
+[OP START 9435 -> 0x69 -> adc]
+	REGS:
+		PC: 9435 (24db)
+		SP: 204 (cc)
+		A:  125 (7d)
+		X:  90 (5a)
+		Y:  1 (1)
+		P:  173 (ad)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 24dc / (9436) => 74 / (116)
+[OP END @ 9436]
+Done..

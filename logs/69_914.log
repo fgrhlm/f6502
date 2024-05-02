@@ -1,0 +1,19 @@
+[TEST 914 - 69.json]
+	MEM WRITE: 2eac / (11948) => 69 / (105)
+	MEM WRITE: 2ead / (11949) => fa / (250)
+	MEM WRITE: 2eae / (11950) => d7 / (215)
+	MEM READ: 2eac / (11948) => 69 / (105)
+[OP START 11948 -> 0x69 -> adc]
+	REGS:
+		PC: 11948 (2eac)
+		SP: 240 (f0)
+		A:  96 (60)
+		X:  118 (76)
+		Y:  66 (42)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2ead / (11949) => fa / (250)
+[OP END @ 11949]
+Done..

@@ -1,0 +1,19 @@
+[TEST 3729 - 69.json]
+	MEM WRITE: 9d95 / (40341) => 69 / (105)
+	MEM WRITE: 9d96 / (40342) => 6 / (6)
+	MEM WRITE: 9d97 / (40343) => f1 / (241)
+	MEM READ: 9d95 / (40341) => 69 / (105)
+[OP START 40341 -> 0x69 -> adc]
+	REGS:
+		PC: 40341 (9d95)
+		SP: 77 (4d)
+		A:  163 (a3)
+		X:  2 (2)
+		Y:  24 (18)
+		P:  234 (ea)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9d96 / (40342) => 6 / (6)
+[OP END @ 40342]
+Done..

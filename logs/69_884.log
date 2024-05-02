@@ -1,0 +1,19 @@
+[TEST 884 - 69.json]
+	MEM WRITE: 3cb / (971) => 69 / (105)
+	MEM WRITE: 3cc / (972) => 57 / (87)
+	MEM WRITE: 3cd / (973) => 5 / (5)
+	MEM READ: 3cb / (971) => 69 / (105)
+[OP START 971 -> 0x69 -> adc]
+	REGS:
+		PC: 971 (3cb)
+		SP: 231 (e7)
+		A:  169 (a9)
+		X:  194 (c2)
+		Y:  0 (0)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3cc / (972) => 57 / (87)
+[OP END @ 972]
+Done..

@@ -1,0 +1,19 @@
+[TEST 1031 - 69.json]
+	MEM WRITE: 18f0 / (6384) => 69 / (105)
+	MEM WRITE: 18f1 / (6385) => 3a / (58)
+	MEM WRITE: 18f2 / (6386) => c7 / (199)
+	MEM READ: 18f0 / (6384) => 69 / (105)
+[OP START 6384 -> 0x69 -> adc]
+	REGS:
+		PC: 6384 (18f0)
+		SP: 164 (a4)
+		A:  46 (2e)
+		X:  120 (78)
+		Y:  76 (4c)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 18f1 / (6385) => 3a / (58)
+[OP END @ 6385]
+Done..

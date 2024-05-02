@@ -1,0 +1,19 @@
+[TEST 5805 - 69.json]
+	MEM WRITE: a8d / (2701) => 69 / (105)
+	MEM WRITE: a8e / (2702) => 11 / (17)
+	MEM WRITE: a8f / (2703) => 2b / (43)
+	MEM READ: a8d / (2701) => 69 / (105)
+[OP START 2701 -> 0x69 -> adc]
+	REGS:
+		PC: 2701 (a8d)
+		SP: 116 (74)
+		A:  152 (98)
+		X:  9 (9)
+		Y:  89 (59)
+		P:  97 (61)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a8e / (2702) => 11 / (17)
+[OP END @ 2702]
+Done..

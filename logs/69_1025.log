@@ -1,0 +1,19 @@
+[TEST 1025 - 69.json]
+	MEM WRITE: 98d1 / (39121) => 69 / (105)
+	MEM WRITE: 98d2 / (39122) => a1 / (161)
+	MEM WRITE: 98d3 / (39123) => 46 / (70)
+	MEM READ: 98d1 / (39121) => 69 / (105)
+[OP START 39121 -> 0x69 -> adc]
+	REGS:
+		PC: 39121 (98d1)
+		SP: 156 (9c)
+		A:  204 (cc)
+		X:  97 (61)
+		Y:  44 (2c)
+		P:  170 (aa)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 98d2 / (39122) => a1 / (161)
+[OP END @ 39122]
+Done..

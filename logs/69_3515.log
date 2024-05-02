@@ -1,0 +1,19 @@
+[TEST 3515 - 69.json]
+	MEM WRITE: 528b / (21131) => 69 / (105)
+	MEM WRITE: 528c / (21132) => d5 / (213)
+	MEM WRITE: 528d / (21133) => 64 / (100)
+	MEM READ: 528b / (21131) => 69 / (105)
+[OP START 21131 -> 0x69 -> adc]
+	REGS:
+		PC: 21131 (528b)
+		SP: 24 (18)
+		A:  214 (d6)
+		X:  101 (65)
+		Y:  97 (61)
+		P:  104 (68)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 528c / (21132) => d5 / (213)
+[OP END @ 21132]
+Done..

@@ -1,0 +1,19 @@
+[TEST 1080 - 69.json]
+	MEM WRITE: 4e9f / (20127) => 69 / (105)
+	MEM WRITE: 4ea0 / (20128) => fb / (251)
+	MEM WRITE: 4ea1 / (20129) => 5c / (92)
+	MEM READ: 4e9f / (20127) => 69 / (105)
+[OP START 20127 -> 0x69 -> adc]
+	REGS:
+		PC: 20127 (4e9f)
+		SP: 35 (23)
+		A:  253 (fd)
+		X:  59 (3b)
+		Y:  198 (c6)
+		P:  106 (6a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4ea0 / (20128) => fb / (251)
+[OP END @ 20128]
+Done..

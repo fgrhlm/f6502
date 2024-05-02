@@ -1,0 +1,19 @@
+[TEST 3706 - 69.json]
+	MEM WRITE: da24 / (55844) => 69 / (105)
+	MEM WRITE: da25 / (55845) => 8d / (141)
+	MEM WRITE: da26 / (55846) => 53 / (83)
+	MEM READ: da24 / (55844) => 69 / (105)
+[OP START 55844 -> 0x69 -> adc]
+	REGS:
+		PC: 55844 (da24)
+		SP: 232 (e8)
+		A:  130 (82)
+		X:  50 (32)
+		Y:  182 (b6)
+		P:  38 (26)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: da25 / (55845) => 8d / (141)
+[OP END @ 55845]
+Done..

@@ -15,5 +15,5 @@
 		|1|0|1|0|0|1|0|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: f58a / (62858) => 71 / (113)
-	BINADC: e8 + 71 = 5a[OP END @ 62858]
+[OP END @ 62858]
 Done..

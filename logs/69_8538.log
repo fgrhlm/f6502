@@ -1,0 +1,19 @@
+[TEST 8538 - 69.json]
+	MEM WRITE: eac7 / (60103) => 69 / (105)
+	MEM WRITE: eac8 / (60104) => 12 / (18)
+	MEM WRITE: eac9 / (60105) => 5a / (90)
+	MEM READ: eac7 / (60103) => 69 / (105)
+[OP START 60103 -> 0x69 -> adc]
+	REGS:
+		PC: 60103 (eac7)
+		SP: 82 (52)
+		A:  24 (18)
+		X:  174 (ae)
+		Y:  13 (d)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eac8 / (60104) => 12 / (18)
+[OP END @ 60104]
+Done..

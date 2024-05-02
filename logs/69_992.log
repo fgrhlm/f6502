@@ -1,0 +1,19 @@
+[TEST 992 - 69.json]
+	MEM WRITE: f39a / (62362) => 69 / (105)
+	MEM WRITE: f39b / (62363) => d3 / (211)
+	MEM WRITE: f39c / (62364) => f4 / (244)
+	MEM READ: f39a / (62362) => 69 / (105)
+[OP START 62362 -> 0x69 -> adc]
+	REGS:
+		PC: 62362 (f39a)
+		SP: 70 (46)
+		A:  65 (41)
+		X:  66 (42)
+		Y:  115 (73)
+		P:  230 (e6)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f39b / (62363) => d3 / (211)
+[OP END @ 62363]
+Done..

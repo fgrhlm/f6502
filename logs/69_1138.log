@@ -1,0 +1,19 @@
+[TEST 1138 - 69.json]
+	MEM WRITE: cd90 / (52624) => 69 / (105)
+	MEM WRITE: cd91 / (52625) => 23 / (35)
+	MEM WRITE: cd92 / (52626) => 0 / (0)
+	MEM READ: cd90 / (52624) => 69 / (105)
+[OP START 52624 -> 0x69 -> adc]
+	REGS:
+		PC: 52624 (cd90)
+		SP: 133 (85)
+		A:  212 (d4)
+		X:  180 (b4)
+		Y:  28 (1c)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cd91 / (52625) => 23 / (35)
+[OP END @ 52625]
+Done..

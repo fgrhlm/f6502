@@ -1,0 +1,19 @@
+[TEST 8200 - 69.json]
+	MEM WRITE: 711a / (28954) => 69 / (105)
+	MEM WRITE: 711b / (28955) => 30 / (48)
+	MEM WRITE: 711c / (28956) => c1 / (193)
+	MEM READ: 711a / (28954) => 69 / (105)
+[OP START 28954 -> 0x69 -> adc]
+	REGS:
+		PC: 28954 (711a)
+		SP: 236 (ec)
+		A:  217 (d9)
+		X:  132 (84)
+		Y:  85 (55)
+		P:  224 (e0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 711b / (28955) => 30 / (48)
+[OP END @ 28955]
+Done..

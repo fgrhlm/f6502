@@ -1,0 +1,19 @@
+[TEST 3412 - 69.json]
+	MEM WRITE: fa7 / (4007) => 69 / (105)
+	MEM WRITE: fa8 / (4008) => 42 / (66)
+	MEM WRITE: fa9 / (4009) => 28 / (40)
+	MEM READ: fa7 / (4007) => 69 / (105)
+[OP START 4007 -> 0x69 -> adc]
+	REGS:
+		PC: 4007 (fa7)
+		SP: 0 (0)
+		A:  129 (81)
+		X:  105 (69)
+		Y:  69 (45)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fa8 / (4008) => 42 / (66)
+[OP END @ 4008]
+Done..

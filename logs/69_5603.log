@@ -1,4 +1,4 @@
-[TEST 603 - 69.json]
+[TEST 5603 - 69.json]
 	MEM WRITE: 392b / (14635) => 69 / (105)
 	MEM WRITE: 392c / (14636) => 7b / (123)
 	MEM WRITE: 392d / (14637) => 11 / (17)
@@ -15,8 +15,5 @@
 		|1|0|0|1|0|1|1|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 392c / (14636) => 7b / (123)
-	BCD START -> 39 + 7b
-	BCD CONVERT -> 39 + 81
-	BCD SUM -> 21
 [OP END @ 14636]
 Done..

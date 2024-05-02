@@ -1,0 +1,19 @@
+[TEST 6194 - 69.json]
+	MEM WRITE: ee47 / (60999) => 69 / (105)
+	MEM WRITE: ee48 / (61000) => fa / (250)
+	MEM WRITE: ee49 / (61001) => b8 / (184)
+	MEM READ: ee47 / (60999) => 69 / (105)
+[OP START 60999 -> 0x69 -> adc]
+	REGS:
+		PC: 60999 (ee47)
+		SP: 50 (32)
+		A:  237 (ed)
+		X:  110 (6e)
+		Y:  204 (cc)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ee48 / (61000) => fa / (250)
+[OP END @ 61000]
+Done..

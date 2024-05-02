@@ -1,0 +1,19 @@
+[TEST 6059 - 69.json]
+	MEM WRITE: dab2 / (55986) => 69 / (105)
+	MEM WRITE: dab3 / (55987) => f7 / (247)
+	MEM WRITE: dab4 / (55988) => 9f / (159)
+	MEM READ: dab2 / (55986) => 69 / (105)
+[OP START 55986 -> 0x69 -> adc]
+	REGS:
+		PC: 55986 (dab2)
+		SP: 128 (80)
+		A:  192 (c0)
+		X:  207 (cf)
+		Y:  47 (2f)
+		P:  173 (ad)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: dab3 / (55987) => f7 / (247)
+[OP END @ 55987]
+Done..

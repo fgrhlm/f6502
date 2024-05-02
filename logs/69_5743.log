@@ -1,0 +1,19 @@
+[TEST 5743 - 69.json]
+	MEM WRITE: cb67 / (52071) => 69 / (105)
+	MEM WRITE: cb68 / (52072) => c4 / (196)
+	MEM WRITE: cb69 / (52073) => 51 / (81)
+	MEM READ: cb67 / (52071) => 69 / (105)
+[OP START 52071 -> 0x69 -> adc]
+	REGS:
+		PC: 52071 (cb67)
+		SP: 164 (a4)
+		A:  255 (ff)
+		X:  22 (16)
+		Y:  121 (79)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cb68 / (52072) => c4 / (196)
+[OP END @ 52072]
+Done..

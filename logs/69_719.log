@@ -1,0 +1,19 @@
+[TEST 719 - 69.json]
+	MEM WRITE: 9d7a / (40314) => 69 / (105)
+	MEM WRITE: 9d7b / (40315) => 15 / (21)
+	MEM WRITE: 9d7c / (40316) => e0 / (224)
+	MEM READ: 9d7a / (40314) => 69 / (105)
+[OP START 40314 -> 0x69 -> adc]
+	REGS:
+		PC: 40314 (9d7a)
+		SP: 234 (ea)
+		A:  175 (af)
+		X:  209 (d1)
+		Y:  177 (b1)
+		P:  164 (a4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9d7b / (40315) => 15 / (21)
+[OP END @ 40315]
+Done..

@@ -15,5 +15,5 @@
 		|1|1|0|0|0|1|0|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 1982 / (6530) => 8 / (8)
-	BINADC: 2b + 8 = 34[OP END @ 6530]
+[OP END @ 6530]
 Done..

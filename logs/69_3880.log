@@ -1,0 +1,19 @@
+[TEST 3880 - 69.json]
+	MEM WRITE: 86d / (2157) => 69 / (105)
+	MEM WRITE: 86e / (2158) => 2b / (43)
+	MEM WRITE: 86f / (2159) => 19 / (25)
+	MEM READ: 86d / (2157) => 69 / (105)
+[OP START 2157 -> 0x69 -> adc]
+	REGS:
+		PC: 2157 (86d)
+		SP: 127 (7f)
+		A:  181 (b5)
+		X:  130 (82)
+		Y:  64 (40)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 86e / (2158) => 2b / (43)
+[OP END @ 2158]
+Done..

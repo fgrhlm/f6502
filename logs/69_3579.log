@@ -1,0 +1,19 @@
+[TEST 3579 - 69.json]
+	MEM WRITE: 2d84 / (11652) => 69 / (105)
+	MEM WRITE: 2d85 / (11653) => c3 / (195)
+	MEM WRITE: 2d86 / (11654) => 9a / (154)
+	MEM READ: 2d84 / (11652) => 69 / (105)
+[OP START 11652 -> 0x69 -> adc]
+	REGS:
+		PC: 11652 (2d84)
+		SP: 169 (a9)
+		A:  119 (77)
+		X:  145 (91)
+		Y:  176 (b0)
+		P:  228 (e4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2d85 / (11653) => c3 / (195)
+[OP END @ 11653]
+Done..

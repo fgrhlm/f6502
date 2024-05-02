@@ -15,5 +15,5 @@
 		|1|1|0|0|0|1|1|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 2f1 / (753) => 4a / (74)
-	BINADC: 86 + 4a = d1[OP END @ 753]
+[OP END @ 753]
 Done..

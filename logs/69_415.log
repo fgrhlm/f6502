@@ -15,5 +15,5 @@
 		|1|0|0|0|0|1|0|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: dc51 / (56401) => 96 / (150)
-	BINADC: a4 + 96 = 3b[OP END @ 56401]
+[OP END @ 56401]
 Done..

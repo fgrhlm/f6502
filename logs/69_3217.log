@@ -1,0 +1,19 @@
+[TEST 3217 - 69.json]
+	MEM WRITE: fc9f / (64671) => 69 / (105)
+	MEM WRITE: fca0 / (64672) => 53 / (83)
+	MEM WRITE: fca1 / (64673) => 55 / (85)
+	MEM READ: fc9f / (64671) => 69 / (105)
+[OP START 64671 -> 0x69 -> adc]
+	REGS:
+		PC: 64671 (fc9f)
+		SP: 198 (c6)
+		A:  228 (e4)
+		X:  129 (81)
+		Y:  170 (aa)
+		P:  165 (a5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fca0 / (64672) => 53 / (83)
+[OP END @ 64672]
+Done..

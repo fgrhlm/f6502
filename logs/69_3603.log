@@ -1,0 +1,19 @@
+[TEST 3603 - 69.json]
+	MEM WRITE: 62be / (25278) => 69 / (105)
+	MEM WRITE: 62bf / (25279) => e7 / (231)
+	MEM WRITE: 62c0 / (25280) => 79 / (121)
+	MEM READ: 62be / (25278) => 69 / (105)
+[OP START 25278 -> 0x69 -> adc]
+	REGS:
+		PC: 25278 (62be)
+		SP: 137 (89)
+		A:  185 (b9)
+		X:  137 (89)
+		Y:  149 (95)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 62bf / (25279) => e7 / (231)
+[OP END @ 25279]
+Done..

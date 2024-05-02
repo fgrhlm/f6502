@@ -1,0 +1,19 @@
+[TEST 1004 - 69.json]
+	MEM WRITE: df86 / (57222) => 69 / (105)
+	MEM WRITE: df87 / (57223) => cd / (205)
+	MEM WRITE: df88 / (57224) => 52 / (82)
+	MEM READ: df86 / (57222) => 69 / (105)
+[OP START 57222 -> 0x69 -> adc]
+	REGS:
+		PC: 57222 (df86)
+		SP: 120 (78)
+		A:  186 (ba)
+		X:  196 (c4)
+		Y:  90 (5a)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: df87 / (57223) => cd / (205)
+[OP END @ 57223]
+Done..

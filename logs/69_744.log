@@ -1,0 +1,19 @@
+[TEST 744 - 69.json]
+	MEM WRITE: 99b2 / (39346) => 69 / (105)
+	MEM WRITE: 99b3 / (39347) => 9f / (159)
+	MEM WRITE: 99b4 / (39348) => 97 / (151)
+	MEM READ: 99b2 / (39346) => 69 / (105)
+[OP START 39346 -> 0x69 -> adc]
+	REGS:
+		PC: 39346 (99b2)
+		SP: 101 (65)
+		A:  18 (12)
+		X:  170 (aa)
+		Y:  184 (b8)
+		P:  104 (68)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 99b3 / (39347) => 9f / (159)
+[OP END @ 39347]
+Done..

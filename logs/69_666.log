@@ -1,0 +1,19 @@
+[TEST 666 - 69.json]
+	MEM WRITE: 358f / (13711) => 69 / (105)
+	MEM WRITE: 3590 / (13712) => 78 / (120)
+	MEM WRITE: 3591 / (13713) => b5 / (181)
+	MEM READ: 358f / (13711) => 69 / (105)
+[OP START 13711 -> 0x69 -> adc]
+	REGS:
+		PC: 13711 (358f)
+		SP: 95 (5f)
+		A:  236 (ec)
+		X:  117 (75)
+		Y:  237 (ed)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3590 / (13712) => 78 / (120)
+[OP END @ 13712]
+Done..

@@ -1,0 +1,19 @@
+[TEST 8230 - 69.json]
+	MEM WRITE: 1cc8 / (7368) => 69 / (105)
+	MEM WRITE: 1cc9 / (7369) => 7 / (7)
+	MEM WRITE: 1cca / (7370) => b / (11)
+	MEM READ: 1cc8 / (7368) => 69 / (105)
+[OP START 7368 -> 0x69 -> adc]
+	REGS:
+		PC: 7368 (1cc8)
+		SP: 25 (19)
+		A:  95 (5f)
+		X:  224 (e0)
+		Y:  123 (7b)
+		P:  165 (a5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1cc9 / (7369) => 7 / (7)
+[OP END @ 7369]
+Done..

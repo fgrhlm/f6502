@@ -1,0 +1,19 @@
+[TEST 653 - 69.json]
+	MEM WRITE: 30fc / (12540) => 69 / (105)
+	MEM WRITE: 30fd / (12541) => 1d / (29)
+	MEM WRITE: 30fe / (12542) => d6 / (214)
+	MEM READ: 30fc / (12540) => 69 / (105)
+[OP START 12540 -> 0x69 -> adc]
+	REGS:
+		PC: 12540 (30fc)
+		SP: 6 (6)
+		A:  210 (d2)
+		X:  163 (a3)
+		Y:  193 (c1)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 30fd / (12541) => 1d / (29)
+[OP END @ 12541]
+Done..

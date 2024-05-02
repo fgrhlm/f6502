@@ -1,0 +1,19 @@
+[TEST 3159 - 69.json]
+	MEM WRITE: ebf9 / (60409) => 69 / (105)
+	MEM WRITE: ebfa / (60410) => c4 / (196)
+	MEM WRITE: ebfb / (60411) => 1b / (27)
+	MEM READ: ebf9 / (60409) => 69 / (105)
+[OP START 60409 -> 0x69 -> adc]
+	REGS:
+		PC: 60409 (ebf9)
+		SP: 179 (b3)
+		A:  253 (fd)
+		X:  25 (19)
+		Y:  108 (6c)
+		P:  231 (e7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ebfa / (60410) => c4 / (196)
+[OP END @ 60410]
+Done..

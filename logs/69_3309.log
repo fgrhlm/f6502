@@ -1,0 +1,19 @@
+[TEST 3309 - 69.json]
+	MEM WRITE: c64 / (3172) => 69 / (105)
+	MEM WRITE: c65 / (3173) => d4 / (212)
+	MEM WRITE: c66 / (3174) => 51 / (81)
+	MEM READ: c64 / (3172) => 69 / (105)
+[OP START 3172 -> 0x69 -> adc]
+	REGS:
+		PC: 3172 (c64)
+		SP: 224 (e0)
+		A:  55 (37)
+		X:  217 (d9)
+		Y:  90 (5a)
+		P:  45 (2d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c65 / (3173) => d4 / (212)
+[OP END @ 3173]
+Done..

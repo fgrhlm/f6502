@@ -1,0 +1,19 @@
+[TEST 5969 - 69.json]
+	MEM WRITE: cf5 / (3317) => 69 / (105)
+	MEM WRITE: cf6 / (3318) => 5b / (91)
+	MEM WRITE: cf7 / (3319) => 9 / (9)
+	MEM READ: cf5 / (3317) => 69 / (105)
+[OP START 3317 -> 0x69 -> adc]
+	REGS:
+		PC: 3317 (cf5)
+		SP: 38 (26)
+		A:  89 (59)
+		X:  100 (64)
+		Y:  166 (a6)
+		P:  163 (a3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cf6 / (3318) => 5b / (91)
+[OP END @ 3318]
+Done..

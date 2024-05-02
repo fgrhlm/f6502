@@ -1,0 +1,19 @@
+[TEST 5963 - 69.json]
+	MEM WRITE: e7ca / (59338) => 69 / (105)
+	MEM WRITE: e7cb / (59339) => 4f / (79)
+	MEM WRITE: e7cc / (59340) => 78 / (120)
+	MEM READ: e7ca / (59338) => 69 / (105)
+[OP START 59338 -> 0x69 -> adc]
+	REGS:
+		PC: 59338 (e7ca)
+		SP: 214 (d6)
+		A:  110 (6e)
+		X:  238 (ee)
+		Y:  99 (63)
+		P:  104 (68)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e7cb / (59339) => 4f / (79)
+[OP END @ 59339]
+Done..

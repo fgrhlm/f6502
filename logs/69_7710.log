@@ -1,4 +1,4 @@
-[TEST 210 - 69.json]
+[TEST 7710 - 69.json]
 	MEM WRITE: 9c39 / (39993) => 69 / (105)
 	MEM WRITE: 9c3a / (39994) => 4b / (75)
 	MEM WRITE: 9c3b / (39995) => 6f / (111)
@@ -15,8 +15,5 @@
 		|0|1|0|1|0|1|1|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 9c3a / (39994) => 4b / (75)
-	BCD START -> d4 + 4b
-	BCD CONVERT -> 34 + 51
-	BCD SUM -> 85
 [OP END @ 39994]
 Done..

@@ -1,0 +1,19 @@
+[TEST 6383 - 69.json]
+	MEM WRITE: b2b5 / (45749) => 69 / (105)
+	MEM WRITE: b2b6 / (45750) => 65 / (101)
+	MEM WRITE: b2b7 / (45751) => 21 / (33)
+	MEM READ: b2b5 / (45749) => 69 / (105)
+[OP START 45749 -> 0x69 -> adc]
+	REGS:
+		PC: 45749 (b2b5)
+		SP: 202 (ca)
+		A:  160 (a0)
+		X:  207 (cf)
+		Y:  221 (dd)
+		P:  108 (6c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b2b6 / (45750) => 65 / (101)
+[OP END @ 45750]
+Done..

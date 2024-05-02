@@ -1,0 +1,19 @@
+[TEST 5895 - 69.json]
+	MEM WRITE: db0c / (56076) => 69 / (105)
+	MEM WRITE: db0d / (56077) => 8 / (8)
+	MEM WRITE: db0e / (56078) => 22 / (34)
+	MEM READ: db0c / (56076) => 69 / (105)
+[OP START 56076 -> 0x69 -> adc]
+	REGS:
+		PC: 56076 (db0c)
+		SP: 111 (6f)
+		A:  80 (50)
+		X:  182 (b6)
+		Y:  99 (63)
+		P:  174 (ae)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: db0d / (56077) => 8 / (8)
+[OP END @ 56077]
+Done..

@@ -1,0 +1,19 @@
+[TEST 3739 - 69.json]
+	MEM WRITE: bd2d / (48429) => 69 / (105)
+	MEM WRITE: bd2e / (48430) => 4d / (77)
+	MEM WRITE: bd2f / (48431) => 3f / (63)
+	MEM READ: bd2d / (48429) => 69 / (105)
+[OP START 48429 -> 0x69 -> adc]
+	REGS:
+		PC: 48429 (bd2d)
+		SP: 213 (d5)
+		A:  1 (1)
+		X:  245 (f5)
+		Y:  243 (f3)
+		P:  224 (e0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bd2e / (48430) => 4d / (77)
+[OP END @ 48430]
+Done..

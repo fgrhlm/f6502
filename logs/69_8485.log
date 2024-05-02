@@ -1,0 +1,19 @@
+[TEST 8485 - 69.json]
+	MEM WRITE: 18ce / (6350) => 69 / (105)
+	MEM WRITE: 18cf / (6351) => 16 / (22)
+	MEM WRITE: 18d0 / (6352) => 71 / (113)
+	MEM READ: 18ce / (6350) => 69 / (105)
+[OP START 6350 -> 0x69 -> adc]
+	REGS:
+		PC: 6350 (18ce)
+		SP: 176 (b0)
+		A:  127 (7f)
+		X:  177 (b1)
+		Y:  116 (74)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 18cf / (6351) => 16 / (22)
+[OP END @ 6351]
+Done..

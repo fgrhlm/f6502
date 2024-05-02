@@ -15,8 +15,5 @@
 		|1|1|0|1|0|1|0|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 2dfb / (11771) => 18 / (24)
-	BCD START -> 64 + 18
-	BCD CONVERT -> 64 + 18
-	BCD SUM -> 83
 [OP END @ 11771]
 Done..

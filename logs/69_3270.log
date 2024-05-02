@@ -1,0 +1,19 @@
+[TEST 3270 - 69.json]
+	MEM WRITE: 36e3 / (14051) => 69 / (105)
+	MEM WRITE: 36e4 / (14052) => 24 / (36)
+	MEM WRITE: 36e5 / (14053) => 54 / (84)
+	MEM READ: 36e3 / (14051) => 69 / (105)
+[OP START 14051 -> 0x69 -> adc]
+	REGS:
+		PC: 14051 (36e3)
+		SP: 123 (7b)
+		A:  8 (8)
+		X:  27 (1b)
+		Y:  3 (3)
+		P:  45 (2d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 36e4 / (14052) => 24 / (36)
+[OP END @ 14052]
+Done..

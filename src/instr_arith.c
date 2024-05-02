@@ -2,55 +2,32 @@
 #include "cpu.h"
 #include "utils.h"
 
-bytes bcd_convert(uint8_t x){
-    uint8_t hi = ((x >> 4) & 0xF);
-    uint8_t lo = ((x >> 0) & 0xF);
-    uint8_t carry = (lo > 9);    
-
-    hi = (hi > 9 ? hi - 10 : hi) + carry;
-    lo = carry ? lo-10 : lo;
-
-    bytes num = {.hi = hi, .lo = lo};
-    return num;
-}
-
 uint8_t bcd_add(cpu* c, uint8_t x, uint8_t y){
-    debug_logf("\tBCD START -> %x + %x\n", x, y);
-    uint8_t o_carry, i_carry;
-    uint8_t sum, sum_hi, sum_lo, sum_carry;
-    i_carry = get_flag(c, FLAG_C);
+    uint8_t hi, lo, out_carry, in_carry, sum;
 
-    bytes d_x = bcd_convert(x);
-    bytes d_y = bcd_convert(y);
-
-    debug_logf("\tBCD CONVERT -> %x + %x\n", (d_x.hi << 4) | d_x.lo, (d_y.hi << 4) | d_y.lo);
+    in_carry = get_flag(c, FLAG_C);
     
-    sum_lo = (d_x.lo + d_y.lo);
-    if(sum_lo > 9){
-        sum_carry = 1;
-        sum_lo = sum_lo - 10;
-    }else{
-        sum_carry = 0;
+    out_carry = 0;
+    hi = ((x & 0xF0) + (y & 0xF0)) >> 4;
+    lo = (x & 0x0F) + (y & 0x0F) + in_carry;
+
+    if(lo >= 10){ 
+        lo = ((lo + 6) & 0x0F);
+        hi++;
     }
 
-    sum_hi = (d_x.hi + d_y.hi) + sum_carry;
-    if(sum_hi > 9){
-        o_carry = 1;
-        sum_hi = sum_hi - 10;
-    }else{
-        o_carry = 0;
-    }
-
-    sum = ((sum_hi << 4) | sum_lo) + i_carry;
-    debug_logf("\tBCD SUM -> %x\n", sum);
-    uint8_t x_sign = get_bit(y, 7);
-    uint8_t sum_sign = get_bit(sum,7);
+    uint8_t temp_sum = ((hi << 4) | lo);
+    uint8_t v_flag = get_bit((x^temp_sum) & (y^temp_sum), 7);
     
-    set_flag(c, FLAG_C, o_carry);
-    set_flag(c, FLAG_Z, (sum == 0));
-    set_flag(c, FLAG_N, get_bit(sum, 7));
-    set_flag(c, FLAG_V, x_sign != sum_sign);
-   
+    if(hi >= 10){ hi = ((hi + 6) & 0x0F); out_carry = 1; }
+
+    sum = ((hi << 4) | lo);
+  
+    set_flag(c, FLAG_C, out_carry);
+    set_flag(c, FLAG_Z, ((x + y + in_carry) & 0xFF) != 0);
+    set_flag(c, FLAG_N, get_bit(temp_sum, 7));
+    set_flag(c, FLAG_V, v_flag);
+    
     return sum;
 }
 
@@ -63,15 +40,13 @@ uint8_t bin_add(cpu* c, uint8_t x, uint8_t y){
     c2 = __builtin_add_overflow(res, i_carry, &res);
     o_carry = c1 | c2;
 
-    uint8_t x_sign = get_bit(x, 7);
-    uint8_t res_sign = get_bit(res,7);
-    
+    uint8_t v_flag = get_bit((x^res) & (y^res), 7);
+
     set_flag(c, FLAG_C, o_carry); 
     set_flag(c, FLAG_Z, (res == 0));
     set_flag(c, FLAG_N, get_bit(res, 7));
-    set_flag(c, FLAG_V, x_sign != res_sign);
+    set_flag(c, FLAG_V, v_flag);
 
-    debug_logf("\tBINADC: %x + %x = %x", x, y, res);
     return res;
 }
 

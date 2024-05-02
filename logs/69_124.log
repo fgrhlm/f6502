@@ -15,5 +15,5 @@
 		|1|1|0|0|0|1|1|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: fe4e / (65102) => 6f / (111)
-	BINADC: 71 + 6f = e1[OP END @ 65102]
+[OP END @ 65102]
 Done..

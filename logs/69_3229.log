@@ -1,0 +1,19 @@
+[TEST 3229 - 69.json]
+	MEM WRITE: 1f43 / (8003) => 69 / (105)
+	MEM WRITE: 1f44 / (8004) => 18 / (24)
+	MEM WRITE: 1f45 / (8005) => d9 / (217)
+	MEM READ: 1f43 / (8003) => 69 / (105)
+[OP START 8003 -> 0x69 -> adc]
+	REGS:
+		PC: 8003 (1f43)
+		SP: 103 (67)
+		A:  69 (45)
+		X:  223 (df)
+		Y:  9 (9)
+		P:  170 (aa)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1f44 / (8004) => 18 / (24)
+[OP END @ 8004]
+Done..

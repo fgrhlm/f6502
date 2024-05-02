@@ -1,0 +1,19 @@
+[TEST 1082 - 69.json]
+	MEM WRITE: 3a6d / (14957) => 69 / (105)
+	MEM WRITE: 3a6e / (14958) => 21 / (33)
+	MEM WRITE: 3a6f / (14959) => 94 / (148)
+	MEM READ: 3a6d / (14957) => 69 / (105)
+[OP START 14957 -> 0x69 -> adc]
+	REGS:
+		PC: 14957 (3a6d)
+		SP: 120 (78)
+		A:  188 (bc)
+		X:  176 (b0)
+		Y:  222 (de)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3a6e / (14958) => 21 / (33)
+[OP END @ 14958]
+Done..

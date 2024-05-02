@@ -1,0 +1,19 @@
+[TEST 5814 - 69.json]
+	MEM WRITE: 7dea / (32234) => 69 / (105)
+	MEM WRITE: 7deb / (32235) => 5a / (90)
+	MEM WRITE: 7dec / (32236) => dd / (221)
+	MEM READ: 7dea / (32234) => 69 / (105)
+[OP START 32234 -> 0x69 -> adc]
+	REGS:
+		PC: 32234 (7dea)
+		SP: 73 (49)
+		A:  252 (fc)
+		X:  14 (e)
+		Y:  204 (cc)
+		P:  168 (a8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7deb / (32235) => 5a / (90)
+[OP END @ 32235]
+Done..

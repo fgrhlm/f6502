@@ -1,0 +1,19 @@
+[TEST 6041 - 69.json]
+	MEM WRITE: cb74 / (52084) => 69 / (105)
+	MEM WRITE: cb75 / (52085) => db / (219)
+	MEM WRITE: cb76 / (52086) => 55 / (85)
+	MEM READ: cb74 / (52084) => 69 / (105)
+[OP START 52084 -> 0x69 -> adc]
+	REGS:
+		PC: 52084 (cb74)
+		SP: 67 (43)
+		A:  65 (41)
+		X:  198 (c6)
+		Y:  103 (67)
+		P:  161 (a1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cb75 / (52085) => db / (219)
+[OP END @ 52085]
+Done..

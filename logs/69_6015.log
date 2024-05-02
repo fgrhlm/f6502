@@ -1,0 +1,19 @@
+[TEST 6015 - 69.json]
+	MEM WRITE: e720 / (59168) => 69 / (105)
+	MEM WRITE: e721 / (59169) => 3 / (3)
+	MEM WRITE: e722 / (59170) => 21 / (33)
+	MEM READ: e720 / (59168) => 69 / (105)
+[OP START 59168 -> 0x69 -> adc]
+	REGS:
+		PC: 59168 (e720)
+		SP: 147 (93)
+		A:  85 (55)
+		X:  61 (3d)
+		Y:  223 (df)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e721 / (59169) => 3 / (3)
+[OP END @ 59169]
+Done..

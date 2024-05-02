@@ -1,0 +1,19 @@
+[TEST 5970 - 69.json]
+	MEM WRITE: ff69 / (65385) => 69 / (105)
+	MEM WRITE: ff6a / (65386) => 86 / (134)
+	MEM WRITE: ff6b / (65387) => 4a / (74)
+	MEM READ: ff69 / (65385) => 69 / (105)
+[OP START 65385 -> 0x69 -> adc]
+	REGS:
+		PC: 65385 (ff69)
+		SP: 89 (59)
+		A:  250 (fa)
+		X:  157 (9d)
+		Y:  170 (aa)
+		P:  163 (a3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ff6a / (65386) => 86 / (134)
+[OP END @ 65386]
+Done..

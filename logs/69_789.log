@@ -1,0 +1,19 @@
+[TEST 789 - 69.json]
+	MEM WRITE: 8ca7 / (36007) => 69 / (105)
+	MEM WRITE: 8ca8 / (36008) => c5 / (197)
+	MEM WRITE: 8ca9 / (36009) => b1 / (177)
+	MEM READ: 8ca7 / (36007) => 69 / (105)
+[OP START 36007 -> 0x69 -> adc]
+	REGS:
+		PC: 36007 (8ca7)
+		SP: 10 (a)
+		A:  233 (e9)
+		X:  85 (55)
+		Y:  255 (ff)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8ca8 / (36008) => c5 / (197)
+[OP END @ 36008]
+Done..

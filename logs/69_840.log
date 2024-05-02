@@ -1,0 +1,19 @@
+[TEST 840 - 69.json]
+	MEM WRITE: afa6 / (44966) => 69 / (105)
+	MEM WRITE: afa7 / (44967) => 83 / (131)
+	MEM WRITE: afa8 / (44968) => 41 / (65)
+	MEM READ: afa6 / (44966) => 69 / (105)
+[OP START 44966 -> 0x69 -> adc]
+	REGS:
+		PC: 44966 (afa6)
+		SP: 39 (27)
+		A:  254 (fe)
+		X:  80 (50)
+		Y:  189 (bd)
+		P:  107 (6b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: afa7 / (44967) => 83 / (131)
+[OP END @ 44967]
+Done..

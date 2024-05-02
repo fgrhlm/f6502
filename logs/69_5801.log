@@ -1,0 +1,19 @@
+[TEST 5801 - 69.json]
+	MEM WRITE: eb3d / (60221) => 69 / (105)
+	MEM WRITE: eb3e / (60222) => dd / (221)
+	MEM WRITE: eb3f / (60223) => 42 / (66)
+	MEM READ: eb3d / (60221) => 69 / (105)
+[OP START 60221 -> 0x69 -> adc]
+	REGS:
+		PC: 60221 (eb3d)
+		SP: 109 (6d)
+		A:  248 (f8)
+		X:  243 (f3)
+		Y:  203 (cb)
+		P:  105 (69)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eb3e / (60222) => dd / (221)
+[OP END @ 60222]
+Done..

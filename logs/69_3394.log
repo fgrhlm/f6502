@@ -1,0 +1,19 @@
+[TEST 3394 - 69.json]
+	MEM WRITE: ae1a / (44570) => 69 / (105)
+	MEM WRITE: ae1b / (44571) => b7 / (183)
+	MEM WRITE: ae1c / (44572) => 4a / (74)
+	MEM READ: ae1a / (44570) => 69 / (105)
+[OP START 44570 -> 0x69 -> adc]
+	REGS:
+		PC: 44570 (ae1a)
+		SP: 239 (ef)
+		A:  4 (4)
+		X:  228 (e4)
+		Y:  104 (68)
+		P:  167 (a7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ae1b / (44571) => b7 / (183)
+[OP END @ 44571]
+Done..

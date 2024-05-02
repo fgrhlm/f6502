@@ -1,0 +1,19 @@
+[TEST 5810 - 69.json]
+	MEM WRITE: 3d1e / (15646) => 69 / (105)
+	MEM WRITE: 3d1f / (15647) => a5 / (165)
+	MEM WRITE: 3d20 / (15648) => f7 / (247)
+	MEM READ: 3d1e / (15646) => 69 / (105)
+[OP START 15646 -> 0x69 -> adc]
+	REGS:
+		PC: 15646 (3d1e)
+		SP: 61 (3d)
+		A:  161 (a1)
+		X:  253 (fd)
+		Y:  77 (4d)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3d1f / (15647) => a5 / (165)
+[OP END @ 15647]
+Done..

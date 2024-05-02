@@ -1,0 +1,19 @@
+[TEST 863 - 69.json]
+	MEM WRITE: ada7 / (44455) => 69 / (105)
+	MEM WRITE: ada8 / (44456) => 28 / (40)
+	MEM WRITE: ada9 / (44457) => e4 / (228)
+	MEM READ: ada7 / (44455) => 69 / (105)
+[OP START 44455 -> 0x69 -> adc]
+	REGS:
+		PC: 44455 (ada7)
+		SP: 19 (13)
+		A:  42 (2a)
+		X:  106 (6a)
+		Y:  1 (1)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ada8 / (44456) => 28 / (40)
+[OP END @ 44456]
+Done..

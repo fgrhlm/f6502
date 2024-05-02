@@ -1,0 +1,19 @@
+[TEST 830 - 69.json]
+	MEM WRITE: aaf4 / (43764) => 69 / (105)
+	MEM WRITE: aaf5 / (43765) => f7 / (247)
+	MEM WRITE: aaf6 / (43766) => 23 / (35)
+	MEM READ: aaf4 / (43764) => 69 / (105)
+[OP START 43764 -> 0x69 -> adc]
+	REGS:
+		PC: 43764 (aaf4)
+		SP: 137 (89)
+		A:  247 (f7)
+		X:  31 (1f)
+		Y:  25 (19)
+		P:  99 (63)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: aaf5 / (43765) => f7 / (247)
+[OP END @ 43765]
+Done..

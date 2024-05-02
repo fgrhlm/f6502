@@ -1,0 +1,19 @@
+[TEST 3702 - 69.json]
+	MEM WRITE: fe9b / (65179) => 69 / (105)
+	MEM WRITE: fe9c / (65180) => ac / (172)
+	MEM WRITE: fe9d / (65181) => 24 / (36)
+	MEM READ: fe9b / (65179) => 69 / (105)
+[OP START 65179 -> 0x69 -> adc]
+	REGS:
+		PC: 65179 (fe9b)
+		SP: 67 (43)
+		A:  113 (71)
+		X:  181 (b5)
+		Y:  96 (60)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fe9c / (65180) => ac / (172)
+[OP END @ 65180]
+Done..

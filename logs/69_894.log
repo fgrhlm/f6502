@@ -1,0 +1,19 @@
+[TEST 894 - 69.json]
+	MEM WRITE: 2f67 / (12135) => 69 / (105)
+	MEM WRITE: 2f68 / (12136) => 14 / (20)
+	MEM WRITE: 2f69 / (12137) => 2e / (46)
+	MEM READ: 2f67 / (12135) => 69 / (105)
+[OP START 12135 -> 0x69 -> adc]
+	REGS:
+		PC: 12135 (2f67)
+		SP: 25 (19)
+		A:  205 (cd)
+		X:  146 (92)
+		Y:  2 (2)
+		P:  40 (28)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2f68 / (12136) => 14 / (20)
+[OP END @ 12136]
+Done..

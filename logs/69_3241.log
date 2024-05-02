@@ -1,0 +1,19 @@
+[TEST 3241 - 69.json]
+	MEM WRITE: d750 / (55120) => 69 / (105)
+	MEM WRITE: d751 / (55121) => 26 / (38)
+	MEM WRITE: d752 / (55122) => 62 / (98)
+	MEM READ: d750 / (55120) => 69 / (105)
+[OP START 55120 -> 0x69 -> adc]
+	REGS:
+		PC: 55120 (d750)
+		SP: 61 (3d)
+		A:  108 (6c)
+		X:  234 (ea)
+		Y:  205 (cd)
+		P:  163 (a3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d751 / (55121) => 26 / (38)
+[OP END @ 55121]
+Done..

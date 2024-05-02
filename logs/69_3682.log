@@ -1,0 +1,19 @@
+[TEST 3682 - 69.json]
+	MEM WRITE: cfab / (53163) => 69 / (105)
+	MEM WRITE: cfac / (53164) => 7d / (125)
+	MEM WRITE: cfad / (53165) => e / (14)
+	MEM READ: cfab / (53163) => 69 / (105)
+[OP START 53163 -> 0x69 -> adc]
+	REGS:
+		PC: 53163 (cfab)
+		SP: 223 (df)
+		A:  33 (21)
+		X:  23 (17)
+		Y:  64 (40)
+		P:  105 (69)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: cfac / (53164) => 7d / (125)
+[OP END @ 53164]
+Done..

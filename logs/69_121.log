@@ -15,5 +15,5 @@
 		|1|1|1|0|0|1|0|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: bc8b / (48267) => 17 / (23)
-	BINADC: fa + 17 = 12[OP END @ 48267]
+[OP END @ 48267]
 Done..

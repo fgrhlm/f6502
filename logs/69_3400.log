@@ -1,0 +1,19 @@
+[TEST 3400 - 69.json]
+	MEM WRITE: 4972 / (18802) => 69 / (105)
+	MEM WRITE: 4973 / (18803) => d0 / (208)
+	MEM WRITE: 4974 / (18804) => 0 / (0)
+	MEM READ: 4972 / (18802) => 69 / (105)
+[OP START 18802 -> 0x69 -> adc]
+	REGS:
+		PC: 18802 (4972)
+		SP: 40 (28)
+		A:  199 (c7)
+		X:  118 (76)
+		Y:  98 (62)
+		P:  233 (e9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4973 / (18803) => d0 / (208)
+[OP END @ 18803]
+Done..

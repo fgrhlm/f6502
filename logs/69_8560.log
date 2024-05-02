@@ -1,0 +1,19 @@
+[TEST 8560 - 69.json]
+	MEM WRITE: eb28 / (60200) => 69 / (105)
+	MEM WRITE: eb29 / (60201) => 90 / (144)
+	MEM WRITE: eb2a / (60202) => 94 / (148)
+	MEM READ: eb28 / (60200) => 69 / (105)
+[OP START 60200 -> 0x69 -> adc]
+	REGS:
+		PC: 60200 (eb28)
+		SP: 103 (67)
+		A:  17 (11)
+		X:  90 (5a)
+		Y:  178 (b2)
+		P:  96 (60)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: eb29 / (60201) => 90 / (144)
+[OP END @ 60201]
+Done..

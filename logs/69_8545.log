@@ -1,0 +1,19 @@
+[TEST 8545 - 69.json]
+	MEM WRITE: 9fec / (40940) => 69 / (105)
+	MEM WRITE: 9fed / (40941) => 1 / (1)
+	MEM WRITE: 9fee / (40942) => 9 / (9)
+	MEM READ: 9fec / (40940) => 69 / (105)
+[OP START 40940 -> 0x69 -> adc]
+	REGS:
+		PC: 40940 (9fec)
+		SP: 175 (af)
+		A:  249 (f9)
+		X:  231 (e7)
+		Y:  185 (b9)
+		P:  32 (20)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9fed / (40941) => 1 / (1)
+[OP END @ 40941]
+Done..

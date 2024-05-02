@@ -1,0 +1,19 @@
+[TEST 738 - 69.json]
+	MEM WRITE: f14f / (61775) => 69 / (105)
+	MEM WRITE: f150 / (61776) => fd / (253)
+	MEM WRITE: f151 / (61777) => 99 / (153)
+	MEM READ: f14f / (61775) => 69 / (105)
+[OP START 61775 -> 0x69 -> adc]
+	REGS:
+		PC: 61775 (f14f)
+		SP: 12 (c)
+		A:  77 (4d)
+		X:  232 (e8)
+		Y:  23 (17)
+		P:  97 (61)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f150 / (61776) => fd / (253)
+[OP END @ 61776]
+Done..

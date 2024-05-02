@@ -1,0 +1,19 @@
+[TEST 764 - 69.json]
+	MEM WRITE: a457 / (42071) => 69 / (105)
+	MEM WRITE: a458 / (42072) => df / (223)
+	MEM WRITE: a459 / (42073) => 32 / (50)
+	MEM READ: a457 / (42071) => 69 / (105)
+[OP START 42071 -> 0x69 -> adc]
+	REGS:
+		PC: 42071 (a457)
+		SP: 121 (79)
+		A:  194 (c2)
+		X:  235 (eb)
+		Y:  206 (ce)
+		P:  44 (2c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a458 / (42072) => df / (223)
+[OP END @ 42072]
+Done..

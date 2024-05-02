@@ -1,0 +1,19 @@
+[TEST 8418 - 69.json]
+	MEM WRITE: 2d5a / (11610) => 69 / (105)
+	MEM WRITE: 2d5b / (11611) => 2e / (46)
+	MEM WRITE: 2d5c / (11612) => c4 / (196)
+	MEM READ: 2d5a / (11610) => 69 / (105)
+[OP START 11610 -> 0x69 -> adc]
+	REGS:
+		PC: 11610 (2d5a)
+		SP: 215 (d7)
+		A:  158 (9e)
+		X:  110 (6e)
+		Y:  138 (8a)
+		P:  235 (eb)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2d5b / (11611) => 2e / (46)
+[OP END @ 11611]
+Done..

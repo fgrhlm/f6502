@@ -1,0 +1,19 @@
+[TEST 3264 - 69.json]
+	MEM WRITE: fe0a / (65034) => 69 / (105)
+	MEM WRITE: fe0b / (65035) => 13 / (19)
+	MEM WRITE: fe0c / (65036) => ad / (173)
+	MEM READ: fe0a / (65034) => 69 / (105)
+[OP START 65034 -> 0x69 -> adc]
+	REGS:
+		PC: 65034 (fe0a)
+		SP: 149 (95)
+		A:  97 (61)
+		X:  92 (5c)
+		Y:  216 (d8)
+		P:  233 (e9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fe0b / (65035) => 13 / (19)
+[OP END @ 65035]
+Done..

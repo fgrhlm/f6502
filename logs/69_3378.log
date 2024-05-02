@@ -1,0 +1,19 @@
+[TEST 3378 - 69.json]
+	MEM WRITE: 1e24 / (7716) => 69 / (105)
+	MEM WRITE: 1e25 / (7717) => 6 / (6)
+	MEM WRITE: 1e26 / (7718) => ab / (171)
+	MEM READ: 1e24 / (7716) => 69 / (105)
+[OP START 7716 -> 0x69 -> adc]
+	REGS:
+		PC: 7716 (1e24)
+		SP: 86 (56)
+		A:  154 (9a)
+		X:  196 (c4)
+		Y:  146 (92)
+		P:  163 (a3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1e25 / (7717) => 6 / (6)
+[OP END @ 7717]
+Done..

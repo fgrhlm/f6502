@@ -1,0 +1,19 @@
+[TEST 670 - 69.json]
+	MEM WRITE: 103 / (259) => 69 / (105)
+	MEM WRITE: 104 / (260) => 45 / (69)
+	MEM WRITE: 105 / (261) => fc / (252)
+	MEM READ: 103 / (259) => 69 / (105)
+[OP START 259 -> 0x69 -> adc]
+	REGS:
+		PC: 259 (103)
+		SP: 80 (50)
+		A:  24 (18)
+		X:  208 (d0)
+		Y:  67 (43)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 104 / (260) => 45 / (69)
+[OP END @ 260]
+Done..

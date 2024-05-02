@@ -1,0 +1,19 @@
+[TEST 6139 - 69.json]
+	MEM WRITE: 1e77 / (7799) => 69 / (105)
+	MEM WRITE: 1e78 / (7800) => fc / (252)
+	MEM WRITE: 1e79 / (7801) => 40 / (64)
+	MEM READ: 1e77 / (7799) => 69 / (105)
+[OP START 7799 -> 0x69 -> adc]
+	REGS:
+		PC: 7799 (1e77)
+		SP: 104 (68)
+		A:  235 (eb)
+		X:  223 (df)
+		Y:  73 (49)
+		P:  111 (6f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1e78 / (7800) => fc / (252)
+[OP END @ 7800]
+Done..

@@ -1,0 +1,19 @@
+[TEST 6119 - 69.json]
+	MEM WRITE: 5b4e / (23374) => 69 / (105)
+	MEM WRITE: 5b4f / (23375) => d5 / (213)
+	MEM WRITE: 5b50 / (23376) => 54 / (84)
+	MEM READ: 5b4e / (23374) => 69 / (105)
+[OP START 23374 -> 0x69 -> adc]
+	REGS:
+		PC: 23374 (5b4e)
+		SP: 142 (8e)
+		A:  59 (3b)
+		X:  68 (44)
+		Y:  13 (d)
+		P:  239 (ef)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5b4f / (23375) => d5 / (213)
+[OP END @ 23375]
+Done..

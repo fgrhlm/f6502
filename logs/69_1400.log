@@ -1,0 +1,19 @@
+[TEST 1400 - 69.json]
+	MEM WRITE: 1e0f / (7695) => 69 / (105)
+	MEM WRITE: 1e10 / (7696) => e4 / (228)
+	MEM WRITE: 1e11 / (7697) => 16 / (22)
+	MEM READ: 1e0f / (7695) => 69 / (105)
+[OP START 7695 -> 0x69 -> adc]
+	REGS:
+		PC: 7695 (1e0f)
+		SP: 82 (52)
+		A:  44 (2c)
+		X:  202 (ca)
+		Y:  148 (94)
+		P:  44 (2c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1e10 / (7696) => e4 / (228)
+[OP END @ 7696]
+Done..

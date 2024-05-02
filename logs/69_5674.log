@@ -1,0 +1,19 @@
+[TEST 5674 - 69.json]
+	MEM WRITE: 10aa / (4266) => 69 / (105)
+	MEM WRITE: 10ab / (4267) => 31 / (49)
+	MEM WRITE: 10ac / (4268) => 78 / (120)
+	MEM READ: 10aa / (4266) => 69 / (105)
+[OP START 4266 -> 0x69 -> adc]
+	REGS:
+		PC: 4266 (10aa)
+		SP: 52 (34)
+		A:  170 (aa)
+		X:  83 (53)
+		Y:  247 (f7)
+		P:  235 (eb)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 10ab / (4267) => 31 / (49)
+[OP END @ 4267]
+Done..

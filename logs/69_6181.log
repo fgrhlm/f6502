@@ -1,0 +1,19 @@
+[TEST 6181 - 69.json]
+	MEM WRITE: efad / (61357) => 69 / (105)
+	MEM WRITE: efae / (61358) => 4 / (4)
+	MEM WRITE: efaf / (61359) => ab / (171)
+	MEM READ: efad / (61357) => 69 / (105)
+[OP START 61357 -> 0x69 -> adc]
+	REGS:
+		PC: 61357 (efad)
+		SP: 15 (f)
+		A:  223 (df)
+		X:  5 (5)
+		Y:  108 (6c)
+		P:  226 (e2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: efae / (61358) => 4 / (4)
+[OP END @ 61358]
+Done..

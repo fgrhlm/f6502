@@ -1,0 +1,19 @@
+[TEST 5968 - 69.json]
+	MEM WRITE: 400a / (16394) => 69 / (105)
+	MEM WRITE: 400b / (16395) => d7 / (215)
+	MEM WRITE: 400c / (16396) => 86 / (134)
+	MEM READ: 400a / (16394) => 69 / (105)
+[OP START 16394 -> 0x69 -> adc]
+	REGS:
+		PC: 16394 (400a)
+		SP: 192 (c0)
+		A:  10 (a)
+		X:  228 (e4)
+		Y:  193 (c1)
+		P:  97 (61)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 400b / (16395) => d7 / (215)
+[OP END @ 16395]
+Done..

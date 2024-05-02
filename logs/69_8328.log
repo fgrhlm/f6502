@@ -1,0 +1,19 @@
+[TEST 8328 - 69.json]
+	MEM WRITE: abda / (43994) => 69 / (105)
+	MEM WRITE: abdb / (43995) => 15 / (21)
+	MEM WRITE: abdc / (43996) => 12 / (18)
+	MEM READ: abda / (43994) => 69 / (105)
+[OP START 43994 -> 0x69 -> adc]
+	REGS:
+		PC: 43994 (abda)
+		SP: 50 (32)
+		A:  107 (6b)
+		X:  240 (f0)
+		Y:  146 (92)
+		P:  32 (20)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: abdb / (43995) => 15 / (21)
+[OP END @ 43995]
+Done..

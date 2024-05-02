@@ -1,0 +1,19 @@
+[TEST 811 - 69.json]
+	MEM WRITE: f4fd / (62717) => 69 / (105)
+	MEM WRITE: f4fe / (62718) => 9b / (155)
+	MEM WRITE: f4ff / (62719) => c7 / (199)
+	MEM READ: f4fd / (62717) => 69 / (105)
+[OP START 62717 -> 0x69 -> adc]
+	REGS:
+		PC: 62717 (f4fd)
+		SP: 251 (fb)
+		A:  217 (d9)
+		X:  176 (b0)
+		Y:  101 (65)
+		P:  227 (e3)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f4fe / (62718) => 9b / (155)
+[OP END @ 62718]
+Done..

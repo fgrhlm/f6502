@@ -1,0 +1,19 @@
+[TEST 5820 - 69.json]
+	MEM WRITE: 4a3c / (19004) => 69 / (105)
+	MEM WRITE: 4a3d / (19005) => 3b / (59)
+	MEM WRITE: 4a3e / (19006) => b7 / (183)
+	MEM READ: 4a3c / (19004) => 69 / (105)
+[OP START 19004 -> 0x69 -> adc]
+	REGS:
+		PC: 19004 (4a3c)
+		SP: 25 (19)
+		A:  238 (ee)
+		X:  157 (9d)
+		Y:  187 (bb)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4a3d / (19005) => 3b / (59)
+[OP END @ 19005]
+Done..

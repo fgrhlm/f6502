@@ -1,0 +1,19 @@
+[TEST 940 - 69.json]
+	MEM WRITE: f39d / (62365) => 69 / (105)
+	MEM WRITE: f39e / (62366) => da / (218)
+	MEM WRITE: f39f / (62367) => 6 / (6)
+	MEM READ: f39d / (62365) => 69 / (105)
+[OP START 62365 -> 0x69 -> adc]
+	REGS:
+		PC: 62365 (f39d)
+		SP: 120 (78)
+		A:  189 (bd)
+		X:  42 (2a)
+		Y:  216 (d8)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f39e / (62366) => da / (218)
+[OP END @ 62366]
+Done..

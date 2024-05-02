@@ -1,0 +1,19 @@
+[TEST 6164 - 69.json]
+	MEM WRITE: 573e / (22334) => 69 / (105)
+	MEM WRITE: 573f / (22335) => 7f / (127)
+	MEM WRITE: 5740 / (22336) => 2a / (42)
+	MEM READ: 573e / (22334) => 69 / (105)
+[OP START 22334 -> 0x69 -> adc]
+	REGS:
+		PC: 22334 (573e)
+		SP: 151 (97)
+		A:  152 (98)
+		X:  162 (a2)
+		Y:  61 (3d)
+		P:  174 (ae)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 573f / (22335) => 7f / (127)
+[OP END @ 22335]
+Done..

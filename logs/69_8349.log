@@ -1,0 +1,19 @@
+[TEST 8349 - 69.json]
+	MEM WRITE: 98ee / (39150) => 69 / (105)
+	MEM WRITE: 98ef / (39151) => cd / (205)
+	MEM WRITE: 98f0 / (39152) => d3 / (211)
+	MEM READ: 98ee / (39150) => 69 / (105)
+[OP START 39150 -> 0x69 -> adc]
+	REGS:
+		PC: 39150 (98ee)
+		SP: 180 (b4)
+		A:  229 (e5)
+		X:  150 (96)
+		Y:  208 (d0)
+		P:  231 (e7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 98ef / (39151) => cd / (205)
+[OP END @ 39151]
+Done..

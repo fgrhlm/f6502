@@ -1,0 +1,19 @@
+[TEST 3343 - 69.json]
+	MEM WRITE: c0af / (49327) => 69 / (105)
+	MEM WRITE: c0b0 / (49328) => 4e / (78)
+	MEM WRITE: c0b1 / (49329) => 77 / (119)
+	MEM READ: c0af / (49327) => 69 / (105)
+[OP START 49327 -> 0x69 -> adc]
+	REGS:
+		PC: 49327 (c0af)
+		SP: 139 (8b)
+		A:  225 (e1)
+		X:  57 (39)
+		Y:  12 (c)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c0b0 / (49328) => 4e / (78)
+[OP END @ 49328]
+Done..

@@ -1,0 +1,19 @@
+[TEST 8579 - 69.json]
+	MEM WRITE: acfa / (44282) => 69 / (105)
+	MEM WRITE: acfb / (44283) => 9 / (9)
+	MEM WRITE: acfc / (44284) => cc / (204)
+	MEM READ: acfa / (44282) => 69 / (105)
+[OP START 44282 -> 0x69 -> adc]
+	REGS:
+		PC: 44282 (acfa)
+		SP: 21 (15)
+		A:  206 (ce)
+		X:  225 (e1)
+		Y:  99 (63)
+		P:  237 (ed)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: acfb / (44283) => 9 / (9)
+[OP END @ 44283]
+Done..

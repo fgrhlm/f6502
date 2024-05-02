@@ -1,0 +1,19 @@
+[TEST 8549 - 69.json]
+	MEM WRITE: fb4a / (64330) => 69 / (105)
+	MEM WRITE: fb4b / (64331) => b9 / (185)
+	MEM WRITE: fb4c / (64332) => 7a / (122)
+	MEM READ: fb4a / (64330) => 69 / (105)
+[OP START 64330 -> 0x69 -> adc]
+	REGS:
+		PC: 64330 (fb4a)
+		SP: 187 (bb)
+		A:  55 (37)
+		X:  250 (fa)
+		Y:  134 (86)
+		P:  232 (e8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fb4b / (64331) => b9 / (185)
+[OP END @ 64331]
+Done..

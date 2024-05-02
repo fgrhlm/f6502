@@ -1,0 +1,19 @@
+[TEST 3203 - 69.json]
+	MEM WRITE: c64c / (50764) => 69 / (105)
+	MEM WRITE: c64d / (50765) => 3e / (62)
+	MEM WRITE: c64e / (50766) => cb / (203)
+	MEM READ: c64c / (50764) => 69 / (105)
+[OP START 50764 -> 0x69 -> adc]
+	REGS:
+		PC: 50764 (c64c)
+		SP: 201 (c9)
+		A:  133 (85)
+		X:  13 (d)
+		Y:  34 (22)
+		P:  175 (af)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c64d / (50765) => 3e / (62)
+[OP END @ 50765]
+Done..

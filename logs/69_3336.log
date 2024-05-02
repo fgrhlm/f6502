@@ -1,0 +1,19 @@
+[TEST 3336 - 69.json]
+	MEM WRITE: 6e2c / (28204) => 69 / (105)
+	MEM WRITE: 6e2d / (28205) => 30 / (48)
+	MEM WRITE: 6e2e / (28206) => da / (218)
+	MEM READ: 6e2c / (28204) => 69 / (105)
+[OP START 28204 -> 0x69 -> adc]
+	REGS:
+		PC: 28204 (6e2c)
+		SP: 19 (13)
+		A:  204 (cc)
+		X:  247 (f7)
+		Y:  18 (12)
+		P:  100 (64)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 6e2d / (28205) => 30 / (48)
+[OP END @ 28205]
+Done..

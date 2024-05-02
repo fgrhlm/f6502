@@ -1,0 +1,19 @@
+[TEST 1132 - 69.json]
+	MEM WRITE: c0a8 / (49320) => 69 / (105)
+	MEM WRITE: c0a9 / (49321) => 24 / (36)
+	MEM WRITE: c0aa / (49322) => 42 / (66)
+	MEM READ: c0a8 / (49320) => 69 / (105)
+[OP START 49320 -> 0x69 -> adc]
+	REGS:
+		PC: 49320 (c0a8)
+		SP: 57 (39)
+		A:  113 (71)
+		X:  120 (78)
+		Y:  248 (f8)
+		P:  96 (60)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c0a9 / (49321) => 24 / (36)
+[OP END @ 49321]
+Done..

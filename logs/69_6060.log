@@ -1,0 +1,19 @@
+[TEST 6060 - 69.json]
+	MEM WRITE: 4f42 / (20290) => 69 / (105)
+	MEM WRITE: 4f43 / (20291) => b7 / (183)
+	MEM WRITE: 4f44 / (20292) => af / (175)
+	MEM READ: 4f42 / (20290) => 69 / (105)
+[OP START 20290 -> 0x69 -> adc]
+	REGS:
+		PC: 20290 (4f42)
+		SP: 162 (a2)
+		A:  129 (81)
+		X:  78 (4e)
+		Y:  29 (1d)
+		P:  102 (66)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 4f43 / (20291) => b7 / (183)
+[OP END @ 20291]
+Done..

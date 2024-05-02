@@ -1,0 +1,19 @@
+[TEST 718 - 69.json]
+	MEM WRITE: 22c7 / (8903) => 69 / (105)
+	MEM WRITE: 22c8 / (8904) => eb / (235)
+	MEM WRITE: 22c9 / (8905) => 84 / (132)
+	MEM READ: 22c7 / (8903) => 69 / (105)
+[OP START 8903 -> 0x69 -> adc]
+	REGS:
+		PC: 8903 (22c7)
+		SP: 216 (d8)
+		A:  97 (61)
+		X:  165 (a5)
+		Y:  229 (e5)
+		P:  229 (e5)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 22c8 / (8904) => eb / (235)
+[OP END @ 8904]
+Done..

@@ -1,0 +1,19 @@
+[TEST 3580 - 69.json]
+	MEM WRITE: 16e0 / (5856) => 69 / (105)
+	MEM WRITE: 16e1 / (5857) => 26 / (38)
+	MEM WRITE: 16e2 / (5858) => 6e / (110)
+	MEM READ: 16e0 / (5856) => 69 / (105)
+[OP START 5856 -> 0x69 -> adc]
+	REGS:
+		PC: 5856 (16e0)
+		SP: 122 (7a)
+		A:  158 (9e)
+		X:  244 (f4)
+		Y:  238 (ee)
+		P:  234 (ea)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 16e1 / (5857) => 26 / (38)
+[OP END @ 5857]
+Done..

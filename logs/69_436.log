@@ -15,5 +15,5 @@
 		|1|1|0|0|0|1|0|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: efe8 / (61416) => 86 / (134)
-	BINADC: cc + 86 = 53[OP END @ 61416]
+[OP END @ 61416]
 Done..

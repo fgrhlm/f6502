@@ -1,0 +1,19 @@
+[TEST 971 - 69.json]
+	MEM WRITE: be51 / (48721) => 69 / (105)
+	MEM WRITE: be52 / (48722) => aa / (170)
+	MEM WRITE: be53 / (48723) => 78 / (120)
+	MEM READ: be51 / (48721) => 69 / (105)
+[OP START 48721 -> 0x69 -> adc]
+	REGS:
+		PC: 48721 (be51)
+		SP: 72 (48)
+		A:  113 (71)
+		X:  70 (46)
+		Y:  71 (47)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: be52 / (48722) => aa / (170)
+[OP END @ 48722]
+Done..

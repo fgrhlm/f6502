@@ -1,0 +1,19 @@
+[TEST 1402 - 69.json]
+	MEM WRITE: 33fb / (13307) => 69 / (105)
+	MEM WRITE: 33fc / (13308) => 18 / (24)
+	MEM WRITE: 33fd / (13309) => 7a / (122)
+	MEM READ: 33fb / (13307) => 69 / (105)
+[OP START 13307 -> 0x69 -> adc]
+	REGS:
+		PC: 13307 (33fb)
+		SP: 162 (a2)
+		A:  118 (76)
+		X:  178 (b2)
+		Y:  231 (e7)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 33fc / (13308) => 18 / (24)
+[OP END @ 13308]
+Done..

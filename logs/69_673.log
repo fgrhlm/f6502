@@ -1,0 +1,19 @@
+[TEST 673 - 69.json]
+	MEM WRITE: 1f9f / (8095) => 69 / (105)
+	MEM WRITE: 1fa0 / (8096) => 8b / (139)
+	MEM WRITE: 1fa1 / (8097) => 2d / (45)
+	MEM READ: 1f9f / (8095) => 69 / (105)
+[OP START 8095 -> 0x69 -> adc]
+	REGS:
+		PC: 8095 (1f9f)
+		SP: 115 (73)
+		A:  113 (71)
+		X:  12 (c)
+		Y:  38 (26)
+		P:  233 (e9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1fa0 / (8096) => 8b / (139)
+[OP END @ 8096]
+Done..

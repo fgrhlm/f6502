@@ -1,0 +1,19 @@
+[TEST 3420 - 69.json]
+	MEM WRITE: ff27 / (65319) => 69 / (105)
+	MEM WRITE: ff28 / (65320) => d / (13)
+	MEM WRITE: ff29 / (65321) => 4f / (79)
+	MEM READ: ff27 / (65319) => 69 / (105)
+[OP START 65319 -> 0x69 -> adc]
+	REGS:
+		PC: 65319 (ff27)
+		SP: 62 (3e)
+		A:  158 (9e)
+		X:  129 (81)
+		Y:  27 (1b)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ff28 / (65320) => d / (13)
+[OP END @ 65320]
+Done..

@@ -1,0 +1,19 @@
+[TEST 3680 - 69.json]
+	MEM WRITE: ea02 / (59906) => 69 / (105)
+	MEM WRITE: ea03 / (59907) => 84 / (132)
+	MEM WRITE: ea04 / (59908) => 61 / (97)
+	MEM READ: ea02 / (59906) => 69 / (105)
+[OP START 59906 -> 0x69 -> adc]
+	REGS:
+		PC: 59906 (ea02)
+		SP: 147 (93)
+		A:  76 (4c)
+		X:  151 (97)
+		Y:  69 (45)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: ea03 / (59907) => 84 / (132)
+[OP END @ 59907]
+Done..

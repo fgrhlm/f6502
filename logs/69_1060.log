@@ -1,0 +1,19 @@
+[TEST 1060 - 69.json]
+	MEM WRITE: 5bea / (23530) => 69 / (105)
+	MEM WRITE: 5beb / (23531) => 38 / (56)
+	MEM WRITE: 5bec / (23532) => 9e / (158)
+	MEM READ: 5bea / (23530) => 69 / (105)
+[OP START 23530 -> 0x69 -> adc]
+	REGS:
+		PC: 23530 (5bea)
+		SP: 93 (5d)
+		A:  35 (23)
+		X:  100 (64)
+		Y:  235 (eb)
+		P:  107 (6b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5beb / (23531) => 38 / (56)
+[OP END @ 23531]
+Done..

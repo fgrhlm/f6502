@@ -1,0 +1,19 @@
+[TEST 3249 - 69.json]
+	MEM WRITE: 15d7 / (5591) => 69 / (105)
+	MEM WRITE: 15d8 / (5592) => 2e / (46)
+	MEM WRITE: 15d9 / (5593) => be / (190)
+	MEM READ: 15d7 / (5591) => 69 / (105)
+[OP START 5591 -> 0x69 -> adc]
+	REGS:
+		PC: 5591 (15d7)
+		SP: 126 (7e)
+		A:  1 (1)
+		X:  130 (82)
+		Y:  117 (75)
+		P:  232 (e8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 15d8 / (5592) => 2e / (46)
+[OP END @ 5592]
+Done..

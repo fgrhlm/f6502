@@ -1,0 +1,19 @@
+[TEST 973 - 69.json]
+	MEM WRITE: 1770 / (6000) => 69 / (105)
+	MEM WRITE: 1771 / (6001) => a4 / (164)
+	MEM WRITE: 1772 / (6002) => 47 / (71)
+	MEM READ: 1770 / (6000) => 69 / (105)
+[OP START 6000 -> 0x69 -> adc]
+	REGS:
+		PC: 6000 (1770)
+		SP: 41 (29)
+		A:  85 (55)
+		X:  139 (8b)
+		Y:  163 (a3)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1771 / (6001) => a4 / (164)
+[OP END @ 6001]
+Done..

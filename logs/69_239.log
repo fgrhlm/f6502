@@ -15,5 +15,5 @@
 		|1|1|0|0|0|1|0|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: f3ca / (62410) => a5 / (165)
-	BINADC: ea + a5 = 90[OP END @ 62410]
+[OP END @ 62410]
 Done..

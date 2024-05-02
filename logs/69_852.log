@@ -1,0 +1,19 @@
+[TEST 852 - 69.json]
+	MEM WRITE: 36de / (14046) => 69 / (105)
+	MEM WRITE: 36df / (14047) => f2 / (242)
+	MEM WRITE: 36e0 / (14048) => db / (219)
+	MEM READ: 36de / (14046) => 69 / (105)
+[OP START 14046 -> 0x69 -> adc]
+	REGS:
+		PC: 14046 (36de)
+		SP: 93 (5d)
+		A:  176 (b0)
+		X:  180 (b4)
+		Y:  136 (88)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 36df / (14047) => f2 / (242)
+[OP END @ 14047]
+Done..

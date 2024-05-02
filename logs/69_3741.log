@@ -1,0 +1,19 @@
+[TEST 3741 - 69.json]
+	MEM WRITE: 2052 / (8274) => 69 / (105)
+	MEM WRITE: 2053 / (8275) => 1c / (28)
+	MEM WRITE: 2054 / (8276) => 19 / (25)
+	MEM READ: 2052 / (8274) => 69 / (105)
+[OP START 8274 -> 0x69 -> adc]
+	REGS:
+		PC: 8274 (2052)
+		SP: 141 (8d)
+		A:  109 (6d)
+		X:  118 (76)
+		Y:  172 (ac)
+		P:  224 (e0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2053 / (8275) => 1c / (28)
+[OP END @ 8275]
+Done..

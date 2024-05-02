@@ -1,0 +1,19 @@
+[TEST 6100 - 69.json]
+	MEM WRITE: 3add / (15069) => 69 / (105)
+	MEM WRITE: 3ade / (15070) => ba / (186)
+	MEM WRITE: 3adf / (15071) => 78 / (120)
+	MEM READ: 3add / (15069) => 69 / (105)
+[OP START 15069 -> 0x69 -> adc]
+	REGS:
+		PC: 15069 (3add)
+		SP: 151 (97)
+		A:  82 (52)
+		X:  70 (46)
+		Y:  37 (25)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3ade / (15070) => ba / (186)
+[OP END @ 15070]
+Done..

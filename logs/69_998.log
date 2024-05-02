@@ -1,0 +1,19 @@
+[TEST 998 - 69.json]
+	MEM WRITE: d3a3 / (54179) => 69 / (105)
+	MEM WRITE: d3a4 / (54180) => 56 / (86)
+	MEM WRITE: d3a5 / (54181) => f / (15)
+	MEM READ: d3a3 / (54179) => 69 / (105)
+[OP START 54179 -> 0x69 -> adc]
+	REGS:
+		PC: 54179 (d3a3)
+		SP: 7 (7)
+		A:  103 (67)
+		X:  221 (dd)
+		Y:  182 (b6)
+		P:  239 (ef)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d3a4 / (54180) => 56 / (86)
+[OP END @ 54180]
+Done..

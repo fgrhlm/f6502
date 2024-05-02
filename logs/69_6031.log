@@ -1,0 +1,19 @@
+[TEST 6031 - 69.json]
+	MEM WRITE: f23a / (62010) => 69 / (105)
+	MEM WRITE: f23b / (62011) => 78 / (120)
+	MEM WRITE: f23c / (62012) => 5 / (5)
+	MEM READ: f23a / (62010) => 69 / (105)
+[OP START 62010 -> 0x69 -> adc]
+	REGS:
+		PC: 62010 (f23a)
+		SP: 50 (32)
+		A:  1 (1)
+		X:  204 (cc)
+		Y:  215 (d7)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: f23b / (62011) => 78 / (120)
+[OP END @ 62011]
+Done..

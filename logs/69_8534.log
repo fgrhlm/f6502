@@ -1,0 +1,19 @@
+[TEST 8534 - 69.json]
+	MEM WRITE: 9f8 / (2552) => 69 / (105)
+	MEM WRITE: 9f9 / (2553) => d7 / (215)
+	MEM WRITE: 9fa / (2554) => 8c / (140)
+	MEM READ: 9f8 / (2552) => 69 / (105)
+[OP START 2552 -> 0x69 -> adc]
+	REGS:
+		PC: 2552 (9f8)
+		SP: 118 (76)
+		A:  201 (c9)
+		X:  211 (d3)
+		Y:  174 (ae)
+		P:  160 (a0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 9f9 / (2553) => d7 / (215)
+[OP END @ 2553]
+Done..

@@ -1,0 +1,19 @@
+[TEST 1102 - 69.json]
+	MEM WRITE: e00a / (57354) => 69 / (105)
+	MEM WRITE: e00b / (57355) => fc / (252)
+	MEM WRITE: e00c / (57356) => 32 / (50)
+	MEM READ: e00a / (57354) => 69 / (105)
+[OP START 57354 -> 0x69 -> adc]
+	REGS:
+		PC: 57354 (e00a)
+		SP: 157 (9d)
+		A:  114 (72)
+		X:  156 (9c)
+		Y:  125 (7d)
+		P:  33 (21)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: e00b / (57355) => fc / (252)
+[OP END @ 57355]
+Done..

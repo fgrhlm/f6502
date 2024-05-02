@@ -15,5 +15,5 @@
 		|0|0|1|0|0|1|1|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: be63 / (48739) => 57 / (87)
-	BINADC: e6 + 57 = 3d[OP END @ 48739]
+[OP END @ 48739]
 Done..

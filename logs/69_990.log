@@ -1,0 +1,19 @@
+[TEST 990 - 69.json]
+	MEM WRITE: 5d26 / (23846) => 69 / (105)
+	MEM WRITE: 5d27 / (23847) => d0 / (208)
+	MEM WRITE: 5d28 / (23848) => 44 / (68)
+	MEM READ: 5d26 / (23846) => 69 / (105)
+[OP START 23846 -> 0x69 -> adc]
+	REGS:
+		PC: 23846 (5d26)
+		SP: 109 (6d)
+		A:  104 (68)
+		X:  104 (68)
+		Y:  216 (d8)
+		P:  38 (26)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5d27 / (23847) => d0 / (208)
+[OP END @ 23847]
+Done..

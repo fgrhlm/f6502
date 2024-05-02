@@ -15,5 +15,5 @@
 		|0|0|0|0|0|1|1|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 74bd / (29885) => 76 / (118)
-	BINADC: df + 76 = 55[OP END @ 29885]
+[OP END @ 29885]
 Done..

@@ -1,0 +1,19 @@
+[TEST 6096 - 69.json]
+	MEM WRITE: c3c8 / (50120) => 69 / (105)
+	MEM WRITE: c3c9 / (50121) => 19 / (25)
+	MEM WRITE: c3ca / (50122) => 38 / (56)
+	MEM READ: c3c8 / (50120) => 69 / (105)
+[OP START 50120 -> 0x69 -> adc]
+	REGS:
+		PC: 50120 (c3c8)
+		SP: 240 (f0)
+		A:  153 (99)
+		X:  125 (7d)
+		Y:  3 (3)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c3c9 / (50121) => 19 / (25)
+[OP END @ 50121]
+Done..

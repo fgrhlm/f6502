@@ -1,0 +1,19 @@
+[TEST 8741 - 69.json]
+	MEM WRITE: 3e39 / (15929) => 69 / (105)
+	MEM WRITE: 3e3a / (15930) => 5a / (90)
+	MEM WRITE: 3e3b / (15931) => 45 / (69)
+	MEM READ: 3e39 / (15929) => 69 / (105)
+[OP START 15929 -> 0x69 -> adc]
+	REGS:
+		PC: 15929 (3e39)
+		SP: 188 (bc)
+		A:  70 (46)
+		X:  175 (af)
+		Y:  96 (60)
+		P:  44 (2c)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 3e3a / (15930) => 5a / (90)
+[OP END @ 15930]
+Done..

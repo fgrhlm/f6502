@@ -15,5 +15,5 @@
 		|1|0|0|0|0|1|1|1|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: ff47 / (65351) => ca / (202)
-	BINADC: 81 + ca = 4c[OP END @ 65351]
+[OP END @ 65351]
 Done..

@@ -1,0 +1,19 @@
+[TEST 6004 - 69.json]
+	MEM WRITE: c103 / (49411) => 69 / (105)
+	MEM WRITE: c104 / (49412) => f7 / (247)
+	MEM WRITE: c105 / (49413) => e6 / (230)
+	MEM READ: c103 / (49411) => 69 / (105)
+[OP START 49411 -> 0x69 -> adc]
+	REGS:
+		PC: 49411 (c103)
+		SP: 2 (2)
+		A:  251 (fb)
+		X:  139 (8b)
+		Y:  60 (3c)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: c104 / (49412) => f7 / (247)
+[OP END @ 49412]
+Done..

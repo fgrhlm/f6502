@@ -1,0 +1,19 @@
+[TEST 700 - 69.json]
+	MEM WRITE: 7b2e / (31534) => 69 / (105)
+	MEM WRITE: 7b2f / (31535) => 69 / (105)
+	MEM WRITE: 7b30 / (31536) => 48 / (72)
+	MEM READ: 7b2e / (31534) => 69 / (105)
+[OP START 31534 -> 0x69 -> adc]
+	REGS:
+		PC: 31534 (7b2e)
+		SP: 252 (fc)
+		A:  29 (1d)
+		X:  101 (65)
+		Y:  11 (b)
+		P:  110 (6e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 7b2f / (31535) => 69 / (105)
+[OP END @ 31535]
+Done..

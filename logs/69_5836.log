@@ -1,0 +1,19 @@
+[TEST 5836 - 69.json]
+	MEM WRITE: d355 / (54101) => 69 / (105)
+	MEM WRITE: d356 / (54102) => 7c / (124)
+	MEM WRITE: d357 / (54103) => be / (190)
+	MEM READ: d355 / (54101) => 69 / (105)
+[OP START 54101 -> 0x69 -> adc]
+	REGS:
+		PC: 54101 (d355)
+		SP: 219 (db)
+		A:  100 (64)
+		X:  226 (e2)
+		Y:  190 (be)
+		P:  233 (e9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: d356 / (54102) => 7c / (124)
+[OP END @ 54102]
+Done..

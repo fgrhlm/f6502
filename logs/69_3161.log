@@ -1,0 +1,19 @@
+[TEST 3161 - 69.json]
+	MEM WRITE: 30cb / (12491) => 69 / (105)
+	MEM WRITE: 30cc / (12492) => 94 / (148)
+	MEM WRITE: 30cd / (12493) => 3e / (62)
+	MEM READ: 30cb / (12491) => 69 / (105)
+[OP START 12491 -> 0x69 -> adc]
+	REGS:
+		PC: 12491 (30cb)
+		SP: 219 (db)
+		A:  205 (cd)
+		X:  8 (8)
+		Y:  194 (c2)
+		P:  37 (25)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 30cc / (12492) => 94 / (148)
+[OP END @ 12492]
+Done..

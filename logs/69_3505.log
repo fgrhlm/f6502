@@ -1,0 +1,19 @@
+[TEST 3505 - 69.json]
+	MEM WRITE: 8044 / (32836) => 69 / (105)
+	MEM WRITE: 8045 / (32837) => b9 / (185)
+	MEM WRITE: 8046 / (32838) => ee / (238)
+	MEM READ: 8044 / (32836) => 69 / (105)
+[OP START 32836 -> 0x69 -> adc]
+	REGS:
+		PC: 32836 (8044)
+		SP: 154 (9a)
+		A:  194 (c2)
+		X:  130 (82)
+		Y:  44 (2c)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8045 / (32837) => b9 / (185)
+[OP END @ 32837]
+Done..

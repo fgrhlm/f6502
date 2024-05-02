@@ -1,0 +1,19 @@
+[TEST 8630 - 69.json]
+	MEM WRITE: a7c / (2684) => 69 / (105)
+	MEM WRITE: a7d / (2685) => aa / (170)
+	MEM WRITE: a7e / (2686) => bf / (191)
+	MEM READ: a7c / (2684) => 69 / (105)
+[OP START 2684 -> 0x69 -> adc]
+	REGS:
+		PC: 2684 (a7c)
+		SP: 170 (aa)
+		A:  183 (b7)
+		X:  107 (6b)
+		Y:  179 (b3)
+		P:  98 (62)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a7d / (2685) => aa / (170)
+[OP END @ 2685]
+Done..

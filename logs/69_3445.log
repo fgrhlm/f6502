@@ -1,0 +1,19 @@
+[TEST 3445 - 69.json]
+	MEM WRITE: fb2d / (64301) => 69 / (105)
+	MEM WRITE: fb2e / (64302) => 81 / (129)
+	MEM WRITE: fb2f / (64303) => 8c / (140)
+	MEM READ: fb2d / (64301) => 69 / (105)
+[OP START 64301 -> 0x69 -> adc]
+	REGS:
+		PC: 64301 (fb2d)
+		SP: 1 (1)
+		A:  185 (b9)
+		X:  221 (dd)
+		Y:  65 (41)
+		P:  40 (28)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: fb2e / (64302) => 81 / (129)
+[OP END @ 64302]
+Done..

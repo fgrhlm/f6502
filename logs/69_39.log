@@ -15,5 +15,5 @@
 		|0|1|1|0|0|1|1|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: 1cde / (7390) => 26 / (38)
-	BINADC: db + 26 = 1[OP END @ 7390]
+[OP END @ 7390]
 Done..

@@ -1,0 +1,19 @@
+[TEST 3520 - 69.json]
+	MEM WRITE: 8e7 / (2279) => 69 / (105)
+	MEM WRITE: 8e8 / (2280) => f5 / (245)
+	MEM WRITE: 8e9 / (2281) => ca / (202)
+	MEM READ: 8e7 / (2279) => 69 / (105)
+[OP START 2279 -> 0x69 -> adc]
+	REGS:
+		PC: 2279 (8e7)
+		SP: 73 (49)
+		A:  206 (ce)
+		X:  46 (2e)
+		Y:  250 (fa)
+		P:  172 (ac)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 8e8 / (2280) => f5 / (245)
+[OP END @ 2280]
+Done..

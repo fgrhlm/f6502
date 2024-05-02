@@ -1,0 +1,19 @@
+[TEST 8440 - 69.json]
+	MEM WRITE: 5e31 / (24113) => 69 / (105)
+	MEM WRITE: 5e32 / (24114) => 8a / (138)
+	MEM WRITE: 5e33 / (24115) => e0 / (224)
+	MEM READ: 5e31 / (24113) => 69 / (105)
+[OP START 24113 -> 0x69 -> adc]
+	REGS:
+		PC: 24113 (5e31)
+		SP: 158 (9e)
+		A:  197 (c5)
+		X:  255 (ff)
+		Y:  103 (67)
+		P:  98 (62)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5e32 / (24114) => 8a / (138)
+[OP END @ 24114]
+Done..

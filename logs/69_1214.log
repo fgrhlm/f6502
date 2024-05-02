@@ -1,0 +1,19 @@
+[TEST 1214 - 69.json]
+	MEM WRITE: 27ff / (10239) => 69 / (105)
+	MEM WRITE: 2800 / (10240) => 23 / (35)
+	MEM WRITE: 2801 / (10241) => 62 / (98)
+	MEM READ: 27ff / (10239) => 69 / (105)
+[OP START 10239 -> 0x69 -> adc]
+	REGS:
+		PC: 10239 (27ff)
+		SP: 79 (4f)
+		A:  3 (3)
+		X:  157 (9d)
+		Y:  39 (27)
+		P:  109 (6d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 2800 / (10240) => 23 / (35)
+[OP END @ 10240]
+Done..

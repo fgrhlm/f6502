@@ -1,0 +1,19 @@
+[TEST 639 - 69.json]
+	MEM WRITE: 1ddc / (7644) => 69 / (105)
+	MEM WRITE: 1ddd / (7645) => 67 / (103)
+	MEM WRITE: 1dde / (7646) => 10 / (16)
+	MEM READ: 1ddc / (7644) => 69 / (105)
+[OP START 7644 -> 0x69 -> adc]
+	REGS:
+		PC: 7644 (1ddc)
+		SP: 247 (f7)
+		A:  166 (a6)
+		X:  86 (56)
+		Y:  118 (76)
+		P:  174 (ae)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 1ddd / (7645) => 67 / (103)
+[OP END @ 7645]
+Done..

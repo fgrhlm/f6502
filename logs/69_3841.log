@@ -1,4 +1,4 @@
-[TEST 91 - 69.json]
+[TEST 3841 - 69.json]
 	MEM WRITE: d3dc / (54236) => 69 / (105)
 	MEM WRITE: d3dd / (54237) => f2 / (242)
 	MEM WRITE: d3de / (54238) => e3 / (227)
@@ -15,5 +15,5 @@
 		|0|0|1|0|0|1|0|0|
 	ADDRESSING MODE: IMMEDIATE
 	MEM READ: d3dd / (54237) => f2 / (242)
-	BINADC: 17 + f2 = 9[OP END @ 54237]
+[OP END @ 54237]
 Done..

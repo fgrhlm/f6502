@@ -1,0 +1,19 @@
+[TEST 856 - 69.json]
+	MEM WRITE: bebc / (48828) => 69 / (105)
+	MEM WRITE: bebd / (48829) => 47 / (71)
+	MEM WRITE: bebe / (48830) => 62 / (98)
+	MEM READ: bebc / (48828) => 69 / (105)
+[OP START 48828 -> 0x69 -> adc]
+	REGS:
+		PC: 48828 (bebc)
+		SP: 151 (97)
+		A:  57 (39)
+		X:  65 (41)
+		Y:  89 (59)
+		P:  231 (e7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: bebd / (48829) => 47 / (71)
+[OP END @ 48829]
+Done..

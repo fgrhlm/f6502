@@ -1,0 +1,19 @@
+[TEST 8612 - 69.json]
+	MEM WRITE: deae / (57006) => 69 / (105)
+	MEM WRITE: deaf / (57007) => 5 / (5)
+	MEM WRITE: deb0 / (57008) => d2 / (210)
+	MEM READ: deae / (57006) => 69 / (105)
+[OP START 57006 -> 0x69 -> adc]
+	REGS:
+		PC: 57006 (deae)
+		SP: 8 (8)
+		A:  254 (fe)
+		X:  201 (c9)
+		Y:  219 (db)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: deaf / (57007) => 5 / (5)
+[OP END @ 57007]
+Done..
