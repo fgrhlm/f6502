@@ -1,0 +1,23 @@
+[TEST 0 - 36.json]
+	MEM WRITE: 3d0d / (15629) => 36 / (54)
+	MEM WRITE: 3d0e / (15630) => 13 / (19)
+	MEM WRITE: 3d0f / (15631) => 1b / (27)
+	MEM WRITE: 13 / (19) => d8 / (216)
+	MEM WRITE: 7a / (122) => 2d / (45)
+	MEM READ: 3d0d / (15629) => 36 / (54)
+[OP START 15629 -> 0x36 -> rol]
+	REGS:
+		PC: 15629 (3d0d)
+		SP: 22 (16)
+		A:  25 (19)
+		X:  103 (67)
+		Y:  89 (59)
+		P:  233 (e9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|1|1|
+	ADDRESSING MODE: ZERO_PAGE_X
+	MEM READ: 3d0e / (15630) => 13 / (19)
+	MEM READ: 7a / (122) => 2d / (45)
+	MEM WRITE: 7a / (122) => 5b / (91)
+[OP END @ 15630]
+Done..

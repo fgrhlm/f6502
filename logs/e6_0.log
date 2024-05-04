@@ -1,0 +1,22 @@
+[TEST 0 - e6.json]
+	MEM WRITE: a3bf / (41919) => e6 / (230)
+	MEM WRITE: a3c0 / (41920) => e4 / (228)
+	MEM WRITE: a3c1 / (41921) => 2d / (45)
+	MEM WRITE: e4 / (228) => c9 / (201)
+	MEM READ: a3bf / (41919) => e6 / (230)
+[OP START 41919 -> 0xe6 -> inc]
+	REGS:
+		PC: 41919 (a3bf)
+		SP: 18 (12)
+		A:  0 (0)
+		X:  194 (c2)
+		Y:  119 (77)
+		P:  46 (2e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|0|0|
+	ADDRESSING MODE: ZERO_PAGE
+	MEM READ: a3c0 / (41920) => e4 / (228)
+	MEM READ: e4 / (228) => c9 / (201)
+	MEM WRITE: e4 / (228) => ca / (202)
+[OP END @ 41920]
+Done..

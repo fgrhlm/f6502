@@ -1,0 +1,18 @@
+[TEST 0 - 0a.json]
+	MEM WRITE: d91a / (55578) => a / (10)
+	MEM WRITE: d91b / (55579) => 78 / (120)
+	MEM WRITE: d91c / (55580) => 2d / (45)
+	MEM READ: d91a / (55578) => a / (10)
+[OP START 55578 -> 0x0a -> asl]
+	REGS:
+		PC: 55578 (d91a)
+		SP: 142 (8e)
+		A:  57 (39)
+		X:  62 (3e)
+		Y:  93 (5d)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: ACCUMULATOR
+[OP END @ 55578]
+Done..

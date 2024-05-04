@@ -1,0 +1,26 @@
+[TEST 0 - 81.json]
+	MEM WRITE: 276d / (10093) => 81 / (129)
+	MEM WRITE: 276e / (10094) => d9 / (217)
+	MEM WRITE: 276f / (10095) => 28 / (40)
+	MEM WRITE: d9 / (217) => dd / (221)
+	MEM WRITE: e / (14) => 64 / (100)
+	MEM WRITE: f / (15) => 4c / (76)
+	MEM READ: 276d / (10093) => 81 / (129)
+[OP START 10093 -> 0x81 -> sta]
+	REGS:
+		PC: 10093 (276d)
+		SP: 236 (ec)
+		A:  22 (16)
+		X:  53 (35)
+		Y:  98 (62)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: ZERO_PAGE_INDIRECT_X
+	MEM READ: 276e / (10094) => d9 / (217)
+	MEM READ: e / (14) => 64 / (100)
+	MEM READ: f / (15) => 4c / (76)
+	store addr: 4c64 -> 16
+	MEM WRITE: 4c64 / (19556) => 16 / (22)
+[OP END @ 10094]
+Done..

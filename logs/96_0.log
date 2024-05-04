@@ -1,0 +1,22 @@
+[TEST 0 - 96.json]
+	MEM WRITE: fb9c / (64412) => 96 / (150)
+	MEM WRITE: fb9d / (64413) => d2 / (210)
+	MEM WRITE: fb9e / (64414) => d3 / (211)
+	MEM WRITE: d2 / (210) => e7 / (231)
+	MEM READ: fb9c / (64412) => 96 / (150)
+[OP START 64412 -> 0x96 -> stx]
+	REGS:
+		PC: 64412 (fb9c)
+		SP: 247 (f7)
+		A:  33 (21)
+		X:  174 (ae)
+		Y:  9 (9)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: ZERO_PAGE_Y
+	MEM READ: fb9d / (64413) => d2 / (210)
+	store addr: db -> ae
+	MEM WRITE: db / (219) => ae / (174)
+[OP END @ 64413]
+Done..

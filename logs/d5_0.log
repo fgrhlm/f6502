@@ -1,0 +1,22 @@
+[TEST 0 - d5.json]
+	MEM WRITE: bee6 / (48870) => d5 / (213)
+	MEM WRITE: bee7 / (48871) => 27 / (39)
+	MEM WRITE: bee8 / (48872) => a1 / (161)
+	MEM WRITE: 27 / (39) => 26 / (38)
+	MEM WRITE: e4 / (228) => a1 / (161)
+	MEM READ: bee6 / (48870) => d5 / (213)
+[OP START 48870 -> 0xd5 -> cmp]
+	REGS:
+		PC: 48870 (bee6)
+		SP: 10 (a)
+		A:  71 (47)
+		X:  189 (bd)
+		Y:  194 (c2)
+		P:  47 (2f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|0|
+	ADDRESSING MODE: ZERO_PAGE_X
+	MEM READ: bee7 / (48871) => 27 / (39)
+	MEM READ: e4 / (228) => a1 / (161)
+[OP END @ 48871]
+Done..

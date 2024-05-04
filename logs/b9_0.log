@@ -1,0 +1,23 @@
+[TEST 0 - b9.json]
+	MEM WRITE: aaab / (43691) => b9 / (185)
+	MEM WRITE: aaac / (43692) => 1e / (30)
+	MEM WRITE: aaad / (43693) => ad / (173)
+	MEM WRITE: adfc / (44540) => b8 / (184)
+	MEM WRITE: aaae / (43694) => 7b / (123)
+	MEM READ: aaab / (43691) => b9 / (185)
+[OP START 43691 -> 0xb9 -> lda]
+	REGS:
+		PC: 43691 (aaab)
+		SP: 118 (76)
+		A:  190 (be)
+		X:  8 (8)
+		Y:  222 (de)
+		P:  224 (e0)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|1|1|
+	ADDRESSING MODE: ABSOLUTE_Y
+	MEM READ: aaac / (43692) => 1e / (30)
+	MEM READ: aaad / (43693) => ad / (173)
+	MEM READ: adfc / (44540) => b8 / (184)
+[OP END @ 43693]
+Done..

@@ -1,0 +1,22 @@
+[TEST 0 - c6.json]
+	MEM WRITE: 34a / (842) => c6 / (198)
+	MEM WRITE: 34b / (843) => 4b / (75)
+	MEM WRITE: 34c / (844) => ee / (238)
+	MEM WRITE: 4b / (75) => f7 / (247)
+	MEM READ: 34a / (842) => c6 / (198)
+[OP START 842 -> 0xc6 -> dec]
+	REGS:
+		PC: 842 (34a)
+		SP: 78 (4e)
+		A:  64 (40)
+		X:  60 (3c)
+		Y:  76 (4c)
+		P:  231 (e7)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|1|
+	ADDRESSING MODE: ZERO_PAGE
+	MEM READ: 34b / (843) => 4b / (75)
+	MEM READ: 4b / (75) => f7 / (247)
+	MEM WRITE: 4b / (75) => f6 / (246)
+[OP END @ 843]
+Done..

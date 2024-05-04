@@ -1,0 +1,23 @@
+[TEST 0 - f6.json]
+	MEM WRITE: 84e6 / (34022) => f6 / (246)
+	MEM WRITE: 84e7 / (34023) => 6e / (110)
+	MEM WRITE: 84e8 / (34024) => 14 / (20)
+	MEM WRITE: 6e / (110) => b9 / (185)
+	MEM WRITE: 8f / (143) => 33 / (51)
+	MEM READ: 84e6 / (34022) => f6 / (246)
+[OP START 34022 -> 0xf6 -> inc]
+	REGS:
+		PC: 34022 (84e6)
+		SP: 60 (3c)
+		A:  41 (29)
+		X:  33 (21)
+		Y:  130 (82)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: ZERO_PAGE_X
+	MEM READ: 84e7 / (34023) => 6e / (110)
+	MEM READ: 8f / (143) => 33 / (51)
+	MEM WRITE: 8f / (143) => 34 / (52)
+[OP END @ 34023]
+Done..

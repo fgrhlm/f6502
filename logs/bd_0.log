@@ -1,0 +1,24 @@
+[TEST 0 - bd.json]
+	MEM WRITE: 3afb / (15099) => bd / (189)
+	MEM WRITE: 3afc / (15100) => a0 / (160)
+	MEM WRITE: 3afd / (15101) => 1 / (1)
+	MEM WRITE: 142 / (322) => 43 / (67)
+	MEM WRITE: 242 / (578) => 10 / (16)
+	MEM WRITE: 3afe / (15102) => a3 / (163)
+	MEM READ: 3afb / (15099) => bd / (189)
+[OP START 15099 -> 0xbd -> lda]
+	REGS:
+		PC: 15099 (3afb)
+		SP: 124 (7c)
+		A:  206 (ce)
+		X:  162 (a2)
+		Y:  63 (3f)
+		P:  172 (ac)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|0|1|
+	ADDRESSING MODE: ABSOLUTE_X
+	MEM READ: 3afc / (15100) => a0 / (160)
+	MEM READ: 3afd / (15101) => 1 / (1)
+	MEM READ: 242 / (578) => 10 / (16)
+[OP END @ 15101]
+Done..

@@ -1,0 +1,19 @@
+[TEST 0 - 29.json]
+	MEM WRITE: a4c7 / (42183) => 29 / (41)
+	MEM WRITE: a4c8 / (42184) => 14 / (20)
+	MEM WRITE: a4c9 / (42185) => c3 / (195)
+	MEM READ: a4c7 / (42183) => 29 / (41)
+[OP START 42183 -> 0x29 -> and]
+	REGS:
+		PC: 42183 (a4c7)
+		SP: 29 (1d)
+		A:  176 (b0)
+		X:  136 (88)
+		Y:  75 (4b)
+		P:  34 (22)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: a4c8 / (42184) => 14 / (20)
+[OP END @ 42184]
+Done..

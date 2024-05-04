@@ -1,0 +1,21 @@
+[TEST 0 - 05.json]
+	MEM WRITE: 4d71 / (19825) => 5 / (5)
+	MEM WRITE: 4d72 / (19826) => ca / (202)
+	MEM WRITE: 4d73 / (19827) => 36 / (54)
+	MEM WRITE: ca / (202) => a5 / (165)
+	MEM READ: 4d71 / (19825) => 5 / (5)
+[OP START 19825 -> 0x05 -> ora]
+	REGS:
+		PC: 19825 (4d71)
+		SP: 165 (a5)
+		A:  250 (fa)
+		X:  25 (19)
+		Y:  4 (4)
+		P:  35 (23)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|0|0|1|0|0|
+	ADDRESSING MODE: ZERO_PAGE
+	MEM READ: 4d72 / (19826) => ca / (202)
+	MEM READ: ca / (202) => a5 / (165)
+[OP END @ 19826]
+Done..

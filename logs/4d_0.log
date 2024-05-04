@@ -1,0 +1,23 @@
+[TEST 0 - 4d.json]
+	MEM WRITE: f5a / (3930) => 4d / (77)
+	MEM WRITE: f5b / (3931) => 1a / (26)
+	MEM WRITE: f5c / (3932) => b / (11)
+	MEM WRITE: b1a / (2842) => 1f / (31)
+	MEM WRITE: f5d / (3933) => 69 / (105)
+	MEM READ: f5a / (3930) => 4d / (77)
+[OP START 3930 -> 0x4d -> eor]
+	REGS:
+		PC: 3930 (f5a)
+		SP: 170 (aa)
+		A:  22 (16)
+		X:  82 (52)
+		Y:  206 (ce)
+		P:  162 (a2)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|0|0|1|0|1|
+	ADDRESSING MODE: ABSOLUTE
+	MEM READ: f5b / (3931) => 1a / (26)
+	MEM READ: f5c / (3932) => b / (11)
+	MEM READ: b1a / (2842) => 1f / (31)
+[OP END @ 3932]
+Done..

@@ -1,0 +1,27 @@
+[TEST 0 - e1.json]
+	MEM WRITE: a727 / (42791) => e1 / (225)
+	MEM WRITE: a728 / (42792) => a5 / (165)
+	MEM WRITE: a729 / (42793) => 44 / (68)
+	MEM WRITE: a5 / (165) => db / (219)
+	MEM WRITE: c1 / (193) => 6e / (110)
+	MEM WRITE: c2 / (194) => cd / (205)
+	MEM WRITE: cd6e / (52590) => 73 / (115)
+	MEM READ: a727 / (42791) => e1 / (225)
+[OP START 42791 -> 0xe1 -> sbc]
+	REGS:
+		PC: 42791 (a727)
+		SP: 223 (df)
+		A:  173 (ad)
+		X:  28 (1c)
+		Y:  240 (f0)
+		P:  161 (a1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|0|1|
+	ADDRESSING MODE: ZERO_PAGE_INDIRECT_X
+	MEM READ: a728 / (42792) => a5 / (165)
+	MEM READ: c1 / (193) => 6e / (110)
+	MEM READ: c2 / (194) => cd / (205)
+	MEM READ: cd6e / (52590) => 73 / (115)
+	BIN SBC
+[OP END @ 42792]
+Done..

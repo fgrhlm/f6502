@@ -1,0 +1,18 @@
+[TEST 2 - 90.json]
+	MEM WRITE: ca63 / (51811) => 90 / (144)
+	MEM WRITE: ca64 / (51812) => 36 / (54)
+	MEM WRITE: ca65 / (51813) => bd / (189)
+	MEM READ: ca63 / (51811) => 90 / (144)
+[OP START 51811 -> 0x90 -> bcc]
+	REGS:
+		PC: 51811 (ca63)
+		SP: 191 (bf)
+		A:  113 (71)
+		X:  240 (f0)
+		Y:  144 (90)
+		P:  39 (27)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|0|
+	ADDRESSING MODE: RELATIVE
+[OP END @ 51812]
+Done..

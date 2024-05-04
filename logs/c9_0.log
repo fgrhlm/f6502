@@ -1,0 +1,19 @@
+[TEST 0 - c9.json]
+	MEM WRITE: 5b8c / (23436) => c9 / (201)
+	MEM WRITE: 5b8d / (23437) => bb / (187)
+	MEM WRITE: 5b8e / (23438) => bf / (191)
+	MEM READ: 5b8c / (23436) => c9 / (201)
+[OP START 23436 -> 0xc9 -> cmp]
+	REGS:
+		PC: 23436 (5b8c)
+		SP: 182 (b6)
+		A:  16 (10)
+		X:  242 (f2)
+		Y:  19 (13)
+		P:  175 (af)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|0|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 5b8d / (23437) => bb / (187)
+[OP END @ 23437]
+Done..

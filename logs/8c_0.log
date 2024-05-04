@@ -1,0 +1,23 @@
+[TEST 0 - 8c.json]
+	MEM WRITE: 84aa / (33962) => 8c / (140)
+	MEM WRITE: 84ab / (33963) => c0 / (192)
+	MEM WRITE: 84ac / (33964) => 13 / (19)
+	MEM WRITE: 84ad / (33965) => a / (10)
+	MEM READ: 84aa / (33962) => 8c / (140)
+[OP START 33962 -> 0x8c -> sty]
+	REGS:
+		PC: 33962 (84aa)
+		SP: 88 (58)
+		A:  133 (85)
+		X:  230 (e6)
+		Y:  126 (7e)
+		P:  103 (67)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|1|0|
+	ADDRESSING MODE: ABSOLUTE
+	MEM READ: 84ab / (33963) => c0 / (192)
+	MEM READ: 84ac / (33964) => 13 / (19)
+	store addr: 13c0 -> 7e
+	MEM WRITE: 13c0 / (5056) => 7e / (126)
+[OP END @ 33964]
+Done..

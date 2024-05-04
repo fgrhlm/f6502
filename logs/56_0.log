@@ -1,0 +1,23 @@
+[TEST 0 - 56.json]
+	MEM WRITE: 44cc / (17612) => 56 / (86)
+	MEM WRITE: 44cd / (17613) => ad / (173)
+	MEM WRITE: 44ce / (17614) => c9 / (201)
+	MEM WRITE: ad / (173) => 73 / (115)
+	MEM WRITE: b / (11) => ff / (255)
+	MEM READ: 44cc / (17612) => 56 / (86)
+[OP START 17612 -> 0x56 -> lsr]
+	REGS:
+		PC: 17612 (44cc)
+		SP: 183 (b7)
+		A:  37 (25)
+		X:  94 (5e)
+		Y:  208 (d0)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: ZERO_PAGE_X
+	MEM READ: 44cd / (17613) => ad / (173)
+	MEM READ: b / (11) => ff / (255)
+	MEM WRITE: b / (11) => 7f / (127)
+[OP END @ 17613]
+Done..

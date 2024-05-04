@@ -1,0 +1,18 @@
+[TEST 0 - 18.json]
+	MEM WRITE: 9a8 / (2472) => 18 / (24)
+	MEM WRITE: 9a9 / (2473) => c9 / (201)
+	MEM WRITE: 9aa / (2474) => 9b / (155)
+	MEM READ: 9a8 / (2472) => 18 / (24)
+[OP START 2472 -> 0x18 -> clc]
+	REGS:
+		PC: 2472 (9a8)
+		SP: 38 (26)
+		A:  215 (d7)
+		X:  121 (79)
+		Y:  191 (bf)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMPLIED
+[OP END @ 2472]
+Done..

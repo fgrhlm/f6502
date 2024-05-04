@@ -1,0 +1,18 @@
+[TEST 0 - f8.json]
+	MEM WRITE: 386c / (14444) => f8 / (248)
+	MEM WRITE: 386d / (14445) => 87 / (135)
+	MEM WRITE: 386e / (14446) => 7a / (122)
+	MEM READ: 386c / (14444) => f8 / (248)
+[OP START 14444 -> 0xf8 -> sed]
+	REGS:
+		PC: 14444 (386c)
+		SP: 188 (bc)
+		A:  25 (19)
+		X:  177 (b1)
+		Y:  26 (1a)
+		P:  40 (28)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMPLIED
+[OP END @ 14444]
+Done..

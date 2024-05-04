@@ -1,0 +1,21 @@
+[TEST 0 - 65.json]
+	MEM WRITE: 231 / (561) => 65 / (101)
+	MEM WRITE: 232 / (562) => cb / (203)
+	MEM WRITE: 233 / (563) => c / (12)
+	MEM WRITE: cb / (203) => eb / (235)
+	MEM READ: 231 / (561) => 65 / (101)
+[OP START 561 -> 0x65 -> adc]
+	REGS:
+		PC: 561 (231)
+		SP: 65 (41)
+		A:  52 (34)
+		X:  170 (aa)
+		Y:  67 (43)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: ZERO_PAGE
+	MEM READ: 232 / (562) => cb / (203)
+	MEM READ: cb / (203) => eb / (235)
+[OP END @ 562]
+Done..

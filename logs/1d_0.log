@@ -1,0 +1,24 @@
+[TEST 0 - 1d.json]
+	MEM WRITE: cc0a / (52234) => 1d / (29)
+	MEM WRITE: cc0b / (52235) => b5 / (181)
+	MEM WRITE: cc0c / (52236) => 10 / (16)
+	MEM WRITE: 1043 / (4163) => 4a / (74)
+	MEM WRITE: 1143 / (4419) => d4 / (212)
+	MEM WRITE: cc0d / (52237) => f8 / (248)
+	MEM READ: cc0a / (52234) => 1d / (29)
+[OP START 52234 -> 0x1d -> ora]
+	REGS:
+		PC: 52234 (cc0a)
+		SP: 2 (2)
+		A:  216 (d8)
+		X:  142 (8e)
+		Y:  5 (5)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: ABSOLUTE_X
+	MEM READ: cc0b / (52235) => b5 / (181)
+	MEM READ: cc0c / (52236) => 10 / (16)
+	MEM READ: 1143 / (4419) => d4 / (212)
+[OP END @ 52236]
+Done..

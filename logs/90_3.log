@@ -1,0 +1,22 @@
+[TEST 3 - 90.json]
+	MEM WRITE: 415e / (16734) => 90 / (144)
+	MEM WRITE: 415f / (16735) => d8 / (216)
+	MEM WRITE: 4160 / (16736) => 20 / (32)
+	MEM WRITE: 4138 / (16696) => e5 / (229)
+	MEM READ: 415e / (16734) => 90 / (144)
+[OP START 16734 -> 0x90 -> bcc]
+	REGS:
+		PC: 16734 (415e)
+		SP: 174 (ae)
+		A:  2 (2)
+		X:  35 (23)
+		Y:  224 (e0)
+		P:  234 (ea)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|1|1|
+	ADDRESSING MODE: RELATIVE
+	MEM READ: 415f / (16735) => d8 / (216)
+	addr = 16693
+	branch -> 16693
+[OP END @ 16695]
+Done..

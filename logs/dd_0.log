@@ -1,0 +1,24 @@
+[TEST 0 - dd.json]
+	MEM WRITE: 1fc2 / (8130) => dd / (221)
+	MEM WRITE: 1fc3 / (8131) => 51 / (81)
+	MEM WRITE: 1fc4 / (8132) => 92 / (146)
+	MEM WRITE: 920d / (37389) => 3a / (58)
+	MEM WRITE: 930d / (37645) => ac / (172)
+	MEM WRITE: 1fc5 / (8133) => 53 / (83)
+	MEM READ: 1fc2 / (8130) => dd / (221)
+[OP START 8130 -> 0xdd -> cmp]
+	REGS:
+		PC: 8130 (1fc2)
+		SP: 146 (92)
+		A:  127 (7f)
+		X:  188 (bc)
+		Y:  36 (24)
+		P:  168 (a8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|1|
+	ADDRESSING MODE: ABSOLUTE_X
+	MEM READ: 1fc3 / (8131) => 51 / (81)
+	MEM READ: 1fc4 / (8132) => 92 / (146)
+	MEM READ: 930d / (37645) => ac / (172)
+[OP END @ 8132]
+Done..

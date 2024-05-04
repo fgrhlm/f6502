@@ -1,0 +1,18 @@
+[TEST 0 - 6a.json]
+	MEM WRITE: c7b0 / (51120) => 6a / (106)
+	MEM WRITE: c7b1 / (51121) => fc / (252)
+	MEM WRITE: c7b2 / (51122) => f / (15)
+	MEM READ: c7b0 / (51120) => 6a / (106)
+[OP START 51120 -> 0x6a -> ror]
+	REGS:
+		PC: 51120 (c7b0)
+		SP: 112 (70)
+		A:  5 (5)
+		X:  174 (ae)
+		Y:  247 (f7)
+		P:  32 (20)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|0|
+	ADDRESSING MODE: ACCUMULATOR
+[OP END @ 51120]
+Done..

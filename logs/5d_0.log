@@ -1,0 +1,24 @@
+[TEST 0 - 5d.json]
+	MEM WRITE: d663 / (54883) => 5d / (93)
+	MEM WRITE: d664 / (54884) => f7 / (247)
+	MEM WRITE: d665 / (54885) => ec / (236)
+	MEM WRITE: ec0d / (60429) => 76 / (118)
+	MEM WRITE: ed0d / (60685) => 79 / (121)
+	MEM WRITE: d666 / (54886) => 7c / (124)
+	MEM READ: d663 / (54883) => 5d / (93)
+[OP START 54883 -> 0x5d -> eor]
+	REGS:
+		PC: 54883 (d663)
+		SP: 67 (43)
+		A:  84 (54)
+		X:  22 (16)
+		Y:  39 (27)
+		P:  225 (e1)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|0|0|1|1|1|
+	ADDRESSING MODE: ABSOLUTE_X
+	MEM READ: d664 / (54884) => f7 / (247)
+	MEM READ: d665 / (54885) => ec / (236)
+	MEM READ: ed0d / (60685) => 79 / (121)
+[OP END @ 54885]
+Done..

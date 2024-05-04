@@ -1,0 +1,18 @@
+[TEST 0 - 30.json]
+	MEM WRITE: 5e13 / (24083) => 30 / (48)
+	MEM WRITE: 5e14 / (24084) => 1d / (29)
+	MEM WRITE: 5e15 / (24085) => 68 / (104)
+	MEM READ: 5e13 / (24083) => 30 / (48)
+[OP START 24083 -> 0x30 -> bmi]
+	REGS:
+		PC: 24083 (5e13)
+		SP: 144 (90)
+		A:  156 (9c)
+		X:  193 (c1)
+		Y:  190 (be)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: RELATIVE
+[OP END @ 24084]
+Done..

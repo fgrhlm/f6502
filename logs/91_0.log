@@ -1,0 +1,26 @@
+[TEST 0 - 91.json]
+	MEM WRITE: 1c86 / (7302) => 91 / (145)
+	MEM WRITE: 1c87 / (7303) => bb / (187)
+	MEM WRITE: 1c88 / (7304) => 6e / (110)
+	MEM WRITE: bb / (187) => 8d / (141)
+	MEM WRITE: bc / (188) => 59 / (89)
+	MEM WRITE: 59a9 / (22953) => d5 / (213)
+	MEM READ: 1c86 / (7302) => 91 / (145)
+[OP START 7302 -> 0x91 -> sta]
+	REGS:
+		PC: 7302 (1c86)
+		SP: 149 (95)
+		A:  63 (3f)
+		X:  17 (11)
+		Y:  28 (1c)
+		P:  43 (2b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|0|
+	ADDRESSING MODE: ZERO_PAGE_INDIRECT_Y
+	MEM READ: 1c87 / (7303) => bb / (187)
+	MEM READ: bb / (187) => 8d / (141)
+	MEM READ: bc / (188) => 59 / (89)
+	store addr: 59a9 -> 3f
+	MEM WRITE: 59a9 / (22953) => 3f / (63)
+[OP END @ 7303]
+Done..

@@ -1,0 +1,23 @@
+[TEST 0 - 0d.json]
+	MEM WRITE: a81f / (43039) => d / (13)
+	MEM WRITE: a820 / (43040) => 63 / (99)
+	MEM WRITE: a821 / (43041) => 46 / (70)
+	MEM WRITE: 4663 / (18019) => e5 / (229)
+	MEM WRITE: a822 / (43042) => 28 / (40)
+	MEM READ: a81f / (43039) => d / (13)
+[OP START 43039 -> 0x0d -> ora]
+	REGS:
+		PC: 43039 (a81f)
+		SP: 249 (f9)
+		A:  39 (27)
+		X:  228 (e4)
+		Y:  90 (5a)
+		P:  232 (e8)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|1|1|
+	ADDRESSING MODE: ABSOLUTE
+	MEM READ: a820 / (43040) => 63 / (99)
+	MEM READ: a821 / (43041) => 46 / (70)
+	MEM READ: 4663 / (18019) => e5 / (229)
+[OP END @ 43041]
+Done..

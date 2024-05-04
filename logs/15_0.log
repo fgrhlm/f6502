@@ -1,0 +1,22 @@
+[TEST 0 - 15.json]
+	MEM WRITE: f50d / (62733) => 15 / (21)
+	MEM WRITE: f50e / (62734) => 22 / (34)
+	MEM WRITE: f50f / (62735) => 30 / (48)
+	MEM WRITE: 22 / (34) => 51 / (81)
+	MEM WRITE: 78 / (120) => f1 / (241)
+	MEM READ: f50d / (62733) => 15 / (21)
+[OP START 62733 -> 0x15 -> ora]
+	REGS:
+		PC: 62733 (f50d)
+		SP: 219 (db)
+		A:  111 (6f)
+		X:  86 (56)
+		Y:  228 (e4)
+		P:  169 (a9)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|1|
+	ADDRESSING MODE: ZERO_PAGE_X
+	MEM READ: f50e / (62734) => 22 / (34)
+	MEM READ: 78 / (120) => f1 / (241)
+[OP END @ 62734]
+Done..

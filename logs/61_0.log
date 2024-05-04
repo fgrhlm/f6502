@@ -1,0 +1,26 @@
+[TEST 0 - 61.json]
+	MEM WRITE: 406f / (16495) => 61 / (97)
+	MEM WRITE: 4070 / (16496) => 96 / (150)
+	MEM WRITE: 4071 / (16497) => 69 / (105)
+	MEM WRITE: 96 / (150) => 80 / (128)
+	MEM WRITE: 29 / (41) => 3b / (59)
+	MEM WRITE: 2a / (42) => 72 / (114)
+	MEM WRITE: 723b / (29243) => 13 / (19)
+	MEM READ: 406f / (16495) => 61 / (97)
+[OP START 16495 -> 0x61 -> adc]
+	REGS:
+		PC: 16495 (406f)
+		SP: 253 (fd)
+		A:  40 (28)
+		X:  147 (93)
+		Y:  133 (85)
+		P:  100 (64)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|1|0|
+	ADDRESSING MODE: ZERO_PAGE_INDIRECT_X
+	MEM READ: 4070 / (16496) => 96 / (150)
+	MEM READ: 29 / (41) => 3b / (59)
+	MEM READ: 2a / (42) => 72 / (114)
+	MEM READ: 723b / (29243) => 13 / (19)
+[OP END @ 16496]
+Done..

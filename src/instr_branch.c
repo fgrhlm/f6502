@@ -4,7 +4,7 @@
 
 void instr_branch(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
-    debug_logf("\tbranch -> %x\n", addr);
+    debug_logf("\tbranch -> %d\n", addr);
     set_pc(c, addr); 
     inc_pc(c);
 }

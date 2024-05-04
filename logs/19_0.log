@@ -1,0 +1,23 @@
+[TEST 0 - 19.json]
+	MEM WRITE: f09b / (61595) => 19 / (25)
+	MEM WRITE: f09c / (61596) => 12 / (18)
+	MEM WRITE: f09d / (61597) => 52 / (82)
+	MEM WRITE: 5298 / (21144) => f2 / (242)
+	MEM WRITE: f09e / (61598) => ac / (172)
+	MEM READ: f09b / (61595) => 19 / (25)
+[OP START 61595 -> 0x19 -> ora]
+	REGS:
+		PC: 61595 (f09b)
+		SP: 129 (81)
+		A:  82 (52)
+		X:  33 (21)
+		Y:  134 (86)
+		P:  230 (e6)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|1|
+	ADDRESSING MODE: ABSOLUTE_Y
+	MEM READ: f09c / (61596) => 12 / (18)
+	MEM READ: f09d / (61597) => 52 / (82)
+	MEM READ: 5298 / (21144) => f2 / (242)
+[OP END @ 61597]
+Done..

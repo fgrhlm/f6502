@@ -1,0 +1,23 @@
+[TEST 0 - 3d.json]
+	MEM WRITE: aaac / (43692) => 3d / (61)
+	MEM WRITE: aaad / (43693) => 20 / (32)
+	MEM WRITE: aaae / (43694) => 0 / (0)
+	MEM WRITE: ff / (255) => 44 / (68)
+	MEM WRITE: aaaf / (43695) => 45 / (69)
+	MEM READ: aaac / (43692) => 3d / (61)
+[OP START 43692 -> 0x3d -> and]
+	REGS:
+		PC: 43692 (aaac)
+		SP: 14 (e)
+		A:  58 (3a)
+		X:  223 (df)
+		Y:  148 (94)
+		P:  107 (6b)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|1|0|
+	ADDRESSING MODE: ABSOLUTE_X
+	MEM READ: aaad / (43693) => 20 / (32)
+	MEM READ: aaae / (43694) => 0 / (0)
+	MEM READ: ff / (255) => 44 / (68)
+[OP END @ 43694]
+Done..

@@ -1,0 +1,19 @@
+[TEST 0 - a0.json]
+	MEM WRITE: 70bd / (28861) => a0 / (160)
+	MEM WRITE: 70be / (28862) => c9 / (201)
+	MEM WRITE: 70bf / (28863) => c1 / (193)
+	MEM READ: 70bd / (28861) => a0 / (160)
+[OP START 28861 -> 0xa0 -> ldy]
+	REGS:
+		PC: 28861 (70bd)
+		SP: 196 (c4)
+		A:  154 (9a)
+		X:  224 (e0)
+		Y:  107 (6b)
+		P:  40 (28)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: 70be / (28862) => c9 / (201)
+[OP END @ 28862]
+Done..

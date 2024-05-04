@@ -1,0 +1,23 @@
+[TEST 0 - 8d.json]
+	MEM WRITE: 376c / (14188) => 8d / (141)
+	MEM WRITE: 376d / (14189) => d / (13)
+	MEM WRITE: 376e / (14190) => 22 / (34)
+	MEM WRITE: 376f / (14191) => e6 / (230)
+	MEM READ: 376c / (14188) => 8d / (141)
+[OP START 14188 -> 0x8d -> sta]
+	REGS:
+		PC: 14188 (376c)
+		SP: 115 (73)
+		A:  253 (fd)
+		X:  229 (e5)
+		Y:  196 (c4)
+		P:  101 (65)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|0|0|1|1|0|
+	ADDRESSING MODE: ABSOLUTE
+	MEM READ: 376d / (14189) => d / (13)
+	MEM READ: 376e / (14190) => 22 / (34)
+	store addr: 220d -> fd
+	MEM WRITE: 220d / (8717) => fd / (253)
+[OP END @ 14190]
+Done..

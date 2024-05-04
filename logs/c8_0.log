@@ -1,0 +1,18 @@
+[TEST 0 - c8.json]
+	MEM WRITE: 917 / (2327) => c8 / (200)
+	MEM WRITE: 918 / (2328) => 45 / (69)
+	MEM WRITE: 919 / (2329) => 64 / (100)
+	MEM READ: 917 / (2327) => c8 / (200)
+[OP START 2327 -> 0xc8 -> iny]
+	REGS:
+		PC: 2327 (917)
+		SP: 217 (d9)
+		A:  110 (6e)
+		X:  45 (2d)
+		Y:  49 (31)
+		P:  110 (6e)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|1|0|1|1|0|
+	ADDRESSING MODE: IMPLIED
+[OP END @ 2327]
+Done..

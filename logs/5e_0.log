@@ -1,0 +1,25 @@
+[TEST 0 - 5e.json]
+	MEM WRITE: c043 / (49219) => 5e / (94)
+	MEM WRITE: c044 / (49220) => 96 / (150)
+	MEM WRITE: c045 / (49221) => 9e / (158)
+	MEM WRITE: 9e34 / (40500) => 4a / (74)
+	MEM WRITE: 9f34 / (40756) => f4 / (244)
+	MEM WRITE: c046 / (49222) => a8 / (168)
+	MEM READ: c043 / (49219) => 5e / (94)
+[OP START 49219 -> 0x5e -> lsr]
+	REGS:
+		PC: 49219 (c043)
+		SP: 248 (f8)
+		A:  171 (ab)
+		X:  158 (9e)
+		Y:  252 (fc)
+		P:  40 (28)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|1|0|1|0|0|
+	ADDRESSING MODE: ABSOLUTE_X
+	MEM READ: c044 / (49220) => 96 / (150)
+	MEM READ: c045 / (49221) => 9e / (158)
+	MEM READ: 9f34 / (40756) => f4 / (244)
+	MEM WRITE: 9f34 / (40756) => 7a / (122)
+[OP END @ 49221]
+Done..

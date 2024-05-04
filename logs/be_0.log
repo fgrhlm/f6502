@@ -1,0 +1,23 @@
+[TEST 0 - be.json]
+	MEM WRITE: 593e / (22846) => be / (190)
+	MEM WRITE: 593f / (22847) => a2 / (162)
+	MEM WRITE: 5940 / (22848) => d6 / (214)
+	MEM WRITE: d6da / (55002) => 7b / (123)
+	MEM WRITE: 5941 / (22849) => 32 / (50)
+	MEM READ: 593e / (22846) => be / (190)
+[OP START 22846 -> 0xbe -> ldx]
+	REGS:
+		PC: 22846 (593e)
+		SP: 2 (2)
+		A:  140 (8c)
+		X:  3 (3)
+		Y:  56 (38)
+		P:  41 (29)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|0|1|0|1|0|0|
+	ADDRESSING MODE: ABSOLUTE_Y
+	MEM READ: 593f / (22847) => a2 / (162)
+	MEM READ: 5940 / (22848) => d6 / (214)
+	MEM READ: d6da / (55002) => 7b / (123)
+[OP END @ 22848]
+Done..

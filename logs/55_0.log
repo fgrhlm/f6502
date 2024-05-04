@@ -1,0 +1,22 @@
+[TEST 0 - 55.json]
+	MEM WRITE: d958 / (55640) => 55 / (85)
+	MEM WRITE: d959 / (55641) => 7f / (127)
+	MEM WRITE: d95a / (55642) => 54 / (84)
+	MEM WRITE: 7f / (127) => a8 / (168)
+	MEM WRITE: 97 / (151) => 9 / (9)
+	MEM READ: d958 / (55640) => 55 / (85)
+[OP START 55640 -> 0x55 -> eor]
+	REGS:
+		PC: 55640 (d958)
+		SP: 126 (7e)
+		A:  92 (5c)
+		X:  24 (18)
+		Y:  207 (cf)
+		P:  42 (2a)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|0|1|0|1|0|0|
+	ADDRESSING MODE: ZERO_PAGE_X
+	MEM READ: d959 / (55641) => 7f / (127)
+	MEM READ: 97 / (151) => 9 / (9)
+[OP END @ 55641]
+Done..

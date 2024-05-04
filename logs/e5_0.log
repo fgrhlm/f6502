@@ -1,0 +1,22 @@
+[TEST 0 - e5.json]
+	MEM WRITE: 22fd / (8957) => e5 / (229)
+	MEM WRITE: 22fe / (8958) => fa / (250)
+	MEM WRITE: 22ff / (8959) => 1e / (30)
+	MEM WRITE: fa / (250) => 0 / (0)
+	MEM READ: 22fd / (8957) => e5 / (229)
+[OP START 8957 -> 0xe5 -> sbc]
+	REGS:
+		PC: 8957 (22fd)
+		SP: 240 (f0)
+		A:  224 (e0)
+		X:  117 (75)
+		Y:  83 (53)
+		P:  164 (a4)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|0|0|1|0|1|
+	ADDRESSING MODE: ZERO_PAGE
+	MEM READ: 22fe / (8958) => fa / (250)
+	MEM READ: fa / (250) => 0 / (0)
+	BIN SBC
+[OP END @ 8958]
+Done..

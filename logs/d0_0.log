@@ -1,0 +1,23 @@
+[TEST 0 - d0.json]
+	MEM WRITE: 40dc / (16604) => d0 / (208)
+	MEM WRITE: 40dd / (16605) => 2b / (43)
+	MEM WRITE: 40de / (16606) => 3a / (58)
+	MEM WRITE: 4009 / (16393) => c1 / (193)
+	MEM WRITE: 4109 / (16649) => 62 / (98)
+	MEM READ: 40dc / (16604) => d0 / (208)
+[OP START 16604 -> 0xd0 -> bne]
+	REGS:
+		PC: 16604 (40dc)
+		SP: 139 (8b)
+		A:  33 (21)
+		X:  204 (cc)
+		Y:  215 (d7)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: RELATIVE
+	MEM READ: 40dd / (16605) => 2b / (43)
+	addr = 16390
+	branch -> 16390
+[OP END @ 16392]
+Done..

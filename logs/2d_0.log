@@ -1,0 +1,23 @@
+[TEST 0 - 2d.json]
+	MEM WRITE: 6279 / (25209) => 2d / (45)
+	MEM WRITE: 627a / (25210) => 51 / (81)
+	MEM WRITE: 627b / (25211) => 19 / (25)
+	MEM WRITE: 1951 / (6481) => 91 / (145)
+	MEM WRITE: 627c / (25212) => f7 / (247)
+	MEM READ: 6279 / (25209) => 2d / (45)
+[OP START 25209 -> 0x2d -> and]
+	REGS:
+		PC: 25209 (6279)
+		SP: 241 (f1)
+		A:  119 (77)
+		X:  201 (c9)
+		Y:  226 (e2)
+		P:  45 (2d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|0|
+	ADDRESSING MODE: ABSOLUTE
+	MEM READ: 627a / (25210) => 51 / (81)
+	MEM READ: 627b / (25211) => 19 / (25)
+	MEM READ: 1951 / (6481) => 91 / (145)
+[OP END @ 25211]
+Done..

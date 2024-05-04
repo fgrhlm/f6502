@@ -1,0 +1,24 @@
+[TEST 0 - ed.json]
+	MEM WRITE: 5f06 / (24326) => ed / (237)
+	MEM WRITE: 5f07 / (24327) => ee / (238)
+	MEM WRITE: 5f08 / (24328) => 4f / (79)
+	MEM WRITE: 4fee / (20462) => f9 / (249)
+	MEM WRITE: 5f09 / (24329) => a0 / (160)
+	MEM READ: 5f06 / (24326) => ed / (237)
+[OP START 24326 -> 0xed -> sbc]
+	REGS:
+		PC: 24326 (5f06)
+		SP: 153 (99)
+		A:  135 (87)
+		X:  121 (79)
+		Y:  92 (5c)
+		P:  236 (ec)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|1|1|0|1|1|1|
+	ADDRESSING MODE: ABSOLUTE
+	MEM READ: 5f07 / (24327) => ee / (238)
+	MEM READ: 5f08 / (24328) => 4f / (79)
+	MEM READ: 4fee / (20462) => f9 / (249)
+	DECIMAL SBC
+[OP END @ 24328]
+Done..

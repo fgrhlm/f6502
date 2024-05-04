@@ -1,0 +1,19 @@
+[TEST 0 - a9.json]
+	MEM WRITE: b36a / (45930) => a9 / (169)
+	MEM WRITE: b36b / (45931) => cc / (204)
+	MEM WRITE: b36c / (45932) => 21 / (33)
+	MEM READ: b36a / (45930) => a9 / (169)
+[OP START 45930 -> 0xa9 -> lda]
+	REGS:
+		PC: 45930 (b36a)
+		SP: 172 (ac)
+		A:  67 (43)
+		X:  145 (91)
+		Y:  150 (96)
+		P:  237 (ed)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|1|1|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b36b / (45931) => cc / (204)
+[OP END @ 45931]
+Done..

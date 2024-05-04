@@ -33,16 +33,21 @@ uint16_t absolute_indirect_addr(cpu* c, mem* m){
 }
 
 uint16_t relative_addr(cpu* c, mem* m){
-    uint8_t offset;
-    
-    uint16_t pc = inc_pc(c);
-    
-    offset = mem_get_byte(m, pc) + 1;
+    int8_t offset;
+    uint8_t hi, lo;
 
-    bytes pcs = split_addr(pc);
+    uint16_t pc = get_pc(c);
+    uint16_t addr;
+    
+    offset = (int8_t)mem_get_byte(m, pc+1);
+    hi = (pc) >> 8;
+    lo = (pc) & 0x00FF;
 
-    uint16_t ad = merge_bytes(pcs.hi, (pcs.lo+offset));
-    return ad;
+    lo += offset;
+    
+    addr = ((hi << 8) | lo) - 1;
+    debug_logf("\taddr = %d\n", addr);
+    return addr;
 }
 
 uint16_t zero_page_addr(cpu* c, mem* m){

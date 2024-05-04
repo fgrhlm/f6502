@@ -1,0 +1,23 @@
+[TEST 0 - cc.json]
+	MEM WRITE: cd48 / (52552) => cc / (204)
+	MEM WRITE: cd49 / (52553) => b3 / (179)
+	MEM WRITE: cd4a / (52554) => 2c / (44)
+	MEM WRITE: 2cb3 / (11443) => e9 / (233)
+	MEM WRITE: cd4b / (52555) => 1 / (1)
+	MEM READ: cd48 / (52552) => cc / (204)
+[OP START 52552 -> 0xcc -> cpy]
+	REGS:
+		PC: 52552 (cd48)
+		SP: 6 (6)
+		A:  61 (3d)
+		X:  196 (c4)
+		Y:  0 (0)
+		P:  45 (2d)
+		|C|Z|I|D|B|X|V|N|
+		|1|0|1|1|0|1|0|0|
+	ADDRESSING MODE: ABSOLUTE
+	MEM READ: cd49 / (52553) => b3 / (179)
+	MEM READ: cd4a / (52554) => 2c / (44)
+	MEM READ: 2cb3 / (11443) => e9 / (233)
+[OP END @ 52554]
+Done..

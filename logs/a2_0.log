@@ -1,0 +1,19 @@
+[TEST 0 - a2.json]
+	MEM WRITE: b02b / (45099) => a2 / (162)
+	MEM WRITE: b02c / (45100) => 72 / (114)
+	MEM WRITE: b02d / (45101) => 42 / (66)
+	MEM READ: b02b / (45099) => a2 / (162)
+[OP START 45099 -> 0xa2 -> ldx]
+	REGS:
+		PC: 45099 (b02b)
+		SP: 38 (26)
+		A:  43 (2b)
+		X:  110 (6e)
+		Y:  81 (51)
+		P:  39 (27)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|0|0|1|0|0|
+	ADDRESSING MODE: IMMEDIATE
+	MEM READ: b02c / (45100) => 72 / (114)
+[OP END @ 45100]
+Done..

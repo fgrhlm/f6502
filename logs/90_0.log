@@ -1,0 +1,22 @@
+[TEST 0 - 90.json]
+	MEM WRITE: ec80 / (60544) => 90 / (144)
+	MEM WRITE: ec81 / (60545) => c6 / (198)
+	MEM WRITE: ec82 / (60546) => 7a / (122)
+	MEM WRITE: ec48 / (60488) => d6 / (214)
+	MEM READ: ec80 / (60544) => 90 / (144)
+[OP START 60544 -> 0x90 -> bcc]
+	REGS:
+		PC: 60544 (ec80)
+		SP: 205 (cd)
+		A:  36 (24)
+		X:  207 (cf)
+		Y:  179 (b3)
+		P:  32 (20)
+		|C|Z|I|D|B|X|V|N|
+		|0|0|0|0|0|1|0|0|
+	ADDRESSING MODE: RELATIVE
+	MEM READ: ec81 / (60545) => c6 / (198)
+	addr = 60485
+	branch -> 60485
+[OP END @ 60487]
+Done..

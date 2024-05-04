@@ -1,0 +1,25 @@
+[TEST 0 - b1.json]
+	MEM WRITE: a084 / (41092) => b1 / (177)
+	MEM WRITE: a085 / (41093) => 90 / (144)
+	MEM WRITE: a086 / (41094) => 2d / (45)
+	MEM WRITE: 90 / (144) => 56 / (86)
+	MEM WRITE: 91 / (145) => 6 / (6)
+	MEM WRITE: 6ef / (1775) => 99 / (153)
+	MEM READ: a084 / (41092) => b1 / (177)
+[OP START 41092 -> 0xb1 -> lda]
+	REGS:
+		PC: 41092 (a084)
+		SP: 78 (4e)
+		A:  159 (9f)
+		X:  61 (3d)
+		Y:  153 (99)
+		P:  102 (66)
+		|C|Z|I|D|B|X|V|N|
+		|0|1|1|0|0|1|1|0|
+	ADDRESSING MODE: ZERO_PAGE_INDIRECT_Y
+	MEM READ: a085 / (41093) => 90 / (144)
+	MEM READ: 90 / (144) => 56 / (86)
+	MEM READ: 91 / (145) => 6 / (6)
+	MEM READ: 6ef / (1775) => 99 / (153)
+[OP END @ 41093]
+Done..

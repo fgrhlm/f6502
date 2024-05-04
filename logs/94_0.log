@@ -1,0 +1,22 @@
+[TEST 0 - 94.json]
+	MEM WRITE: aed9 / (44761) => 94 / (148)
+	MEM WRITE: aeda / (44762) => 8e / (142)
+	MEM WRITE: aedb / (44763) => 63 / (99)
+	MEM WRITE: 8e / (142) => 82 / (130)
+	MEM READ: aed9 / (44761) => 94 / (148)
+[OP START 44761 -> 0x94 -> sty]
+	REGS:
+		PC: 44761 (aed9)
+		SP: 191 (bf)
+		A:  12 (c)
+		X:  201 (c9)
+		Y:  131 (83)
+		P:  171 (ab)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|0|1|0|1|0|1|
+	ADDRESSING MODE: ZERO_PAGE_X
+	MEM READ: aeda / (44762) => 8e / (142)
+	store addr: 57 -> 83
+	MEM WRITE: 57 / (87) => 83 / (131)
+[OP END @ 44762]
+Done..

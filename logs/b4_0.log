@@ -1,0 +1,22 @@
+[TEST 0 - b4.json]
+	MEM WRITE: 9baa / (39850) => b4 / (180)
+	MEM WRITE: 9bab / (39851) => e9 / (233)
+	MEM WRITE: 9bac / (39852) => 4b / (75)
+	MEM WRITE: e9 / (233) => f5 / (245)
+	MEM WRITE: 4f / (79) => 6 / (6)
+	MEM READ: 9baa / (39850) => b4 / (180)
+[OP START 39850 -> 0xb4 -> ldy]
+	REGS:
+		PC: 39850 (9baa)
+		SP: 107 (6b)
+		A:  12 (c)
+		X:  102 (66)
+		Y:  180 (b4)
+		P:  111 (6f)
+		|C|Z|I|D|B|X|V|N|
+		|1|1|1|1|0|1|1|0|
+	ADDRESSING MODE: ZERO_PAGE_X
+	MEM READ: 9bab / (39851) => e9 / (233)
+	MEM READ: 4f / (79) => 6 / (6)
+[OP END @ 39851]
+Done..
