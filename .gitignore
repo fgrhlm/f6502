@@ -1,1 +1,4 @@
 tests/
+*.json
+*.log
+*.dump
