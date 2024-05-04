@@ -58,7 +58,7 @@ void init_emu_test(emu* e, int argc, char* argv[]){
     set_pc(c, test_start);
 
     uint16_t test_stop = atoi(argv[2]);
-    e->test_stop = test_stop;
+    e->test_stop = 1;
 
     uint8_t init_sp = atoi(argv[3]);
     set_reg(c, REG_S, init_sp);
@@ -100,10 +100,9 @@ void emu_run(emu* e){
     mem* m = e->mem;
 
     while(emu_get_mode(e) != STOP){
-        //clearc();
-        //print_emu_state(e);
-        if(!cpu_op(c,m)){ emu_set_mode(e, STOP); };
         emu_inc_step(e);
+        if(!cpu_op(c,m)){ emu_set_mode(e, STOP); };
+        
         if(emu_get_mode(e) == STEP){
             int ch = read_key();
             switch(ch){
@@ -118,7 +117,7 @@ void emu_run(emu* e){
             }
         }
 
-        if(get_pc(c) == e->test_stop){ emu_set_mode(e, STOP); }
+        if(emu_get_step(e) == e->test_stop){ emu_set_mode(e, STOP); }
         if(e->step > 300){ debug_logf("Took too long..\n"); emu_set_mode(e, STOP); }
     }
 

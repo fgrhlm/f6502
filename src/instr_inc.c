@@ -14,7 +14,7 @@ void instr_dec_reg(cpu* c, reg r){
 }
 void instr_dec(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
-    uint8_t n = next_byte(c, m);
+    uint8_t n = mem_get_byte(m, addr);
 
     n = n - 1;
 
@@ -38,7 +38,7 @@ void instr_inc_reg(cpu* c, reg r){
 
 void instr_inc(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
-    uint8_t n = next_byte(c, m);
+    uint8_t n = mem_get_byte(m, addr);
 
     n = n + 1;
 

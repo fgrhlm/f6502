@@ -58,4 +58,9 @@ void instr_pla(cpu* c, mem* m){
 }
 
 void instr_php(cpu* c, mem* m){ push_reg_stack(c, m, REG_P); }
-void instr_plp(cpu* c, mem* m){ pull_reg_stack(c, m, REG_P); }
+void instr_plp(cpu* c, mem* m){ 
+    uint8_t p = pull_byte_stack(c, m);
+    set_bit(&p, 5, 1);
+    set_bit(&p, 4, 0);
+    set_reg(c, REG_P, p); 
+}

@@ -4,89 +4,94 @@
 #include "mem.h"
 #include "addr.h"
 
-
 void instr_asl(cpu* c, mem* m){
-    uint8_t operand;
-    uint8_t result;
-
     addr_mode am = get_mode(c);
-    uint16_t addr = get_addr(c, m);
-    
-    if(am == AM_ACCUMULATOR){ 
-        operand = *get_reg(c, REG_A); 
-    }else{
-        operand = mem_get_byte(m, addr);
-    }
-    
-    uint8_t o_carry = get_bit(operand, 7);
-    result = operand << 1;
-    set_bit(&result, 0, 0);
-    
-    set_flag(c, FLAG_C, o_carry);
-    set_flag(c, FLAG_N, get_bit(result, 7));
-    set_flag(c, FLAG_Z, result == 0);
-
+    uint16_t addr;
+    uint8_t byte;
     if(am == AM_ACCUMULATOR){
-        set_reg(c, REG_A, result);
+        byte = *get_reg(c, REG_A);
     }else{
-        mem_set_byte(m, addr, result);
-    }
+        addr = get_addr(c, m);
+        byte = mem_get_byte(m, addr);
+    };
+
+    set_flag(c, FLAG_C, get_bit(byte, 7));
+    
+    uint8_t result = byte << 1;
+    set_bit(&result, 0, 0);
+
+    (am == AM_ACCUMULATOR) ? set_reg(c, REG_A, result) : mem_set_byte(m, addr, result);
+    
+    set_flag(c, FLAG_N, get_bit(result, 7));
+    set_flag(c, FLAG_Z, (result == 0));
 }
 
 void instr_lsr(cpu* c, mem* m){
-    uint8_t operand;
-    uint8_t result;
-
     addr_mode am = get_mode(c);
-    
-    if(am == AM_ACCUMULATOR){ 
-        operand = *get_reg(c, REG_A); 
-    }else{
-        operand = next_byte(c, m);
-    }
-    
-    result = operand >> 1;
-    
-    set_flag(c, FLAG_C, get_bit(operand, 1));
-    set_flag(c, FLAG_N, get_bit(result, 7));
-    set_flag(c, FLAG_Z, result == 0);
-
+    uint16_t addr;
+    uint8_t byte;
     if(am == AM_ACCUMULATOR){
-        set_reg(c, REG_A, result);
+        byte = *get_reg(c, REG_A);
     }else{
-        mem_set_byte(m, get_addr(c, m), result);
-    }
+        addr = get_addr(c, m);
+        byte = mem_get_byte(m, addr);
+    };
+
+    set_flag(c, FLAG_C, get_bit(byte, 0));
+    
+    uint8_t result = byte >> 1;
+    set_bit(&result, 7, 0);
+
+    (am == AM_ACCUMULATOR) ? set_reg(c, REG_A, result) : mem_set_byte(m, addr, result);
+    
+    set_flag(c, FLAG_N, get_bit(result, 7));
+    set_flag(c, FLAG_Z, (result == 0));
 }
 
 void instr_rol(cpu* c, mem* m){
     addr_mode am = get_mode(c);
-    uint16_t addr = get_addr(c, m);
-
-    uint8_t operand = am == AM_ACCUMULATOR ? *get_reg(c, REG_A) : next_byte(c, m);
-    uint8_t result = operand << 1;
-
     uint8_t carry = get_flag(c, FLAG_C);
+
+    uint16_t addr;
+    uint8_t byte, result;
+    if(am == AM_ACCUMULATOR){
+        byte = *get_reg(c, REG_A);
+    }else{
+        addr = get_addr(c, m);
+        byte = mem_get_byte(m, addr);
+    };
+
+    set_flag(c, FLAG_C, get_bit(byte, 7));    
+    result = (byte << 1);
+
     set_bit(&result, 0, carry);
 
-    am == AM_ACCUMULATOR ? set_reg(c, REG_A, result) : mem_set_byte(m, addr, result); 
-
-    set_flag(c, FLAG_C,get_bit(result, 7));
-    set_flag(c, FLAG_N,get_bit(operand, 6));
+    (am == AM_ACCUMULATOR) ? set_reg(c, REG_A, result) : mem_set_byte(m, addr, result);
+    
+    set_flag(c, FLAG_N, get_bit(byte, 6));
     set_flag(c, FLAG_Z, result == 0);
 }
+
 void instr_ror(cpu* c, mem* m){
     addr_mode am = get_mode(c);
-    uint16_t addr = get_addr(c, m);
-
-    uint8_t operand = am == AM_ACCUMULATOR ? *get_reg(c, REG_A) : next_byte(c, m);
-    uint8_t result = operand >> 1;
     uint8_t carry = get_flag(c, FLAG_C);
+
+    uint16_t addr;
+    uint8_t byte, result;
+    if(am == AM_ACCUMULATOR){
+        byte = *get_reg(c, REG_A);
+    }else{
+        addr = get_addr(c, m);
+        byte = mem_get_byte(m, addr);
+    };
+
+    set_flag(c, FLAG_C, get_bit(byte, 0));    
+    result = (byte >> 1);
 
     set_bit(&result, 7, carry);
 
-    am == AM_ACCUMULATOR ? set_reg(c, REG_A, result) : mem_set_byte(m, addr, result); 
+    (am == AM_ACCUMULATOR) ? set_reg(c, REG_A, result) : mem_set_byte(m, addr, result);
     
-    set_flag(c, FLAG_C, get_bit(operand, 0));
-    set_flag(c, FLAG_N, get_bit(operand, 7));
-    set_flag(c, FLAG_Z, (result == 0));
+    set_flag(c, FLAG_N, carry);
+    set_flag(c, FLAG_Z, result == 0);
 }

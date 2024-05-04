@@ -22,9 +22,10 @@ void instr_ldy(cpu* c, mem* m){ instr_load(c, m, REG_Y); }
 
 void instr_store(cpu* c, mem* m, reg r){
     uint16_t addr = get_addr(c, m);
-    uint8_t byte = *get_reg(c, r);
+    uint8_t reg = *get_reg(c, r);
+    debug_logf("\tstore addr: %x -> %x\n", addr, reg);
 
-    mem_set_byte(m, addr, byte);
+    mem_set_byte(m, addr, reg);
 }
 
 void instr_lax(cpu* c, mem* m){

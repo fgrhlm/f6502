@@ -20,7 +20,11 @@ void instr_tax(cpu* c, mem* m){ instr_transfer(c, m, REG_X, REG_A); }
 void instr_tay(cpu* c, mem* m){ instr_transfer(c, m, REG_Y, REG_A); }
 void instr_tsx(cpu* c, mem* m){ instr_transfer(c, m, REG_X, REG_S); }
 void instr_txa(cpu* c, mem* m){ instr_transfer(c, m, REG_A, REG_X); }
-void instr_txs(cpu* c, mem* m){ instr_transfer(c, m, REG_S, REG_X); }
+void instr_txs(cpu* c, mem* m){
+    uint8_t p = *get_reg(c, REG_P);
+    instr_transfer(c, m, REG_S, REG_X); 
+    set_reg(c, REG_P, p);
+}
 void instr_tya(cpu* c, mem* m){ instr_transfer(c, m, REG_A, REG_Y); }
 
 void instr_shs(cpu* c, mem* m){

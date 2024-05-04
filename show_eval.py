@@ -3,7 +3,7 @@ from enum import Enum
 from utils import color, ops
 
 if __name__=="__main__":
-    with open("tests/logs/eval.json", "r") as f:
+    with open("logs/eval.json", "r") as f:
         res = json.load(f)
     
     print()

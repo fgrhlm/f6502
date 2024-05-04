@@ -47,16 +47,26 @@ uint16_t relative_addr(cpu* c, mem* m){
 
 uint16_t zero_page_addr(cpu* c, mem* m){
     uint16_t addr = 0; 
+    uint8_t byte, reg, lo;
 
     switch(get_mode(c)){
         case AM_ZERO_PAGE: 
-            addr = merge_bytes(0, mem_get_byte(m, inc_pc(c))); 
+            byte = mem_get_byte(m, inc_pc(c));
+            addr = merge_bytes(0, byte); 
             break;
         case AM_ZERO_PAGE_X:
-            addr = merge_bytes(0, (mem_get_byte(m, inc_pc(c) + *get_reg(c, REG_X)))); 
+            byte = mem_get_byte(m, inc_pc(c));
+            reg = *get_reg(c, REG_X);
+            lo = byte + reg;
+
+            addr = merge_bytes(0, lo); 
             break;
         case AM_ZERO_PAGE_Y:
-            addr = merge_bytes(0, (mem_get_byte(m, inc_pc(c) + *get_reg(c, REG_Y)))); 
+            byte = mem_get_byte(m, inc_pc(c));
+            reg = *get_reg(c, REG_Y);
+            lo = byte + reg;
+
+            addr = merge_bytes(0, lo); 
             break;
         default:
             break;
@@ -80,18 +90,18 @@ uint16_t zero_page_indirect_x(cpu* c, mem* m){
 }
 
 uint16_t zero_page_indirect_y(cpu* c, mem* m){
-    uint8_t hi, lo, carry;
-    uint16_t zp_addr, eff_addr;
+    uint8_t byte_addr = mem_get_byte(m, inc_pc(c));
+    uint8_t byte = mem_get_byte(m, merge_bytes(0,byte_addr));
     uint8_t reg = *get_reg(c, REG_Y);
-    uint8_t byte = mem_get_byte(m, inc_pc(c));
+    uint8_t lo, hi;
 
-    carry = __builtin_add_overflow(reg, byte, &zp_addr);
-
-    lo = mem_get_byte(m, merge_bytes(0, zp_addr));
-    hi = mem_get_byte(m, merge_bytes(0, zp_addr + 1)) + carry;
+    uint8_t carry = __builtin_add_overflow(byte, reg, &lo);
     
-    eff_addr = merge_bytes(hi, lo);
-    return eff_addr;
+
+    byte_addr += 1;
+    hi = mem_get_byte(m, merge_bytes(0,byte_addr)) + carry;
+
+    return merge_bytes(hi, lo);
 }
 
 uint16_t get_addr(cpu* c, mem* m){

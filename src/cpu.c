@@ -65,9 +65,7 @@ uint8_t cpu_op(cpu* c, mem* m){
     log_regs(c,m);
 
     instr_parse(c, m, opcode);
-
-    pc = get_pc(c) + 1;
-    set_pc(c, pc); 
-
+   
+    inc_pc(c);
     return 1;
 }

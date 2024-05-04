@@ -3,7 +3,7 @@
 #include "utils.h"
 
 uint8_t bcd_add(cpu* c, uint8_t x, uint8_t y){
-    uint8_t hi, lo, out_carry, in_carry, sum;
+    uint8_t hi, lo, out_carry, in_carry, sum, temp_sum;
 
     in_carry = get_flag(c, FLAG_C);
     
@@ -11,12 +11,14 @@ uint8_t bcd_add(cpu* c, uint8_t x, uint8_t y){
     hi = ((x & 0xF0) + (y & 0xF0)) >> 4;
     lo = (x & 0x0F) + (y & 0x0F) + in_carry;
 
+    temp_sum = ((hi << 4) | lo);
+
     if(lo >= 10){ 
         lo = ((lo + 6) & 0x0F);
         hi++;
     }
 
-    uint8_t temp_sum = ((hi << 4) | lo);
+    temp_sum = ((hi << 4) | lo);
     uint8_t v_flag = get_bit((x^temp_sum) & (y^temp_sum), 7);
     
     if(hi >= 10){ hi = ((hi + 6) & 0x0F); out_carry = 1; }
@@ -24,8 +26,8 @@ uint8_t bcd_add(cpu* c, uint8_t x, uint8_t y){
     sum = ((hi << 4) | lo);
   
     set_flag(c, FLAG_C, out_carry);
-    set_flag(c, FLAG_Z, ((x + y + in_carry) & 0xFF) != 0);
     set_flag(c, FLAG_N, get_bit(temp_sum, 7));
+    set_flag(c, FLAG_Z, sum == 0);
     set_flag(c, FLAG_V, v_flag);
     
     return sum;
@@ -64,6 +66,7 @@ void instr_adc(cpu* c, mem* m){
 
     set_reg(c, REG_A, res);
 }
+
 void instr_cmp(cpu* c, mem* m){
     uint8_t byte = next_byte(c, m);
     uint8_t acc = *get_reg(c, REG_A);
@@ -92,7 +95,7 @@ void instr_cpy(cpu* c, mem* m){
     set_flag(c, FLAG_C, byte <= reg);
 }
 
-uint8_t sub(cpu* c, uint8_t x, uint8_t y){
+uint8_t bin_sub(cpu* c, uint8_t x, uint8_t y){
     uint8_t i_carry = !get_flag(c, FLAG_C);
     uint8_t c1, c2, o_carry;
     uint8_t res;
@@ -110,6 +113,27 @@ uint8_t sub(cpu* c, uint8_t x, uint8_t y){
     set_flag(c, FLAG_V, x_sign != res_sign);
 
     return res;
+}
+
+uint8_t bcd_sub(cpu* c, uint8_t x, uint8_t y){
+    uint16_t res, lo;
+    uint8_t in_carry = get_flag(c, FLAG_C);
+
+    lo = (x & 0x0F) - (y & 0x0F) + (in_carry - 1);
+    res = x - y + (in_carry - 1);
+    
+    if(res < 0){ res = res - 0x60; }
+    if(lo < 0){ res = res - 0x06; }
+    
+    return (res & 0x00FF);
+}
+
+uint8_t sub(cpu*c, uint8_t x, uint8_t y){
+    uint8_t dec = get_flag(c, FLAG_D);
+    dec ? debug_logf("\tDECIMAL SBC\n") : debug_logf("\tBIN SBC\n");
+    uint8_t sum = dec ? bcd_sub(c, x, y) : bin_sub(c, x, y);
+    
+    return sum;
 }
 
 void instr_sbc(cpu* c, mem* m){

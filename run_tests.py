@@ -388,7 +388,7 @@ if __name__=="__main__":
                 res_str = color("g", f" TEST: {res['opcode']},json\tSTATUS: PASS ") if status == TestResult.PASS else color("r", f" TEST: {res['opcode']}.json\tSTATUS: FAIL @ {index} ")
                 print(f"\r{res_str}")
            
-            with open("tests/logs/eval.json", "w") as f:
+            with open("logs/eval.json", "w") as f:
                 for k in result_output.keys():
                     status = result_output[k]["status"]
                     if status == TestResult.PASS: result_output[k]["status"] = "PASS"
