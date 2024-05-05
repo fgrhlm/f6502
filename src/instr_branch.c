@@ -6,7 +6,6 @@ void instr_branch(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
     debug_logf("\tbranch -> %d\n", addr);
     set_pc(c, addr); 
-    inc_pc(c);
 }
 
 void instr_bcc(cpu* c, mem* m){ if(!get_flag(c, FLAG_C)){ instr_branch(c, m); } inc_pc(c); }

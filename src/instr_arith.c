@@ -95,51 +95,40 @@ void instr_cpy(cpu* c, mem* m){
     set_flag(c, FLAG_C, byte <= reg);
 }
 
-uint8_t bin_sub(cpu* c, uint8_t x, uint8_t y){
-    uint8_t i_carry = !get_flag(c, FLAG_C);
-    uint8_t c1, c2, o_carry;
-    uint8_t res;
-   
-    c1 = __builtin_sub_overflow(x, y, &res);
-    c2 = __builtin_sub_overflow(res, i_carry, &res);
-    o_carry = c1 | c2;
-
-    uint8_t x_sign = get_bit(x, 7);
-    uint8_t res_sign = get_bit(res,7);
+uint8_t sub(cpu* c, uint8_t x, uint8_t y){
+    uint8_t dec, carry_in, carry_out, c1, c2;
+    int16_t res, t_res;
     
-    set_flag(c, FLAG_C, o_carry); 
-    set_flag(c, FLAG_Z, (res == 0));
+    dec = get_flag(c, FLAG_D);
+    carry_in = get_flag(c, FLAG_C);
+    
+    c1 = __builtin_sub_overflow(x, y, &res);
+    c2 = __builtin_sub_overflow(res, !carry_in, &res);
+    
     set_flag(c, FLAG_N, get_bit(res, 7));
-    set_flag(c, FLAG_V, x_sign != res_sign);
+    set_flag(c, FLAG_Z, !(res & 0xFF));
+    uint8_t v_flag = get_bit((x^res), 7) && get_bit((x^y), 7);
+    set_flag(c, FLAG_V, v_flag);
+    
+    if(dec){
+        t_res = (uint16_t)(x & 0x0F) - (uint16_t)(y & 0x0F) - !carry_in;
+        if(t_res < 0){ t_res = ((t_res - 6) & 0x0F) - 16; }
+        res = (uint16_t)(x & 0xF0) - (uint16_t)(y & 0xF0) + t_res;
+        if(res < 0){ res = res - 0x60; }
+    }
+   
+    carry_out = !(res < 0);
+    set_flag(c, FLAG_C, carry_out);
+    
+    res = res & 0x00FF;
 
     return res;
-}
-
-uint8_t bcd_sub(cpu* c, uint8_t x, uint8_t y){
-    uint16_t res, lo;
-    uint8_t in_carry = get_flag(c, FLAG_C);
-
-    lo = (x & 0x0F) - (y & 0x0F) + (in_carry - 1);
-    res = x - y + (in_carry - 1);
-    
-    if(res < 0){ res = res - 0x60; }
-    if(lo < 0){ res = res - 0x06; }
-    
-    return (res & 0x00FF);
-}
-
-uint8_t sub(cpu*c, uint8_t x, uint8_t y){
-    uint8_t dec = get_flag(c, FLAG_D);
-    dec ? debug_logf("\tDECIMAL SBC\n") : debug_logf("\tBIN SBC\n");
-    uint8_t sum = dec ? bcd_sub(c, x, y) : bin_sub(c, x, y);
-    
-    return sum;
 }
 
 void instr_sbc(cpu* c, mem* m){
     uint8_t byte = next_byte(c, m);
     uint8_t acc = *get_reg(c, REG_A);
-    uint8_t res = sub(c, byte, acc);
+    uint8_t res = sub(c, acc, byte);
 
     set_reg(c, REG_A, res);
 }

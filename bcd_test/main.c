@@ -2,28 +2,16 @@
 #include <stdint.h>
 
 uint8_t bcd_sub(uint8_t* res, uint8_t x, uint8_t y, uint8_t c){
-    uint8_t hi, lo, out_carry, in_carry, sum, temp_sum;
+    uint8_t carry_out = 1;
 
-    in_carry = c;
+    int16_t t_sum = (uint16_t)(x & 0x0F) - (uint16_t)(y & 0x0F) - !c;
+    if(t_sum < 0){ t_sum = ((t_sum - 6) & 0x0F) - 16; }
     
-    out_carry = 0;
-    lo = (x & 0x0F) - (y & 0x0F) - !in_carry;
-    if(lo & 0x10){ lo = lo - 0x06; }
-
-    hi = (x >> 4) - (y >> 4) - (lo & 0x10);
-    if(hi & 0x10){ hi = hi - 0x06; }
-
-    //uint8_t v_flag = get_bit((x^temp_sum) & (y^temp_sum), 7);
+    int16_t sum = (x & 0xF0) - (y & 0xF0) + t_sum;
+    if(sum < 0){ sum = sum - 0x60; }
     
-
-    *res = ((hi << 4) | (lo & 0xF)) & 0xFF;
-  
-    //set_flag(c, FLAG_C, out_carry);
-    //set_flag(c, FLAG_N, get_bit(temp_sum, 7));
-    //set_flag(c, FLAG_Z, sum == 0);
-    //set_flag(c, FLAG_V, v_flag);
-    
-    return out_carry;
+    *res = (sum & 0x00FF);
+    return carry_out;
 }
 
 int main(int argc, char** argv){

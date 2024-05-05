@@ -33,20 +33,15 @@ uint16_t absolute_indirect_addr(cpu* c, mem* m){
 }
 
 uint16_t relative_addr(cpu* c, mem* m){
-    int8_t offset;
-    uint8_t hi, lo;
+    uint16_t pc, byte_addr, addr;
+    uint8_t offset;
+    pc = get_pc(c);
+    byte_addr = pc + 1;
 
-    uint16_t pc = get_pc(c);
-    uint16_t addr;
+    debug_logf("\tbyteaddr: %04x\n", byte_addr);
+    offset = mem_get_byte(m, byte_addr);
     
-    offset = (int8_t)mem_get_byte(m, pc+1);
-    hi = (pc) >> 8;
-    lo = (pc) & 0x00FF;
-
-    lo += offset;
-    
-    addr = ((hi << 8) | lo) - 1;
-    debug_logf("\taddr = %d\n", addr);
+    addr = (int16_t)pc + (int8_t)offset;
     return addr;
 }
 

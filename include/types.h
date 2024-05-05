@@ -44,6 +44,7 @@ typedef struct {
     uint8_t test_mode;
     uint16_t test_start;
     uint16_t test_stop;
+    uint16_t test_stop_pc;
 
     char* test_file;
     char* test_index;
