@@ -1,4 +1,7 @@
 tests/
+logs/
+,cache
+__pycache__
 *.json
 *.log
 *.dump

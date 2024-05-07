@@ -95,7 +95,6 @@ void free_emu(emu* e){
     free(e); 
 }
 
-
 void emu_run(emu* e){
     cpu* c = e->cpu;
     mem* m = e->mem;

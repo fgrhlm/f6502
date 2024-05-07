@@ -9,7 +9,6 @@ void instr_cpx(cpu* c, mem* m);
 void instr_cpy(cpu* c, mem* m);
 void instr_sbc(cpu* c, mem* m);
 
-
 void instr_anc(cpu* c, mem* m);
 void instr_arr(cpu* c, mem* m);
 void instr_asr(cpu* c, mem* m);

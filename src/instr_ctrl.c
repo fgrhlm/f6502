@@ -67,5 +67,21 @@ void instr_rts(cpu* c, mem* m){
     set_pc(c, pc);
 }
 
-void instr_nop(cpu* c, mem* m){ }
+void instr_nop(cpu* c, mem* m){ 
+    addr_mode am = get_mode(c);
+    uint16_t pc = get_pc(c);
+    switch(am){
+        case AM_IMPLIED:
+            set_pc(c, pc);
+            break;
+        case AM_IMMEDIATE: case AM_ZERO_PAGE: case AM_ZERO_PAGE_X:
+            set_pc(c, pc + 1);
+            break;
+        case AM_ABSOLUTE: case AM_ABSOLUTE_X:
+            set_pc(c, pc + 2);
+            break;
+        default:
+            break;
+    }
+}
 void instr_jam(cpu* c, mem* m){ cpu_stop(c); };

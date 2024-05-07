@@ -66,6 +66,10 @@ uint8_t cpu_op(cpu* c, mem* m){
 
     instr_parse(c, m, opcode);
    
-    inc_pc(c);
-    return 1;
+    if(!c->stop){
+        inc_pc(c);
+        return 1;
+    };
+
+    return 0;
 }
