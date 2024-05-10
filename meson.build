@@ -2,8 +2,9 @@ project('sfotemu', 'c')
 
 add_global_arguments(language : 'c')
 
-sources = files(
-  'src/emu.c',
+incdir = include_directories('include')
+
+src_lib = files(
   'src/cpu.c',
   'src/addr.c', 
   'src/mem.c',
@@ -22,5 +23,8 @@ sources = files(
   'src/instr_trans.c'
 )
 
-incdir = include_directories('include')
-executable('sfotemu', sources, include_directories: incdir)
+src_tui = files('src/tui.c')
+
+lib = library('6502cpu', src_lib, include_directories: incdir)
+
+executable('tui', src_tui, include_directories: incdir, link_with : lib, link_args : ['-lncurses'])
