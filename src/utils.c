@@ -445,8 +445,8 @@ void debug_dumpf(const char* fmt, ...){
 }
 
 void dump_emu(emu* e){
-    cpu* c = e->cpu;
-    mem* m = e->mem;
+    cpu* c = e->c;
+    mem* m = e->m;
     
     debug_dumpf("%d\n", get_pc(c));
     debug_dumpf("%d\n", *get_reg(c, REG_S));

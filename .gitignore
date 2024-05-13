@@ -1,7 +1,6 @@
-tests/
+tests/ProcessorTests/
+tests/6502_bin/
+tests/__pycache__/
 logs/
 .cache
-__pycache__/
-*.json
-*.log
-*.dump
+build/

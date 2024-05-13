@@ -3,6 +3,14 @@
 #include <stdlib.h>
 #include <panel.h>
 #include <stdint.h>
+#include <string.h>
+
+#include "types.h"
+#include "mem.h"
+#include "cpu.h"
+
+cpu* CPU;
+mem* MEM;
 
 void finish(int sig){
     endwin();
@@ -25,18 +33,18 @@ void show_regs(WINDOW* w){
     wattron(w, A_BOLD);
     mvwprintw(w, 0, 1, "[ Regs ]");
     wattroff(w, A_BOLD);
-    show_reg(w, 1,align_x,"PCH", 0);
-    show_reg(w, 2,align_x,"PCL", 0);
-    show_reg(w, 3,align_x,"A", 0);
-    show_reg(w, 4,align_x,"X", 0);
-    show_reg(w, 5,align_x,"Y", 0);
-    show_reg(w, 6,align_x,"S", 0);
-    show_reg(w, 7,align_x,"P", 0);
+    show_reg(w, 1,align_x,"PCH", *get_reg(CPU, REG_PH));
+    show_reg(w, 2,align_x,"PCL", *get_reg(CPU, REG_PL));
+    show_reg(w, 3,align_x,"A",   *get_reg(CPU, REG_A));
+    show_reg(w, 4,align_x,"X",   *get_reg(CPU, REG_X));
+    show_reg(w, 5,align_x,"Y",   *get_reg(CPU, REG_Y));
+    show_reg(w, 6,align_x,"S",   *get_reg(CPU, REG_S));
+    show_reg(w, 7,align_x,"P",   *get_reg(CPU, REG_P));
     wrefresh(w);
 }
 
 void show_flags(WINDOW* w){
-    char* flags[] = {"N", "V", "X", "B", "D", "I", "Z", "C" };
+    char* flags[] = { "N", "V", "X", "B", "D", "I", "Z", "C" };
     box(w,0,0);
     wattron(w, A_BOLD);
     mvwprintw(w, 0, 1, "[ Flags ]");
@@ -44,7 +52,7 @@ void show_flags(WINDOW* w){
 
     int next_skip = 0;
     for(int i=0; i<8; i++){
-        int flag = 0;
+        int flag = get_bit(*get_reg(CPU, REG_P), i);
         flag ? wattron(w, COLOR_PAIR(2) | A_BOLD) : wattron(w, COLOR_PAIR(1) | A_BOLD);
         mvwprintw(w, 1, (2+i)+next_skip, "%d", 0);
         flag ? wattroff(w, COLOR_PAIR(2) | A_BOLD) : wattroff(w, COLOR_PAIR(1) | A_BOLD);
@@ -98,12 +106,15 @@ void show_mem(WINDOW* w){
 }
 
 void show_info(WINDOW* w){
+    int max_y, max_x;
+    getmaxyx(w, max_y, max_x);
     box(w,0,0);
     wattron(w, A_BOLD);
     mvwprintw(w, 0, 1, "[ Debugger ]");
     wattroff(w, A_BOLD);
     mvwprintw(w, 1, 2, "ROM:");
     mvwprintw(w, 2, 2, "Breakpoints:");
+
     wrefresh(w);
 }
 
@@ -165,6 +176,9 @@ dwin* new_dwin(int h, int w, int y, int x, void (*draw_func)(WINDOW*)){
 void render_dwin(dwin* d){ d->draw_func(d->win); }
 
 int main(int argc, char** argv){
+    CPU = create_cpu();
+    MEM = create_mem(UINT16_MAX);
+
     init_curses();
     int max_y, max_x;
     getmaxyx(stdscr, max_y, max_x);
@@ -195,6 +209,8 @@ int main(int argc, char** argv){
         delwin(windows[i]->win);
         free(windows[i]);
     }
-
+    
+    free_mem(MEM);
+    free_cpu(CPU);
     finish(0);
 }

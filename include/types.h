@@ -25,29 +25,56 @@ typedef struct {
 } mem;
 
 typedef struct {
+    uint16_t addr;
+    uint8_t byte;
+} mem_byte;
+
+typedef struct {
     uint8_t* regs;
     addr_mode addr_mode;
     uint8_t stop;
 } cpu;
 
-typedef enum { RUN, STEP, STOP } emu_mode;
+typedef enum { EMU_LOAD_TEST, EMU_LOAD_NORMAL, EMU_LOAD_DEBUG } emu_load_mode;
+typedef enum { EMU_RUN_NORMAL, EMU_RUN_STEP, EMU_RUN_STOP, EMU_RUN_BREAKPOINT } emu_run_mode;
+
+// Container for Tom Harts processor tests
+typedef struct {
+    unsigned int count;
+    mem_byte* bytes;
+} mem_byte_list;
 
 typedef struct {
-    cpu* cpu;
-    mem* mem;
+    uint16_t pc_start;
+    uint16_t pc_stop;
+
+    uint8_t regs_start[7];
+    mem_byte_list* mem_start;
+
+    char* filename;
+    char* index;
+} emu_test;
+
+typedef struct {
+    uint64_t date_created;
+    uint64_t date_modified;
+    uint16_t pc_offset;
+} emu_rom_meta;
+
+typedef struct {
+    char* filename;
+    uint8_t* data;
+    emu_rom_meta* meta;
+} emu_rom;
+
+typedef struct {
+    cpu* c;
+    mem* m;
+    
+    emu_load_mode load_mode;
+    emu_run_mode run_mode;
     
     unsigned long step;
-    char* loaded_bin;
-    emu_mode mode;
-    
-    // Test stuff
-    uint8_t test_mode;
-    uint16_t test_start;
-    uint16_t test_stop;
-    uint16_t test_stop_pc;
-
-    char* test_file;
-    char* test_index;
 } emu;
 
 #endif

@@ -24,7 +24,9 @@ src_lib = files(
 )
 
 src_tui = files('src/tui.c')
+src_emu = files('src/emu.c')
 
 lib = library('6502cpu', src_lib, include_directories: incdir)
 
-executable('tui', src_tui, include_directories: incdir, link_with : lib, link_args : ['-lncurses'])
+executable('debug', src_tui, include_directories: incdir, link_with : lib, link_args : ['-lncurses'])
+executable('emu', src_emu, include_directories: incdir, link_with : lib)

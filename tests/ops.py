@@ -1,5 +1,3 @@
-from enum import Enum
-
 ops = {
     '00': {'name': 'brk', 'category': 'ctrl', 'doc': True},
     '01': {'name': 'ora', 'category': 'logic', 'doc': True},
@@ -258,24 +256,3 @@ ops = {
     'fe': {'name': 'inc', 'category': 'inc', 'doc': True},
     'ff': {'name': 'isc', 'category': 'arith', 'doc': False}
 }
-
-def color(n, s):
-    color = ""
-    match n:
-        case "r": color = "\x1b[30;41;1m"
-        case "g": color = "\x1b[30;42;1m"
-        case "y": color = "\x1b[30;47;1m"
-        case "b": color = "\x1b[30;44;1m"
-        case "m": color = "\x1b[30;45;1m"
-        case "c": color = "\x1b[30;46;1m"
-        case "n": color = "\x1b[37;40;1m"
-
-        case "bold": color = "\x1b[39;49;1m"
-    
-    return f"{color}{s}\x1b[0m"
-
-class TestResult(Enum):
-    SKIP = 0
-    PASS = 1
-    FAIL = 2
-    ERROR = 3
