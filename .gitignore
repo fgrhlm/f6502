@@ -1,4 +1,5 @@
 tests/ProcessorTests/
+tests/ProcessorTestsConverted/
 tests/6502_bin/
 tests/__pycache__/
 logs/

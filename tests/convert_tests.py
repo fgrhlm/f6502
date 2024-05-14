@@ -1,5 +1,6 @@
 import json
 import sys
+import os
 
 from ops import ops
 
@@ -15,58 +16,61 @@ from ops import ops
     Order:
     TEST_OPCODE
     TEST_INDEX
-    START_PC
-    START_S
-    START_A
-    START_X
-    START_Y
-    START_P
+    .. START_REGS (PC, S, A, X, Y, P)
     START_RAM_LEN
-    ... RAM ADDR | RAM VALUE
-    FINAL_PC
-    FINAL_S
-    FINAL_A
-    FINAL_X
-    FINAL_Y
-    FINAL_P
+    .. START_RAM (ADDR, VALUE)
+    .. FINAL_REGS (PC, S, A, X, Y, P)
     FINAL_RAM_LEN
-    ... RAM ADDR | RAM VALUE
+    .. FINAL_RAM (ADDR, VALUE)
     CYCLES_LEN
     .. TYPE | RAM ADDR | RAM VALUE
 """
 
 if __name__=="__main__":
-    fn = sys.argv[1]
-    print(f"Converting {fn}")
+    dest_dir = "./ProcessorTestsConverted"
+    if not os.path.exists(dest_dir):
+        os.makedirs(dest_dir)
 
-    with open(fn, "r") as f:
-        data = json.load(f)
+    tests_dir = sys.argv[1]
+    tests = os.listdir(tests_dir)
 
-    print(f"\n\n{data[0]}\n\n")
+    total_len = len(tests)
+    for ifn, fn in enumerate(tests):
+        print(f"converting: {fn} ({ifn}/{total_len})")
+        with open(os.path.join(tests_dir, fn), "r") as f:
+            data = json.load(f)
 
-    for test_index, test in enumerate(data[:1]):
-        out = []
+        for test_index, test in enumerate(data):
+            out = []
 
-        op = fn.split('/')[-1].split('.')[0]
+            op = fn.split('/')[-1].split('.')[0]
+            
+            out_dir = os.path.join(dest_dir, ops[op]["name"])
+            if not os.path.exists(out_dir):
+                os.makedirs(out_dir)
 
-        out.append(op)
-        out.append(test_index)
+            out_file = os.path.join(out_dir, f"{op}.tst")
 
-        for x in [test["initial"], test["final"]]:
-            for k,v in x.items():
-                if k == "ram":
-                    out.append(len(v))
-                    for n in v:
-                        out.append(n[0])
-                        out.append(n[1])
-                else:
-                    out.append(v)
-        
-        out.append(len(test["cycles"]))
-        for n in test["cycles"]:
-            c_type = 0 if n[2] == "read" else 1
-            out.append(c_type)
-            out.append(n[0])
-            out.append(n[1])
+            out.append(str(int(op, 16)))
+            out.append(str(test_index))
 
-    print(out)
+            for x in [test["initial"], test["final"]]:
+                for k,v in x.items():
+                    if k == "ram":
+                        out.append(str(len(v)))
+                        for n in v:
+                            out.append(str(n[0]))
+                            out.append(str(n[1]))
+                    else:
+                        out.append(str(v))
+            
+            out.append(str(len(test["cycles"])))
+            for n in test["cycles"]:
+                c_type = 0 if n[2] == "read" else 1
+                out.append(str(c_type))
+                out.append(str(n[0]))
+                out.append(str(n[1]))
+
+            with open(out_file, "a") as f:
+                f.write(" ".join(out))
+                f.write('\n')

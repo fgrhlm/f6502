@@ -105,7 +105,6 @@ int run_test(int argc, char* argv[]){
         }
     }
    
-    printf("END PC %d\n", get_pc(e->c));
     free_test(test);
     dump_emu(e); 
     free_emu(e);
