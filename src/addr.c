@@ -38,7 +38,6 @@ uint16_t relative_addr(cpu* c, mem* m){
     pc = get_pc(c);
     byte_addr = pc + 1;
 
-    debug_logf("\tbyteaddr: %04x\n", byte_addr);
     offset = mem_get_byte(m, byte_addr);
     
     addr = (int16_t)pc + (int8_t)offset;

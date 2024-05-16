@@ -63,7 +63,6 @@ void instr_rts(cpu* c, mem* m){
     addr.hi = pull_byte_stack(c, m);
 
     uint16_t pc = merge_bytes(addr.hi, addr.lo);
-    debug_logf("RTS -> %d\n", pc);
     set_pc(c, pc);
 }
 

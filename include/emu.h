@@ -6,12 +6,11 @@
 
 #include "types.h"
 
+void load_test(char* fpath, cpu* c, mem* m);
+void load_bin(char* fpath, mem* mem, unsigned int offset);
+
 emu* create_emu();
 void free_emu(emu* e);
-
-emu_test* parse_test(int argc, char* argv[]);
-void load_test(emu* e, emu_test* t);
-void free_test(emu_test* test);
 
 int run_test(int argc, char* argv[]);
 

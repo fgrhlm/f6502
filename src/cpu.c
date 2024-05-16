@@ -61,9 +61,6 @@ uint8_t cpu_op(cpu* c, mem* m){
     uint16_t pc = get_pc(c);
     uint8_t opcode = mem_get_byte(m, pc);
     
-    debug_logf("[OP START %d -> 0x%02x -> %s]\n", pc, opcode, opcode_to_str(opcode));
-    log_regs(c,m);
-
     instr_parse(c, m, opcode);
    
     if(!c->stop){

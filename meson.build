@@ -20,13 +20,15 @@ src_lib = files(
   'src/instr_logic.c',
   'src/instr_shift.c',
   'src/instr_stack.c',
-  'src/instr_trans.c'
+  'src/instr_trans.c',
+  'src/bin.c',
+  'src/emu.c'
 )
 
 src_tui = files('src/tui.c')
-src_emu = files('src/emu.c')
+src_testrunner = files('src/testrunner.c')
 
 lib = library('6502cpu', src_lib, include_directories: incdir)
 
 executable('debug', src_tui, include_directories: incdir, link_with : lib, link_args : ['-lncurses'])
-executable('emu', src_emu, include_directories: incdir, link_with : lib)
+executable('testrunner', src_testrunner, include_directories: incdir, link_with : lib)
