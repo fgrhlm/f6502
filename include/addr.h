@@ -2,7 +2,8 @@
 #define ADDR_H
 
 #include <stdint.h>
-#include "types.h"
+#include "mem.h"
+#include "cpu.h"
 
 uint16_t immediate_addr(cpu* c);
 uint16_t absolute_addr(cpu* c, mem* m);

@@ -1,5 +1,4 @@
 #include "instr_stack.h"
-#include "types.h"
 #include "cpu.h"
 #include "mem.h"
 #include "utils.h"
@@ -14,7 +13,7 @@ void push_reg_stack(cpu* c, mem* m, reg r){
         set_bit(&src, 5, 1);
     }
 
-    uint16_t addr = merge_bytes(0x01,sp); 
+    uint16_t addr = (0x01 << 8) | sp; 
     
     mem_set_byte(m, addr, src);
     set_reg(c, REG_S, sp - 1);
@@ -23,7 +22,7 @@ void push_reg_stack(cpu* c, mem* m, reg r){
 void push_byte_stack(cpu* c, mem* m, uint8_t b){
     uint8_t sp = *get_reg(c, REG_S);
 
-    uint16_t addr = merge_bytes(0x01,sp); 
+    uint16_t addr = (0x01 << 8) | sp; 
     mem_set_byte(m, addr, b);
     set_reg(c, REG_S, sp - 1);
 }
@@ -31,7 +30,7 @@ void push_byte_stack(cpu* c, mem* m, uint8_t b){
 void pull_reg_stack(cpu* c, mem* m, reg r){
     uint8_t sp = *get_reg(c, REG_S);
 
-    uint16_t addr = merge_bytes(0x01, sp+1); 
+    uint16_t addr = (0x01 << 8) | (sp+1); 
     uint8_t src = mem_get_byte(m, addr);
 
     set_reg(c, r, src);
@@ -40,7 +39,7 @@ void pull_reg_stack(cpu* c, mem* m, reg r){
 
 uint8_t pull_byte_stack(cpu* c, mem* m){
     uint8_t sp = *get_reg(c, REG_S);
-    uint16_t addr = merge_bytes(0x01, sp+1); 
+    uint16_t addr = (0x01 << 8) | (sp+1); 
     uint8_t byte = mem_get_byte(m, addr);
 
     set_reg(c, REG_S, sp + 1);

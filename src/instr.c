@@ -13,9 +13,7 @@
 #include "instr_branch.h"
 #include "instr_flags.h"
 
-#include "types.h"
 #include "cpu.h"
-#include "utils.h"
 
 void instr_exec(cpu* c, mem* m, addr_mode am, void (*instr_ptr)(cpu*, mem*)){
     set_mode(c, am);

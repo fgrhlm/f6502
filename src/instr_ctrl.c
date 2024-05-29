@@ -1,9 +1,7 @@
 #include <stdint.h>
-#include "types.h"
 #include "cpu.h"
 #include "instr_stack.h"
 #include "addr.h"
-#include "utils.h"
 #include "mem.h"
 
 void instr_brk(cpu* c, mem* m){
@@ -57,12 +55,12 @@ void instr_rti(cpu* c, mem* m){
 }
 
 void instr_rts(cpu* c, mem* m){
-    bytes addr;
+    uint8_t hi, lo;
 
-    addr.lo = pull_byte_stack(c, m);
-    addr.hi = pull_byte_stack(c, m);
+    lo = pull_byte_stack(c, m);
+    hi = pull_byte_stack(c, m);
 
-    uint16_t pc = merge_bytes(addr.hi, addr.lo);
+    uint16_t pc = (hi << 8) | lo;
     set_pc(c, pc);
 }
 
@@ -83,4 +81,4 @@ void instr_nop(cpu* c, mem* m){
             break;
     }
 }
-void instr_jam(cpu* c, mem* m){ cpu_stop(c); };
+void instr_jam(cpu* c, mem* m){ cpu_stop(c); }

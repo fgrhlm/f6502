@@ -1,8 +1,6 @@
 #include <stdint.h>
-#include <types.h>
 #include "cpu.h"
 #include "mem.h"
-#include "utils.h"
 
 uint16_t immediate_addr(cpu* c){ return inc_pc(c); }
 
@@ -12,7 +10,7 @@ uint16_t absolute_addr(cpu* c, mem* m){
     lo = mem_get_byte(m, inc_pc(c));
     hi = mem_get_byte(m, inc_pc(c));
     
-    uint16_t ad = merge_bytes(hi, lo);
+    uint16_t ad = (hi << 8) | lo;
     addr_mode am = get_mode(c);
 
     if(am == AM_ABSOLUTE_X) { return ad + *get_reg(c, REG_X); }
@@ -28,7 +26,7 @@ uint16_t absolute_indirect_addr(cpu* c, mem* m){
     lo = mem_get_byte(m, abs_addr);
     hi = mem_get_byte(m, abs_addr+1);
 
-    uint16_t ad = merge_bytes(hi, lo);
+    uint16_t ad = (hi << 8) | lo;
     return ad;
 }
 
@@ -51,21 +49,21 @@ uint16_t zero_page_addr(cpu* c, mem* m){
     switch(get_mode(c)){
         case AM_ZERO_PAGE: 
             byte = mem_get_byte(m, inc_pc(c));
-            addr = merge_bytes(0, byte); 
+            addr = (0 << 8) | byte; 
             break;
         case AM_ZERO_PAGE_X:
             byte = mem_get_byte(m, inc_pc(c));
             reg = *get_reg(c, REG_X);
             lo = byte + reg;
 
-            addr = merge_bytes(0, lo); 
+            addr = (0 << 8) | lo; 
             break;
         case AM_ZERO_PAGE_Y:
             byte = mem_get_byte(m, inc_pc(c));
             reg = *get_reg(c, REG_Y);
             lo = byte + reg;
 
-            addr = merge_bytes(0, lo); 
+            addr = (0 << 8) | lo; 
             break;
         default:
             break;
@@ -81,16 +79,16 @@ uint16_t zero_page_indirect_x(cpu* c, mem* m){
     uint8_t byte = mem_get_byte(m, inc_pc(c));
 
     zp_addr = reg+byte;
-    lo = mem_get_byte(m, merge_bytes(0, zp_addr));
-    hi = mem_get_byte(m, merge_bytes(0, zp_addr + 1));
+    lo = mem_get_byte(m, (0 << 8) | zp_addr);
+    hi = mem_get_byte(m, (0 << 8) | (zp_addr + 1));
     
-    eff_addr = merge_bytes(hi, lo);
+    eff_addr = (hi << 8) | lo;
     return eff_addr;
 }
 
 uint16_t zero_page_indirect_y(cpu* c, mem* m){
     uint8_t byte_addr = mem_get_byte(m, inc_pc(c));
-    uint8_t byte = mem_get_byte(m, merge_bytes(0,byte_addr));
+    uint8_t byte = mem_get_byte(m, (0 << 8) | byte_addr);
     uint8_t reg = *get_reg(c, REG_Y);
     uint8_t lo, hi;
 
@@ -98,9 +96,9 @@ uint16_t zero_page_indirect_y(cpu* c, mem* m){
     
 
     byte_addr += 1;
-    hi = mem_get_byte(m, merge_bytes(0,byte_addr)) + carry;
+    hi = mem_get_byte(m, (0 << 8) | byte_addr) + carry;
 
-    return merge_bytes(hi, lo);
+    return (hi << 8) | lo;
 }
 
 uint16_t get_addr(cpu* c, mem* m){

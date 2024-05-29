@@ -1,7 +1,15 @@
-project('sfotemu', 'c')
+project(
+  'sfotemu',
+  'c',
+  default_options : [
+    'c_std=c17',
+    'werror=true',
+    'warning_level=1',
+    'c_args=-Wpedantic'
+  ]
+)
 
-add_global_arguments(language : 'c')
-
+# 6502 CPU Lib
 incdir = include_directories('include')
 
 src_lib = files(
@@ -22,13 +30,11 @@ src_lib = files(
   'src/instr_stack.c',
   'src/instr_trans.c',
   'src/bin.c',
-  'src/emu.c'
 )
-
-src_tui = files('src/tui.c')
-src_testrunner = files('src/testrunner.c')
 
 lib = library('6502cpu', src_lib, include_directories: incdir)
 
-executable('debug', src_tui, include_directories: incdir, link_with : lib, link_args : ['-lncurses'])
-executable('testrunner', src_testrunner, include_directories: incdir, link_with : lib)
+# Single Step Tests
+src_single_step_tests = files('tests/single-step-tests/test.c')
+dep_jsonc = dependency('json-c')
+single_step_tests = executable('single-step-tests', src_single_step_tests, dependencies : [dep_jsonc])

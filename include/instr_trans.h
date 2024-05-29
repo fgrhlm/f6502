@@ -1,8 +1,6 @@
 #ifndef INSTR_TRANS_H
 #define INSTR_TRANS_H
 
-#include "types.h"
-
 void instr_tax(cpu* c, mem* m);
 void instr_tay(cpu* c, mem* m);
 void instr_tsx(cpu* c, mem* m);

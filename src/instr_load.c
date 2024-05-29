@@ -1,11 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-#include "instr_load.h"
-#include "types.h"
 #include "cpu.h"
 #include "mem.h"
-#include "utils.h"
 #include "addr.h"
 
 void instr_load(cpu* c, mem* m, reg r){
@@ -35,7 +29,7 @@ void instr_lax(cpu* c, mem* m){
 
     set_flag(c, FLAG_Z, byte == 0);
     set_flag(c, FLAG_N, get_bit(byte, 7));
-};
+}
 
 void instr_sta(cpu* c, mem* m){ instr_store(c, m, REG_A); }
 void instr_stx(cpu* c, mem* m){ instr_store(c, m, REG_X); }
@@ -54,7 +48,7 @@ void instr_las(cpu* c, mem* m){
 
     set_flag(c, FLAG_N, get_bit(res, 7));
     set_flag(c, FLAG_Z, res == 0);
-};
+}
 
 void instr_shx(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
@@ -69,15 +63,15 @@ void instr_shx(cpu* c, mem* m){
     }
 
     mem_set_byte(m, addr, res);
-};
+}
 
 void instr_shy(cpu* c, mem* m){
 
-};
+}
 
 void instr_sha(cpu* c, mem* m){
 
-};
+}
 
 void instr_sax(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
@@ -87,4 +81,4 @@ void instr_sax(cpu* c, mem* m){
     uint8_t res = (a & x);
 
     mem_set_byte(m, addr, res);
-};
+}

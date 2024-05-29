@@ -2,7 +2,6 @@
 #include "cpu.h"
 #include "addr.h"
 #include "mem.h"
-#include "types.h"
 
 void instr_dec_reg(cpu* c, reg r){
     uint8_t n = *get_reg(c, r);

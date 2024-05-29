@@ -1,8 +1,6 @@
 #ifndef INSTR_ARITH_H
 #define INSTR_ARITH_H
 
-#include "types.h"
-
 void instr_adc(cpu* c, mem* m);
 void instr_cmp(cpu* c, mem* m);
 void instr_cpx(cpu* c, mem* m);

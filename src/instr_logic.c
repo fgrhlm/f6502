@@ -1,5 +1,4 @@
 #include <stdint.h>
-#include "types.h"
 #include "cpu.h"
 
 void instr_and(cpu* c, mem* m){

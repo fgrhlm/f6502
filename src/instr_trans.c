@@ -1,11 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-#include "instr_load.h"
-#include "types.h"
 #include "cpu.h"
 #include "mem.h"
-#include "utils.h"
 #include "addr.h"
 
 void instr_transfer(cpu* c, mem* m, reg dst, reg src){
@@ -35,8 +29,8 @@ void instr_shs(cpu* c, mem* m){
     uint8_t res = (a & x);
 
     set_reg(c, REG_S, res);
-    bytes s = split_addr(addr);
+    uint8_t hi = addr >> 8;
 
-    res = (res & s.hi) + 1;
+    res = (res & hi) + 1;
     mem_set_byte(m, addr, res);
-};
+}

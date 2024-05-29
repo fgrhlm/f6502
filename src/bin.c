@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "types.h"
+#include "mem.h"
 
 void load_bin(char* fpath, mem* mem, unsigned int offset){
     FILE* fp;

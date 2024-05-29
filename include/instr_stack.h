@@ -1,7 +1,10 @@
 #ifndef INSTR_STACK_H
 #define INSTR_STACK_H
 
-#include "types.h"
+#include <stdint.h>
+
+#include "cpu.h"
+#include "mem.h"
 
 void push_reg_stack(cpu* c, mem* m, reg r);
 void push_byte_stack(cpu* c, mem* m, uint8_t b);

@@ -2,7 +2,6 @@
 #include "cpu.h"
 #include "addr.h"
 #include "mem.h"
-#include "utils.h"
 
 uint8_t bcd_add(cpu* c, uint8_t x, uint8_t y){
     uint8_t hi, lo, out_carry, in_carry, sum, temp_sum;
@@ -98,14 +97,14 @@ void instr_cpy(cpu* c, mem* m){
 }
 
 uint8_t sub(cpu* c, uint8_t x, uint8_t y){
-    uint8_t dec, carry_in, carry_out, c1, c2;
+    uint8_t dec, carry_in, carry_out;
     int16_t res, t_res;
     
     dec = get_flag(c, FLAG_D);
     carry_in = get_flag(c, FLAG_C);
     
-    c1 = __builtin_sub_overflow(x, y, &res);
-    c2 = __builtin_sub_overflow(res, !carry_in, &res);
+    __builtin_sub_overflow(x, y, &res);
+    __builtin_sub_overflow(res, !carry_in, &res);
     
     set_flag(c, FLAG_N, get_bit(res, 7));
     set_flag(c, FLAG_Z, !(res & 0xFF));
@@ -164,7 +163,7 @@ void instr_arr(cpu* c, mem* m){
     // FIX DECIMAL MODE
     uint8_t v_bit = get_bit(result, 7);
     set_flag(c, FLAG_N, v_bit);
-};
+}
 
 void instr_asr(cpu* c, mem* m){
     uint8_t byte = next_byte(c, m);
@@ -181,7 +180,7 @@ void instr_asr(cpu* c, mem* m){
     set_flag(c, FLAG_Z, (result == 0));
     set_flag(c, FLAG_N, 0);
     set_flag(c, FLAG_C, o_carry);   
-};
+}
 
 void instr_sbx(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
@@ -197,9 +196,9 @@ void instr_sbx(cpu* c, mem* m){
     //set_flag(c, FLAG_C, );
     set_flag(c, FLAG_N, get_bit(res, 7));
     set_flag(c, FLAG_Z, res == 0);
-};
+}
 
-void instr_xaa(cpu* c, mem* m){};
+void instr_xaa(cpu* c, mem* m){}
 
 void instr_dcp(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
@@ -213,14 +212,14 @@ void instr_dcp(cpu* c, mem* m){
     set_flag(c, FLAG_Z, res == 0);
     set_flag(c, FLAG_N, get_bit(res, 7));
     set_flag(c, FLAG_C, byte <= acc);
-};
+}
 
 void instr_isc(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
     uint8_t byte = mem_get_byte(m, addr);
 
     byte = byte + 1;
-};
+}
 
 void instr_rla(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
@@ -239,7 +238,7 @@ void instr_rla(cpu* c, mem* m){
 
     set_flag(c, FLAG_N, get_bit(result, 7));
     set_flag(c, FLAG_Z, result == 0);
-};
+}
 
 void instr_rra(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
@@ -255,7 +254,7 @@ void instr_rra(cpu* c, mem* m){
    
     uint8_t res = add(c, acc, byte);
     set_reg(c, REG_A, res);
-};
+}
 
 void instr_slo(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
@@ -273,7 +272,7 @@ void instr_slo(cpu* c, mem* m){
 
     set_flag(c, FLAG_N, get_bit(result, 7));
     set_flag(c, FLAG_Z, result == 0);
-};
+}
 
 void instr_sre(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
@@ -291,4 +290,4 @@ void instr_sre(cpu* c, mem* m){
 
     set_flag(c, FLAG_N, get_bit(result, 7));
     set_flag(c, FLAG_Z, result == 0);
-};
+}

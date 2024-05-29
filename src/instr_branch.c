@@ -1,6 +1,5 @@
 #include "cpu.h"
 #include "addr.h"
-#include "utils.h"
 
 void instr_branch(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);

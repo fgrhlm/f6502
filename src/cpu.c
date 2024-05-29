@@ -1,12 +1,10 @@
 #include <stdint.h>
-#include <stdlib.h>
 #include <termios.h>
 #include <unistd.h>
 
 #include "cpu.h"
 #include "mem.h"
 #include "instr.h"
-#include "utils.h"
 #include "addr.h"
 
 uint8_t get_bit(uint8_t b, uint8_t i){ return (b >> i) & 1; }
@@ -43,19 +41,6 @@ uint8_t next_byte(cpu* c, mem* m){
 }
 
 void cpu_stop(cpu* c){ c->stop = 1; }
-
-cpu* create_cpu(){
-    cpu* c = malloc(sizeof(cpu));
-
-    c->regs = calloc(7, sizeof(uint8_t));
-    c->stop = 0;
-    return c;
-}
-
-void free_cpu(cpu* cpu){
-    free(cpu->regs);
-    free(cpu);
-}
 
 uint8_t cpu_op(cpu* c, mem* m){
     uint16_t pc = get_pc(c);

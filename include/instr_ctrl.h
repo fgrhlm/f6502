@@ -1,8 +1,6 @@
 #ifndef INSTR_CTRL_H
 #define INSTR_CTRL_H
 
-#include "types.h"
-
 void instr_brk(cpu* c, mem* m);
 void instr_jmp(cpu* c, mem* m);
 void instr_jsr(cpu* c, mem* m);

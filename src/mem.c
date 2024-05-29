@@ -2,7 +2,6 @@
 #include <stdint.h>
 
 #include "mem.h"
-#include "types.h"
 
 mem* create_mem(unsigned int mem_size){
     mem* m = malloc(sizeof(mem)); 

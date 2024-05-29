@@ -1,8 +1,6 @@
 #ifndef INSTR_LOAD_H
 #define INSTR_LOAD_H
 
-#include "types.h"
-
 void instr_lda(cpu* c, mem* m);
 void instr_ldx(cpu* c, mem* m);
 void instr_ldy(cpu* c, mem* m);
