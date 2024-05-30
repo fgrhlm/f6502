@@ -40,18 +40,26 @@ uint8_t next_byte(cpu* c, mem* m){
     return byte;
 }
 
+void reset_cpu(cpu* c){
+    set_reg(c, REG_PH, 0);
+    set_reg(c, REG_PL, 0);
+    set_reg(c, REG_S, 0);
+    set_reg(c, REG_A, 0);
+    set_reg(c, REG_X, 0);
+    set_reg(c, REG_Y, 0);
+    set_reg(c, REG_P, 0);
+    c->addr_mode = AM_NULL;
+}
+
 void cpu_stop(cpu* c){ c->stop = 1; }
 
-uint8_t cpu_op(cpu* c, mem* m){
+uint8_t cpu_tick(cpu* c, mem* m){
     uint16_t pc = get_pc(c);
     uint8_t opcode = mem_get_byte(m, pc);
     
     instr_parse(c, m, opcode);
    
-    if(!c->stop){
-        inc_pc(c);
-        return 1;
-    };
-
-    return 0;
+    inc_pc(c);
+    
+    return 1;
 }

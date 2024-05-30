@@ -16,7 +16,7 @@ typedef enum {
     AM_ZERO_PAGE_X,AM_ZERO_PAGE_Y,AM_RELATIVE,
     AM_ABSOLUTE,AM_ABSOLUTE_X,AM_ABSOLUTE_Y,
     AM_ABSOLUTE_INDIRECT,AM_ZERO_PAGE_INDIRECT_X,AM_ZERO_PAGE_INDIRECT_Y,
-    AM_IMPLIED,
+    AM_IMPLIED, AM_NULL
 } addr_mode;
 
 typedef struct {
@@ -25,7 +25,7 @@ typedef struct {
 } cpu_cycle;
 
 typedef struct {
-    uint8_t* regs;
+    uint8_t regs[7];
     addr_mode addr_mode;
     uint8_t stop;
 } cpu;
@@ -54,8 +54,9 @@ void free_cpu(cpu* cpu);
 
 uint8_t next_byte(cpu* c, mem* m);
 
+void reset_cpu(cpu* c);
 void cpu_stop(cpu* c);
 
-uint8_t cpu_op(cpu* c, mem* m);
+uint8_t cpu_tick(cpu* c, mem* m);
 
 #endif

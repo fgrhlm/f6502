@@ -9,9 +9,9 @@ project(
   ]
 )
 
+
 # 6502 CPU Lib
 incdir = include_directories('include')
-
 src_lib = files(
   'src/cpu.c',
   'src/addr.c', 
@@ -34,7 +34,10 @@ src_lib = files(
 
 lib = library('6502cpu', src_lib, include_directories: incdir)
 
+# Dependencies
+dep_lib = declare_dependency(link_with : lib, include_directories : incdir)
+dep_jsonc = dependency('json-c')
+
 # Single Step Tests
 src_single_step_tests = files('tests/single-step-tests/test.c')
-dep_jsonc = dependency('json-c')
-single_step_tests = executable('single-step-tests', src_single_step_tests, dependencies : [dep_jsonc])
+single_step_tests = executable('single-step-tests', src_single_step_tests, dependencies : [dep_jsonc, dep_lib])
