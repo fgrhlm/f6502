@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <json-c/json.h>
 #include <json_visit.h>
@@ -145,15 +146,17 @@ void free_tests(test_def *tests, int len){
     free(tests);
 }
 
-void test_assert(char* n, uint8_t x, uint8_t y, test_result* t){
+void test_assert(char* n, uint8_t x, uint8_t y, test_result* t, uint8_t verbose){
     if(x != y){ 
         *t = TEST_FAIL; 
-        printf("    %s should be %d was %d\n", n, x, y);
+        if(verbose){
+            printf("    %s %02x %02x\n", n, x, y);
+        }
     }
 
 }
 
-test_result run_test(test_def t, cpu* c, mem* m){
+test_result run_test(test_def t, cpu* c, mem* m, uint8_t verbose){
     reset_cpu(c);
     reset_mem(m);
 
@@ -166,23 +169,26 @@ test_result run_test(test_def t, cpu* c, mem* m){
     set_reg(c, REG_P, t.initial.p);
 
     for(int i=0; i<t.initial.ram_len; i++){
-        mem_set_byte(m, t.initial.ram[0].addr, t.initial.ram[0].val);
+        mem_set_byte(m, t.initial.ram[i].addr, t.initial.ram[i].val);
     }
 
     cpu_tick(c, m);
     
     test_result res = TEST_PASS;
-    
-    test_assert("PC HI", (t.final.pc >> 8), *get_reg(c, REG_PH), &res);
-    test_assert("PC LO", (t.final.pc & 0x00FF), *get_reg(c, REG_PL), &res);
-    test_assert("S", t.final.s, *get_reg(c, REG_S), &res);
-    test_assert("A", t.final.a, *get_reg(c, REG_A), &res);
-    test_assert("X", t.final.x, *get_reg(c, REG_X), &res);
-    test_assert("Y", t.final.y, *get_reg(c, REG_Y), &res);
-    test_assert("P", t.final.p, *get_reg(c, REG_P), &res);
+
+    test_assert("REG_PH", (t.final.pc >> 8), *get_reg(c, REG_PH), &res, verbose);
+    test_assert("REG_PL", (t.final.pc & 0x00FF), *get_reg(c, REG_PL), &res, verbose);
+    test_assert("REG_S", t.final.s, *get_reg(c, REG_S), &res, verbose);
+    test_assert("REG_A", t.final.a, *get_reg(c, REG_A), &res, verbose);
+    test_assert("REG_X", t.final.x, *get_reg(c, REG_X), &res, verbose);
+    test_assert("REG_Y", t.final.y, *get_reg(c, REG_Y), &res, verbose);
+    test_assert("REG_P", t.final.p, *get_reg(c, REG_P), &res, verbose);
     
     for(int i=0; i<t.final.ram_len; i++){
-        
+        uint8_t val = mem_get_byte(m, t.final.ram[i].addr);
+        char debug_str[128];
+        sprintf(debug_str, "RAM_%04x", t.final.ram[i].addr);
+        test_assert(debug_str, t.final.ram[i].val, val, &res, verbose);
     }
 
     return res;
@@ -190,34 +196,45 @@ test_result run_test(test_def t, cpu* c, mem* m){
 
 int main(int argc, char **argv){
     if(argc < 2){ exit(1); }
-    char* fn = argv[1];
+    char* fn;
 
-    json_object *root = json_object_from_file(fn);
-    if(!root){
-        printf("%s\n", json_util_get_last_err());
-        exit(1);
-    } 
+    json_object *root;
+    uint8_t verbose = strcmp(argv[1], "-v")^1;
+    int t = verbose ? 2 : 1;
+
+    for(; t<argc; t++){
+        fn = argv[t];
+        root = json_object_from_file(fn);
+        if(!root){
+            printf("%s\n", json_util_get_last_err());
+            exit(1);
+        } 
 
 
-    int len = json_object_array_length(root);
-    
-    test_def *tests = malloc(len*sizeof(test_def));
-    
-    parse_tests(root, len, tests);
-    
-    cpu c;
+        int len = json_object_array_length(root);
+        int fail_len = 0;
+        
+        test_def *tests = malloc(len*sizeof(test_def));
+        
+        parse_tests(root, len, tests);
+        
+        cpu c;
 
-    mem* m = create_mem(65535);
-    test_result res;
-    for(int i=0; i<len; i++){
-        res = run_test(tests[i], &c, m);
-        if(res == TEST_FAIL){
-            printf("Test %d FAIL\n", i);
+        mem* m = create_mem(65535);
+        test_result res;
+        for(int i=0; i<len; i++){
+            if(verbose){ printf("%d\n", i); }
+            res = run_test(tests[i], &c, m, verbose);
+            if(res == TEST_FAIL){
+                fail_len++;
+            }
         }
-    }
+        
+        printf("%s %05d %05d\n", fn, (len-fail_len), fail_len);
 
-    json_object_put(root);
-    free_tests(tests, len);
-    free_mem(m);
+        json_object_put(root);
+        free_tests(tests, len);
+        free_mem(m);
+    }
     return 0;
 }
