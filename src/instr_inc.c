@@ -10,6 +10,7 @@ void instr_dec_reg(cpu* c, reg r){
 
     set_flag(c, FLAG_N, get_bit(n, 7));
     set_flag(c, FLAG_Z, n == 0);
+    inc_pc(c);
 }
 void instr_dec(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
@@ -21,6 +22,7 @@ void instr_dec(cpu* c, mem* m){
     
     set_flag(c, FLAG_N, get_bit(n, 7));
     set_flag(c, FLAG_Z, n == 0);
+    inc_pc(c);
 }
 
 void instr_dex(cpu* c, mem* m){ instr_dec_reg(c, REG_X); }
@@ -33,6 +35,7 @@ void instr_inc_reg(cpu* c, reg r){
 
     set_flag(c, FLAG_N, get_bit(n, 7));
     set_flag(c, FLAG_Z, n == 0);
+    inc_pc(c);
 }
 
 void instr_inc(cpu* c, mem* m){
@@ -45,6 +48,7 @@ void instr_inc(cpu* c, mem* m){
     
     set_flag(c, FLAG_N, get_bit(n, 7));
     set_flag(c, FLAG_Z, n == 0);
+    inc_pc(c);
 }
 
 void instr_inx(cpu* c, mem* m){ instr_inc_reg(c, REG_X); }

@@ -8,6 +8,7 @@ void instr_transfer(cpu* c, mem* m, reg dst, reg src){
     set_reg(c, dst, byte);
     set_flag(c, FLAG_N, get_bit(byte, 7));
     set_flag(c, FLAG_Z,(byte == 0));
+    inc_pc(c);
 }
 
 void instr_tax(cpu* c, mem* m){ instr_transfer(c, m, REG_X, REG_A); }
@@ -33,4 +34,5 @@ void instr_shs(cpu* c, mem* m){
 
     res = (res & hi) + 1;
     mem_set_byte(m, addr, res);
+    inc_pc(c);
 }

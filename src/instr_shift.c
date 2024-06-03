@@ -23,6 +23,7 @@ void instr_asl(cpu* c, mem* m){
     
     set_flag(c, FLAG_N, get_bit(result, 7));
     set_flag(c, FLAG_Z, (result == 0));
+    inc_pc(c);
 }
 
 void instr_lsr(cpu* c, mem* m){
@@ -45,6 +46,7 @@ void instr_lsr(cpu* c, mem* m){
     
     set_flag(c, FLAG_N, get_bit(result, 7));
     set_flag(c, FLAG_Z, (result == 0));
+    inc_pc(c);
 }
 
 void instr_rol(cpu* c, mem* m){
@@ -69,6 +71,7 @@ void instr_rol(cpu* c, mem* m){
     
     set_flag(c, FLAG_N, get_bit(byte, 6));
     set_flag(c, FLAG_Z, result == 0);
+    inc_pc(c);
 }
 
 void instr_ror(cpu* c, mem* m){
@@ -93,4 +96,5 @@ void instr_ror(cpu* c, mem* m){
     
     set_flag(c, FLAG_N, carry);
     set_flag(c, FLAG_Z, result == 0);
+    inc_pc(c);
 }

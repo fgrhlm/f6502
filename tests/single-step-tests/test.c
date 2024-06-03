@@ -146,17 +146,18 @@ void free_tests(test_def *tests, int len){
     free(tests);
 }
 
-void test_assert(char* n, uint8_t x, uint8_t y, test_result* t, uint8_t verbose){
+void test_assert(int index, char* n, uint8_t x, uint8_t y, test_result* t, uint8_t verbose){
     if(x != y){ 
         *t = TEST_FAIL; 
         if(verbose){
-            printf("    %s %02x %02x\n", n, x, y);
+            printf("%04d %s %02x (%d) %02x (%d)\n", index, n, x, x, y, y);
         }
     }
 
 }
 
-test_result run_test(test_def t, cpu* c, mem* m, uint8_t verbose){
+test_result run_test(test_def* tests, int index, cpu* c, mem* m, uint8_t verbose){
+    test_def t = tests[index];
     reset_cpu(c);
     reset_mem(m);
 
@@ -176,19 +177,19 @@ test_result run_test(test_def t, cpu* c, mem* m, uint8_t verbose){
     
     test_result res = TEST_PASS;
 
-    test_assert("REG_PH", (t.final.pc >> 8), *get_reg(c, REG_PH), &res, verbose);
-    test_assert("REG_PL", (t.final.pc & 0x00FF), *get_reg(c, REG_PL), &res, verbose);
-    test_assert("REG_S", t.final.s, *get_reg(c, REG_S), &res, verbose);
-    test_assert("REG_A", t.final.a, *get_reg(c, REG_A), &res, verbose);
-    test_assert("REG_X", t.final.x, *get_reg(c, REG_X), &res, verbose);
-    test_assert("REG_Y", t.final.y, *get_reg(c, REG_Y), &res, verbose);
-    test_assert("REG_P", t.final.p, *get_reg(c, REG_P), &res, verbose);
+    test_assert(index, "REG_PH", (t.final.pc >> 8), *get_reg(c, REG_PH), &res, verbose);
+    test_assert(index, "REG_PL", (t.final.pc & 0x00FF), *get_reg(c, REG_PL), &res, verbose);
+    test_assert(index, "REG_S", t.final.s, *get_reg(c, REG_S), &res, verbose);
+    test_assert(index, "REG_A", t.final.a, *get_reg(c, REG_A), &res, verbose);
+    test_assert(index, "REG_X", t.final.x, *get_reg(c, REG_X), &res, verbose);
+    test_assert(index, "REG_Y", t.final.y, *get_reg(c, REG_Y), &res, verbose);
+    test_assert(index, "REG_P", t.final.p, *get_reg(c, REG_P), &res, verbose);
     
     for(int i=0; i<t.final.ram_len; i++){
         uint8_t val = mem_get_byte(m, t.final.ram[i].addr);
         char debug_str[128];
         sprintf(debug_str, "RAM_%04x", t.final.ram[i].addr);
-        test_assert(debug_str, t.final.ram[i].val, val, &res, verbose);
+        test_assert(index, debug_str, t.final.ram[i].val, val, &res, verbose);
     }
 
     return res;
@@ -199,7 +200,7 @@ int main(int argc, char **argv){
     char* fn;
 
     json_object *root;
-    uint8_t verbose = strcmp(argv[1], "-v")^1;
+    uint8_t verbose = (strcmp(argv[1], "-v") == 0) ? 1 : 0;
     int t = verbose ? 2 : 1;
 
     for(; t<argc; t++){
@@ -223,8 +224,7 @@ int main(int argc, char **argv){
         mem* m = create_mem(65535);
         test_result res;
         for(int i=0; i<len; i++){
-            if(verbose){ printf("%d\n", i); }
-            res = run_test(tests[i], &c, m, verbose);
+            res = run_test(tests, i, &c, m, verbose);
             if(res == TEST_FAIL){
                 fail_len++;
             }

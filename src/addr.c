@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <stdio.h>
 #include "cpu.h"
 #include "mem.h"
 
@@ -73,14 +74,16 @@ uint16_t zero_page_addr(cpu* c, mem* m){
 }
 
 uint16_t zero_page_indirect_x(cpu* c, mem* m){
-    uint8_t hi, lo;
-    uint16_t zp_addr, eff_addr;
+    uint8_t hi, lo, t_addr;
+    uint16_t eff_addr;
     uint8_t reg = *get_reg(c, REG_X);
     uint8_t byte = mem_get_byte(m, inc_pc(c));
 
-    zp_addr = reg+byte;
-    lo = mem_get_byte(m, (0 << 8) | zp_addr);
-    hi = mem_get_byte(m, (0 << 8) | (zp_addr + 1));
+    t_addr = byte + reg;
+    lo = mem_get_byte(m, (uint16_t)t_addr);
+
+    t_addr = (byte + 1) + reg;
+    hi = mem_get_byte(m, (uint16_t)t_addr);
     
     eff_addr = (hi << 8) | lo;
     return eff_addr;

@@ -8,6 +8,7 @@ void instr_load(cpu* c, mem* m, reg r){
     set_reg(c, r, operand);
     set_flag(c, FLAG_Z, (operand == 0));
     set_flag(c, FLAG_N, get_bit(operand, 7));
+    inc_pc(c);
 }
 
 void instr_lda(cpu* c, mem* m){ instr_load(c, m, REG_A); }
@@ -19,6 +20,7 @@ void instr_store(cpu* c, mem* m, reg r){
     uint8_t reg = *get_reg(c, r);
 
     mem_set_byte(m, addr, reg);
+    inc_pc(c);
 }
 
 void instr_lax(cpu* c, mem* m){
@@ -29,6 +31,7 @@ void instr_lax(cpu* c, mem* m){
 
     set_flag(c, FLAG_Z, byte == 0);
     set_flag(c, FLAG_N, get_bit(byte, 7));
+    inc_pc(c);
 }
 
 void instr_sta(cpu* c, mem* m){ instr_store(c, m, REG_A); }
@@ -48,6 +51,7 @@ void instr_las(cpu* c, mem* m){
 
     set_flag(c, FLAG_N, get_bit(res, 7));
     set_flag(c, FLAG_Z, res == 0);
+    inc_pc(c);
 }
 
 void instr_shx(cpu* c, mem* m){
@@ -63,14 +67,17 @@ void instr_shx(cpu* c, mem* m){
     }
 
     mem_set_byte(m, addr, res);
+    inc_pc(c);
 }
 
 void instr_shy(cpu* c, mem* m){
 
+    inc_pc(c);
 }
 
 void instr_sha(cpu* c, mem* m){
 
+    inc_pc(c);
 }
 
 void instr_sax(cpu* c, mem* m){
@@ -81,4 +88,5 @@ void instr_sax(cpu* c, mem* m){
     uint8_t res = (a & x);
 
     mem_set_byte(m, addr, res);
+    inc_pc(c);
 }

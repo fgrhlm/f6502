@@ -1,7 +1,6 @@
 #include "instr_stack.h"
 #include "cpu.h"
 #include "mem.h"
-#include "utils.h"
 
 void push_reg_stack(cpu* c, mem* m, reg r){
     uint8_t sp = *get_reg(c, REG_S);
@@ -46,7 +45,7 @@ uint8_t pull_byte_stack(cpu* c, mem* m){
     return byte;
 }
 
-void instr_pha(cpu* c, mem* m){ push_reg_stack(c, m, REG_A); }
+void instr_pha(cpu* c, mem* m){ push_reg_stack(c, m, REG_A); inc_pc(c); }
 void instr_pla(cpu* c, mem* m){
     pull_reg_stack(c, m, REG_A);
 
@@ -54,12 +53,14 @@ void instr_pla(cpu* c, mem* m){
     
     set_flag(c, FLAG_N, get_bit(a, 7));
     set_flag(c, FLAG_Z, (a == 0));
+    inc_pc(c);
 }
 
-void instr_php(cpu* c, mem* m){ push_reg_stack(c, m, REG_P); }
+void instr_php(cpu* c, mem* m){ push_reg_stack(c, m, REG_P); inc_pc(c); }
 void instr_plp(cpu* c, mem* m){ 
     uint8_t p = pull_byte_stack(c, m);
     set_bit(&p, 5, 1);
     set_bit(&p, 4, 0);
     set_reg(c, REG_P, p); 
+    inc_pc(c);
 }

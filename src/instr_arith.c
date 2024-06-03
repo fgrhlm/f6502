@@ -66,6 +66,7 @@ void instr_adc(cpu* c, mem* m){
     uint8_t res = add(c, acc, byte);
 
     set_reg(c, REG_A, res);
+    inc_pc(c);
 }
 
 void instr_cmp(cpu* c, mem* m){
@@ -76,6 +77,7 @@ void instr_cmp(cpu* c, mem* m){
     set_flag(c, FLAG_Z, result == 0);
     set_flag(c, FLAG_N, get_bit(result, 7));
     set_flag(c, FLAG_C, byte <= acc);
+    inc_pc(c);
 }
 void instr_cpx(cpu* c, mem* m){
     uint8_t byte = next_byte(c, m);
@@ -85,6 +87,7 @@ void instr_cpx(cpu* c, mem* m){
     set_flag(c, FLAG_Z, result == 0);
     set_flag(c, FLAG_N, get_bit(result, 7));
     set_flag(c, FLAG_C, byte <= reg);
+    inc_pc(c);
 }
 void instr_cpy(cpu* c, mem* m){
     uint8_t byte = next_byte(c, m);
@@ -94,6 +97,7 @@ void instr_cpy(cpu* c, mem* m){
     set_flag(c, FLAG_Z, result == 0);
     set_flag(c, FLAG_N, get_bit(result, 7));
     set_flag(c, FLAG_C, byte <= reg);
+    inc_pc(c);
 }
 
 uint8_t sub(cpu* c, uint8_t x, uint8_t y){
@@ -132,6 +136,7 @@ void instr_sbc(cpu* c, mem* m){
     uint8_t res = sub(c, acc, byte);
 
     set_reg(c, REG_A, res);
+    inc_pc(c);
 }
 
 void instr_anc(cpu* c, mem* m){
@@ -144,6 +149,7 @@ void instr_anc(cpu* c, mem* m){
     uint8_t v_bit = get_bit(result, 7);
     set_flag(c, FLAG_N, v_bit);
     set_flag(c, FLAG_C, v_bit);
+    inc_pc(c);
 }
 
 void instr_arr(cpu* c, mem* m){
@@ -163,6 +169,7 @@ void instr_arr(cpu* c, mem* m){
     // FIX DECIMAL MODE
     uint8_t v_bit = get_bit(result, 7);
     set_flag(c, FLAG_N, v_bit);
+    inc_pc(c);
 }
 
 void instr_asr(cpu* c, mem* m){
@@ -180,6 +187,7 @@ void instr_asr(cpu* c, mem* m){
     set_flag(c, FLAG_Z, (result == 0));
     set_flag(c, FLAG_N, 0);
     set_flag(c, FLAG_C, o_carry);   
+    inc_pc(c);
 }
 
 void instr_sbx(cpu* c, mem* m){
@@ -196,6 +204,7 @@ void instr_sbx(cpu* c, mem* m){
     //set_flag(c, FLAG_C, );
     set_flag(c, FLAG_N, get_bit(res, 7));
     set_flag(c, FLAG_Z, res == 0);
+    inc_pc(c);
 }
 
 void instr_xaa(cpu* c, mem* m){}
@@ -212,6 +221,7 @@ void instr_dcp(cpu* c, mem* m){
     set_flag(c, FLAG_Z, res == 0);
     set_flag(c, FLAG_N, get_bit(res, 7));
     set_flag(c, FLAG_C, byte <= acc);
+    inc_pc(c);
 }
 
 void instr_isc(cpu* c, mem* m){
@@ -219,6 +229,7 @@ void instr_isc(cpu* c, mem* m){
     uint8_t byte = mem_get_byte(m, addr);
 
     byte = byte + 1;
+    inc_pc(c);
 }
 
 void instr_rla(cpu* c, mem* m){
@@ -238,6 +249,7 @@ void instr_rla(cpu* c, mem* m){
 
     set_flag(c, FLAG_N, get_bit(result, 7));
     set_flag(c, FLAG_Z, result == 0);
+    inc_pc(c);
 }
 
 void instr_rra(cpu* c, mem* m){
@@ -254,6 +266,7 @@ void instr_rra(cpu* c, mem* m){
    
     uint8_t res = add(c, acc, byte);
     set_reg(c, REG_A, res);
+    inc_pc(c);
 }
 
 void instr_slo(cpu* c, mem* m){
@@ -272,6 +285,7 @@ void instr_slo(cpu* c, mem* m){
 
     set_flag(c, FLAG_N, get_bit(result, 7));
     set_flag(c, FLAG_Z, result == 0);
+    inc_pc(c);
 }
 
 void instr_sre(cpu* c, mem* m){
@@ -290,4 +304,5 @@ void instr_sre(cpu* c, mem* m){
 
     set_flag(c, FLAG_N, get_bit(result, 7));
     set_flag(c, FLAG_Z, result == 0);
+    inc_pc(c);
 }

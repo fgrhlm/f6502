@@ -19,12 +19,12 @@ void instr_brk(cpu* c, mem* m){
     uint16_t new_pc = (hi << 8) | lo;
 
     set_flag(c, FLAG_I, 1);
-    set_pc(c, new_pc-1);
+    set_pc(c, new_pc);
 }
 
 void instr_jmp(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
-    set_pc(c, addr - 1);
+    set_pc(c, addr);
 }
 void instr_jsr(cpu* c, mem* m){
     uint16_t pc = get_pc(c);
@@ -37,10 +37,10 @@ void instr_jsr(cpu* c, mem* m){
     push_byte_stack(c, m, hi);
     push_byte_stack(c, m, lo);
 
-    hi = mem_get_byte(m, pc + 2);
     lo = mem_get_byte(m, pc + 1);
+    hi = mem_get_byte(m, pc + 2);
     
-    set_pc(c, ((hi << 8) | lo) - 1);
+    set_pc(c, ((hi << 8) | lo));
 }
 
 void instr_rti(cpu* c, mem* m){
@@ -51,7 +51,7 @@ void instr_rti(cpu* c, mem* m){
     set_bit(&p, 5, 1);
     set_bit(&p, 4, 0);
     set_reg(c, REG_P, p);
-    set_pc(c, ((pc_h << 8) | pc_l) - 1);
+    set_pc(c, ((pc_h << 8) | pc_l));
 }
 
 void instr_rts(cpu* c, mem* m){
@@ -81,4 +81,5 @@ void instr_nop(cpu* c, mem* m){
             break;
     }
 }
-void instr_jam(cpu* c, mem* m){ cpu_stop(c); }
+void instr_jam(cpu* c, mem* m){ }
+

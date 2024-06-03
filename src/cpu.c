@@ -49,6 +49,7 @@ void reset_cpu(cpu* c){
     set_reg(c, REG_Y, 0);
     set_reg(c, REG_P, 0);
     c->addr_mode = AM_NULL;
+    c->stop = 0;
 }
 
 void cpu_stop(cpu* c){ c->stop = 1; }
@@ -59,7 +60,5 @@ uint8_t cpu_tick(cpu* c, mem* m){
     
     instr_parse(c, m, opcode);
    
-    inc_pc(c);
-    
     return 1;
 }
