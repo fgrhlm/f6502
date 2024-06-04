@@ -26,13 +26,14 @@ void instr_jmp(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
     set_pc(c, addr);
 }
+
 void instr_jsr(cpu* c, mem* m){
     uint16_t pc = get_pc(c);
 
     uint8_t hi, lo;
 
     hi = (pc + 2) >> 8;
-    lo = (pc + 2) & 0x00FF;
+    lo = (pc + 2) & 0xFF;
 
     push_byte_stack(c, m, hi);
     push_byte_stack(c, m, lo);
@@ -80,6 +81,8 @@ void instr_nop(cpu* c, mem* m){
         default:
             break;
     }
+
+    inc_pc(c);
 }
 void instr_jam(cpu* c, mem* m){ }
 
