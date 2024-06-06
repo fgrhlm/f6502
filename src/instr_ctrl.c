@@ -63,6 +63,7 @@ void instr_rts(cpu* c, mem* m){
 
     uint16_t pc = (hi << 8) | lo;
     set_pc(c, pc);
+    inc_pc(c);
 }
 
 void instr_nop(cpu* c, mem* m){ 
