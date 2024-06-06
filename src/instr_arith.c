@@ -207,7 +207,9 @@ void instr_sbx(cpu* c, mem* m){
     inc_pc(c);
 }
 
-void instr_xaa(cpu* c, mem* m){}
+void instr_xaa(cpu* c, mem* m){
+    // TODO
+}
 
 void instr_dcp(cpu* c, mem* m){
     uint16_t addr = get_addr(c, m);
@@ -225,10 +227,17 @@ void instr_dcp(cpu* c, mem* m){
 }
 
 void instr_isc(cpu* c, mem* m){
+    uint8_t res, byte, acc;
     uint16_t addr = get_addr(c, m);
-    uint8_t byte = mem_get_byte(m, addr);
+    acc = *get_reg(c, REG_A);
+    byte = mem_get_byte(m, addr);
 
-    byte = byte + 1;
+    byte++;
+    mem_set_byte(m, addr, byte);
+    
+    res = sub(c, acc, byte);
+    set_reg(c, REG_A, res);
+
     inc_pc(c);
 }
 

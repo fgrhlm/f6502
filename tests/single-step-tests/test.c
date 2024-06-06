@@ -146,11 +146,29 @@ void free_tests(test_def *tests, int len){
     free(tests);
 }
 
+void bin_str(uint8_t b, char* str){
+    sprintf(
+        str,
+        "%d%d%d%d%d%d%d%d",
+        (b & 0x80) ? 1 : 0,
+        (b & 0x40) ? 1 : 0,
+        (b & 0x20) ? 1 : 0,
+        (b & 0x10) ? 1 : 0,
+        (b & 0x08) ? 1 : 0,
+        (b & 0x04) ? 1 : 0,
+        (b & 0x02) ? 1 : 0,
+        (b & 0x01) ? 1 : 0
+    );
+}
+
 void test_assert(int index, char* n, uint8_t x, uint8_t y, test_result* t, uint8_t verbose){
     if(x != y){ 
         *t = TEST_FAIL; 
         if(verbose){
-            printf("%04d %s %02x (%d) %02x (%d)\n", index, n, x, x, y, y);
+            char bin_x[9], bin_y[9];
+            bin_str(x, bin_x);
+            bin_str(y, bin_y);
+            printf("%04d\n    %s\n    (%02x) [%03d] {%s}\n    (%02x) [%03d] {%s}\n", index, n, x, x, bin_x, y, y, bin_y);
         }
     }
 
@@ -188,7 +206,7 @@ test_result run_test(test_def* tests, int index, cpu* c, mem* m, uint8_t verbose
     for(int i=0; i<t.final.ram_len; i++){
         uint8_t val = mem_get_byte(m, t.final.ram[i].addr);
         char debug_str[128];
-        sprintf(debug_str, "RAM_%04x", t.final.ram[i].addr);
+        sprintf(debug_str, "RAM (%04x) [%03d]", t.final.ram[i].addr, t.final.ram[i].addr);
         test_assert(index, debug_str, t.final.ram[i].val, val, &res, verbose);
     }
 
