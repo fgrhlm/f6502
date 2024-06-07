@@ -1,18 +1,22 @@
 #include <stdint.h>
+#include <stdio.h>
 #include "cpu.h"
 #include "addr.h"
 #include "mem.h"
 
 uint8_t bcd_add(cpu* c, uint8_t x, uint8_t y){
-    uint8_t hi, lo, out_carry, in_carry, sum, temp_sum;
+    uint8_t hi, lo, out_carry, in_carry, sum, temp_sum, z_flag;
 
     in_carry = get_flag(c, FLAG_C);
-    
     out_carry = 0;
+    
+    z_flag = (x+y+in_carry) & 255;
+    set_flag(c, FLAG_Z, z_flag == 0);
+    
     hi = ((x & 0xF0) + (y & 0xF0)) >> 4;
     lo = (x & 0x0F) + (y & 0x0F) + in_carry;
 
-    temp_sum = ((hi << 4) | lo);
+    temp_sum = ((hi << 4) | lo); 
 
     if(lo >= 10){ 
         lo = ((lo + 6) & 0x0F);
@@ -20,6 +24,7 @@ uint8_t bcd_add(cpu* c, uint8_t x, uint8_t y){
     }
 
     temp_sum = ((hi << 4) | lo);
+    
     uint8_t v_flag = get_bit((x^temp_sum) & (y^temp_sum), 7);
     
     if(hi >= 10){ hi = ((hi + 6) & 0x0F); out_carry = 1; }
@@ -28,7 +33,6 @@ uint8_t bcd_add(cpu* c, uint8_t x, uint8_t y){
   
     set_flag(c, FLAG_C, out_carry);
     set_flag(c, FLAG_N, get_bit(temp_sum, 7));
-    set_flag(c, FLAG_Z, sum == 0);
     set_flag(c, FLAG_V, v_flag);
     
     return sum;
@@ -56,7 +60,6 @@ uint8_t bin_add(cpu* c, uint8_t x, uint8_t y){
 uint8_t add(cpu*c, uint8_t x, uint8_t y){
     uint8_t dec = get_flag(c, FLAG_D);
     uint8_t sum = dec ? bcd_add(c, x, y) : bin_add(c, x, y);
-    
     return sum;
 }
 

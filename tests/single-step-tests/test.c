@@ -174,6 +174,19 @@ void test_assert(int index, char* n, uint8_t x, uint8_t y, test_result* t, uint8
 
 }
 
+void dump_cpu(cpu* c){
+    printf(
+        "    PH:%d PL:%d S:%d A:%d X:%d Y:%d P:%d\n",
+        *get_reg(c, REG_PH),
+        *get_reg(c, REG_PL),
+        *get_reg(c, REG_S ),
+        *get_reg(c, REG_A ),
+        *get_reg(c, REG_X ),
+        *get_reg(c, REG_Y ),
+        *get_reg(c, REG_P )
+    );
+}
+
 test_result run_test(test_def* tests, int index, cpu* c, mem* m, uint8_t verbose){
     test_def t = tests[index];
     reset_cpu(c);
@@ -208,6 +221,10 @@ test_result run_test(test_def* tests, int index, cpu* c, mem* m, uint8_t verbose
         char debug_str[128];
         sprintf(debug_str, "RAM (%04x) [%03d]", t.final.ram[i].addr, t.final.ram[i].addr);
         test_assert(index, debug_str, t.final.ram[i].val, val, &res, verbose);
+    }
+
+    if((res == TEST_FAIL) && verbose){
+        dump_cpu(c);
     }
 
     return res;
