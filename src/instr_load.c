@@ -67,9 +67,7 @@ void instr_shx(cpu *c, mem *m) {
   hi = (addr + 1) >> 8;
 
   res = reg_x & hi;
-  printf("res: %d\n", res);
 
-  printf("addr: %d\n", addr);
   mem_set_byte(m, addr, res);
   inc_pc(c);
 }
@@ -85,9 +83,7 @@ void instr_shy(cpu *c, mem *m) {
   hi = (addr >> 8) + 1;
 
   res = reg_y & hi;
-  printf("res: %d\n", res);
 
-  printf("addr: %d\n", addr);
   mem_set_byte(m, addr, res);
   inc_pc(c);
 }
@@ -108,7 +104,6 @@ void instr_sha(cpu *c, mem *m) {
 
   res = acc & reg_x & op;
 
-  printf("ad: %x, res: %d\n", (addr - reg_y) + 1, res);
   mem_set_byte(m, addr, res);
   inc_pc(c);
 }
