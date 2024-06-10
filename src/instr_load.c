@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 #include "cpu.h"
 #include "mem.h"
 #include "addr.h"
@@ -55,28 +57,59 @@ void instr_las(cpu* c, mem* m){
 }
 
 void instr_shx(cpu* c, mem* m){
-    uint16_t addr = get_addr(c, m);
-    uint16_t pc = get_pc(c);
+    uint16_t addr;
+    uint8_t reg_x, hi, res;
 
-    uint8_t reg_x = *get_reg(c, REG_X);
-    uint8_t hi = (addr+1) >> 8;
-    uint8_t res = reg_x & hi;
+    reg_x = *get_reg(c, REG_X);
+
+    addr = get_addr(c, m);
+
+    hi = (addr + 1) >> 8;
     
-    if((pc >> 8) != (addr >> 8)){
-        addr = (res << 8) | (addr & 0xFF);
-    }
-
+    res = reg_x & hi;
+    printf("res: %d\n", res);
+    
+    printf("addr: %d\n", addr);
     mem_set_byte(m, addr, res);
     inc_pc(c);
 }
 
 void instr_shy(cpu* c, mem* m){
+    uint16_t addr;
+    uint8_t reg_y, hi, res;
 
+    reg_y = *get_reg(c, REG_Y);
+
+    addr = get_addr(c, m);
+
+    hi = (addr >> 8) + 1;
+    
+    res = reg_y & hi;
+    printf("res: %d\n", res);
+    
+    printf("addr: %d\n", addr);
+    mem_set_byte(m, addr, res);
     inc_pc(c);
 }
 
 void instr_sha(cpu* c, mem* m){
+    uint16_t addr = get_addr(c, m);
+    uint8_t acc = *get_reg(c, REG_A);
+    uint8_t reg_x = *get_reg(c, REG_X);
+    uint8_t reg_y = *get_reg(c, REG_Y);
 
+    uint8_t res, op;
+
+    if(c->addr_mode == AM_ABSOLUTE_Y){
+        op = ((addr - reg_y) >> 8) + 1;
+    }else{
+        op = mem_get_byte(m, ((addr - reg_y) + 1) & 0xFF);
+    }
+
+    res = acc & reg_x & op;
+   
+    printf("ad: %x, res: %d\n", (addr - reg_y) + 1, res);
+    mem_set_byte(m, addr, res);
     inc_pc(c);
 }
 
