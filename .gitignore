@@ -1,6 +1,7 @@
-tests/ProcessorTests/
-tests/ProcessorTestsConverted/
-tests/6502_bin/
+tests/**/*.bin
+tests/**/*.lst
+tests/**/*.map
+tests/**/*.o
 tests/__pycache__/
 logs/
 .cache
