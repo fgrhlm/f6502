@@ -11,6 +11,6 @@ uint16_t indirect_addr(cpu *c, mem *m);
 uint16_t indexed_indirect_addr(cpu *c, mem *m, reg r);
 uint16_t relative_addr(cpu *c, mem *m);
 uint16_t zero_page_addr(cpu *c, mem *m);
-uint16_t get_addr(cpu *c, mem *m);
+uint16_t get_addr(cpu *c, mem *m); // TODO: Should be more like read_next_addr and put on address bus
 
 #endif

@@ -10,7 +10,7 @@ project(
 )
 
 
-# 6502 CPU Lib
+# 6502 lib
 incdir = include_directories('include')
 src_lib = files(
   'src/cpu.c',
@@ -37,6 +37,11 @@ lib = library('6502cpu', src_lib, include_directories: incdir)
 # Dependencies
 dep_lib = declare_dependency(link_with : lib, include_directories : incdir)
 dep_jsonc = dependency('json-c')
+dep_curses = dependency('curses')
+
+# TUI
+src_tui = files('src/tui.c')
+tui = executable('tui', src_tui, dependencies : [dep_curses, dep_lib])
 
 # Single Step Tests
 src_single_step_tests = files('tests/single-step-tests/test.c')

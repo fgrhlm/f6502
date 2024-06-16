@@ -2,15 +2,15 @@
 #include "cpu.h"
 
 void instr_branch(cpu *c, mem *m, uint8_t flag_state) {
-  uint16_t pc;
+    uint16_t pc;
 
-  if (flag_state) {
-    uint16_t addr = get_addr(c, m);
-    set_pc(c, addr);
-  }
+    if (flag_state) {
+        uint16_t addr = get_addr(c, m);
+        set_pc(c, addr);
+    }
 
-  pc = get_pc(c);
-  set_pc(c, pc + 2);
+    pc = get_pc(c);
+    set_pc(c, pc + 2);
 }
 
 void instr_bcc(cpu *c, mem *m) { instr_branch(c, m, !get_flag(c, FLAG_C)); }

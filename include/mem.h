@@ -4,13 +4,13 @@
 #include <stdint.h>
 
 typedef struct {
-  uint8_t *bytes;
-  unsigned int size;
+    uint8_t *bytes;
+    unsigned int size;
 } mem;
 
 typedef struct {
-  uint16_t addr;
-  uint8_t byte;
+    uint16_t addr;
+    uint8_t byte;
 } mem_byte;
 
 mem *create_mem(unsigned int mem_size);
