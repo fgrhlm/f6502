@@ -33,6 +33,6 @@ void instr_shs(cpu *c, mem *m) {
     uint8_t hi = addr >> 8;
 
     res = (res & hi) + 1;
-    mem_set_byte(m, addr, res);
+    mem_write(m, addr, res);
     inc_pc(c);
 }

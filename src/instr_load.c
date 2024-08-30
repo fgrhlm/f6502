@@ -21,7 +21,7 @@ void instr_store(cpu *c, mem *m, reg r) {
     uint16_t addr = get_addr(c, m);
     uint8_t reg = *get_reg(c, r);
 
-    mem_set_byte(m, addr, reg);
+    mem_write(m, addr, reg);
     inc_pc(c);
 }
 
@@ -42,7 +42,7 @@ void instr_sty(cpu *c, mem *m) { instr_store(c, m, REG_Y); }
 
 void instr_las(cpu *c, mem *m) {
     uint16_t addr = get_addr(c, m);
-    uint8_t byte = mem_get_byte(m, addr);
+    uint8_t byte = mem_read(m, addr);
 
     uint8_t sp = *get_reg(c, REG_S);
     uint8_t res = sp & byte;
@@ -68,7 +68,7 @@ void instr_shx(cpu *c, mem *m) {
 
     res = reg_x & hi;
 
-    mem_set_byte(m, addr, res);
+    mem_write(m, addr, res);
     inc_pc(c);
 }
 
@@ -84,7 +84,7 @@ void instr_shy(cpu *c, mem *m) {
 
     res = reg_y & hi;
 
-    mem_set_byte(m, addr, res);
+    mem_write(m, addr, res);
     inc_pc(c);
 }
 
@@ -99,12 +99,12 @@ void instr_sha(cpu *c, mem *m) {
     if (c->addr_mode == AM_ABSOLUTE_Y) {
         op = ((addr - reg_y) >> 8) + 1;
     } else {
-        op = mem_get_byte(m, ((addr - reg_y) + 1) & 0xFF);
+        op = mem_read(m, ((addr - reg_y) + 1) & 0xFF);
     }
 
     res = acc & reg_x & op;
 
-    mem_set_byte(m, addr, res);
+    mem_write(m, addr, res);
     inc_pc(c);
 }
 
@@ -115,6 +115,6 @@ void instr_sax(cpu *c, mem *m) {
     uint8_t x = *get_reg(c, REG_X);
     uint8_t res = (a & x);
 
-    mem_set_byte(m, addr, res);
+    mem_write(m, addr, res);
     inc_pc(c);
 }

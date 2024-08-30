@@ -14,11 +14,11 @@ void instr_dec_reg(cpu *c, reg r) {
 }
 void instr_dec(cpu *c, mem *m) {
     uint16_t addr = get_addr(c, m);
-    uint8_t n = mem_get_byte(m, addr);
+    uint8_t n = mem_read(m, addr);
 
     n = n - 1;
 
-    mem_set_byte(m, addr, n);
+    mem_write(m, addr, n);
 
     set_flag(c, FLAG_N, get_bit(n, 7));
     set_flag(c, FLAG_Z, n == 0);
@@ -40,11 +40,11 @@ void instr_inc_reg(cpu *c, reg r) {
 
 void instr_inc(cpu *c, mem *m) {
     uint16_t addr = get_addr(c, m);
-    uint8_t n = mem_get_byte(m, addr);
+    uint8_t n = mem_read(m, addr);
 
     n = n + 1;
 
-    mem_set_byte(m, addr, n);
+    mem_write(m, addr, n);
 
     set_flag(c, FLAG_N, get_bit(n, 7));
     set_flag(c, FLAG_Z, n == 0);

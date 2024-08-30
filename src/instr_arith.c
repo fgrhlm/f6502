@@ -202,7 +202,7 @@ void instr_asr(cpu *c, mem *m) {
 
 void instr_sbx(cpu *c, mem *m) {
     uint16_t addr = get_addr(c, m);
-    int8_t byte = (int8_t)mem_get_byte(m, addr);
+    int8_t byte = (int8_t)mem_read(m, addr);
 
     int8_t a = (int8_t)*get_reg(c, REG_A);
     int8_t x = (int8_t)*get_reg(c, REG_X);
@@ -223,11 +223,11 @@ void instr_xaa(cpu *c, mem *m) {
 
 void instr_dcp(cpu *c, mem *m) {
     uint16_t addr = get_addr(c, m);
-    uint8_t byte = mem_get_byte(m, addr);
+    uint8_t byte = mem_read(m, addr);
     uint8_t acc = *get_reg(c, REG_A);
 
     byte = byte - 1;
-    mem_set_byte(m, addr, byte);
+    mem_write(m, addr, byte);
 
     uint8_t res = acc - byte;
     set_flag(c, FLAG_Z, res == 0);
@@ -240,10 +240,10 @@ void instr_isc(cpu *c, mem *m) {
     uint8_t res, byte, acc;
     uint16_t addr = get_addr(c, m);
     acc = *get_reg(c, REG_A);
-    byte = mem_get_byte(m, addr);
+    byte = mem_read(m, addr);
 
     byte++;
-    mem_set_byte(m, addr, byte);
+    mem_write(m, addr, byte);
 
     res = sub(c, acc, byte);
     set_reg(c, REG_A, res);
@@ -253,7 +253,7 @@ void instr_isc(cpu *c, mem *m) {
 
 void instr_rla(cpu *c, mem *m) {
     uint16_t addr = get_addr(c, m);
-    uint8_t byte = mem_get_byte(m, addr);
+    uint8_t byte = mem_read(m, addr);
     uint8_t acc = *get_reg(c, REG_A);
     uint8_t carry_in = get_flag(c, FLAG_C);
 
@@ -261,7 +261,7 @@ void instr_rla(cpu *c, mem *m) {
 
     byte = (byte << 1);
     set_bit(&byte, 0, carry_in);
-    mem_set_byte(m, addr, byte);
+    mem_write(m, addr, byte);
 
     uint8_t result = byte & acc;
     set_reg(c, REG_A, result);
@@ -273,7 +273,7 @@ void instr_rla(cpu *c, mem *m) {
 
 void instr_rra(cpu *c, mem *m) {
     uint16_t addr = get_addr(c, m);
-    uint8_t byte = mem_get_byte(m, addr);
+    uint8_t byte = mem_read(m, addr);
     uint8_t acc = *get_reg(c, REG_A);
     uint8_t carry_in = get_flag(c, FLAG_C);
 
@@ -281,7 +281,7 @@ void instr_rra(cpu *c, mem *m) {
 
     byte = (byte >> 1);
     set_bit(&byte, 7, carry_in);
-    mem_set_byte(m, addr, byte);
+    mem_write(m, addr, byte);
 
     uint8_t res = add(c, acc, byte);
     set_reg(c, REG_A, res);
@@ -290,14 +290,14 @@ void instr_rra(cpu *c, mem *m) {
 
 void instr_slo(cpu *c, mem *m) {
     uint16_t addr = get_addr(c, m);
-    uint8_t byte = mem_get_byte(m, addr);
+    uint8_t byte = mem_read(m, addr);
     uint8_t acc = *get_reg(c, REG_A);
 
     set_flag(c, FLAG_C, get_bit(byte, 7));
 
     byte = (byte << 1);
     set_bit(&byte, 0, 0);
-    mem_set_byte(m, addr, byte);
+    mem_write(m, addr, byte);
 
     uint8_t result = byte | acc;
     set_reg(c, REG_A, result);
@@ -309,14 +309,14 @@ void instr_slo(cpu *c, mem *m) {
 
 void instr_sre(cpu *c, mem *m) {
     uint16_t addr = get_addr(c, m);
-    uint8_t byte = mem_get_byte(m, addr);
+    uint8_t byte = mem_read(m, addr);
     uint8_t acc = *get_reg(c, REG_A);
 
     set_flag(c, FLAG_C, get_bit(byte, 0));
 
     byte = (byte >> 1);
     set_bit(&byte, 7, 0);
-    mem_set_byte(m, addr, byte);
+    mem_write(m, addr, byte);
 
     uint8_t result = byte ^ acc;
     set_reg(c, REG_A, result);

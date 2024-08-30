@@ -10,12 +10,12 @@ void instr_brk(cpu *c, mem *m) {
 
     uint16_t pc = get_pc(c) + 2;
 
-    push_byte_stack(c, m, pc >> 8);
-    push_byte_stack(c, m, pc & 0x00FF);
-    push_byte_stack(c, m, status);
+    stack_push(c, m, pc >> 8);
+    stack_push(c, m, pc & 0x00FF);
+    stack_push(c, m, status);
 
-    uint8_t hi = mem_get_byte(m, 0xFFFF);
-    uint8_t lo = mem_get_byte(m, 0xFFFE);
+    uint8_t hi = mem_read(m, 0xFFFF);
+    uint8_t lo = mem_read(m, 0xFFFE);
     uint16_t new_pc = (hi << 8) | lo;
 
     set_flag(c, FLAG_I, 1);
@@ -35,19 +35,19 @@ void instr_jsr(cpu *c, mem *m) {
     hi = (pc + 2) >> 8;
     lo = (pc + 2) & 0xFF;
 
-    push_byte_stack(c, m, hi);
-    push_byte_stack(c, m, lo);
+    stack_push(c, m, hi);
+    stack_push(c, m, lo);
 
-    lo = mem_get_byte(m, pc + 1);
-    hi = mem_get_byte(m, pc + 2);
+    lo = mem_read(m, pc + 1);
+    hi = mem_read(m, pc + 2);
 
     set_pc(c, ((hi << 8) | lo));
 }
 
 void instr_rti(cpu *c, mem *m) {
-    uint8_t p = pull_byte_stack(c, m);
-    uint8_t pc_l = pull_byte_stack(c, m);
-    uint8_t pc_h = pull_byte_stack(c, m);
+    uint8_t p = stack_pop(c, m);
+    uint8_t pc_l = stack_pop(c, m);
+    uint8_t pc_h = stack_pop(c, m);
 
     set_bit(&p, 5, 1);
     set_bit(&p, 4, 0);
@@ -58,8 +58,8 @@ void instr_rti(cpu *c, mem *m) {
 void instr_rts(cpu *c, mem *m) {
     uint8_t hi, lo;
 
-    lo = pull_byte_stack(c, m);
-    hi = pull_byte_stack(c, m);
+    lo = stack_pop(c, m);
+    hi = stack_pop(c, m);
 
     uint16_t pc = (hi << 8) | lo;
     set_pc(c, pc);

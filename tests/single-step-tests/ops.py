@@ -1,3 +1,5 @@
+import sys
+
 ops = {
     "00": {'name': 'brk', 'category': 'ctrl', 'illegal': True, 'admode': 'implied', 'bytes': 1, 'cycles': 7, 'plus_cycle_page': False, 'plus_cycle_branch': False},
     "01": {'name': 'ora', 'category': 'logic', 'illegal': True, 'admode': 'indirect-pre-index', 'bytes': 2, 'cycles': 6, 'plus_cycle_page': False, 'plus_cycle_branch': False},
@@ -258,5 +260,4 @@ ops = {
 }
 
 if __name__=="__main__":
-    for k,v in ops.items():
-        print(f'"{k}": {v},')
+    exit

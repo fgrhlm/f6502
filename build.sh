@@ -2,7 +2,7 @@
 set -e
 
 function compile () {
-    meson compile -C build
+    meson compile -v -C build
 }
 
 function main () {

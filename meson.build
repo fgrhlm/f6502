@@ -39,9 +39,9 @@ dep_lib = declare_dependency(link_with : lib, include_directories : incdir)
 dep_jsonc = dependency('json-c')
 dep_curses = dependency('curses')
 
-# TUI
-src_tui = files('src/tui.c')
-tui = executable('tui', src_tui, dependencies : [dep_curses, dep_lib])
+# Functional Tests
+src_functional_test = files('tests/6502_65C02_functional_tests/test.c')
+functional_test = executable('functional_test', src_functional_test, dependencies : [dep_lib])
 
 # Single Step Tests
 src_single_step_tests = files('tests/single-step-tests/test.c')

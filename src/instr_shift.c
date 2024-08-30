@@ -11,7 +11,7 @@ void instr_asl(cpu *c, mem *m) {
         byte = *get_reg(c, REG_A);
     } else {
         addr = get_addr(c, m);
-        byte = mem_get_byte(m, addr);
+        byte = mem_read(m, addr);
     };
 
     set_flag(c, FLAG_C, get_bit(byte, 7));
@@ -20,7 +20,7 @@ void instr_asl(cpu *c, mem *m) {
     set_bit(&result, 0, 0);
 
     (am == AM_ACCUMULATOR) ? set_reg(c, REG_A, result)
-                           : mem_set_byte(m, addr, result);
+                           : mem_write(m, addr, result);
 
     set_flag(c, FLAG_N, get_bit(result, 7));
     set_flag(c, FLAG_Z, (result == 0));
@@ -35,7 +35,7 @@ void instr_lsr(cpu *c, mem *m) {
         byte = *get_reg(c, REG_A);
     } else {
         addr = get_addr(c, m);
-        byte = mem_get_byte(m, addr);
+        byte = mem_read(m, addr);
     };
 
     set_flag(c, FLAG_C, get_bit(byte, 0));
@@ -44,7 +44,7 @@ void instr_lsr(cpu *c, mem *m) {
     set_bit(&result, 7, 0);
 
     (am == AM_ACCUMULATOR) ? set_reg(c, REG_A, result)
-                           : mem_set_byte(m, addr, result);
+                           : mem_write(m, addr, result);
 
     set_flag(c, FLAG_N, get_bit(result, 7));
     set_flag(c, FLAG_Z, (result == 0));
@@ -61,7 +61,7 @@ void instr_rol(cpu *c, mem *m) {
         byte = *get_reg(c, REG_A);
     } else {
         addr = get_addr(c, m);
-        byte = mem_get_byte(m, addr);
+        byte = mem_read(m, addr);
     };
 
     set_flag(c, FLAG_C, get_bit(byte, 7));
@@ -70,7 +70,7 @@ void instr_rol(cpu *c, mem *m) {
     set_bit(&result, 0, carry);
 
     (am == AM_ACCUMULATOR) ? set_reg(c, REG_A, result)
-                           : mem_set_byte(m, addr, result);
+                           : mem_write(m, addr, result);
 
     set_flag(c, FLAG_N, get_bit(byte, 6));
     set_flag(c, FLAG_Z, result == 0);
@@ -87,7 +87,7 @@ void instr_ror(cpu *c, mem *m) {
         byte = *get_reg(c, REG_A);
     } else {
         addr = get_addr(c, m);
-        byte = mem_get_byte(m, addr);
+        byte = mem_read(m, addr);
     };
 
     set_flag(c, FLAG_C, get_bit(byte, 0));
@@ -96,7 +96,7 @@ void instr_ror(cpu *c, mem *m) {
     set_bit(&result, 7, carry);
 
     (am == AM_ACCUMULATOR) ? set_reg(c, REG_A, result)
-                           : mem_set_byte(m, addr, result);
+                           : mem_write(m, addr, result);
 
     set_flag(c, FLAG_N, carry);
     set_flag(c, FLAG_Z, result == 0);

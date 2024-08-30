@@ -37,7 +37,7 @@ void instr_eor(cpu *c, mem *m) {
 }
 void instr_ora(cpu *c, mem *m) {
     uint16_t addr = get_addr(c, m);
-    uint8_t byte = mem_get_byte(m, addr);
+    uint8_t byte = mem_read(m, addr);
     uint8_t acc = *get_reg(c, REG_A);
     uint8_t result = byte | acc;
 

@@ -42,7 +42,7 @@ addr_mode get_addr_mode(cpu *c){ return c->addr_mode; }
 
 uint8_t next_byte(cpu *c, mem *m) {
     uint16_t addr = get_addr(c, m);
-    uint8_t byte = mem_get_byte(m, addr);
+    uint8_t byte = mem_read(m, addr);
 
     return byte;
 }
@@ -58,7 +58,7 @@ void reset_cpu(cpu *c) {
 
 uint8_t cpu_tick(cpu *c, mem *m) {
     uint16_t pc = get_pc(c);
-    uint8_t opcode = mem_get_byte(m, pc);
+    uint8_t opcode = mem_read(m, pc);
 
     instr_parse(c, m, opcode);
 

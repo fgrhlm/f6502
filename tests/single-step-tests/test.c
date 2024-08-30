@@ -186,7 +186,7 @@ test_result run_test(test_def *tests, int index, cpu *c, mem *m,
     set_reg(c, REG_P, t.initial.p);
 
     for (int i = 0; i < t.initial.ram_len; i++) {
-        mem_set_byte(m, t.initial.ram[i].addr, t.initial.ram[i].val);
+        mem_write(m, t.initial.ram[i].addr, t.initial.ram[i].val);
     }
 
     cpu_tick(c, m);
@@ -204,7 +204,7 @@ test_result run_test(test_def *tests, int index, cpu *c, mem *m,
     test_assert(index, "REG_P", t.final.p, *get_reg(c, REG_P), &res, verbose);
 
     for (int i = 0; i < t.final.ram_len; i++) {
-        uint8_t val = mem_get_byte(m, t.final.ram[i].addr);
+        uint8_t val = mem_read(m, t.final.ram[i].addr);
         char debug_str[128];
         sprintf(debug_str, "RAM (%04x) [%03d]", t.final.ram[i].addr,
                 t.final.ram[i].addr);

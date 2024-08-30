@@ -15,12 +15,12 @@ void free_mem(mem *m) {
     free(m);
 }
 
-uint8_t mem_get_byte(mem *m, unsigned int p) {
+uint8_t mem_read(mem *m, unsigned int p) {
     uint8_t byte = m->bytes[p];
     return byte;
 }
 
-void mem_set_byte(mem *m, unsigned int p, uint8_t b) { m->bytes[p] = b; }
+void mem_write(mem *m, unsigned int p, uint8_t b) { m->bytes[p] = b; }
 
 void reset_mem(mem *m) {
     for (int i = 0; i < m->size; i++) {

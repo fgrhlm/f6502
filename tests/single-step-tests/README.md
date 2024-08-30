@@ -5,19 +5,21 @@
 [SingleStepTests/65x02](https://github.com/SingleStepTests/65x02)
 [json-c/json-c](https://github.com/json-c/json-c)
 
-## Setup
-Clone the SingleStepTests/65x02 repo.
-Install json-c either by cloning the repo and compiling or by using your package manager.
-
-### Arch Linux
-`pacman -S json-c`
-
 ## Running (bash)
-The test program takes `n` number of test files as input.
-To run the complete test suite: `single-step-tests $SingleSepTestsREPO/6502/v1/*`
+`single-step-tests $TESTS_REPO/6502/v1/*`
+
+For verbose output use flag `-v`
+
+## Log
+You can generate some pretty results using the included python script.
+
+Run the test suite with script.
 
 ```bash
 script $YOUR_LOG_FILE
 single-step-tests $TESTS/*
 exit
 ```
+
+And display results
+`python results.py $YOUR_LOG_FILE`
