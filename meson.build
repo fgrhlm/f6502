@@ -1,5 +1,5 @@
 project(
-  'sfotemu',
+  'f6502',
   'c',
   default_options : [
     'c_std=c17',
@@ -16,7 +16,6 @@ src_lib = files(
   'src/cpu.c',
   'src/addr.c', 
   'src/mem.c',
-  'src/utils.c',
   'src/instr.c',
   'src/instr_arith.c',
   'src/instr_branch.c',
@@ -32,7 +31,7 @@ src_lib = files(
   'src/bin.c',
 )
 
-lib = library('6502cpu', src_lib, include_directories: incdir)
+lib = library('f6502', src_lib, include_directories: incdir)
 
 # Dependencies
 dep_lib = declare_dependency(link_with : lib, include_directories : incdir)
@@ -40,7 +39,7 @@ dep_jsonc = dependency('json-c')
 dep_curses = dependency('curses')
 
 # Functional Tests
-src_functional_test = files('tests/6502_65C02_functional_tests/test.c')
+src_functional_test = files('tests/functional-tests/test.c')
 functional_test = executable('functional_test', src_functional_test, dependencies : [dep_lib])
 
 # Single Step Tests

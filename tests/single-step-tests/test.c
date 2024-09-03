@@ -244,6 +244,7 @@ int main(int argc, char **argv) {
         parse_tests(root, len, tests);
 
         cpu c;
+        reset_cpu(&c);
 
         mem *m = create_mem(65535);
         test_result res;

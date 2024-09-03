@@ -61,9 +61,11 @@ typedef struct {
     addr_mode addr_mode;
 } cpu;
 
+// Bits
 uint8_t get_bit(uint8_t b, uint8_t i);
 void set_bit(uint8_t *b, uint8_t i, uint8_t n);
 
+// Registers
 uint8_t *get_reg(cpu *c, reg r);
 void set_reg(cpu *c, reg r, uint8_t b);
 
@@ -75,12 +77,21 @@ uint8_t *get_flags(cpu *c);
 uint8_t get_flag(cpu *c, flag f);
 void set_flag(cpu *c, flag f, uint8_t n);
 
+// Pins
 pin_state get_pin(cpu *c, pin p);
 void set_pin(cpu *c, pin p, pin_state ps);
 
+// Addressing
 void set_addr_mode(cpu *c, addr_mode am);
 addr_mode get_addr_mode(cpu *c);
 
+// Stack
+void stack_reg_push(cpu *c, mem *m, reg r);
+void stack_push(cpu *c, mem *m, uint8_t b);
+void stack_reg_pop(cpu *c, mem *m, reg r);
+uint8_t stack_pop(cpu *c, mem *m);
+
+// Mem
 void mem_to_reg(reg dst, uint16_t src);
 void reg_to_mem(uint16_t dst, reg src);
 void reg_to_reg(reg dst, reg src);
@@ -88,6 +99,12 @@ void free_cpu(cpu *cpu);
 
 uint8_t next_byte(cpu *c, mem *m);
 
+// Interrupts
+void service_irq(cpu *c, mem *m);
+void service_nmi(cpu *c, mem *m);
+void service_interrupts(cpu *c, mem *m);
+
+// CPU API
 void reset_cpu(cpu *c);
 
 uint8_t cpu_tick(cpu *c, mem *m);

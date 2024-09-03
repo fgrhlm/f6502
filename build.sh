@@ -1,12 +1,14 @@
 #!/bin/bash
 set -e
 
-function compile () {
-    meson compile -v -C build
-}
-
 function main () {
-    compile
+    local BUILD_DIR="./build"
+    
+    if [ ! -d $BUILD_DIR ]; then
+        meson setup $BUILD_DIR
+    fi
+
+    meson compile -v -C $BUILD_DIR
 }
 
 main
