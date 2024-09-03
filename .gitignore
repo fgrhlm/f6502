@@ -7,3 +7,4 @@ logs/
 .cache
 build/
 notes.txt
+*.log
